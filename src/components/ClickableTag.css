@@ -1,0 +1,19 @@
+.clickable-tag.p-tag {
+    cursor: pointer;
+}
+
+.clickable-tag.p-tag:hover {
+    background: var(--main-highlight);
+}
+
+.clickable-tag.selected {
+    background-color: var(--main-highlight);
+}
+
+.clickable-tag.disabled {
+    background-color: var(--main-disabled);
+}
+.clickable-tag.disabled:hover {
+    background-color: var(--main-disabled);
+    cursor: initial;
+}
