@@ -67,3 +67,8 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+# Mind maps
+Mind maps to help organize the `entry-points/fresh-start packs` that were mentioned on 2024-05-17.  
+## Nix mind map
+Nix project mind map depicting how NGI0 supported projects fit into the Nix ecosystem [excalidraw](https://excalidraw.com/#json=8huW67sF3KMBsNgCB5KHm,DMix8A7OyHjpggLNhRjeBw). 
