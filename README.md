@@ -71,4 +71,4 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 # Mind maps
 Mind maps to help organize the `entry-points/fresh-start packs` that were mentioned on 2024-05-17.  
 ## Nix mind map
-Nix project mind map depicting how NGI0 supported projects fit into the Nix ecosystem [excalidraw](https://excalidraw.com/#json=mQip-0cSUJ0v3P06L1_du,wURoXaR1xBIuu9M61WYGVA). 
+Nix project mind map depicting how NGI0 supported projects fit into the Nix ecosystem [excalidraw](https://excalidraw.com/#json=d8AbTfcfZ8WvSzPCcd2hd,MS6ngCYm4vUGkum_fzUYqg). 
