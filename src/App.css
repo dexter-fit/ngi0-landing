@@ -90,4 +90,10 @@ body {
     display: flex;
     gap: 5px;
     flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.tag-list:after {
+    content: "";
+    flex: auto;
 }
