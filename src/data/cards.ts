@@ -2,7 +2,7 @@ import {ProjectCardType} from "../types";
 
 const CARDS = [
     {
-        image: "https://nlnet.nl/project/FrictionlessStandards/frictionlessdata.hex.svg",
+        image: "img/dream2nix.logo.svg",
         header: "Data packages",
         subheader: "Specification + improved tooling for external data set descriptions",
         tags: ["Data", "AI", "Data Set Descriptions"],
@@ -11,7 +11,7 @@ const CARDS = [
         start: "2023-04"
     },
     {
-        image: "https://nlnet.nl/logo/banner.svg",
+        image: "img/dream2nix.logo.svg",
         header: "K-Gen",
         subheader: "From datasets in DCAT catalogs to knowledge graphs",
         tags: ["Data", "AI", "Data Set Descriptions", "Knowledge Graphs"],
@@ -20,7 +20,7 @@ const CARDS = [
         start: "2022-12"
     },
     {
-        image: "https://nlnet.nl/project/AtomicData/atomicdata.logo.svg",
+        image: "img/dream2nix.logo.svg",
         header: "Atomic Tables",
         subheader: "Self-hostable tabular structured data solution",
         tags: ["Data", "AI", "Data Modeling"],
@@ -29,7 +29,7 @@ const CARDS = [
         start: "2022-10"
     },
     {
-        image: "https://nlnet.nl/project/AtomicData/atomicdata.logo.svg",
+        image: "img/dream2nix.logo.svg",
         header: "Atomic Data",
         subheader: "Typesafe handling of LinkedData",
         tags: ["Data", "AI", "Data Modeling", "Knowledge Graphs"],
@@ -39,7 +39,7 @@ const CARDS = [
         end: "2023-06"
     },
     {
-        image: "https://nlnet.nl/project/OrganicMaps/organicmaps.hex.svg",
+        image: "img/dream2nix.logo.svg",
         header: "Organic Maps",
         subheader: "Privacy-focused Android & iOS offline maps application",
         tags: ["Services", "Applications", "Maps", "P2P", "OpenStreetMap"],
@@ -48,7 +48,7 @@ const CARDS = [
         start: "2021-10"
     },
     {
-        image: "https://nlnet.nl/project/Protomaps/protomaps.logo.svg",
+        image: "img/dream2nix.logo.svg",
         header: "Protomaps",
         subheader: "Self-hostable maps based on OpenStreetMap data",
         tags: ["Services", "Applications", "Maps", "OpenStreetMap", "Verticals", "Search"],
@@ -57,7 +57,7 @@ const CARDS = [
         start: "2023-10"
     },
     {
-        image: "https://nlnet.nl/project/Peermaps/peermaps.logo.svg",
+        image: "img/dream2nix.logo.svg",
         header: "peermaps",
         subheader: "Peer to peer cartography",
         tags: ["Verticals", "Search", "Maps", "OpenStreetMap", "P2P", "Decentralised Solutions"],
@@ -67,7 +67,7 @@ const CARDS = [
         end: "2022-10"
     },
     {
-        image: "https://nlnet.nl/project/Mapcomplete/mapcomplete.hex.svg",
+        image: "img/dream2nix.logo.svg",
         header: "MapComplete",
         subheader: "Thematics OpenStreetMap-viewer and editor",
         tags: ["Verticals", "Search", "Maps", "OpenStreetMap", "Gamification"],
@@ -76,7 +76,7 @@ const CARDS = [
         start: "2022-10"
     },
     {
-        image: "https://nlnet.nl/project/Nominatim/openstreetmap.logo.svg",
+        image: "img/dream2nix.logo.svg",
         header: "Nominatim",
         subheader: "Multi-lingual support in address search",
         tags: ["Operating Systems", "Maps", "OpenStreetMap"],

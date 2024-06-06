@@ -1,4 +1,4 @@
-* {
+:root {
     --main-disabled: #A3CF74;
     --main-color: #74AA00;
     --primary-color: var(--main-color);
@@ -31,7 +31,7 @@ body {
     min-width: var(--min-width);
 }
 
-.container {
+.my-cards-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -40,6 +40,7 @@ body {
     margin: auto;
     min-width: var(--min-width);
     box-sizing: border-box;
+    gap: 20px;
 }
 
 .tag-heading {

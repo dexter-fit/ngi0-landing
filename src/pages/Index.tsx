@@ -96,44 +96,39 @@ const Index = () => {
 
     return (
         <>
-            <div className="container">
-                <div>
-                    <div className="tag-heading">
-                        <h2>Tags</h2>
-                        <div className="tag-search-input-container">
-                            <div className="card flex justify-content-center">
-                                <FloatLabel>
-                                    <InputText id="project-search"
-                                               className="full-width"
-                                               value={searchString}
-                                               onChange={(e) => updateStringState(e.target.value)}
-                                    />
-                                    <label htmlFor="project-search">Search Projects</label>
-                                </FloatLabel>
-                            </div>
-                            <div id="search-clear-button">
-                                <ClickableTag disabled={searchClearDisabled} onClick={clearSearch} name="×"/>
-                            </div>
+            <div>
+                <div className="tag-heading">
+                    <h2>Tags</h2>
+                    <div className="tag-search-input-container">
+                        <div className="card flex justify-content-center">
+                            <FloatLabel>
+                                <InputText id="project-search"
+                                           className="full-width"
+                                           value={searchString}
+                                           onChange={(e) => updateStringState(e.target.value)}
+                                />
+                                <label htmlFor="project-search">Search Projects</label>
+                            </FloatLabel>
+                        </div>
+                        <div id="search-clear-button">
+                            <ClickableTag disabled={searchClearDisabled} onClick={clearSearch} name="×"/>
                         </div>
                     </div>
-                    <div className="tag-list" key={JSON.stringify(tags)}>
-                        <ClickableTag disabled={tagsClearDisabled} onClick={clearTags} name="×"/>
-                        {Object.entries(tags).map(([tag, active]) => <ClickableTag key={tag} name={tag} active={active} onClick={() => toggleTag(tag)}/>)}
-                    </div>
                 </div>
-
+                <div className="tag-list" key={JSON.stringify(tags)}>
+                    <ClickableTag disabled={tagsClearDisabled} onClick={clearTags} name="×"/>
+                    {Object.entries(tags).map(([tag, active]) => <ClickableTag key={tag} name={tag} active={active} onClick={() => toggleTag(tag)}/>)}
+                </div>
             </div>
 
-            <div id="projects-cards" className="container">
-                {cards.map(card =>
-                    <ProjectCard
-                        hidden={cardsStatus.find(item => item.header === card.header)?.hidden}
-                        highlight={cardsStatus.find(item => item.header === card.header)?.highlight}
-                        key={card.header}
-                        card={card}
-                    />
-                )}
-            </div>
+            {cards.map(card =>
+                <ProjectCard
+                    hidden={cardsStatus.find(item => item.header === card.header)?.hidden}
+                    highlight={cardsStatus.find(item => item.header === card.header)?.highlight}
+                    key={card.header}
+                    card={card}
+                />
+            )}
         </>
     );
 }
