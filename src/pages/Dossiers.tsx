@@ -10,6 +10,7 @@ import {
 } from "../data/nixDossierData";
 import {ProjectDescriptionProps} from "../types/ProjectDescriptionProps";
 import {useOutletContext} from "react-router-dom";
+import {CardCarouselTemplate} from "../components/CardCarouselTemplate";
 
 const Dossiers = () => {
 
@@ -30,7 +31,6 @@ const Dossiers = () => {
         "Community-Driven",
         "Configuration Management"
     ].map(item => <Tag value={item} key={item}></Tag>);
-    const cardCarouselTemplate = (card: ProjectCardType) => <ProjectCard key={card.header} card={card}/>;
 
     const projects: ProjectDescriptionProps[] = [
         {
@@ -60,7 +60,7 @@ const Dossiers = () => {
                 links: ["Links here"],
                 carousel: {
                     cards: NIX_LANGUAGE_RELATED_PROJECT_CARDS,
-                    template: cardCarouselTemplate
+                    template: CardCarouselTemplate
                 }
             },
             children: <>
@@ -112,7 +112,7 @@ const Dossiers = () => {
                 links: ["Links here"],
                 carousel: {
                     cards: NIX_PKG_RELATED_PROJECT_CARDS,
-                    template: cardCarouselTemplate
+                    template: CardCarouselTemplate
                 }
             },
             children: <>
@@ -160,7 +160,7 @@ const Dossiers = () => {
                 links: ["Links here"],
                 carousel: {
                     cards: NIX_OS_RELATED_PROJECT_CARDS,
-                    template: cardCarouselTemplate
+                    template: CardCarouselTemplate
                 }
             },
             children: <>
