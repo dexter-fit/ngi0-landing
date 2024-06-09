@@ -1,5 +1,5 @@
-import React, {ReactNode} from "react";
-import {CardProps} from "primereact/card";
+import {ReactNode} from "react";
+import {AssociatedProjectProps} from "./associatedProjectProps";
 
 export type ProjectDescriptionProps = {
     otherProjectsLinkSpace?: ReactNode,
@@ -7,11 +7,9 @@ export type ProjectDescriptionProps = {
     tags?: ReactNode[],
     descriptionContent: {
         header: string,
-        anchor: string,
+        anchor?: string,
         links?: ReactNode[],
-        carousel?: {
-            cards: CardProps[],
-            template: (item: any) => React.ReactNode}
+        associatedProjects?: AssociatedProjectProps[]
     },
     children: ReactNode
 };

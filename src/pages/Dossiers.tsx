@@ -8,7 +8,7 @@ import {
     NIX_OS_RELATED_PROJECT_CARDS,
     NIX_PKG_RELATED_PROJECT_CARDS
 } from "../data/nixDossierData";
-import {ProjectDescriptionProps} from "../types/ProjectDescriptionProps";
+import {ProjectDescriptionProps} from "../types/projectDescriptionProps";
 import {useOutletContext} from "react-router-dom";
 import {CardCarouselTemplate} from "../components/CardCarouselTemplate";
 
@@ -31,6 +31,8 @@ const Dossiers = () => {
         "Community-Driven",
         "Configuration Management"
     ].map(item => <Tag value={item} key={item}></Tag>);
+
+    const associatedNGI0Projects = "Associated NGI0 Projects";
 
     const projects: ProjectDescriptionProps[] = [
         {
@@ -58,10 +60,15 @@ const Dossiers = () => {
             descriptionContent: {
                 header: "Nix Language",
                 links: ["Links here"],
-                carousel: {
-                    cards: NIX_LANGUAGE_RELATED_PROJECT_CARDS,
-                    template: CardCarouselTemplate
-                }
+                associatedProjects: [
+                    {
+                        heading: associatedNGI0Projects,
+                        carousel: {
+                            cards: NIX_LANGUAGE_RELATED_PROJECT_CARDS,
+                            template: CardCarouselTemplate
+                        }
+                    }
+                ]
             },
             children: <>
                 <p>Nix is a functional programming language specifically designed for configuration management and
@@ -110,10 +117,15 @@ const Dossiers = () => {
             descriptionContent: {
                 header: "Nix Package Manager",
                 links: ["Links here"],
-                carousel: {
-                    cards: NIX_PKG_RELATED_PROJECT_CARDS,
-                    template: CardCarouselTemplate
-                }
+                associatedProjects: [
+                    {
+                        heading: associatedNGI0Projects,
+                        carousel: {
+                            cards: NIX_PKG_RELATED_PROJECT_CARDS,
+                            template: CardCarouselTemplate
+                        }
+                    }
+                ]
             },
             children: <>
                 <p>The Nix package manager is a powerful tool designed for package management and system configuration.
@@ -158,10 +170,15 @@ const Dossiers = () => {
             descriptionContent: {
                 header: "Nix OS",
                 links: ["Links here"],
-                carousel: {
-                    cards: NIX_OS_RELATED_PROJECT_CARDS,
-                    template: CardCarouselTemplate
-                }
+                associatedProjects: [
+                    {
+                        heading: associatedNGI0Projects,
+                        carousel: {
+                            cards: NIX_OS_RELATED_PROJECT_CARDS,
+                            template: CardCarouselTemplate
+                        }
+                    }
+                ]
             },
             children: <>
                 <p>NixOS is a Linux distribution built on top of the Nix package manager. It is designed to be reliable,

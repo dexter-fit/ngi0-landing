@@ -1,33 +1,10 @@
 import "./ProjectDescription.css";
-import {Carousel} from "primereact/carousel";
 import React from "react";
 import {ScrollPanel} from "primereact/scrollpanel";
-import {ProjectDescriptionProps} from "../types/ProjectDescriptionProps";
+import {ProjectDescriptionProps} from "../types";
+import {AssociatedProjectTemplate} from "./AssociatedProjectTemplate";
 
 const ProjectDescription = (props: ProjectDescriptionProps) => {
-
-    const responsiveOptions = [
-        {
-            breakpoint: '1400px',
-            numVisible: 2,
-            numScroll: 1,
-        },
-        {
-            breakpoint: '1199px',
-            numVisible: 3,
-            numScroll: 1,
-        },
-        {
-            breakpoint: '767px',
-            numVisible: 2,
-            numScroll: 1,
-        },
-        {
-            breakpoint: '575px',
-            numVisible: 1,
-            numScroll: 1,
-        },
-    ];
 
     return <>
         {props?.image ? <div className="image-container">
@@ -53,20 +30,11 @@ const ProjectDescription = (props: ProjectDescriptionProps) => {
                 <div>
                     {props.descriptionContent.links?.map(item => item)}
                 </div>
-                {props.descriptionContent.carousel ? <div>
-                    <h2>
-                        Associated NGI0 Projects
-                    </h2>
-                    <div>
-                        <Carousel
-                            value={props.descriptionContent.carousel.cards}
-                            numScroll={1}
-                            numVisible={3}
-                            responsiveOptions={responsiveOptions}
-                            itemTemplate={props.descriptionContent.carousel.template}
-                        />
-                    </div>
-                </div> : <></>}
+                {props.descriptionContent.associatedProjects?.map(project => <AssociatedProjectTemplate
+                    description={project.description}
+                    carousel={project.carousel}
+                    heading={project.heading}
+                />)}
             </section>
         </article>
     </>
