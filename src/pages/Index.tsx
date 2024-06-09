@@ -121,14 +121,16 @@ const Index = () => {
                 </div>
             </div>
 
-            {cards.map(card =>
-                <ProjectCard
-                    hidden={cardsStatus.find(item => item.header === card.header)?.hidden}
-                    highlight={cardsStatus.find(item => item.header === card.header)?.highlight}
-                    key={card.header}
-                    card={card}
-                />
-            )}
+            <div className="cards-container">
+                {cards.map(card =>
+                    <ProjectCard
+                        hidden={cardsStatus.find(item => item.header === card.header)?.hidden}
+                        highlight={cardsStatus.find(item => item.header === card.header)?.highlight}
+                        key={card.header}
+                        card={card}
+                    />
+                )}
+            </div>
         </>
     );
 }

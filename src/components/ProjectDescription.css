@@ -1,0 +1,25 @@
+.p-scrollpanel-bar {
+    background-color: var(--primary-color);
+}
+
+.p-scrollpanel-content {
+    overflow-x: hidden;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding-top: 10px;
+}
+
+@media screen and (max-width: 480px) {
+    .image-container {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+img {
+    padding: 10px;
+}

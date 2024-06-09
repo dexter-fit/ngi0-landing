@@ -1,0 +1,23 @@
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    text-align: center;
+    padding: 10px 0;
+    background-color: var(--main-color);
+    color: #fff;
+    font-size: 20px;
+    min-width: var(--min-width);
+}
+
+.header-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 1rem;
+}
+
+.header-heading {
+    margin-right: 3rem;
+    flex-grow: 1;
+}

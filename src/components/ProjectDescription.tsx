@@ -1,8 +1,10 @@
+import "./ProjectDescription.css";
 import {Carousel} from "primereact/carousel";
-import React, {ReactNode} from "react";
-import {CardProps} from "primereact/card";
+import React from "react";
+import {ScrollPanel} from "primereact/scrollpanel";
+import {ProjectDescriptionProps} from "../types/ProjectDescriptionProps";
 
-const ProjectDescription = (props: {image?: string, tags?: ReactNode[], descriptionContent: {header: string, links?: ReactNode[], carousel?: {cards: CardProps[], template: (item: any) => React.ReactNode}}, children: ReactNode}) => {
+const ProjectDescription = (props: ProjectDescriptionProps) => {
 
     const responsiveOptions = [
         {
@@ -31,12 +33,18 @@ const ProjectDescription = (props: {image?: string, tags?: ReactNode[], descript
         {props?.image ? <div className="image-container">
             <img src={props.image} alt="image" key={props.image}/>
         </div> : <></>}
-        <div className="tag-list">
-            {props.tags}
-        </div>
+
+        {props.tags?.length ? <ScrollPanel className="scrollbar">
+            <div className="content-wrapper">
+                {props.tags}
+            </div>
+        </ScrollPanel> : <></>}
+
+        {props?.otherProjectsLinkSpace ? props.otherProjectsLinkSpace : <></>}
+
         <article>
             <section>
-                <h1>
+                <h1 id={props.descriptionContent.anchor}>
                     {props.descriptionContent.header}
                 </h1>
                 <div>
@@ -45,12 +53,12 @@ const ProjectDescription = (props: {image?: string, tags?: ReactNode[], descript
                 <div>
                     {props.descriptionContent.links?.map(item => item)}
                 </div>
-                { props.descriptionContent.carousel ? <div>
+                {props.descriptionContent.carousel ? <div>
                     <h2>
                         Associated NGI0 Projects
                     </h2>
                     <div>
-                         <Carousel
+                        <Carousel
                             value={props.descriptionContent.carousel.cards}
                             numScroll={1}
                             numVisible={3}
