@@ -5,7 +5,6 @@ import {ProjectDescriptionProps} from "../types";
 import {AssociatedProjectTemplate} from "./AssociatedProjectTemplate";
 
 const ProjectDescription = (props: ProjectDescriptionProps) => {
-
     return <>
         {props?.image ? <div className="image-container">
             <img src={props.image} alt="image" key={props.image}/>
@@ -17,9 +16,9 @@ const ProjectDescription = (props: ProjectDescriptionProps) => {
             </div>
         </ScrollPanel> : <></>}
 
-        {props?.otherProjectsLinkSpace ? props.otherProjectsLinkSpace : <></>}
+        {props.otherProjectsLinkSpace ? props.otherProjectsLinkSpace : <></>}
 
-        <article>
+        <article key={props.descriptionContent.anchor}>
             <section>
                 <h1 id={props.descriptionContent.anchor}>
                     {props.descriptionContent.header}

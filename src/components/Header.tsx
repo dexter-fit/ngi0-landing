@@ -21,6 +21,11 @@ const Header = (props: {menuItems: MenuItem[]}) => {
                     label: "Dossiers",
                     url: "/dossiers",
                     icon: "pi pi-file"
+                },
+                {
+                    label: "Project Detail",
+                    url: "/detail",
+                    icon: "pi pi-file"
                 }
             ]
         }

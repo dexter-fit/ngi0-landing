@@ -1,16 +1,15 @@
 import {Tag} from "primereact/tag";
-import {ProjectCard} from "../components/ProjectCard";
 import React, {useEffect} from "react";
-import {ProjectCardType} from "../types";
 import {ProjectDescription} from "../components/ProjectDescription";
 import {
     NIX_LANGUAGE_RELATED_PROJECT_CARDS,
     NIX_OS_RELATED_PROJECT_CARDS,
     NIX_PKG_RELATED_PROJECT_CARDS
 } from "../data/nixDossierData";
-import {ProjectDescriptionProps} from "../types/projectDescriptionProps";
+import {ProjectDescriptionProps} from "../types";
 import {useOutletContext} from "react-router-dom";
 import {CardCarouselTemplate} from "../components/CardCarouselTemplate";
+import {replaceSpacesWith} from "../util/replaceSpacesWith";
 
 const Dossiers = () => {
 
@@ -173,6 +172,15 @@ const Dossiers = () => {
                 associatedProjects: [
                     {
                         heading: associatedNGI0Projects,
+                        description: "Description of associated projects. As NixOS has many projects with different targets (build upon it for mobile, for cloud, extensions and so on we should probably describe each of them separately. And some description about the projects, explaining the goals of this group i.e. these aim to improve the NixOS operating system itself, ...",
+                        carousel: {
+                            cards: NIX_OS_RELATED_PROJECT_CARDS,
+                            template: CardCarouselTemplate
+                        }
+                    },
+                    {
+                        heading: associatedNGI0Projects,
+                        description: "Description of associated projects. As NixOS has many projects with different targets (build upon it for mobile, for cloud, extensions and so on we should probably describe each of them separately. And some description about the projects, explaining the goals of this group i.e. these aim to improve the NixOS operating system itself, ...",
                         carousel: {
                             cards: NIX_OS_RELATED_PROJECT_CARDS,
                             template: CardCarouselTemplate
@@ -226,7 +234,7 @@ const Dossiers = () => {
                 label: "Nix Environment Dossier",
                 items: projects.map(item => ({
                     label: item.descriptionContent.header,
-                    url: `/dossiers#${item.descriptionContent.header.replace(/ /g, "_")}`,
+                    url: `/dossiers#${replaceSpacesWith(item.descriptionContent.header, "_")}`,
                     icon: "pi pi-file"
                 }))
             }
@@ -240,7 +248,7 @@ const Dossiers = () => {
                 <ProjectDescription key={item.descriptionContent.header}
                                     image={item.image}
                                     tags={item.tags}
-                                    descriptionContent={{...item.descriptionContent, anchor: item.descriptionContent.header.replace(/ /g, "_")}}>
+                                    descriptionContent={{...item.descriptionContent, anchor: replaceSpacesWith(item.descriptionContent.header, "_")}}>
                     {item.children}
                 </ProjectDescription>
         )}
