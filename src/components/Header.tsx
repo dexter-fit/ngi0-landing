@@ -10,7 +10,7 @@ const Header = (props: {menuItems: MenuItem[]}) => {
 
     const menuItems = [
         {
-            label: "NLnet; Projects",
+            label: "All Projects",
             items: [
                 {
                     label: "Projects",
@@ -38,11 +38,13 @@ const Header = (props: {menuItems: MenuItem[]}) => {
 
     menuItems.push(...props.menuItems);
 
+    const customHeader = <h2 className="font-bold">NLnet; Projects</h2>;
+
     return <>
         <div className="header">
             <div className="header-container">
                 <Button icon="pi pi-bars" onClick={() => setHidden(false)} size="small" text raised style={{background: "white"}}/>
-                <Sidebar visible={!hidden} onHide={() => setHidden(true)} baseZIndex={101}>
+                <Sidebar header={customHeader} visible={!hidden} onHide={() => setHidden(true)} baseZIndex={101}>
                     <Menu model={menuItems} className="full-width"/>
                 </Sidebar>
                 <div className="header-heading">NLnet; Projects</div>

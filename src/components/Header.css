@@ -29,3 +29,11 @@
 .p-menu .p-menuitem > .p-menuitem-content .p-menuitem-link {
     padding: 0.75rem 0;
 }
+
+.p-sidebar-custom-header {
+    padding-bottom: 0;
+}
+
+.p-sidebar-custom-header > h2 {
+    margin-bottom: 0;
+}
