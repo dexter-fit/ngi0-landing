@@ -11,6 +11,7 @@ import {Header} from "./components/Header";
 import {useState} from "react";
 import {MenuItem} from "primereact/menuitem";
 import {ProjectDetail} from "./pages/ProjectDetail";
+import {ProjectsComparison} from "./pages/ProjectsComparison";
 
 const App = () => {
     const [menuItems, setMenuItems] = useState([] as MenuItem[]);
@@ -34,7 +35,8 @@ const App = () => {
                 [
                     {path: "", element: <Index/>},
                     {path: "dossiers", element: <Dossiers/>},
-                    {path: "detail", element: <ProjectDetail/>}
+                    {path: "detail", element: <ProjectDetail/>},
+                    {path: "comparison", element: <ProjectsComparison/>}
                 ]
         }], {basename: "/"}
     );

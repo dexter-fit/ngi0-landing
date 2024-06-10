@@ -9,7 +9,6 @@ import {Link, useOutletContext} from "react-router-dom";
 import React, {useEffect} from "react";
 import {ProjectDescription} from "../components/ProjectDescription";
 import {replaceSpacesWith} from "../util/replaceSpacesWith";
-import {Button} from "primereact/button";
 import {ClickableTag} from "../components/ClickableTag";
 
 const ProjectDetail = () => {
@@ -109,7 +108,7 @@ const ProjectDetail = () => {
     useEffect(() => {
         const objectsList = [
             {
-                label: "Nix Environment Dossier",
+                label: "Nix Language detail",
                 items: projects.map(item => ({
                     label: item.descriptionContent.header,
                     url: `/detail#${replaceSpacesWith(item.descriptionContent.header, "_")}`,
