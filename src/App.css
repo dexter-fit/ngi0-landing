@@ -103,3 +103,7 @@ body {
 .full-width {
     width: 100%;
 }
+
+.p-button-tiny {
+    padding: 5px;
+}

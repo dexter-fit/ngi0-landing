@@ -26,7 +26,7 @@ const ProjectDescription = (props: ProjectDescriptionProps) => {
                 <div>
                     {props.children}
                 </div>
-                <div>
+                <div className="flex gap-1">
                     {props.descriptionContent.links?.map(item => item)}
                 </div>
                 {props.descriptionContent.associatedProjects?.map(project => <AssociatedProjectTemplate
