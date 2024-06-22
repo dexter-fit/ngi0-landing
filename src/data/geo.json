@@ -1,0 +1,76 @@
+{
+    "cards": [
+        {
+        "image": "img/dream2nix.logo.svg",
+        "header": "Organic Maps",
+        "subheader": "Privacy-focused Android & iOS offline maps application",
+        "tags": [
+            "Services",
+            "Applications",
+            "Maps",
+            "P2P",
+            "OpenStreetMap"
+        ],
+        "link": "https://nlnet.nl/project/OrganicMaps/",
+        "fund": "NGI0 Entrust",
+        "start": "2021-10"
+        },
+        {
+        "image": "img/dream2nix.logo.svg",
+        "header": "Protomaps",
+        "subheader": "Self-hostable maps based on OpenStreetMap data",
+        "tags": [
+            "Services",
+            "Applications",
+            "Maps",
+            "OpenStreetMap",
+            "Verticals",
+            "Search"
+        ],
+        "link": "https://nlnet.nl/project/Protomaps/",
+        "fund": "NGI Zero Core",
+        "start": "2023-10"
+        },
+        {
+        "image": "img/dream2nix.logo.svg",
+        "header": "peermaps",
+        "subheader": "Peer to peer cartography",
+        "tags": [
+            "Verticals",
+            "Search",
+            "Maps",
+            "OpenStreetMap",
+            "P2P",
+            "Decentralised Solutions"
+        ],
+        "link": "https://nlnet.nl/project/Peermaps/",
+        "fund": "NGI0 Discovery",
+        "start": "2021-12",
+        "end": "2022-10"
+        },
+        {
+        "image": "img/dream2nix.logo.svg",
+        "header": "MapComplete",
+        "subheader": "Thematics OpenStreetMap-viewer and editor",
+        "tags": [
+            "Verticals",
+            "Search",
+            "Maps",
+            "OpenStreetMap",
+            "Gamification"
+        ],
+        "link": "https://nlnet.nl/project/Mapcomplete/",
+        "fund": "NGI0 Entrust",
+        "start": "2022-10"
+        }
+    ],
+    "tags": [
+        "aa"
+    ],
+    "projects": [
+    ],
+    "detailedProjects": [
+    ],
+    "comparison": [
+    ]
+}

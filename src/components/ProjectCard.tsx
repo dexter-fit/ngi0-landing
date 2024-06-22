@@ -52,7 +52,7 @@ const ProjectCard = (props: {card: ProjectCardType, hidden?: boolean, highlight?
             <div className="card-tags">
                 {props.card.tags.map(tagName => <Tag key={tagName}>{tagName}</Tag>)}
             </div>
-            <a className="card-link-container" href="https://nlnet.nl/project/AtomicData/">
+            <a className="card-link-container" href={props.card.link}>
                 <span className="card-link">Visit</span>
             </a>
         </div>

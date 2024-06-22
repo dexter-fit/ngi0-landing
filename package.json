@@ -22,7 +22,9 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "REACT_APP_CONTENT_TYPE=dos react-scripts start",
+    "start_dossie": "REACT_APP_CONTENT_TYPE=dos npm start",
+    "start_geo": "REACT_APP_CONTENT_TYPE=geo react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
