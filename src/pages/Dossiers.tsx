@@ -90,8 +90,6 @@ function loadProjects() {
             ];
         }
 
-        console.log(cards, i)
-
             projects.push({
                     image: proj.image,
                     tags: tags,

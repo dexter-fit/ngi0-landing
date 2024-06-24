@@ -47,7 +47,7 @@ const ProjectCard = (props: {card: ProjectCardType, hidden?: boolean, highlight?
                         </span>
                     </p>
                 </div>
-                <p>Typesafe handling of LinkedData</p>
+                <p>{props.card.subheader}</p>
             </div>
             <div className="card-tags">
                 {props.card.tags.map(tagName => <Tag key={tagName}>{tagName}</Tag>)}

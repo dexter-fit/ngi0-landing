@@ -1,7 +1,7 @@
 :root {
     --main-disabled: #A3CF74;
     --main-color: #74AA00;
-    --primary-color: var(--main-color);
+    --primary-color: #74AA00;
     --main-highlight: #639100;
     --max-width: 1400px;
     --min-width: 300px;

@@ -17,7 +17,7 @@ const ProjectsComparison = () => {
     useEffect(() => {
         const objectsList = [
             {
-                label: "Nix vs Docker",
+                label: process.env.REACT_APP_CONTENT_TYPE === 'dos' ? inputDos.comparison[0].header : inputGeo.comparison[0].header2,
                 items: projects.map(item => ({
                     label: item.descriptionContent.header,
                     url: `/detail#${replaceSpacesWith(item.descriptionContent.header, "_")}`,
@@ -52,7 +52,7 @@ function loadProjects() {
     inputDos.tags.map(item => <Tag value={item} key={item}></Tag>) :
     inputGeo.tags.map(item => <Tag value={item} key={item}></Tag>);
 
-    for (const proj of process.env.REACT_APP_CONTENT_TYPE === 'dos' ? inputDos.projects : inputGeo.projects) {
+    for (const proj of process.env.REACT_APP_CONTENT_TYPE === 'dos' ? inputDos.comparison : inputGeo.comparison) {
         projects.push({
             otherProjectsLinkSpace: <div className="full-width flex flex-column">
                 <p className="flex align-items-center gap-1"><span>{proj.linkHeader}</span>

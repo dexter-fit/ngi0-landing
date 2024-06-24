@@ -57,7 +57,7 @@ function loadProjects() {
     const similarNGI0Projects = "Similar NGI0 Projects";
     const similarCorporateProjects = "Similar Corporate Projects";
 
-    for (const proj of process.env.REACT_APP_CONTENT_TYPE === 'dos' ? inputDos.projects : inputGeo.projects) {
+    for (const proj of process.env.REACT_APP_CONTENT_TYPE === 'dos' ? inputDos.detailedProjects : inputGeo.detailedProjects) {
         projects.push({
             otherProjectsLinkSpace: <>
                 <p><span>Fund</span> <span>NGI0 Assure</span></p>

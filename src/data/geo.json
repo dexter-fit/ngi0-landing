@@ -1,7 +1,23 @@
 {
     "cards": [
         {
-        "image": "img/dream2nix.logo.svg",
+        "image": "img/openstreetmap.logo.svg",
+        "header": "Nominatim",
+        "subheader": "Multi-lingual support in address search",
+        "tags": [
+            "Verticals",
+            "Search",
+            "Maps",
+            "OpenStreetMap",
+            "Gamification"
+        ],
+        "link": "https://nlnet.nl/project/Nominatim/",
+        "fund": "NGI0 Discovery",
+        "start": "2020-10",
+        "end": "2022-09"
+        },
+        {
+        "image": "img/organicmaps.svg",
         "header": "Organic Maps",
         "subheader": "Privacy-focused Android & iOS offline maps application",
         "tags": [
@@ -16,7 +32,7 @@
         "start": "2021-10"
         },
         {
-        "image": "img/dream2nix.logo.svg",
+        "image": "img/protomaps.logo.svg",
         "header": "Protomaps",
         "subheader": "Self-hostable maps based on OpenStreetMap data",
         "tags": [
@@ -32,7 +48,7 @@
         "start": "2023-10"
         },
         {
-        "image": "img/dream2nix.logo.svg",
+        "image": "img/peermaps.logo.svg",
         "header": "peermaps",
         "subheader": "Peer to peer cartography",
         "tags": [
@@ -49,7 +65,7 @@
         "end": "2022-10"
         },
         {
-        "image": "img/dream2nix.logo.svg",
+        "image": "img/mapcomplete.logo.svg",
         "header": "MapComplete",
         "subheader": "Thematics OpenStreetMap-viewer and editor",
         "tags": [
@@ -62,15 +78,111 @@
         "link": "https://nlnet.nl/project/Mapcomplete/",
         "fund": "NGI0 Entrust",
         "start": "2022-10"
+        },
+        {
+        "image": "img/streetcomplete.logo.svg",
+        "header": "StreetComplete",
+        "subheader": "Fix open geodata with OpenStreetMap",
+        "tags": [
+            "Verticals",
+            "Search",
+            "Maps",
+            "OpenStreetMap"
+        ],
+        "link": "https://nlnet.nl/project/StreetComplete/",
+        "fund": "NGI0 Discovery",
+        "start": "2019-04",
+        "end": "2019-04"
+        },
+        {
+        "image": "img/openstreetmap.logo.svg",
+        "header": "Mobroute",
+        "subheader": "A minimalist FOSS public-transportation router/tool suite",
+        "tags": [
+            "Verticals",
+            "Search",
+            "Maps",
+            "OpenStreetMap"
+        ],
+        "link": "https://nlnet.nl/project/Mobroute/",
+        "fund": "NGI0 Entrust",
+        "start": "2023-04"
         }
     ],
     "tags": [
-        "aa"
+        "Open Street Maps",
+        "Geovisualization",
+        "Open Source GIS",
+        "Spatial Data Visualization",
+        "GeoMapping Tools",
+        "GIS Software",
+        "Open Source Cartography",
+        "GeoAnalytics",
+        "Geospatial Analysis",
+        "Mapping Libraries",
+        "Geographic Information Systems",
+        "Data Visualization",
+        "Open Source Mapping",
+        "Cartographic Tools",
+        "GeoData Tools",
+        "GIS Applications",
+        "Open Source Geospatial",
+        "Interactive Maps",
+        "GeoVisualization Software",
+        "Spatial Data Analysis",
+        "Open Source Data Mapping"
     ],
     "projects": [
+        {
+            "image": "img/openstreetmap.logo.svg",
+            "header": "Geovisualisation",
+            "text": "Geovisualization encompasses a wide variety of applications, from simple map displays with various points of interest, to navigation in unfamiliar space, to complex applications that help us every day. With themed maps, users can get to know their surroundings better as well as new points of interest. The next level is then represented by applications that allow the user to modify the maps themselves. Thanks to open souce projects with a wide community of users, cartography is more accessible than ever before.",
+            "links": [
+                {
+                    "img": "img/openstreetmap.logo.svg",
+                    "link": "https://www.openstreetmap.org/",
+                    "label": "Open Street Maps"
+                },
+                {
+                    "icon": "pi pi-info",
+                    "link": "https://en.wikipedia.org/wiki/OpenStreetMap",
+                    "label": "Wikipedia"
+                }
+            ]
+        },
+        {
+            "header": "Open Street Map",
+            "text": "OpenStreetMap (OSM) is a free, open geographic database updated and maintained by a community of volunteers via open collaboration. Contributors collect data from surveys, trace from aerial imagery and also import from other freely licensed geodata sources. OpenStreetMap is freely licensed under the Open Database License and as a result commonly used to make electronic maps, inform turn-by-turn navigation, assist in humanitarian aid and data visualisation. OpenStreetMap uses its own topology to store geographical features which can then be exported into other GIS file formats. The OpenStreetMap website itself is an online map, geodata search engine and editor.\nOpenStreetMap was created by Steve Coast in response to the Ordnance Survey, the United Kingdom's national mapping agency, failing to release its data to the public under free licences in 2004. Initially, maps were created only via GPS traces, but it was quickly populated by importing public domain geographical data such as the U.S. TIGER and by tracing permitted aerial photography or satellite imagery. OpenStreetMap's adoption was accelerated by Google Maps's introduction of pricing in 2012 and the development of supporting software and applications.\nThe database is hosted by the OpenStreetMap Foundation, a non-profit organisation registered in England and Wales and is funded mostly via donations."
+        },
+        {
+            "header": "Map Editors",
+            "text": "OpenStreetMap is a libre and free online database of geodata which can be edited by everyone and is used by millions of people. However, contributing can be challenging or intimidating to non-technical users. Therefore there are webapps whose goal is to make it trivial to see and update information on OpenStreetMap. This is achieved by showing only features related to a single topic of interest on the map - from playgrounds, public toilets and bicycle rental places to charging stations and public tap water spots."
+        },
+        {
+            "header": "Routing",
+            "text": "Route mapping refers to the process of visually depicting a particular route or trip on a map, often involving waypoints, landmarks and other geographical data. The aim is to provide a clear, interactive, and spatially accurate representation of a route’s course. Route mapping solves puzzles for various sectors via navigation, travel planning, and logistics visualisation. Unlike route planning software which focuses on optimising logistics, and efficiency, route mapping software’s primary role is to create visual and understandable maps."
+        }
     ],
     "detailedProjects": [
+        {
+            "header": "Open Street Map",
+            "linkHeader": "Open Street Map",
+            "text": "OpenStreetMap (OSM) is a free, open geographic database updated and maintained by a community of volunteers via open collaboration. Contributors collect data from surveys, trace from aerial imagery and also import from other freely licensed geodata sources. OpenStreetMap is freely licensed under the Open Database License and as a result commonly used to make electronic maps, inform turn-by-turn navigation, assist in humanitarian aid and data visualisation. OpenStreetMap uses its own topology to store geographical features which can then be exported into other GIS file formats. The OpenStreetMap website itself is an online map, geodata search engine and editor.\nOpenStreetMap was created by Steve Coast in response to the Ordnance Survey, the United Kingdom's national mapping agency, failing to release its data to the public under free licences in 2004. Initially, maps were created only via GPS traces, but it was quickly populated by importing public domain geographical data such as the U.S. TIGER and by tracing permitted aerial photography or satellite imagery. OpenStreetMap's adoption was accelerated by Google Maps's introduction of pricing in 2012 and the development of supporting software and applications.\nThe database is hosted by the OpenStreetMap Foundation, a non-profit organisation registered in England and Wales and is funded mostly via donations."
+        }
     ],
     "comparison": [
-    ]
+        {
+            "header": "Comparison Between MapComplete and StreetComplete",
+            "header2": "Map complete vs Street complete",
+            "linkHeader": "Part of the Open street map environment",
+            "link2Header": "Visit the Geovisualisation page",
+            "text": "MapComplete\n-----------\n\n**Purpose**: MapComplete is a versatile tool designed for browsing, editing, and adding data to OpenStreetMap (OSM). It is particularly useful for visualizing specific themes and datasets, such as cycling infrastructure, public transportation, or cultural heritage.\n\n**Features**:\n\n*   **Theme-based Mapping**: Users can choose from various themes, each highlighting different types of data. For example, there are themes for bicycle parking, public art, trees, and more.\n*   **Interactive Interface**: MapComplete provides an intuitive interface that allows users to click on map elements and edit their properties directly.\n*   **Visualization**: It emphasizes the visualization of OSM data, making it easier to see what data is already present and what might be missing or incorrect.\n*   **Customization**: Users and communities can create custom themes tailored to specific needs or interests.\n\nStreetComplete\n--------------\n\n**Purpose**: StreetComplete is a mobile application focused on improving OpenStreetMap by allowing users to answer simple, survey-style questions about their surroundings. It targets casual users who can contribute data without needing in-depth knowledge of OSM.\n\n**Features**:\n\n*   **Quest-based System**: Users are presented with quests, which are questions about nearby map features. These might include details like building addresses, road surface types, or amenity opening hours.\n*   **Mobile-friendly**: Designed specifically for mobile use, StreetComplete leverages the GPS capabilities of smartphones to present relevant quests based on the user’s location.\n*   **User-friendly**: The app simplifies the process of contributing to OSM, making it accessible to anyone, including those without mapping experience.\n*   **Automatic Upload**: Once users complete quests, the app automatically uploads the data to OSM, ensuring contributions are quickly integrated into the map.\n\nComparison\n----------\n\nAspect\n\nMapComplete\n\nStreetComplete\n\n**Target Audience**\n\nBoth casual and experienced mappers interested in specific themes and visualization.\n\nCasual mappers looking for a straightforward way to contribute via their mobile devices.\n\n**Usability**\n\nRicher, more detailed interface suitable for desktop use and thematic exploration.\n\nGamified, easy-to-use experience for on-the-go contributions.\n\n**Functionality**\n\nAllows for detailed edits and visualizations based on selected themes, providing a comprehensive tool for exploring and enhancing specific types of OSM data.\n\nFocuses on answering specific questions about the environment, making it simpler but less comprehensive in terms of data management.\n\n**Contribution Style**\n\nUsers might engage in more complex edits and data management, often in a targeted way based on themes.\n\nUsers contribute by answering predefined questions, making contributions easier but more guided and limited to what the app presents."
+        }
+    ],
+    "colors": {
+        "main-disabled": "#6497b1",
+        "main-color": "#005b96",
+        "main-highlight": "#011f4b",
+        "primary-color": "#005b96"
+    }
 }

@@ -4,6 +4,8 @@ import {Button} from "primereact/button";
 import "./Header.css";
 import {Menu} from "primereact/menu";
 import { MenuItem } from "primereact/menuitem";
+import inputDos from "../data/dossie.json";
+import inputGeo from "../data/geo.json";
 
 const Header = (props: {menuItems: MenuItem[]}) => {
     const [hidden, setHidden] = useState(true);
@@ -18,7 +20,7 @@ const Header = (props: {menuItems: MenuItem[]}) => {
                     icon: "pi pi-home"
                 },
                 {
-                    label: "Dossiers",
+                    label: process.env.REACT_APP_CONTENT_TYPE === 'dos' ? inputDos.projects[0].header : inputGeo.projects[0].header,
                     url: "/dossiers",
                     icon: "pi pi-file"
                 },
