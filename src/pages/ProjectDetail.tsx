@@ -1,9 +1,5 @@
 import {Tag} from "primereact/tag";
 import {ProjectDescriptionProps} from "../types";
-import {
-    NIX_LANGUAGE_RELATED_PROJECT_CARDS,
-    NIX_OS_RELATED_PROJECT_CARDS
-} from "../data/nixDossierData";
 import {CardCarouselTemplate} from "../components/CardCarouselTemplate";
 import {Link, useOutletContext} from "react-router-dom";
 import React, {useEffect} from "react";
@@ -13,9 +9,10 @@ import {ClickableTag} from "../components/ClickableTag";
 import inputDos from "../data/dossie.json";
 import inputGeo from "../data/geo.json";
 import { markdownToHtml } from "../util/markdownToHtml";
+import {fillWithRandomStuff} from "../data/nixDossierData";
 
-const ProjectDetail = () => {
-    const projects: ProjectDescriptionProps[] = loadProjects();
+const ProjectDetail = (props: {contentType: "dos" | "geo"}) => {
+    const projects: ProjectDescriptionProps[] = loadProjects(props.contentType);
 
 
     const { setNewMenuItemsFromChild } = useOutletContext();
@@ -26,7 +23,7 @@ const ProjectDetail = () => {
                 label: "Nix Language detail",
                 items: projects.map(item => ({
                     label: item.descriptionContent.header,
-                    url: `/detail#${replaceSpacesWith(item.descriptionContent.header, "_")}`,
+                    url: `/ngi0/${props.contentType}/detail#${replaceSpacesWith(item.descriptionContent.header, "_")}`,
                     icon: "pi pi-file"
                 }))
             }
@@ -48,25 +45,25 @@ const ProjectDetail = () => {
     </>;
 };
 
-function loadProjects() {
+function loadProjects(contentType: "dos" | "geo") {
     let projects: ProjectDescriptionProps[] = [];
 
-    const NIX_TAGS = process.env.REACT_APP_CONTENT_TYPE === 'dos' ?
+    const NIX_TAGS = contentType === 'dos' ?
         inputDos.tags.map(item => <Tag value={item} key={item}></Tag>) :
         inputGeo.tags.map(item => <Tag value={item} key={item}></Tag>);
     const similarNGI0Projects = "Similar NGI0 Projects";
     const similarCorporateProjects = "Similar Corporate Projects";
 
-    for (const proj of process.env.REACT_APP_CONTENT_TYPE === 'dos' ? inputDos.detailedProjects : inputGeo.detailedProjects) {
+    for (const proj of contentType === 'dos' ? inputDos.detailedProjects : inputGeo.detailedProjects) {
         projects.push({
             otherProjectsLinkSpace: <>
                 <p><span>Fund</span> <span>NGI0 Assure</span></p>
                 <p><span>2022-12</span> - <span>active</span></p>
                 <p className="flex align-items-center gap-1"><span>{proj.linkHeader}</span>
-                    <Link to="/dossiers" className="flex align-items-center" style={{textDecoration: "none"}}><ClickableTag name="Visit"/></Link>
+                    <Link to={`/${contentType}/dossiers`} className="flex align-items-center" style={{textDecoration: "none"}}><ClickableTag name="Visit"/></Link>
                 </p>
             </>,
-            image: process.env.REACT_APP_CONTENT_TYPE === 'dos' ? inputDos.cards[0].image : inputGeo.cards[0].image,
+            image: contentType === 'dos' ? inputDos.cards[0].image : inputGeo.cards[0].image,
             tags: NIX_TAGS,
             descriptionContent: {
                 header: proj.header,
@@ -75,14 +72,14 @@ function loadProjects() {
                     {
                         heading: similarNGI0Projects,
                         carousel: {
-                            cards: NIX_LANGUAGE_RELATED_PROJECT_CARDS,
+                            cards: fillWithRandomStuff(3, contentType),
                             template: CardCarouselTemplate
                         }
                     },
                     {
                         heading: similarCorporateProjects,
                         carousel: {
-                            cards: NIX_OS_RELATED_PROJECT_CARDS,
+                            cards: fillWithRandomStuff(4, contentType),
                             template: CardCarouselTemplate
                         }
                     }

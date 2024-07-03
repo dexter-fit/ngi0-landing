@@ -33,12 +33,32 @@ const App = () => {
             element: Layout,
             children:
                 [
-                    {path: "", element: <Index/>},
-                    {path: "dossiers", element: <Dossiers/>},
-                    {path: "detail", element: <ProjectDetail/>},
-                    {path: "comparison", element: <ProjectsComparison/>}
+                    {
+                        path: "/",
+                        element: <Index/>
+                    },
+                    {
+                        path: "/geo",
+                        children:
+                            [
+                                {path: "", element: <Index contentType={"geo"}/>},
+                                {path: "dossiers", element: <Dossiers contentType={"geo"}/>},
+                                {path: "detail", element: <ProjectDetail contentType={"geo"}/>},
+                                {path: "comparison", element: <ProjectsComparison contentType={"geo"}/>}
+                            ]
+                    },
+                    {
+                        path: "/dos",
+                        children:
+                            [
+                                {path: "", element: <Index contentType={"dos"}/>},
+                                {path: "dossiers", element: <Dossiers contentType={"dos"}/>},
+                                {path: "detail", element: <ProjectDetail contentType={"dos"}/>},
+                                {path: "comparison", element: <ProjectsComparison contentType={"dos"}/>}
+                            ]
+                    }
                 ]
-        }], {basename: "/"}
+        }], {basename: "/ngi0"}
     );
 
     return (

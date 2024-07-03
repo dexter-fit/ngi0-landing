@@ -9,18 +9,18 @@ import inputDos from "../data/dossie.json";
 import inputGeo from "../data/geo.json";
 import { markdownToHtml } from "../util/markdownToHtml";
 
-const ProjectsComparison = () => {
-    const projects: ProjectDescriptionProps[] = loadProjects();
+const ProjectsComparison = (props: {contentType: "dos" | "geo"}) => {
+    const projects: ProjectDescriptionProps[] = loadProjects(props.contentType);
 
     const {setNewMenuItemsFromChild} = useOutletContext();
 
     useEffect(() => {
         const objectsList = [
             {
-                label: process.env.REACT_APP_CONTENT_TYPE === 'dos' ? inputDos.comparison[0].header : inputGeo.comparison[0].header2,
+                label: props.contentType === 'dos' ? inputDos.comparison[0].header : inputGeo.comparison[0].header2,
                 items: projects.map(item => ({
                     label: item.descriptionContent.header,
-                    url: `/detail#${replaceSpacesWith(item.descriptionContent.header, "_")}`,
+                    url: `/ngi0/${props.contentType}/detail#${replaceSpacesWith(item.descriptionContent.header, "_")}`,
                     icon: "pi pi-file"
                 }))
             }
@@ -45,26 +45,26 @@ const ProjectsComparison = () => {
     </>;
 };
 
-function loadProjects() {
+function loadProjects(contentType: "dos" | "geo") {
     let projects: ProjectDescriptionProps[] = [];
 
-    const NIX_TAGS = process.env.REACT_APP_CONTENT_TYPE === 'dos' ?
+    const NIX_TAGS = contentType === 'dos' ?
     inputDos.tags.map(item => <Tag value={item} key={item}></Tag>) :
     inputGeo.tags.map(item => <Tag value={item} key={item}></Tag>);
 
-    for (const proj of process.env.REACT_APP_CONTENT_TYPE === 'dos' ? inputDos.comparison : inputGeo.comparison) {
+    for (const proj of contentType === 'dos' ? inputDos.comparison : inputGeo.comparison) {
         projects.push({
             otherProjectsLinkSpace: <div className="full-width flex flex-column">
                 <p className="flex align-items-center gap-1"><span>{proj.linkHeader}</span>
-                    <Link to="/dossiers" className="flex align-items-center"
+                    <Link to={`/${contentType}/dossiers`} className="flex align-items-center"
                           style={{textDecoration: "none"}}><ClickableTag name="Visit"/></Link>
                 </p>
                 <p className="flex align-items-center gap-1"><span>{proj.link2Header}</span>
-                    <Link to="/detail" className="flex align-items-center"
+                    <Link to={`/${contentType}/detail`} className="flex align-items-center"
                           style={{textDecoration: "none"}}><ClickableTag name="Visit"/></Link>
                 </p>
             </div>,
-            image: process.env.REACT_APP_CONTENT_TYPE === 'dos' ? inputDos.cards[0].image : inputGeo.cards[0].image,
+            image: contentType === 'dos' ? inputDos.cards[0].image : inputGeo.cards[0].image,
             tags: NIX_TAGS,
             descriptionContent: {
                 header: proj.header

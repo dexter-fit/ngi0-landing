@@ -1,14 +1,14 @@
 import React, {useEffect, useState} from 'react';
 import {FloatLabel} from "primereact/floatlabel";
 import {InputText} from "primereact/inputtext";
-import {CARDS} from "../data/cards";
+import {getCards} from "../data/cards";
 import {ClickableTag} from "../components/ClickableTag";
 import {ProjectCard} from "../components/ProjectCard";
 import {ProjectCardType} from "../types";
 
 
-const Index = () => {
-    const cards = CARDS;
+const Index = (props: {contentType?: "dos" | "geo"}) => {
+    const cards = getCards(props.contentType);
     const allAvailableTags = Object.fromEntries(cards.flatMap(card => card.tags).sort().map(tag => [tag, false]));
     const [searchString, setSearchString] = useState('');
     const [searchClearDisabled, setSearchClearDisabled] = useState(true);

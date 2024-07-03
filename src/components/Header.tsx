@@ -12,26 +12,56 @@ const Header = (props: {menuItems: MenuItem[]}) => {
 
     const menuItems = [
         {
-            label: "All Projects",
+            label: "Dossiers",
+            url: "/ngi0/",
+            icon: "pi pi-home"
+        },
+        {
+            label: "Geography Projects",
             items: [
                 {
                     label: "Projects",
-                    url: "/",
+                    url: "/ngi0/geo",
                     icon: "pi pi-home"
                 },
                 {
-                    label: process.env.REACT_APP_CONTENT_TYPE === 'dos' ? inputDos.projects[0].header : inputGeo.projects[0].header,
-                    url: "/dossiers",
+                    label: "Dossier",
+                    url: "/ngi0/geo/dossiers",
                     icon: "pi pi-file"
                 },
                 {
                     label: "Project Detail",
-                    url: "/detail",
+                    url: "/ngi0/geo/detail",
                     icon: "pi pi-file"
                 },
                 {
                     label: "Project Comparison",
-                    url: "/comparison",
+                    url: "/ngi0/geo/comparison",
+                    icon: "pi pi-file"
+                }
+            ]
+        },
+        {
+            label: "Nix Projects",
+            items: [
+                {
+                    label: "Projects",
+                    url: "/ngi0/dos",
+                    icon: "pi pi-home"
+                },
+                {
+                    label: "Dossier",
+                    url: "/ngi0/dos/dossiers",
+                    icon: "pi pi-file"
+                },
+                {
+                    label: "Project Detail",
+                    url: "/ngi0/dos/detail",
+                    icon: "pi pi-file"
+                },
+                {
+                    label: "Project Comparison",
+                    url: "/ngi0/dos/comparison",
                     icon: "pi pi-file"
                 }
             ]

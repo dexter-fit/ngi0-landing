@@ -1,11 +1,6 @@
 import {Tag} from "primereact/tag";
 import React, {useEffect} from "react";
 import {ProjectDescription} from "../components/ProjectDescription";
-import {
-    NIX_LANGUAGE_RELATED_PROJECT_CARDS,
-    NIX_OS_RELATED_PROJECT_CARDS,
-    NIX_PKG_RELATED_PROJECT_CARDS
-} from "../data/nixDossierData";
 import {ProjectDescriptionProps} from "../types";
 import {Link, useOutletContext} from "react-router-dom";
 import {CardCarouselTemplate} from "../components/CardCarouselTemplate";
@@ -14,9 +9,10 @@ import {markdownToHtml} from "../util/markdownToHtml";
 import {Button} from "primereact/button";
 import inputDos from "../data/dossie.json";
 import inputGeo from "../data/geo.json";
+import {fillWithRandomStuff} from "../data/nixDossierData";
 
-const Dossiers = () => {
-    const projects: ProjectDescriptionProps[] = loadProjects();
+const Dossiers = (props: {contentType: "dos" | "geo"}) => {
+    const projects: ProjectDescriptionProps[] = loadProjects(props.contentType);
 
     const { setNewMenuItemsFromChild } = useOutletContext();
 
@@ -26,7 +22,7 @@ const Dossiers = () => {
                 label: "Nix Environment Dossier",
                 items: projects.map(item => ({
                     label: item.descriptionContent.header,
-                    url: `/dossiers#${replaceSpacesWith(item.descriptionContent.header, "_")}`,
+                    url: `/ngi0/${props.contentType}/dossiers#${replaceSpacesWith(item.descriptionContent.header, "_")}`,
                     icon: "pi pi-file"
                 }))
             }
@@ -47,18 +43,19 @@ const Dossiers = () => {
     </>
 }
 
-function loadProjects() {
+function loadProjects(contentType: "dos" | "geo") {
     let projects: ProjectDescriptionProps[] = [];
 
-    const NIX_TAGS = process.env.REACT_APP_CONTENT_TYPE === 'dos' ? inputDos.tags : inputGeo.tags;
+    const NIX_TAGS = contentType === 'dos' ? inputDos.tags : inputGeo.tags;
     const associatedNGI0Projects = "Associated NGI0 Projects";
+
     const cards: any [] = [
-        NIX_LANGUAGE_RELATED_PROJECT_CARDS,
-        NIX_PKG_RELATED_PROJECT_CARDS,
-        NIX_OS_RELATED_PROJECT_CARDS
+        fillWithRandomStuff(5, contentType),
+        fillWithRandomStuff(4, contentType),
+        fillWithRandomStuff(3, contentType),
     ]
 
-    for (const [i, proj] of process.env.REACT_APP_CONTENT_TYPE === 'dos' ? inputDos.projects.entries() : inputGeo.projects.entries()) {
+    for (const [i, proj] of contentType === 'dos' ? inputDos.projects.entries() : inputGeo.projects.entries()) {
         let links: any = [];
         if (proj.links !== undefined) {
             for (const linkItem of proj.links) {
