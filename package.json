@@ -17,6 +17,7 @@
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.23.1",
     "react-scripts": "5.0.1",
+    "react-snap": "^1.23.0",
     "showdown": "^2.1.0",
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
@@ -50,5 +51,5 @@
   "devDependencies": {
     "@types/showdown": "^2.0.6"
   },
-  "homepage": "/ngi0/"
+  "homepage": "/ngi0"
 }

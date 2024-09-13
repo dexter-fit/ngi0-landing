@@ -6,9 +6,35 @@ import {Menu} from "primereact/menu";
 import { MenuItem } from "primereact/menuitem";
 import inputDos from "../data/dossie.json";
 import inputGeo from "../data/geo.json";
+import { Link } from "react-router-dom";
 
 const Header = (props: {menuItems: MenuItem[]}) => {
     const [hidden, setHidden] = useState(true);
+
+    const createLinks = (items: MenuItem[]) => {
+        return items.map((item) => {
+            if (item.items) {
+                // If there are nested items, recursively create links for them
+                return (
+                    <div key={item.label}>
+                        <span>{item.label}</span>
+                        <div style={{ paddingLeft: '20px' }}>
+                            {createLinks(item.items as MenuItem[])}
+                        </div>
+                    </div>
+                );
+            } else {
+                return (
+                    <div key={item.url}>
+                        <Link to={item.url?.replace("/ngi0", "") || ""}>
+                            <i className={item.icon}></i> {item.label}
+                        </Link>
+                    </div>
+                );
+            }
+        });
+    };
+
 
     const menuItems = [
         {
@@ -80,6 +106,10 @@ const Header = (props: {menuItems: MenuItem[]}) => {
                     <Menu model={menuItems} className="full-width"/>
                 </Sidebar>
                 <div className="header-heading">NLnet; Projects</div>
+            </div>
+
+            <div className="header-links-prerender-hidden">
+                {createLinks(menuItems)}
             </div>
         </div>
     </>;
