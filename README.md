@@ -2,7 +2,14 @@
 Using React, see bellow for usage. 
 ## Building the image
 ```sh
-docker build -t dexter.fit.vutbr.cz/ngi0/landing:latest .
+docker build -t dexter.fit.vutbr.cz/ngi0/landing:latest -f SSGDockerfile .
+```
+## Building the image with pre rendering
+```shell
+npm run build-ssg
+```
+```sh
+docker build -t dexter.fit.vutbr.cz/ngi0/landing:latest -f SSGDockerfile .
 ```
 ## Running the image locally
 ```sh

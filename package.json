@@ -27,8 +27,14 @@
     "start_dossie": "REACT_APP_CONTENT_TYPE=dos npm start",
     "start_geo": "REACT_APP_CONTENT_TYPE=geo react-scripts start",
     "build": "react-scripts build",
+	"build-ssg": "npm run build && react-snap",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
+  },
+  "reactSnap": {
+	"skipThirdPartyRequests": true,
+	"puppeteer": { "timeout": 100000000 },
+	"puppeteerArgs": ["--no-sandbox", "--disable-setuid-sandbox"]
   },
   "eslintConfig": {
     "extends": [
