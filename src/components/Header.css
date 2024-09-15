@@ -41,3 +41,95 @@
 .p-sidebar-custom-header > h2 {
     margin-bottom: 0;
 }
+
+
+/* CSS Menu feature */
+.css-menu-main-div {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.css-menu-shadow {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color:rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
+.css-menu-sidebar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: white;
+    color: black;
+    display: none;
+    z-index: 1000;
+    width: 18em;
+    height: 100vh;
+}
+
+.css-menu-main-div:hover .css-menu-sidebar {
+    display: block;
+}
+
+.css-menu-sidebar:hover + .css-menu-shadow {
+    display: block;
+}
+
+.css-menu-btn {
+    background-color: white;
+}
+
+.css-menu-links {
+    display: grid;
+    grid-template-columns: auto 0.9fr;
+    align-items: center;
+    padding-left: 2em;
+    margin: 0.5em 0;
+}
+
+.css-menu-links-spec {
+    display: grid;
+    grid-template-columns: auto 0.9fr;
+    align-items: center;
+    padding-left: 2em;
+    text-align: left;
+    font-weight: bold;
+    margin: 1em 0;
+    font-size: 1em;
+}
+
+.css-menu-links:hover {
+    background-color: lightgray;
+}
+
+.css-menu-a, .css-menu-a:visited {
+    text-decoration: none;
+    color: black;
+    text-align: left;
+}
+
+.css-menu-icon {
+    width: max-content;
+}
+
+.css-menu-header-spec {
+    text-align: left;
+}
+
+.css-menu-icon-spec {
+    width: max-content;
+    color: transparent;
+}
+
+.css-menu-header-div {
+    margin-left: 2em;
+}
+
+.css-menu-header {
+    text-align: left;
+}
