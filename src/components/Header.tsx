@@ -117,6 +117,10 @@ const Header = (props: {menuItems: MenuItem[]}) => {
             <div className="header-container">
                 <div className="header-heading">NLnet; Projects</div>
 
+                <div className="header-links-prerender-hidden">
+                    {createLinks(menuItems)}
+                </div>
+
                 <div className="css-menu-main-div">
                     <Button icon="pi pi-bars" size="small" text raised className="css-menu-btn"/>
 
@@ -125,7 +129,8 @@ const Header = (props: {menuItems: MenuItem[]}) => {
                             <h3 className="css-menu-header">NLnet; Projects</h3>
                         </div>
                         <div className="css-menu-links">
-                            <i className={menuItems[0].icon + " css-menu-icon"}></i><a href={menuItems[0].url} className="css-menu-a">{menuItems[0].label}</a>
+                            <i className={menuItems[0].icon + " css-menu-icon"}></i><a href={menuItems[0].url}
+                                                                                       className="css-menu-a">{menuItems[0].label}</a>
                         </div>
 
                         <div className="css-menu-links-spec">
@@ -134,7 +139,8 @@ const Header = (props: {menuItems: MenuItem[]}) => {
 
                         {menuItems[1]?.items?.map(item => (
                             <div className="css-menu-links">
-                                <i className={item.icon + " css-menu-icon"}></i><a href={item.url} className="css-menu-a">{item.label}</a>
+                                <i className={item.icon + " css-menu-icon"}></i><a href={item.url}
+                                                                                   className="css-menu-a">{item.label}</a>
                             </div>
                         ))}
 
@@ -144,7 +150,8 @@ const Header = (props: {menuItems: MenuItem[]}) => {
 
                         {menuItems[2]?.items?.map(item => (
                             <div className="css-menu-links">
-                                <i className={item.icon + " css-menu-icon"}></i><a href={item.url} className="css-menu-a">{item.label}</a>
+                                <i className={item.icon + " css-menu-icon"}></i><a href={item.url}
+                                                                                   className="css-menu-a">{item.label}</a>
                             </div>
                         ))}
                     </div>
