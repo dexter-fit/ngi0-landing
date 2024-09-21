@@ -10,11 +10,9 @@ const ProjectDescription = (props: ProjectDescriptionProps) => {
             <img src={props.image} alt="image" key={props.image}/>
         </div> : <></>}
 
-        {props.tags?.length ? <ScrollPanel className="scrollbar">
-            <div className="content-wrapper">
-                {props.tags}
-            </div>
-        </ScrollPanel> : <></>}
+        {props.tags?.length ? <div className="content-wrapper">
+            {props.tags}
+        </div> : <></>}
 
         {props.otherProjectsLinkSpace ? props.otherProjectsLinkSpace : <></>}
 

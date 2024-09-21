@@ -6,11 +6,15 @@
     overflow-x: hidden;
 }
 
+.p-tag, .p-component {
+    flex-shrink: 0;
+}
+
 .content-wrapper {
     display: flex;
     flex-direction: row;
     gap: 10px;
-    padding-top: 10px;
+    overflow-x: auto;
 }
 
 @media screen and (max-width: 480px) {
