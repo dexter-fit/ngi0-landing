@@ -1,10 +1,11 @@
-* {
+:root {
     --main-disabled: #A3CF74;
     --main-color: #74AA00;
-    --primary-color: var(--main-color);
+    --primary-color: #74AA00;
     --main-highlight: #639100;
     --max-width: 1400px;
     --min-width: 300px;
+    --mobile-breakpoint: 480px;
 }
 
 .p-tag {
@@ -22,24 +23,19 @@ body {
     background-color: #f0f0f0;
 }
 
-.header {
-    text-align: center;
-    padding: 20px 0;
-    background-color: var(--main-color);
-    color: #fff;
-    font-size: 20px;
-    min-width: var(--min-width);
-}
-
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+.my-cards-container {
     padding: 20px;
     max-width: var(--max-width);
     margin: auto;
     min-width: var(--min-width);
     box-sizing: border-box;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
 
 .tag-heading {
@@ -96,4 +92,18 @@ body {
 .tag-list:after {
     content: "";
     flex: auto;
+}
+
+@media screen and (max-width: 480px) {
+    .hide-mobile {
+        display: none;
+    }
+}
+
+.full-width {
+    width: 100%;
+}
+
+.p-button-tiny {
+    padding: 5px;
 }

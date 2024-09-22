@@ -1,23 +1,68 @@
 import "primereact/resources/themes/lara-light-cyan/theme.css";
 import './App.css';
-import { PrimeReactProvider } from 'primereact/api';
-import {createBrowserRouter, RouterProvider} from "react-router-dom";
+import 'primeicons/primeicons.css';
+import 'primeflex/primeflex.css';
+
+import {PrimeReactProvider} from 'primereact/api';
+import {createBrowserRouter, Outlet, RouterProvider} from "react-router-dom";
 import {Index} from "./pages/Index";
+import {Dossiers} from "./pages/Dossiers";
+import {Header} from "./components/Header";
+import {useState} from "react";
+import {MenuItem} from "primereact/menuitem";
+import {ProjectDetail} from "./pages/ProjectDetail";
+import {ProjectsComparison} from "./pages/ProjectsComparison";
 
 const App = () => {
-    const router = createBrowserRouter(
-        [
-            {path: "/", element: <Index/>}
-        ]
+    const [menuItems, setMenuItems] = useState([] as MenuItem[]);
+
+    const setNewMenuItemsFromChild = (newMenuItems: MenuItem[]) => {
+        setMenuItems(newMenuItems);
+    };
+
+    const Layout = <PrimeReactProvider>
+        <Header menuItems={menuItems}/>
+        <div className="my-cards-container">
+            <Outlet context={{ setNewMenuItemsFromChild }}/>
+        </div>
+    </PrimeReactProvider>
+
+    const router = createBrowserRouter([
+        {
+            path: "/",
+            element: Layout,
+            children:
+                [
+                    {
+                        path: "/",
+                        element: <Index/>
+                    },
+                    {
+                        path: "/geo",
+                        children:
+                            [
+                                {path: "", element: <Index contentType={"geo"}/>},
+                                {path: "dossiers", element: <Dossiers contentType={"geo"}/>},
+                                {path: "detail", element: <ProjectDetail contentType={"geo"}/>},
+                                {path: "comparison", element: <ProjectsComparison contentType={"geo"}/>}
+                            ]
+                    },
+                    {
+                        path: "/dos",
+                        children:
+                            [
+                                {path: "", element: <Index contentType={"dos"}/>},
+                                {path: "dossiers", element: <Dossiers contentType={"dos"}/>},
+                                {path: "detail", element: <ProjectDetail contentType={"dos"}/>},
+                                {path: "comparison", element: <ProjectsComparison contentType={"dos"}/>}
+                            ]
+                    }
+                ]
+        }], {basename: "/ngi0"}
     );
 
     return (
-        <PrimeReactProvider>
-            <div className="header">
-                NLnet; Projects
-            </div>
-            <RouterProvider router={router}/>
-        </PrimeReactProvider>
+        <RouterProvider router={router}/>
     );
 }
 

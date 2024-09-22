@@ -2,7 +2,14 @@
 Using React, see bellow for usage. 
 ## Building the image
 ```sh
-docker build -t dexter.fit.vutbr.cz/ngi0/landing:latest .
+docker build -t dexter.fit.vutbr.cz/ngi0/landing:latest -f SSGDockerfile .
+```
+## Building the image with pre rendering
+```shell
+npm run build-ssg
+```
+```sh
+docker build -t dexter.fit.vutbr.cz/ngi0/landing:latest -f SSGDockerfile .
 ```
 ## Running the image locally
 ```sh
@@ -32,6 +39,22 @@ In the project directory, you can run:
 ### `npm start`
 
 Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
+
+### `npm run start_dossie`
+
+Runs the app in the development mode with Dossie data.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
+
+### `npm run start_geo`
+
+Runs the app in the development mode with Geovisualisation data.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.\

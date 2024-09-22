@@ -32,10 +32,10 @@ const ProjectCard = (props: {card: ProjectCardType, hidden?: boolean, highlight?
                     {props.card.header}
                 </h3>
                 <div>
-                    <p className="fund">
+                    <p className="fund hide-mobile">
                         <span className="fund-label">Fund: </span><span className="fund-name">{props.card.fund}</span>
                     </p>
-                    <p>
+                    <p className="hide-mobile">
                         <span className="start">
                             {props.card.start}
                         </span>
@@ -47,12 +47,12 @@ const ProjectCard = (props: {card: ProjectCardType, hidden?: boolean, highlight?
                         </span>
                     </p>
                 </div>
-                <p>Typesafe handling of LinkedData</p>
+                <p>{props.card.subheader}</p>
             </div>
             <div className="card-tags">
                 {props.card.tags.map(tagName => <Tag key={tagName}>{tagName}</Tag>)}
             </div>
-            <a className="card-link-container" href="https://nlnet.nl/project/AtomicData/">
+            <a className="card-link-container" href={props.card.link}>
                 <span className="card-link">Visit</span>
             </a>
         </div>

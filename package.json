@@ -10,19 +10,31 @@
     "@types/node": "^16.18.97",
     "@types/react": "^18.3.2",
     "@types/react-dom": "^18.3.0",
+    "primeflex": "^3.3.1",
+    "primeicons": "^7.0.0",
     "primereact": "^10.6.5",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.23.1",
     "react-scripts": "5.0.1",
+    "react-snap": "^1.23.0",
+    "showdown": "^2.1.0",
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
+    "start_dossie": "REACT_APP_CONTENT_TYPE=dos npm start",
+    "start_geo": "REACT_APP_CONTENT_TYPE=geo react-scripts start",
     "build": "react-scripts build",
+	"build-ssg": "npm run build && react-snap",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
+  },
+  "reactSnap": {
+	"skipThirdPartyRequests": true,
+	"puppeteer": { "timeout": 100000000 },
+	"puppeteerArgs": ["--no-sandbox", "--disable-setuid-sandbox"]
   },
   "eslintConfig": {
     "extends": [
@@ -41,5 +53,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "devDependencies": {
+    "@types/showdown": "^2.0.6"
+  },
+  "homepage": "/ngi0"
 }
