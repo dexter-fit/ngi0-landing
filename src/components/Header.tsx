@@ -1,16 +1,10 @@
-import React, {useState} from "react";
-import {Sidebar} from "primereact/sidebar";
+import React from "react";
 import {Button} from "primereact/button";
 import "./Header.css";
-import {Menu} from "primereact/menu";
 import { MenuItem } from "primereact/menuitem";
-import inputDos from "../data/dossie.json";
-import inputGeo from "../data/geo.json";
 import { Link } from "react-router-dom";
 
 const Header = (props: {menuItems: MenuItem[]}) => {
-    const [hidden, setHidden] = useState(true);
-
     const createLinks = (items: MenuItem[]) => {
         return items.map((item) => {
             if (item.items) {
