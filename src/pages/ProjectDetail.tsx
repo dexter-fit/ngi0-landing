@@ -6,8 +6,8 @@ import React, {useEffect} from "react";
 import {ProjectDescription} from "../components/ProjectDescription";
 import {replaceSpacesWith} from "../util/replaceSpacesWith";
 import {ClickableTag} from "../components/ClickableTag";
-import inputDos from "../data/dossie.json";
-import inputGeo from "../data/geo.json";
+import inputDos from "../data/nix";
+import inputGeo from "../data/geo";
 import { markdownToHtml } from "../util/markdownToHtml";
 import {fillWithRandomStuff} from "../data/nixDossierData";
 

@@ -1,7 +1,7 @@
 import {ProjectCardType} from "../types";
 
-import inputDos from "./dossie.json";
-import inputGeo from "./geo.json";
+import inputDos from "./nix";
+import inputGeo from "./geo";
 
 const compare = (a: ProjectCardType, b: ProjectCardType) => {
     const headerA = a.header.toUpperCase();

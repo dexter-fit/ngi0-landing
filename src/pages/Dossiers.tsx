@@ -7,8 +7,8 @@ import {CardCarouselTemplate} from "../components/CardCarouselTemplate";
 import {replaceSpacesWith} from "../util/replaceSpacesWith";
 import {markdownToHtml} from "../util/markdownToHtml";
 import {Button} from "primereact/button";
-import inputDos from "../data/dossie.json";
-import inputGeo from "../data/geo.json";
+import inputDos from "../data/nix";
+import inputGeo from "../data/geo";
 import {fillWithRandomStuff} from "../data/nixDossierData";
 
 const Dossiers = (props: {contentType: "dos" | "geo"}) => {

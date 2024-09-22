@@ -5,8 +5,8 @@ import {ClickableTag} from "../components/ClickableTag";
 import React, {useEffect} from "react";
 import {replaceSpacesWith} from "../util/replaceSpacesWith";
 import {ProjectDescription} from "../components/ProjectDescription";
-import inputDos from "../data/dossie.json";
-import inputGeo from "../data/geo.json";
+import inputDos from "../data/nix";
+import inputGeo from "../data/geo";
 import { markdownToHtml } from "../util/markdownToHtml";
 
 const ProjectsComparison = (props: {contentType: "dos" | "geo"}) => {

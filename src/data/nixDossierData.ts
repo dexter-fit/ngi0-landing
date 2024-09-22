@@ -1,6 +1,6 @@
 import {ProjectCardType} from "../types";
-import inputDos from "./dossie.json";
-import inputGeo from "./geo.json";
+import inputDos from "./nix";
+import inputGeo from "./geo";
 
 function fillWithRandomStuff(numOfProjects: number, contentType: "dos" | "geo") {
     let cards: ProjectCardType[] = [];
