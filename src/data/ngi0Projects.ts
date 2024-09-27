@@ -1,3 +1,5 @@
+import {funds} from "./funds";
+
 export const ngi0Projects = {
     dataPackages: {
         "image": "/ngi0/img/dream2nix.logo.svg",
@@ -162,22 +164,23 @@ export const ngi0Projects = {
     },
 
     typeInferenceForNix: {
-        image: "img/dream2nix.logo.svg",
+        image: "https://nlnet.nl/project/NixDebugAdaptor/nix.logo.svg",
         header: "Type Inference for Nix",
-        subheader: "This is a placeholder sub header",
-        tags: ["This", "Is", "A Placeholder"],
+        subheader: "Adding static typing and type inference to Nix",
+        tags: ["Nix", "Static type system", "Type inference", "nixpkgs", "Language server protocol"],
         link: "https://nlnet.nl/project/Nix-TypeInference/",
-        fund: "NGI PLACEHOLDER",
-        start: "NGI PLACEHOLDER"
+        fund: funds.assure,
+        start: "2023-04",
+        end: "2024-08"
     },
     debugAdapterWithNix: {
-        image: "img/dream2nix.logo.svg",
+        image: "https://nlnet.nl/project/NixDebugAdaptor/nix.logo.svg",
         header: "Debug Adapter with Nix",
-        subheader: "This is a placeholder sub header",
-        tags: ["This", "Is", "A Placeholder"],
-        link: "https://nlnet.nl/project/NixDebugAdaptor/",
-        fund: "NGI PLACEHOLDER",
-        start: "NGI PLACEHOLDER"
+        subheader: "Implement the Debug Adaptor Protocol for Nix",
+        tags: ["Nix", "Debugging", "Debug Adapter Protocol", "DAWN project", "Nix development"],
+        link: "https://nlnet.nl/project/NixDebugAdaptor/nix.logo.svg",
+        fund: funds.entrust,
+        start: "2023-06"
     },
 
     dream2nix: {
@@ -195,131 +198,141 @@ export const ngi0Projects = {
         "start": "2022-02"
     },
     libnix: {
-        image: "img/dream2nix.logo.svg",
+        image: "https://nlnet.nl/project/libnix/Nix.logo.svg",
         header: "libnix",
-        subheader: "This is a placeholder sub header",
-        tags: ["This", "Is", "A Placeholder"],
+        subheader: "Native Nix on MS Windows",
+        tags: ["Nix", "Windows support", "libnix", "Package managers", "Declarative packaging"],
         link: "https://nlnet.nl/project/libnix/",
-        fund: "NGI PLACEHOLDER",
-        start: "NGI PLACEHOLDER"
+        fund: funds.zeroCore,
+        start: "2023-12"
     },
     genealogos: {
-        image: "img/dream2nix.logo.svg",
+        image: "https://nlnet.nl/project/Genealogos/genealogos.logo.svg",
         header: "Genealogos",
-        subheader: "This is a placeholder sub header",
-        tags: ["This", "Is", "A Placeholder"],
+        subheader: "Nix to SBOM generator targeting the CycloneDX format",
+        tags: ["Software supply chain", "Nix", "CycloneDX", "SBOM", "nixpkgs"],
         link: "https://nlnet.nl/project/Genealogos/",
-        fund: "NGI PLACEHOLDER",
-        start: "NGI PLACEHOLDER"
+        fund: funds.entrust,
+        start: "2023-02",
+        end: "2024-06"
     },
     genodepkgs: {
-        image: "img/dream2nix.logo.svg",
+        image: "https://nlnet.nl/project/libnix/Nix.logo.svg",
         header: "Genodepkgs",
-        subheader: "This is a placeholder sub header",
-        tags: ["This", "Is", "A Placeholder"],
-        link: "https://nlnet.nl/project/Genealogos/",
-        fund: "NGI PLACEHOLDER",
-        start: "NGI PLACEHOLDER"
+        subheader: "When Genode and Nixpkgs meet",
+        tags: ["Genode OS", "Nix", "Genodepkgs", "Operating Systems", "nixpkgs"],
+        link: "https://nlnet.nl/project/Genodepkgs/",
+        fund: funds.pet,
+        start: "2020-08",
+        end: "2022-10"
     },
     pythonSupplyChainWithDream2Nix: {
         image: "img/dream2nix.logo.svg",
         header: "Python supply-chain with dream2nix",
-        subheader: "This is a placeholder sub header",
-        tags: ["This", "Is", "A Placeholder"],
+        subheader: "Towards a secure, extensible & reproducible Python supply-chain with dream2nix",
+        tags: ["Python", "Nix", "Dream2nix", "Software supply chain", "Build automation"],
         link: "https://nlnet.nl/project/Dream2nix-Python/",
-        fund: "NGI PLACEHOLDER",
-        start: "NGI PLACEHOLDER"
+        fund: funds.assure,
+        start: "2023-02",
+        end: "2024-08"
     },
 
     securingNixOSServicesWithSystemd: {
-        image: "img/dream2nix.logo.svg",
+        image: "https://nlnet.nl/project/libnix/Nix.logo.svg",
         header: "Securing NixOS services with systemd",
-        subheader: "This is a placeholder sub header",
-        tags: ["This", "Is", "A Placeholder"],
+        subheader: "NixOS, with the nix package manager, services that can be installed and configured in a reproducible, declarative way",
+        tags: ["NixOS", "Systemd", "Security", "Sandboxing", "Service configuration"],
         link: "https://nlnet.nl/project/NixOS-Services/",
-        fund: "NGI PLACEHOLDER",
-        start: "NGI PLACEHOLDER"
+        fund: funds.assure,
+        start: "2021-10",
+        end: "2024-08"
     },
     uefiSecureBootSupportFotNixOS: {
-        image: "img/dream2nix.logo.svg",
+        image: "https://nlnet.nl/project/libnix/Nix.logo.svg",
         header: "UEFI Secure Boot support for NixOS",
-        subheader: "This is a placeholder sub header",
-        tags: ["This", "Is", "A Placeholder"],
+        subheader: "Add a self-sovereign root of trust as part of supply chain security",
+        tags: ["Nix", "UEFI Secure Boot", "Supply chain security", "Root of trust", "TPM attestation"],
         link: "https://nlnet.nl/project/NixOS-UEFI/",
-        fund: "NGI PLACEHOLDER",
-        start: "NGI PLACEHOLDER"
+        fund: funds.assure,
+        start: "2021-12",
+        end: "2024-08"
     },
     p4Nix: {
-        image: "img/dream2nix.logo.svg",
+        image: "https://nlnet.nl/project/libnix/Nix.logo.svg",
         header: "p4-nix",
-        subheader: "This is a placeholder sub header",
-        tags: ["This", "Is", "A Placeholder"],
+        subheader: "Combine Programming Protocol-independent Packet Processors language with declarative Nix packaging",
+        tags: ["P4", "Nix", "Networking", "FPGA", "Functional programming"],
         link: "https://nlnet.nl/project/p4-nix/",
-        fund: "NGI PLACEHOLDER",
-        start: "NGI PLACEHOLDER"
+        fund: funds.assure,
+        start: "2022-08",
+        end: "2024-08"
     },
     nixOSClevis: {
-        image: "img/dream2nix.logo.svg",
+        image: "https://nlnet.nl/project/libnix/Nix.logo.svg",
         header: "NixOS/Clevis",
-        subheader: "This is a placeholder sub header",
-        tags: ["This", "Is", "A Placeholder"],
+        subheader: "Unattented disk decryption with Clevis on NixOS",
+        tags: ["NixOS", "Full disk encryption", "Cloud security", "Remote unlocking", "Proxmox Hypervisor"],
         link: "https://nlnet.nl/project/NixOS-Clevis/",
-        fund: "NGI PLACEHOLDER",
-        start: "NGI PLACEHOLDER"
+        fund: funds.assure,
+        start: "2023-04",
+        end: "2024-06"
     },
 
     nixCloud: {
-        image: "img/dream2nix.logo.svg",
+        image: "https://nlnet.nl/project/webservicesecurity/nixcloud.svg",
         header: "NixCloud",
-        subheader: "This is a placeholder sub header",
-        tags: ["This", "Is", "A Placeholder"],
+        subheader: "Declarative internet services based on NixOS",
+        tags: ["NixOS", "TLS Pool", "Declarative packaging", "Security", "Decentralized applications"],
         link: "https://nlnet.nl/project/webservicesecurity/",
-        fund: "NGI PLACEHOLDER",
-        start: "NGI PLACEHOLDER"
+        fund: funds.internetHardening,
+        start: "2017-02",
+        end: "2019-05"
     },
     nixCloudWebservices: {
-        image: "img/dream2nix.logo.svg",
+        image: "https://nlnet.nl/project/webservicesecurity/nixcloud.svg",
         header: "Nixcloud Webservices",
-        subheader: "This is a placeholder sub header",
-        tags: ["This", "Is", "A Placeholder"],
+        subheader: "Declarative web services based on NixOS",
+        tags: ["NixOS", "Web services", "Declarative services", "Nixcloud", "Service abstraction"],
         link: "https://nlnet.nl/project/nixcloud-webservices/",
-        fund: "NGI PLACEHOLDER",
-        start: "NGI PLACEHOLDER"
+        fund: "",
+        start: ""
     },
     selfPrivacy: {
-        image: "img/dream2nix.logo.svg",
+        image: "ihttps://nlnet.nl/project/SelfPrivacy/SelfPrivacy.logo.svg",
         header: "SelfPrivacy",
-        subheader: "This is a placeholder sub header",
-        tags: ["This", "Is", "A Placeholder"],
+        subheader: "Reproducible self-hosting stack based on NixOS",
+        tags: ["Self-hosting", "NixOS", "SelfPrivacy", "Open source services", "Infrastructure management"],
         link: "https://nlnet.nl/project/SelfPrivacy/",
-        fund: "NGI PLACEHOLDER",
-        start: "NGI PLACEHOLDER"
+        fund: funds.entrust,
+        start: "2023-04"
     },
     robotnix: {
-        image: "img/dream2nix.logo.svg",
+        image: "https://nlnet.nl/project/libnix/Nix.logo.svg",
         header: "Robotnix",
-        subheader: "This is a placeholder sub header",
-        tags: ["This", "Is", "A Placeholder"],
+        subheader: "Reproducible Builds of Android with NIX",
+        tags: ["Robotnix", "Android", "Nix", "AOSP", "Reproducible builds"],
         link: "https://nlnet.nl/project/Robotnix/",
-        fund: "NGI PLACEHOLDER",
-        start: "NGI PLACEHOLDER"
+        fund: funds.pet,
+        start: "2020-10",
+        end: "2022-10"
     },
     liminix: {
-        image: "img/dream2nix.logo.svg",
+        image: "https://nlnet.nl/project/Liminix/liminix.logo.svg",
         header: "Liminix",
-        subheader: "This is a placeholder sub header",
-        tags: ["This", "Is", "A Placeholder"],
+        subheader: "Nix-based OS for domestic WiFi routers, access points etc",
+        tags: ["Liminix", "OpenWRT", "Nix", "Embedded Linux", "Configuration management"],
         link: "https://nlnet.nl/project/Liminix/",
-        fund: "NGI PLACEHOLDER",
-        start: "NGI PLACEHOLDER"
+        fund: funds.entrust,
+        start: "2022-12"
     },
     mobileNixos: {
-        image: "img/dream2nix.logo.svg",
+        image: "https://nlnet.nl/project/mobile-nixos/mobilenixos.svg",
         header: "mobile-nixos",
-        subheader: "This is a placeholder sub header",
-        tags: ["This", "Is", "A Placeholder"],
+        subheader: "NixOS for mobile phones and tablets",
+        tags: ["mobile-nixos", "NixOS", "GNU/Linux", "Mobile Operating System", "Software Freedom"],
         link: "https://nlnet.nl/project/mobile-nixos/",
-        fund: "NGI PLACEHOLDER",
-        start: "NGI PLACEHOLDER"
+        fund: funds.pet,
+        start: "2019-04",
+        end: "2022-10"
     }
 }
