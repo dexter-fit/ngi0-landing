@@ -32,10 +32,10 @@ const ProjectCard = (props: {card: ProjectCardType, hidden?: boolean, highlight?
                     {props.card.header}
                 </h3>
                 <div>
-                    <p className="fund hide-mobile">
+                    {props.card.fund ? <p className="fund hide-mobile">
                         <span className="fund-label">Fund: </span><span className="fund-name">{props.card.fund}</span>
-                    </p>
-                    <p className="hide-mobile">
+                    </p> : <></>}
+                    {props.card.start ? <p className="hide-mobile">
                         <span className="start">
                             {props.card.start}
                         </span>
@@ -45,7 +45,7 @@ const ProjectCard = (props: {card: ProjectCardType, hidden?: boolean, highlight?
                         <span className="end">
                             {props.card.end ?? "active"}
                         </span>
-                    </p>
+                    </p> : <></>}
                 </div>
                 <p>{props.card.subheader}</p>
             </div>
