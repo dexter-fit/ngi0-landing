@@ -7,7 +7,7 @@ import {ProjectCard} from "../components/ProjectCard";
 import {ProjectCardType} from "../types";
 
 
-const Index = (props: {contentType?: "dos" | "geo"}) => {
+const Index = (props: {contentType?: "dos" | "geo" | "all"}) => {
     const cards = getCards(props.contentType);
     const allAvailableTags = Object.fromEntries(cards.flatMap(card => card.tags).sort().map(tag => [tag, false]));
     const [searchString, setSearchString] = useState('');

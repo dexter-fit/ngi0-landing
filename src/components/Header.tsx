@@ -37,6 +37,11 @@ const Header = (props: {menuItems: MenuItem[]}) => {
             icon: "pi pi-home"
         },
         {
+            label: "Projects",
+            url: "/ngi0/projects",
+            icon: "pi pi-home"
+        },
+        {
             label: "Geography Projects",
             items: [
                 {
@@ -127,11 +132,16 @@ const Header = (props: {menuItems: MenuItem[]}) => {
                                                                                        className="css-menu-a">{menuItems[0].label}</a>
                         </div>
 
+                        <div className="css-menu-links">
+                            <i className={menuItems[1].icon + " css-menu-icon"}></i><a href={menuItems[1].url}
+                                                                                       className="css-menu-a">{menuItems[1].label}</a>
+                        </div>
+
                         <div className="css-menu-links-spec">
                             <i className="pi pi-home css-menu-icon-spec"></i>Geography Projects
                         </div>
 
-                        {menuItems[1]?.items?.map(item => (
+                        {menuItems[2]?.items?.map(item => (
                             <div className="css-menu-links">
                                 <i className={item.icon + " css-menu-icon"}></i><a href={item.url}
                                                                                    className="css-menu-a">{item.label}</a>
@@ -142,7 +152,7 @@ const Header = (props: {menuItems: MenuItem[]}) => {
                             <i className="pi pi-home css-menu-icon-spec"></i>Nix Projects
                         </div>
 
-                        {menuItems[2]?.items?.map(item => (
+                        {menuItems[3]?.items?.map(item => (
                             <div className="css-menu-links">
                                 <i className={item.icon + " css-menu-icon"}></i><a href={item.url}
                                                                                    className="css-menu-a">{item.label}</a>

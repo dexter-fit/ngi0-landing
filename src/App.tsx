@@ -38,6 +38,10 @@ const App = () => {
                         element: <Index/>
                     },
                     {
+                        path: "/projects",
+                        element: <Index contentType="all"/>
+                    },
+                    {
                         path: "/geo",
                         children:
                             [
