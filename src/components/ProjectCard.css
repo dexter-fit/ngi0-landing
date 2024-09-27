@@ -1,6 +1,5 @@
 .my-card {
     position: relative;
-    max-width: 250px;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -8,6 +7,8 @@
     display: flex;
     flex-direction: column;
     transition: opacity 300ms ease-in-out;
+    max-width: 22rem;
+    min-width: 22rem;
 }
 
 .my-card:hover {
@@ -66,4 +67,41 @@
 .hidden {
     display: none;
     pointer-events: none;
+}
+
+.p-carousel-item {
+    justify-content: space-around;
+    display: flex;
+}
+
+.p-carousel-indicator:last-child {
+    margin-right: 0;
+}
+
+@media only screen and (max-width: 1400px) {
+    .my-card {
+        max-width: 25rem;
+        min-width: 25rem;
+    }
+}
+
+@media only screen and (max-width: 1199px) {
+    .my-card {
+        max-width: 16rem;
+        min-width: 16rem;
+    }
+}
+
+@media only screen and (max-width: 950px) {
+    .my-card {
+        max-width: 16rem;
+        min-width: 16rem;
+    }
+}
+
+@media only screen and (max-width: 690px) {
+    .my-card {
+        max-width: 22rem;
+        min-width: 22rem;
+    }
 }

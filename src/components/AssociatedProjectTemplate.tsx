@@ -16,12 +16,12 @@ const AssociatedProjectTemplate = (props: AssociatedProjectProps) => {
             numScroll: 1,
         },
         {
-            breakpoint: '767px',
+            breakpoint: '950px',
             numVisible: 2,
             numScroll: 1,
         },
         {
-            breakpoint: '575px',
+            breakpoint: '690px',
             numVisible: 1,
             numScroll: 1,
         },
