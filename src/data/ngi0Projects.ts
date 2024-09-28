@@ -11,7 +11,7 @@ export const ngi0Projects = {
             "Data Set Descriptions"
         ],
         "link": "https://nlnet.nl/project/FrictionlessStandards/",
-        "fund": "NGI0 Entrust",
+        "fund": funds.entrust,
         "start": "2023-04"
     },
     kGen: {
@@ -25,7 +25,7 @@ export const ngi0Projects = {
             "Knowledge Graphs"
         ],
         "link": "https://nlnet.nl/project/K-Gen/",
-        "fund": "NGI Assure",
+        "fund": funds.assure,
         "start": "2022-12"
     },
     atomicTables: {
@@ -38,7 +38,7 @@ export const ngi0Projects = {
             "Data Modeling"
         ],
         "link": "https://nlnet.nl/project/AtomicTables/",
-        "fund": "NGI0 Entrust",
+        "fund": funds.entrust,
         "start": "2022-10"
     },
     atomicData: {
@@ -52,7 +52,7 @@ export const ngi0Projects = {
             "Knowledge Graphs"
         ],
         "link": "https://nlnet.nl/project/AtomicData/",
-        "fund": "NGI Assure",
+        "fund": funds.assure,
         "start": "2021-10",
         "end": "2023-06"
     },
@@ -68,7 +68,7 @@ export const ngi0Projects = {
             "OpenStreetMap"
         ],
         "link": "https://nlnet.nl/project/OrganicMaps/",
-        "fund": "NGI0 Entrust",
+        "fund": funds.entrust,
         "start": "2021-10"
     },
     protomaps: {
@@ -84,7 +84,7 @@ export const ngi0Projects = {
             "Search"
         ],
         "link": "https://nlnet.nl/project/Protomaps/",
-        "fund": "NGI Zero Core",
+        "fund": funds.zeroCore,
         "start": "2023-10"
     },
     peermaps: {
@@ -100,7 +100,7 @@ export const ngi0Projects = {
             "Decentralised Solutions"
         ],
         "link": "https://nlnet.nl/project/Peermaps/",
-        "fund": "NGI0 Discovery",
+        "fund": funds.discovery,
         "start": "2021-12",
         "end": "2022-10"
     },
@@ -116,7 +116,7 @@ export const ngi0Projects = {
             "Gamification"
         ],
         "link": "https://nlnet.nl/project/Mapcomplete/",
-        "fund": "NGI0 Entrust",
+        "fund": funds.entrust,
         "start": "2022-10"
     },
     nominatim: {
@@ -129,7 +129,7 @@ export const ngi0Projects = {
             "OpenStreetMap"
         ],
         "link": "https://nlnet.nl/project/Nominatim/",
-        "fund": "NGI0 Discovery",
+        "fund": funds.discovery,
         "start": "2020-10",
         "end": "2022-09"
     },
@@ -144,7 +144,7 @@ export const ngi0Projects = {
             "OpenStreetMap"
         ],
         "link": "https://nlnet.nl/project/StreetComplete/",
-        "fund": "NGI0 Discovery",
+        "fund": funds.discovery,
         "start": "2019-04",
         "end": "2019-04"
     },
@@ -159,7 +159,7 @@ export const ngi0Projects = {
             "OpenStreetMap"
         ],
         "link": "https://nlnet.nl/project/Mobroute/",
-        "fund": "NGI0 Entrust",
+        "fund": funds.entrust,
         "start": "2023-04"
     },
 
@@ -194,7 +194,7 @@ export const ngi0Projects = {
             "Packaging"
         ],
         "link": "https://nlnet.nl/project/Dream2nix/",
-        "fund": "NGI Assure",
+        "fund": funds.assure,
         "start": "2022-02"
     },
     libnix: {

@@ -3,7 +3,8 @@ const funds = {
     zeroCore: "NGI Zero Core",
     assure: "NGI Assure",
     pet: "NGI0 PET",
-    internetHardening: "Internet Hardening Fund"
+    internetHardening: "Internet Hardening Fund",
+    discovery: "NGI0 Discovery"
 }
 
 export {funds};
