@@ -12,18 +12,23 @@
 
 .content-wrapper {
     display: flex;
-    flex-direction: row;
-    gap: 10px;
-    overflow-x: auto;
-}
-
-@media screen and (max-width: 480px) {
-    .image-container {
-        display: flex;
-        justify-content: center;
-    }
+    flex-wrap: wrap;
+    gap: 0.25rem;
 }
 
 img {
     padding: 10px;
+}
+
+.image-content-wrapper {
+    display: inline-block;
+    text-align: justify;
+}
+
+.margin-btm {
+    margin-bottom: 1rem;
+}
+
+.image {
+    float: left;
 }
