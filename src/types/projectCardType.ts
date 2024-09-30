@@ -4,8 +4,8 @@ type ProjectCardType = {
     subheader: string;
     tags: string[];
     link: string;
-    fund: string;
-    start: string;
+    fund?: string;
+    start?: string;
     end?: string;
 };
 

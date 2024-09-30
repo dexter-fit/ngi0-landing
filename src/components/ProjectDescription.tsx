@@ -1,6 +1,5 @@
 import "./ProjectDescription.css";
 import React from "react";
-import {ScrollPanel} from "primereact/scrollpanel";
 import {ProjectDescriptionProps} from "../types";
 import {AssociatedProjectTemplate} from "./AssociatedProjectTemplate";
 

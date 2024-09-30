@@ -71,10 +71,16 @@ const Index = (props: {contentType?: "dos" | "geo" | "all"}) => {
         cards.forEach(item => {
             const stringsToSearchIn = [
                 item.header.toLowerCase(),
-                item.subheader.toLowerCase(),
-                item.fund.toLowerCase(),
-                item.start.toLowerCase()
+                item.subheader.toLowerCase()
             ];
+
+            if (item.fund) {
+                stringsToSearchIn.push(item.fund.toLowerCase());
+            }
+
+            if (item.start) {
+                stringsToSearchIn.push(item.start.toLowerCase());
+            }
 
             if (item.end) {
                 stringsToSearchIn.push(item.end.toLowerCase());

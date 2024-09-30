@@ -95,24 +95,14 @@ const Header = (props: {menuItems: MenuItem[]}) => {
 
     menuItems.push(...props.menuItems);
 
-    const customHeader = <h2 className="font-bold">NLnet; Projects</h2>;
+    const getLinksFromMenuItems = (menuItems: MenuItem[]) => menuItems.map(item => (
+        <div className="css-menu-links">
+            <i className={item.icon + " css-menu-icon"}></i><a href={item.url} className="css-menu-a">{item.label}</a>
+        </div>
+    ));
 
     return <>
         <div className="header">
-            {
-            /*<div className="header-container">
-                <Button icon="pi pi-bars" onClick={() => setHidden(false)} size="small" text raised style={{background: "white"}}/>
-                <Sidebar header={customHeader} visible={!hidden} onHide={() => setHidden(true)} baseZIndex={101}>
-                    <Menu model={menuItems} className="full-width"/>
-                </Sidebar>
-                <div className="header-heading">NLnet; Projects</div>
-            </div>
-
-            <div className="header-links-prerender-hidden">
-                {createLinks(menuItems)}
-            </div>
-            */
-            }
             <div className="header-container">
                 <div className="header-heading">NLnet; Projects</div>
 
@@ -141,23 +131,13 @@ const Header = (props: {menuItems: MenuItem[]}) => {
                             <i className="pi pi-home css-menu-icon-spec"></i>Geography Projects
                         </div>
 
-                        {menuItems[2]?.items?.map(item => (
-                            <div className="css-menu-links">
-                                <i className={item.icon + " css-menu-icon"}></i><a href={item.url}
-                                                                                   className="css-menu-a">{item.label}</a>
-                            </div>
-                        ))}
+                        {getLinksFromMenuItems(menuItems[2].items as MenuItem[])}
 
                         <div className="css-menu-links-spec">
                             <i className="pi pi-home css-menu-icon-spec"></i>Nix Projects
                         </div>
 
-                        {menuItems[3]?.items?.map(item => (
-                            <div className="css-menu-links">
-                                <i className={item.icon + " css-menu-icon"}></i><a href={item.url}
-                                                                                   className="css-menu-a">{item.label}</a>
-                            </div>
-                        ))}
+                        {getLinksFromMenuItems(menuItems[3].items as MenuItem[])}
                     </div>
                     <div className="css-menu-shadow"/>
                 </div>

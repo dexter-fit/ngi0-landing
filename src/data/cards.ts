@@ -17,7 +17,7 @@ const compare = (a: ProjectCardType, b: ProjectCardType) => {
     return 0;
 }
 
-const getCards = (contentType?: "dos" | "geo" | "all") => {
+const getCards = (contentType?: "dos" | "geo" | "all"): ProjectCardType[] => {
     if (contentType) {
         switch (contentType) {
             case "all":
@@ -29,7 +29,7 @@ const getCards = (contentType?: "dos" | "geo" | "all") => {
         }
     }
 
-    return [...dossiers].sort(compare);
+    return dossiers.sort(compare);
 }
 
 export {getCards};
