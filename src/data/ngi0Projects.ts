@@ -57,7 +57,7 @@ export const ngi0Projects = {
         "end": "2023-06"
     },
     organicMaps: {
-        "image": "/ngi0/img/dream2nix.logo.svg",
+        "image": "/ngi0/img/organicmaps.svg",
         "header": "Organic Maps",
         "subheader": "Privacy-focused Android & iOS offline maps application",
         "tags": [
@@ -72,7 +72,7 @@ export const ngi0Projects = {
         "start": "2021-10"
     },
     protomaps: {
-        "image": "/ngi0/img/dream2nix.logo.svg",
+        "image": "/ngi0/img/protomaps.logo.svg",
         "header": "Protomaps",
         "subheader": "Self-hostable maps based on OpenStreetMap data",
         "tags": [
@@ -88,7 +88,7 @@ export const ngi0Projects = {
         "start": "2023-10"
     },
     peermaps: {
-        "image": "/ngi0/img/dream2nix.logo.svg",
+        "image": "/ngi0/img/peermaps.logo.svg",
         "header": "peermaps",
         "subheader": "Peer to peer cartography",
         "tags": [
@@ -105,7 +105,7 @@ export const ngi0Projects = {
         "end": "2022-10"
     },
     mapComplete: {
-        "image": "/ngi0/img/dream2nix.logo.svg",
+        "image": "/ngi0/img/mapcomplete.logo.svg",
         "header": "MapComplete",
         "subheader": "Thematics OpenStreetMap-viewer and editor",
         "tags": [
@@ -120,7 +120,7 @@ export const ngi0Projects = {
         "start": "2022-10"
     },
     nominatim: {
-        "image": "/ngi0/img/dream2nix.logo.svg",
+        "image": "/ngi0/img/openstreetmap.logo.svg",
         "header": "Nominatim",
         "subheader": "Multi-lingual support in address search",
         "tags": [

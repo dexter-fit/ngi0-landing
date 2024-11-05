@@ -50,12 +50,12 @@ const Header = (props: {menuItems: MenuItem[]}) => {
                     icon: "pi pi-home"
                 },
                 {
-                    label: "Dossier",
-                    url: "/ngi0/geo/dossiers",
+                    label: "Geovisualisation",
+                    url: "/ngi0/geo/geovisualisation",
                     icon: "pi pi-file"
                 },
                 {
-                    label: "Project Detail",
+                    label: "Open Street Map",
                     url: "/ngi0/geo/detail",
                     icon: "pi pi-file"
                 },

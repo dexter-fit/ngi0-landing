@@ -10,6 +10,7 @@ import inputDos from "../data/nix";
 import inputGeo from "../data/geo";
 import { markdownToHtml } from "../util/markdownToHtml";
 import {fillWithRandomStuff} from "../data/nixDossierData";
+import { Button } from "primereact/button";
 
 const ProjectDetail = (props: {contentType: "dos" | "geo"}) => {
     const projects: ProjectDescriptionProps[] = loadProjects(props.contentType);
@@ -55,6 +56,21 @@ function loadProjects(contentType: "dos" | "geo") {
     const similarCorporateProjects = "Similar Corporate Projects";
 
     for (const proj of contentType === 'dos' ? inputDos.detailedProjects : inputGeo.detailedProjects) {
+        let links: any = [];
+        if (proj.links !== undefined) {
+            for (const linkItem of proj.links) {
+                let img: any = undefined;
+                if (linkItem.img !== undefined) {
+                    img = <img className="p-0 p-button-icon-left" src={linkItem.img} width="20px" alt=""/>;
+                } else {
+                    img = linkItem.icon;
+                }
+                links.push(
+                    <Link to={linkItem.link}><Button outlined={true} icon={img} className="p-button-tiny" label={linkItem.label}/></Link>
+                )
+            }
+        }
+        
         projects.push({
             otherProjectsLinkSpace: <>
                 <p><span>Fund</span> <span>NGI0 Assure</span></p>
@@ -67,7 +83,7 @@ function loadProjects(contentType: "dos" | "geo") {
             tags: NIX_TAGS,
             descriptionContent: {
                 header: proj.header,
-                links: ["Links here"],
+                links: links,
                 associatedProjects: [
                     {
                         heading: similarNGI0Projects,

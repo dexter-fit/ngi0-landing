@@ -46,7 +46,7 @@ const App = () => {
                         children:
                             [
                                 {path: "", element: <Index contentType={"geo"}/>},
-                                {path: "dossiers", element: <Dossiers contentType={"geo"}/>},
+                                {path: "geovisualisation", element: <Dossiers contentType={"geo"}/>},
                                 {path: "detail", element: <ProjectDetail contentType={"geo"}/>},
                                 {path: "comparison", element: <ProjectsComparison contentType={"geo"}/>}
                             ]
