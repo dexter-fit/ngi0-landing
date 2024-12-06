@@ -76,7 +76,7 @@ function loadProjects(contentType: "dos" | "geo") {
                 <p><span>Fund</span> <span>NGI0 Assure</span></p>
                 <p><span>2022-12</span> - <span>active</span></p>
                 <p className="flex align-items-center gap-1"><span>{proj.linkHeader}</span>
-                    <Link to={`/${contentType}/${contentType === 'dos' ? 'dossiers' : 'geovisualisation'}`} className="flex align-items-center" style={{textDecoration: "none"}}>
+                    <Link to={`/${contentType}`} className="flex align-items-center" style={{textDecoration: "none"}}>
                         <ClickableTag name="Visit"/>
                     </Link>
                 </p>

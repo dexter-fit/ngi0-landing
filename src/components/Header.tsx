@@ -42,16 +42,13 @@ const Header = (props: {menuItems: MenuItem[]}) => {
             icon: "pi pi-home"
         },
         {
-            label: "Geography Projects",
+            label: "Geovisualisation",
+            url: "/ngi0/geo",
+            icon: "pi pi-home",
             items: [
                 {
                     label: "Projects",
-                    url: "/ngi0/geo",
-                    icon: "pi pi-home"
-                },
-                {
-                    label: "Geovisualisation",
-                    url: "/ngi0/geo/geovisualisation",
+                    url: "/ngi0/geo/projects",
                     icon: "pi pi-file"
                 },
                 {
@@ -68,15 +65,12 @@ const Header = (props: {menuItems: MenuItem[]}) => {
         },
         {
             label: "Nix Projects",
+            url: "/ngi0/dos",
+            icon: "pi pi-home",
             items: [
                 {
                     label: "Projects",
-                    url: "/ngi0/dos",
-                    icon: "pi pi-home"
-                },
-                {
-                    label: "Dossier",
-                    url: "/ngi0/dos/dossiers",
+                    url: "/ngi0/dos/projects",
                     icon: "pi pi-file"
                 },
                 {
@@ -101,30 +95,41 @@ const Header = (props: {menuItems: MenuItem[]}) => {
         </div>
     ));
 
-    const setHeader = function(url, menuItems) {
-        let str = '';
-        try {
-            for (const item of menuItems) {
-                if (`${item.url}/` === `/ngi0${url}/`) {
-                    str = item.label;
-                }
+    const findBreadcrumbs = (
+        menu: MenuItem[],
+        currentUrl: string,
+        trail: MenuItem[] = []
+    ): MenuItem[] => {
+        for (const item of menu) {
+            if (item.url === currentUrl) {
+                return [...trail, item];
+            }
 
-                if (item.items) {
-                    for (const innerItem of item.items) {
-                        if (`${innerItem.url}/` === `/ngi0${url}/`) {
-                            str = innerItem.label;
-                        }
-                    }
+            if (item.items) {
+                const found = findBreadcrumbs(item.items as MenuItem[], currentUrl, [...trail, item]);
+                if (found.length) {
+                    return found;
                 }
             }
-        } catch (err) {}
-        return str;
+        }
+
+        return [];
     };
+
+    const breadcrumbs = [
+        {label: "NGI0 Projects", url: "/ngi0"},
+        ...findBreadcrumbs(menuItems, `/ngi0${useLocation().pathname}`)
+    ]
 
     return <>
         <div className="header">
             <div className="header-container">
-                <div className="header-heading">{setHeader(useLocation().pathname, menuItems)}</div>
+                <div className="header-heading">{
+                    breadcrumbs.map((item, index) => <>
+                        <span><a href={item.url}>{item.label}</a></span>
+                        {index < breadcrumbs.length - 1 ? <span>; </span> : <></>}
+                    </>)}
+                </div>
 
                 <div className="header-links-prerender-hidden">
                     {createLinks(menuItems)}
@@ -137,24 +142,26 @@ const Header = (props: {menuItems: MenuItem[]}) => {
                         <div className="css-menu-header-div">
                             <h3 className="css-menu-header">NLnet; Projects</h3>
                         </div>
-                        <div className="css-menu-links">
+                        <div className="css-menu-links bold">
                             <i className={menuItems[0].icon + " css-menu-icon"}></i><a href={menuItems[0].url}
                                                                                        className="css-menu-a">{menuItems[0].label}</a>
                         </div>
 
-                        <div className="css-menu-links">
+                        <div className="css-menu-links bold">
                             <i className={menuItems[1].icon + " css-menu-icon"}></i><a href={menuItems[1].url}
                                                                                        className="css-menu-a">{menuItems[1].label}</a>
                         </div>
 
-                        <div className="css-menu-links-spec">
-                            <i className="pi pi-home css-menu-icon-spec"></i>Geography Projects
+                        <div className="css-menu-links bold">
+                            <i className={menuItems[1].icon + " css-menu-icon"}></i><a href={menuItems[2].url}
+                                                                                       className="css-menu-a">{menuItems[2].label}</a>
                         </div>
 
                         {getLinksFromMenuItems(menuItems[2].items as MenuItem[])}
 
-                        <div className="css-menu-links-spec">
-                            <i className="pi pi-home css-menu-icon-spec"></i>Nix Projects
+                        <div className="css-menu-links bold">
+                            <i className={menuItems[3].icon + " css-menu-icon"}></i><a href={menuItems[1].url}
+                                                                                       className="css-menu-a">{menuItems[3].label}</a>
                         </div>
 
                         {getLinksFromMenuItems(menuItems[3].items as MenuItem[])}

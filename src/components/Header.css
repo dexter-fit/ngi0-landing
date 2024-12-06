@@ -26,6 +26,11 @@
     flex-grow: 1;
 }
 
+.header-heading a {
+    text-decoration: none;
+    color: var(--primary-50);
+}
+
 .p-menu {
     border: 0;
 }
@@ -90,6 +95,10 @@
     align-items: center;
     padding-left: 2em;
     margin: 0.5em 0;
+}
+
+.bold {
+    font-weight: bold;
 }
 
 .css-menu-links-spec {

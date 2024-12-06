@@ -56,7 +56,7 @@ function loadProjects(contentType: "dos" | "geo") {
         projects.push({
             otherProjectsLinkSpace: <div className="full-width flex flex-column">
                 <p className="flex align-items-center gap-1"><span>{proj.linkHeader}</span>
-                    <Link to={`/${contentType}/dossiers`} className="flex align-items-center"
+                    <Link to={`/${contentType}`} className="flex align-items-center"
                           style={{textDecoration: "none"}}><ClickableTag name="Visit"/></Link>
                 </p>
                 <p className="flex align-items-center gap-1"><span>{proj.link2Header}</span>

@@ -22,7 +22,7 @@ const Dossiers = (props: {contentType: "dos" | "geo"}) => {
                 label: "Nix Environment Dossier",
                 items: projects.map(item => ({
                     label: item.descriptionContent.header,
-                    url: `/ngi0/${props.contentType}/dossiers#${replaceSpacesWith(item.descriptionContent.header, "_")}`,
+                    url: `/ngi0/${props.contentType}#${replaceSpacesWith(item.descriptionContent.header, "_")}`,
                     icon: "pi pi-file"
                 }))
             }

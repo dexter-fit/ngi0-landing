@@ -45,8 +45,8 @@ const App = () => {
                         path: "/geo",
                         children:
                             [
-                                {path: "", element: <Index contentType={"geo"}/>},
-                                {path: "geovisualisation", element: <Dossiers contentType={"geo"}/>},
+                                {path: "", element: <Dossiers contentType={"geo"}/>},
+                                {path: "projects", element: <Index contentType={"geo"}/>},
                                 {path: "detail", element: <ProjectDetail contentType={"geo"}/>},
                                 {path: "comparison", element: <ProjectsComparison contentType={"geo"}/>}
                             ]
@@ -55,8 +55,8 @@ const App = () => {
                         path: "/dos",
                         children:
                             [
-                                {path: "", element: <Index contentType={"dos"}/>},
-                                {path: "dossiers", element: <Dossiers contentType={"dos"}/>},
+                                {path: "", element: <Dossiers contentType={"dos"}/>},
+                                {path: "projects", element: <Index contentType={"dos"}/>},
                                 {path: "detail", element: <ProjectDetail contentType={"dos"}/>},
                                 {path: "comparison", element: <ProjectsComparison contentType={"dos"}/>}
                             ]
