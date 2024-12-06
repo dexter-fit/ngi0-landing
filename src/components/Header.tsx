@@ -160,7 +160,7 @@ const Header = (props: {menuItems: MenuItem[]}) => {
                         {getLinksFromMenuItems(menuItems[2].items as MenuItem[])}
 
                         <div className="css-menu-links bold">
-                            <i className={menuItems[3].icon + " css-menu-icon"}></i><a href={menuItems[1].url}
+                            <i className={menuItems[3].icon + " css-menu-icon"}></i><a href={menuItems[3].url}
                                                                                        className="css-menu-a">{menuItems[3].label}</a>
                         </div>
 

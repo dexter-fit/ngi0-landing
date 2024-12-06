@@ -38,7 +38,16 @@ export default {
             "image": "/ngi0/img/openstreetmap.logo.svg",
             "header": "Geovisualisation",
             "text": "Geovisualization encompasses a wide variety of applications, from simple map displays with various points of interest, to navigation in unfamiliar space, to complex applications that help us every day. With themed maps, users can get to know their surroundings better as well as new points of interest. The next level is then represented by applications that allow the user to modify the maps themselves. Thanks to open souce projects with a wide community of users, cartography is more accessible than ever before.",
-            "links": []
+            "links": [
+                {
+                    "link": "/geo/detail",
+                    "label": "Open Street Map"
+                },
+                {
+                    "link": "/geo/comparison",
+                    "label": "MapComplete vs StreetComplete"
+                }
+            ]
         },
         {
             "header": "Open Street Map",

@@ -75,7 +75,7 @@ function loadProjects(contentType: "dos" | "geo") {
             otherProjectsLinkSpace: <>
                 <p><span>Fund</span> <span>NGI0 Assure</span></p>
                 <p><span>2022-12</span> - <span>active</span></p>
-                <p className="flex align-items-center gap-1"><span>{proj.linkHeader}</span>
+                <p className="flex align-items-center gap-1"><span>Part of the {"dos" ? "Nix" : "Geography"} dossier</span>
                     <Link to={`/${contentType}`} className="flex align-items-center" style={{textDecoration: "none"}}>
                         <ClickableTag name="Visit"/>
                     </Link>

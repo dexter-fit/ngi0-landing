@@ -52,6 +52,14 @@ export default {
                     "icon": "pi pi-github",
                     "link": "https://github.com/NixOS/nix",
                     "label": "GitHub"
+                },
+                {
+                    "link": "/dos/detail",
+                    "label": "Nix Language"
+                },
+                {
+                    "link": "/dos/comparison",
+                    "label": "Nix vs Docker"
                 }
             ]
         },
