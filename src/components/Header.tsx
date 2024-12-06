@@ -2,7 +2,7 @@ import React from "react";
 import {Button} from "primereact/button";
 import "./Header.css";
 import { MenuItem } from "primereact/menuitem";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Header = (props: {menuItems: MenuItem[]}) => {
     const createLinks = (items: MenuItem[]) => {
@@ -116,9 +116,12 @@ const Header = (props: {menuItems: MenuItem[]}) => {
         return [];
     };
 
+    const location = window.location.pathname;
+    const locationAlwaysWithoutSlash = location.endsWith('/') ? location.slice(0, -1) : location
+
     const breadcrumbs = [
         {label: "NGI0 Projects", url: "/ngi0"},
-        ...findBreadcrumbs(menuItems, `/ngi0${useLocation().pathname}`)
+        ...findBreadcrumbs(menuItems, locationAlwaysWithoutSlash)
     ]
 
     return <>
