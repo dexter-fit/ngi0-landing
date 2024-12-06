@@ -24,8 +24,6 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "start_dossie": "REACT_APP_CONTENT_TYPE=dos npm start",
-    "start_geo": "REACT_APP_CONTENT_TYPE=geo react-scripts start",
     "build": "react-scripts build",
 	"build-ssg": "npm run build && react-snap",
     "test": "react-scripts test",
