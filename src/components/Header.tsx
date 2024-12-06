@@ -2,7 +2,7 @@ import React from "react";
 import {Button} from "primereact/button";
 import "./Header.css";
 import { MenuItem } from "primereact/menuitem";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Header = (props: {menuItems: MenuItem[]}) => {
     const createLinks = (items: MenuItem[]) => {
@@ -90,7 +90,7 @@ const Header = (props: {menuItems: MenuItem[]}) => {
                     icon: "pi pi-file"
                 }
             ]
-        }
+        }  
     ] as MenuItem[];
 
     menuItems.push(...props.menuItems);
@@ -101,10 +101,30 @@ const Header = (props: {menuItems: MenuItem[]}) => {
         </div>
     ));
 
+    const setHeader = function(url, menuItems) {
+        let str = '';
+        try {
+            for (const item of menuItems) {
+                if (`${item.url}/` === `/ngi0${url}/`) {
+                    str = item.label;
+                }
+
+                if (item.items) {
+                    for (const innerItem of item.items) {
+                        if (`${innerItem.url}/` === `/ngi0${url}/`) {
+                            str = innerItem.label;
+                        }
+                    }
+                }
+            }
+        } catch (err) {}
+        return str;
+    };
+
     return <>
         <div className="header">
             <div className="header-container">
-                <div className="header-heading">NLnet; Projects</div>
+                <div className="header-heading">{setHeader(useLocation().pathname, menuItems)}</div>
 
                 <div className="header-links-prerender-hidden">
                     {createLinks(menuItems)}
