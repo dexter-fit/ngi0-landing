@@ -14,14 +14,12 @@ import {ProjectDetail} from "./pages/ProjectDetail";
 import {ProjectsComparison} from "./pages/ProjectsComparison";
 
 const App = () => {
-    const [menuItems, setMenuItems] = useState([] as MenuItem[]);
-
-    const setNewMenuItemsFromChild = (newMenuItems: MenuItem[]) => {};
+    const [menuItems] = useState([] as MenuItem[]);
 
     const Layout = <PrimeReactProvider>
         <Header menuItems={menuItems}/>
         <div className="my-cards-container">
-            <Outlet context={{ setNewMenuItemsFromChild }}/>
+            <Outlet/>
         </div>
     </PrimeReactProvider>
 

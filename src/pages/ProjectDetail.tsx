@@ -16,24 +16,6 @@ import {tagsFromProjectCardType} from "../util/tagsFromProjectCardType";
 const ProjectDetail = (props: {contentType: "dos" | "geo"}) => {
     const projects: ProjectDescriptionProps[] = loadProjects(props.contentType);
 
-
-    const { setNewMenuItemsFromChild } = useOutletContext();
-
-    useEffect(() => {
-        const objectsList = [
-            {
-                label: "Nix Language detail",
-                items: projects.map(item => ({
-                    label: item.descriptionContent.header,
-                    url: `/ngi0/${props.contentType}/detail#${replaceSpacesWith(item.descriptionContent.header, "_")}`,
-                    icon: "pi pi-file"
-                }))
-            }
-        ];
-
-        setNewMenuItemsFromChild(objectsList);
-    }, []);
-
     return <>
         {projects.map(item =>
             <ProjectDescription key={item.descriptionContent.header}
