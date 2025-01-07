@@ -12,6 +12,7 @@ import {useState} from "react";
 import {MenuItem} from "primereact/menuitem";
 import {ProjectDetail} from "./pages/ProjectDetail";
 import {ProjectsComparison} from "./pages/ProjectsComparison";
+import {dossiers} from "./data/dossiers";
 
 const App = () => {
     const [menuItems] = useState([] as MenuItem[]);
@@ -22,6 +23,17 @@ const App = () => {
             <Outlet/>
         </div>
     </PrimeReactProvider>
+
+    const getDossierPathsBasedOnTheDossierPathname = (pathName: string) => ({
+        path: pathName,
+        children:
+            [
+                {path: "", element: <Dossiers/>},
+                {path: "projects", element: <Index contentType={pathName as any}/>},
+                {path: "detail", element: <ProjectDetail contentType={pathName as any}/>},
+                {path: "comparison", element: <ProjectsComparison contentType={pathName as any}/>}
+            ]
+    });
 
     const router = createBrowserRouter([
         {
@@ -37,26 +49,7 @@ const App = () => {
                         path: "/projects",
                         element: <Index contentType="all"/>
                     },
-                    {
-                        path: "/geo",
-                        children:
-                            [
-                                {path: "", element: <Dossiers/>},
-                                {path: "projects", element: <Index contentType={"geo"}/>},
-                                {path: "detail", element: <ProjectDetail contentType={"geo"}/>},
-                                {path: "comparison", element: <ProjectsComparison contentType={"geo"}/>}
-                            ]
-                    },
-                    {
-                        path: "/dos",
-                        children:
-                            [
-                                {path: "", element: <Dossiers/>},
-                                {path: "projects", element: <Index contentType={"dos"}/>},
-                                {path: "detail", element: <ProjectDetail contentType={"dos"}/>},
-                                {path: "comparison", element: <ProjectsComparison contentType={"dos"}/>}
-                            ]
-                    }
+                    ...Object.keys(dossiers).map((pathName: string) => getDossierPathsBasedOnTheDossierPathname(pathName))
                 ]
         }], {basename: "/ngi0"}
     );
