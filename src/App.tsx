@@ -16,9 +16,7 @@ import {ProjectsComparison} from "./pages/ProjectsComparison";
 const App = () => {
     const [menuItems, setMenuItems] = useState([] as MenuItem[]);
 
-    const setNewMenuItemsFromChild = (newMenuItems: MenuItem[]) => {
-        setMenuItems(newMenuItems);
-    };
+    const setNewMenuItemsFromChild = (newMenuItems: MenuItem[]) => {};
 
     const Layout = <PrimeReactProvider>
         <Header menuItems={menuItems}/>
@@ -45,7 +43,7 @@ const App = () => {
                         path: "/geo",
                         children:
                             [
-                                {path: "", element: <Dossiers contentType={"geo"}/>},
+                                {path: "", element: <Dossiers/>},
                                 {path: "projects", element: <Index contentType={"geo"}/>},
                                 {path: "detail", element: <ProjectDetail contentType={"geo"}/>},
                                 {path: "comparison", element: <ProjectsComparison contentType={"geo"}/>}
@@ -55,7 +53,7 @@ const App = () => {
                         path: "/dos",
                         children:
                             [
-                                {path: "", element: <Dossiers contentType={"dos"}/>},
+                                {path: "", element: <Dossiers/>},
                                 {path: "projects", element: <Index contentType={"dos"}/>},
                                 {path: "detail", element: <ProjectDetail contentType={"dos"}/>},
                                 {path: "comparison", element: <ProjectsComparison contentType={"dos"}/>}

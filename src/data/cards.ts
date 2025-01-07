@@ -2,7 +2,7 @@ import {ProjectCardType} from "../types";
 
 import inputDos from "./nix";
 import inputGeo from "./geo";
-import {dossiers} from "./dossiers";
+import {dossiersArray} from "./dossiers";
 
 const compare = (a: ProjectCardType, b: ProjectCardType) => {
     const headerA = a.header.toUpperCase();
@@ -29,7 +29,7 @@ const getCards = (contentType?: "dos" | "geo" | "all"): ProjectCardType[] => {
         }
     }
 
-    return dossiers.sort(compare);
+    return dossiersArray.sort(compare);
 }
 
 export {getCards};

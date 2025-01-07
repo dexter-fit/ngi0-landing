@@ -8,6 +8,7 @@ import {ProjectDescription} from "../components/ProjectDescription";
 import inputDos from "../data/nix";
 import inputGeo from "../data/geo";
 import { markdownToHtml } from "../util/markdownToHtml";
+import {tagsFromProjectCardType} from "../util/tagsFromProjectCardType";
 
 const ProjectsComparison = (props: {contentType: "dos" | "geo"}) => {
     const projects: ProjectDescriptionProps[] = loadProjects(props.contentType);
@@ -48,18 +49,19 @@ const ProjectsComparison = (props: {contentType: "dos" | "geo"}) => {
 function loadProjects(contentType: "dos" | "geo") {
     let projects: ProjectDescriptionProps[] = [];
 
-    const NIX_TAGS = contentType === 'dos' ?
-    inputDos.tags.map(item => <Tag value={item} key={item}></Tag>) :
-    inputGeo.tags.map(item => <Tag value={item} key={item}></Tag>);
+    const NIX_TAGS = tagsFromProjectCardType(contentType === 'dos' ?
+        inputDos.cards :
+        inputGeo.cards
+    ).map(item => <Tag value={item} key={item}></Tag>);
 
     for (const proj of contentType === 'dos' ? inputDos.comparison : inputGeo.comparison) {
         projects.push({
             otherProjectsLinkSpace: <div className="full-width flex flex-column">
-                <p className="flex align-items-center gap-1"><span>{proj.linkHeader}</span>
+                <p className="flex align-items-center gap-1"><span>{proj?.linkHeader}</span>
                     <Link to={`/${contentType}`} className="flex align-items-center"
                           style={{textDecoration: "none"}}><ClickableTag name="Visit"/></Link>
                 </p>
-                <p className="flex align-items-center gap-1"><span>{proj.link2Header}</span>
+                <p className="flex align-items-center gap-1"><span>{proj?.link2Header}</span>
                     <Link to={`/${contentType}/detail`} className="flex align-items-center"
                           style={{textDecoration: "none"}}><ClickableTag name="Visit"/></Link>
                 </p>

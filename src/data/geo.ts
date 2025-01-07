@@ -1,6 +1,6 @@
 import {ngi0Projects} from "./ngi0Projects";
 
-export default {
+const geo =  {
     "cards": [
         ngi0Projects.nominatim,
         ngi0Projects.organicMaps,
@@ -145,3 +145,21 @@ The map data can be edited from a number of editing applications that provide ai
         }
     ]
 }
+
+export const GEO_DOSSIER_PATHNAME = "geo";
+
+export const DOSSIER = {
+    pathName: GEO_DOSSIER_PATHNAME,
+    image: "/ngi0/img/openstreetmap.logo.svg",
+    header: "Geography",
+    subheader: "Charting, routing, maps",
+    tags: ["Charting", "Routing", "Maps", "OpenStreetMap", "Decentralised Solutions"],
+    link: `/ngi0/${GEO_DOSSIER_PATHNAME}`,
+    cards: geo.cards,
+    tagsDossierDetail: geo.tags,
+    projects: geo.projects,
+    detailedProjects: geo.detailedProjects,
+    comparison: geo.comparison
+}
+
+export default geo;

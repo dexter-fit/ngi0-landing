@@ -11,6 +11,7 @@ import inputGeo from "../data/geo";
 import { markdownToHtml } from "../util/markdownToHtml";
 import {fillWithRandomStuff} from "../data/nixDossierData";
 import { Button } from "primereact/button";
+import {tagsFromProjectCardType} from "../util/tagsFromProjectCardType";
 
 const ProjectDetail = (props: {contentType: "dos" | "geo"}) => {
     const projects: ProjectDescriptionProps[] = loadProjects(props.contentType);
@@ -49,9 +50,11 @@ const ProjectDetail = (props: {contentType: "dos" | "geo"}) => {
 function loadProjects(contentType: "dos" | "geo") {
     let projects: ProjectDescriptionProps[] = [];
 
-    const NIX_TAGS = contentType === 'dos' ?
-        inputDos.tags.map(item => <Tag value={item} key={item}></Tag>) :
-        inputGeo.tags.map(item => <Tag value={item} key={item}></Tag>);
+    const NIX_TAGS = tagsFromProjectCardType(contentType === 'dos' ?
+        inputDos.cards :
+        inputGeo.cards
+    ).map(item => <Tag value={item} key={item}></Tag>);
+
     const similarNGI0Projects = "Similar NGI0 Projects";
     const similarCorporateProjects = "Similar Corporate Projects";
 

@@ -1,35 +1,22 @@
-import {Tag} from "primereact/tag";
-import React, {useEffect} from "react";
+import React from "react";
 import {ProjectDescription} from "../components/ProjectDescription";
-import {ProjectDescriptionProps} from "../types";
-import {Link, useOutletContext} from "react-router-dom";
+import {AssociatedProjectProps, ProjectDescriptionProps} from "../types";
+import {useLocation} from "react-router-dom";
 import {CardCarouselTemplate} from "../components/CardCarouselTemplate";
 import {replaceSpacesWith} from "../util/replaceSpacesWith";
 import {markdownToHtml} from "../util/markdownToHtml";
-import {Button} from "primereact/button";
-import inputDos from "../data/nix";
-import inputGeo from "../data/geo";
-import {fillWithRandomStuff} from "../data/nixDossierData";
+import {dossiers} from "../data/dossiers";
+import {tagsFromProjectCardType} from "../util/tagsFromProjectCardType";
+import {ContentType} from "../types/ContentType";
+import {ProjectDescriptionLinkType} from "../types/ProjectDescriptionLinkType";
+import {AssociatedProjectType} from "../types/AssociatedProjectType";
+import {createLinkFromProjectLinkItem} from "../util/createLinkFromProjectLinkItem";
+import {stringToTag} from "../util/stringToTag";
+import {getContentTypeFromLocation} from "../util/getContentTypeFromLocation";
 
-const Dossiers = (props: {contentType: "dos" | "geo"}) => {
-    const projects: ProjectDescriptionProps[] = loadProjects(props.contentType);
-
-    const { setNewMenuItemsFromChild } = useOutletContext();
-
-    useEffect(() => {
-        const objectsList = [
-            {
-                label: "Nix Environment Dossier",
-                items: projects.map(item => ({
-                    label: item.descriptionContent.header,
-                    url: `/ngi0/${props.contentType}#${replaceSpacesWith(item.descriptionContent.header, "_")}`,
-                    icon: "pi pi-file"
-                }))
-            }
-        ];
-
-        setNewMenuItemsFromChild(objectsList);
-    }, []);
+const Dossiers = () => {
+    const dossier = getContentTypeFromLocation(useLocation());
+    const projects: ProjectDescriptionProps[] = loadProjects(dossier);
 
     return <>
         {projects.map(item =>
@@ -43,64 +30,48 @@ const Dossiers = (props: {contentType: "dos" | "geo"}) => {
     </>
 }
 
-function loadProjects(contentType: "dos" | "geo") {
+function loadProjects(contentType: ContentType) {
+    const dossier = dossiers[contentType];
     let projects: ProjectDescriptionProps[] = [];
 
-    const NIX_TAGS = contentType === 'dos' ? inputDos.tags : inputGeo.tags;
-    const associatedNGI0Projects = "Associated NGI0 Projects";
+    let tags = [];
 
-    const cards: any [] = [
-        fillWithRandomStuff(5, contentType),
-        fillWithRandomStuff(4, contentType),
-        fillWithRandomStuff(3, contentType),
-    ]
+    for (const proj of dossier.projects) {
+        const links = proj.links?.map((item: ProjectDescriptionLinkType) => createLinkFromProjectLinkItem(item));
 
-    for (const [i, proj] of contentType === 'dos' ? inputDos.projects.entries() : inputGeo.projects.entries()) {
-        let links: any = [];
-        if (proj.links !== undefined) {
-            for (const linkItem of proj.links) {
-                let img: any = undefined;
-                if (linkItem.img !== undefined) {
-                    img = <img className="p-0 p-button-icon-left" src={linkItem.img} width="20px" alt=""/>;
-                } else {
-                    img = linkItem.icon;
-                }
-                links.push(
-                    <Link to={linkItem.link}><Button outlined={true} icon={img} className="p-button-tiny" label={linkItem.label}/></Link>
-                )
+        tags = tagsFromProjectCardType(
+            proj.associatedProjects?.flatMap((item: AssociatedProjectType) => item.carousel) || []
+        ).map(stringToTag);
+
+        let associatedProjects = [];
+
+        associatedProjects = proj.associatedProjects?.map((item: AssociatedProjectType) => ({
+            heading: item.heading,
+            description: item.description,
+            carousel: {
+                cards: item.carousel,
+                template: CardCarouselTemplate
             }
-        }
+        } as AssociatedProjectProps));
 
-        let tags: any = [];
-        let asProjects: any = [];
-        if (proj.links !== undefined) {
-            tags = NIX_TAGS.map(item => <Tag value={item} key={item}></Tag>);
-        } else {
-            asProjects = [
-                {
-                    heading: associatedNGI0Projects,
-                    carousel: {
-                        cards: cards[i - 1],
-                        template: CardCarouselTemplate
-                    }
-                }
-            ];
-        }
-
-            projects.push({
-                    image: proj.image,
-                    tags: tags,
-                    descriptionContent: {
-                        header: proj.header,
-                        links: links,
-                        associatedProjects: asProjects
-                    },
-                    children: <div dangerouslySetInnerHTML={{
-                        __html: markdownToHtml(proj.text)
-                    }}>
-                    </div>
-                })
+        projects.push({
+            image: proj.image,
+            // tags, // I don't know if we want this here. This allows us to add tags bellow each section with associated ngi0 projects
+            descriptionContent: {
+                header: proj.header,
+                links: links,
+                associatedProjects: associatedProjects
+            },
+            children: <div dangerouslySetInnerHTML={{
+                __html: markdownToHtml(proj.text)
+            }}>
+            </div>
+        })
     }
+
+    // Add dossier tags to the first description block
+    tags = dossier.tagsDossierDetail.map(stringToTag);
+    projects[0].tags = tags;
 
     return projects;
 }

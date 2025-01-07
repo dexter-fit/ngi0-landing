@@ -1,18 +1,13 @@
-const dossiers = [
-    {
-        image: "https://nlnet.nl/project/NixDebugAdaptor/nix.logo.svg",
-        header: "Nix Dossier",
-        subheader: "Nix, Nixpkg, NixOS",
-        tags: ["Nix", "NixOS", "Package Manager", "Operating System", "Reliability"],
-        link: "/ngi0/dos"
-    },
-    {
-        image: "/ngi0/img/openstreetmap.logo.svg",
-        header: "Geography",
-        subheader: "Charting, routing, maps",
-        tags: ["Charting", "Routing", "Maps", "OpenStreetMap", "Decentralised Solutions"],
-        link: "/ngi0/geo"
-    },
-]
+import {DOSSIER as NIX_DOSSIER} from "./nix";
+import {DOSSIER as GEO_DOSSIER} from "./geo"
+import {ProjectCardType} from "../types";
 
-export {dossiers};
+const dossiers =
+    Object.fromEntries([
+        [NIX_DOSSIER.pathName, NIX_DOSSIER],
+        [GEO_DOSSIER.pathName, GEO_DOSSIER]
+    ]);
+
+const dossiersArray = Object.values(dossiers) as ProjectCardType[];
+
+export {dossiers, dossiersArray};
