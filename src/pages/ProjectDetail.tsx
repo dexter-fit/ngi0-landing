@@ -40,7 +40,7 @@ function loadProjects(contentType: "dos" | "geo") {
     const similarNGI0Projects = "Similar NGI0 Projects";
     const similarCorporateProjects = "Similar Corporate Projects";
 
-    for (const proj of contentType === 'dos' ? inputDos.detailedProjects : inputGeo.detailedProjects) {
+    for (const proj of contentType === 'dos' ? inputDos.detailedProject : inputGeo.detailedProject) {
         let links: any = [];
         if (proj.links !== undefined) {
             for (const linkItem of proj.links) {

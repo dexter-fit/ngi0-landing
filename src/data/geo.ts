@@ -70,7 +70,7 @@ const geo =  {
             "text": "Route mapping refers to the process of visually depicting a particular route or trip on a map, often involving waypoints, landmarks and other geographical data. The aim is to provide a clear, interactive, and spatially accurate representation of a route’s course. Route mapping solves puzzles for various sectors via navigation, travel planning, and logistics visualisation. Unlike route planning software which focuses on optimising logistics, and efficiency, route mapping software’s primary role is to create visual and understandable maps."
         }
     ],
-    "detailedProjects": [
+    "detailedProject": [
         {
             "header": "Open Street Map",
             "linkHeader": "Open Street Map",
@@ -158,8 +158,14 @@ export const DOSSIER = {
     cards: geo.cards,
     tagsDossierDetail: geo.tags,
     projects: geo.projects,
-    detailedProjects: geo.detailedProjects,
-    comparison: geo.comparison
+    detailedProject: geo.detailedProject, // deprecated
+    comparison: geo.comparison, // deprecated
+    detailedProjects: {
+        "open_street_map": geo.detailedProject
+    },
+    comparisons: {
+        "mapcomplete_vs_streetcomplete": geo.comparison
+    }
 }
 
 export default geo;

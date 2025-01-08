@@ -26,33 +26,55 @@ const App = () => {
 
     const getDossierPathsBasedOnTheDossierPathname = (pathName: string) => ({
         path: pathName,
+        element: <Dossiers/>,
         children:
             [
-                {path: "", element: <Dossiers/>},
                 {path: "projects", element: <Index contentType={pathName as any}/>},
-                {path: "detail", element: <ProjectDetail contentType={pathName as any}/>},
-                {path: "comparison", element: <ProjectsComparison contentType={pathName as any}/>}
+                {
+                    path: "comparison",
+                    element: <ProjectsComparison contentType={pathName as any}/>,
+                    children: Object
+                        .keys(dossiers[pathName].comparisons)
+                        .map((path) => ({
+                            path,
+                            element: <ProjectsComparison contentType={pathName as any}/>
+                        }))
+                },
+                {
+                    path: "detail",
+                    element: <ProjectDetail contentType={pathName as any}/>,
+                    children: Object
+                        .keys(dossiers[pathName].detailedProjects)
+                        .map((path) => ({
+                            path,
+                            element: <ProjectDetail contentType={pathName as any}/>
+                        }))
+                }
             ]
     });
 
-    const router = createBrowserRouter([
+    const routes = [
         {
             path: "/",
             element: Layout,
             children:
                 [
                     {
-                        path: "/",
+                        path: "",
                         element: <Index/>
                     },
                     {
-                        path: "/projects",
+                        path: "projects",
                         element: <Index contentType="all"/>
                     },
                     ...Object.keys(dossiers).map((pathName: string) => getDossierPathsBasedOnTheDossierPathname(pathName))
                 ]
-        }], {basename: "/ngi0"}
-    );
+        }
+    ];
+
+    console.log(routes[0]);
+
+    const router = createBrowserRouter(routes, {basename: "/ngi0"});
 
     return (
         <RouterProvider router={router}/>

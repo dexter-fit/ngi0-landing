@@ -143,14 +143,20 @@ export const DOSSIER = {
     cards: NIX_CARDS,
     tagsDossierDetail: NIX_TAGS,
     projects: NIX_DOSSIER_PROJECTS,
-    detailedProjects: NIX_LANGUAGE_DETAIL,
-    comparison: NIX_VS_DOCKER_COMPARISON
+    detailedProject: NIX_LANGUAGE_DETAIL, // deprecated
+    comparison: NIX_VS_DOCKER_COMPARISON, // deprecated
+    detailedProjects: {
+        "nix_language": NIX_LANGUAGE_DETAIL
+    },
+    comparisons: {
+        "nix_vs_docker": NIX_VS_DOCKER_COMPARISON
+    }
 }
 
 export default {
     cards: NIX_CARDS,
     tags: NIX_TAGS,
     projects: NIX_DOSSIER_PROJECTS,
-    detailedProjects: NIX_LANGUAGE_DETAIL,
+    detailedProject: NIX_LANGUAGE_DETAIL,
     comparison: NIX_VS_DOCKER_COMPARISON
 }
