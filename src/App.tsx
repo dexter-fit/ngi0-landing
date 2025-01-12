@@ -26,28 +26,28 @@ const App = () => {
 
     const getDossierPathsBasedOnTheDossierPathname = (pathName: string) => ({
         path: pathName,
-        element: <Dossiers/>,
         children:
             [
-                {path: "projects", element: <Index contentType={pathName as any}/>},
+                {path: "", element: <Dossiers/>},
+                {path: "projects", element: <Index/>},
                 {
                     path: "comparison",
-                    element: <ProjectsComparison contentType={pathName as any}/>,
+                    element: <ProjectsComparison/>,
                     children: Object
                         .keys(dossiers[pathName].comparisons)
                         .map((path) => ({
                             path,
-                            element: <ProjectsComparison contentType={pathName as any}/>
+                            element: <ProjectsComparison/>
                         }))
                 },
                 {
                     path: "detail",
-                    element: <ProjectDetail contentType={pathName as any}/>,
+                    element: <ProjectDetail/>,
                     children: Object
                         .keys(dossiers[pathName].detailedProjects)
                         .map((path) => ({
                             path,
-                            element: <ProjectDetail contentType={pathName as any}/>
+                            element: <ProjectDetail/>
                         }))
                 }
             ]

@@ -1,20 +1,21 @@
-import {Tag} from "primereact/tag";
-import {ProjectDescriptionProps} from "../types";
+import {AssociatedProjectProps, ProjectDescriptionProps} from "../types";
 import {CardCarouselTemplate} from "../components/CardCarouselTemplate";
-import {Link, useOutletContext} from "react-router-dom";
-import React, {useEffect} from "react";
+import {useLocation} from "react-router-dom";
+import React from "react";
 import {ProjectDescription} from "../components/ProjectDescription";
 import {replaceSpacesWith} from "../util/replaceSpacesWith";
-import {ClickableTag} from "../components/ClickableTag";
-import inputDos from "../data/nix";
-import inputGeo from "../data/geo";
 import { markdownToHtml } from "../util/markdownToHtml";
-import {fillWithRandomStuff} from "../data/nixDossierData";
-import { Button } from "primereact/button";
-import {tagsFromProjectCardType} from "../util/tagsFromProjectCardType";
+import { getContentTypeFromLocation } from "../util/getContentTypeFromLocation";
+import { ContentType } from "../types/ContentType";
+import { dossiers } from "../data/dossiers";
+import { AssociatedProjectType } from "../types/AssociatedProjectType";
+import { stringToTag } from "../util/stringToTag";
+import { ProjectDescriptionLinkType } from "../types/ProjectDescriptionLinkType";
+import { createLinkFromProjectLinkItem } from "../util/createLinkFromProjectLinkItem";
 
-const ProjectDetail = (props: {contentType: "dos" | "geo"}) => {
-    const projects: ProjectDescriptionProps[] = loadProjects(props.contentType);
+const ProjectDetail = () => {
+    const dossier = getContentTypeFromLocation(useLocation());
+    const projects: ProjectDescriptionProps[] = loadProjects(dossier);
 
     return <>
         {projects.map(item =>
@@ -22,77 +23,46 @@ const ProjectDetail = (props: {contentType: "dos" | "geo"}) => {
                                 otherProjectsLinkSpace={item.otherProjectsLinkSpace}
                                 image={item.image}
                                 tags={item.tags}
-                                descriptionContent={{...item.descriptionContent, anchor: item.descriptionContent.header.replace(/ /g, "_")}}>
+                                descriptionContent={{...item.descriptionContent, anchor: replaceSpacesWith(item.descriptionContent.header, "_")}}>
                 {item.children}
             </ProjectDescription>
         )}
     </>;
 };
 
-function loadProjects(contentType: "dos" | "geo") {
+function loadProjects(contentType: ContentType) {
+    const dossier = dossiers[contentType];
     let projects: ProjectDescriptionProps[] = [];
 
-    const NIX_TAGS = tagsFromProjectCardType(contentType === 'dos' ?
-        inputDos.cards :
-        inputGeo.cards
-    ).map(item => <Tag value={item} key={item}></Tag>);
+    for (const projGroupName in dossier.detailedProjects) {
+        for (const proj of dossier.detailedProjects[projGroupName]) {
+            const links = proj.links?.map((item: ProjectDescriptionLinkType) => createLinkFromProjectLinkItem(item));
 
-    const similarNGI0Projects = "Similar NGI0 Projects";
-    const similarCorporateProjects = "Similar Corporate Projects";
-
-    for (const proj of contentType === 'dos' ? inputDos.detailedProject : inputGeo.detailedProject) {
-        let links: any = [];
-        if (proj.links !== undefined) {
-            for (const linkItem of proj.links) {
-                let img: any = undefined;
-                if (linkItem.img !== undefined) {
-                    img = <img className="p-0 p-button-icon-left" src={linkItem.img} width="20px" alt=""/>;
-                } else {
-                    img = linkItem.icon;
+            let associatedProjects = [];
+    
+            associatedProjects = proj.associatedProjects?.map((item: AssociatedProjectType) => ({
+                heading: item.heading,
+                description: item.description,
+                carousel: {
+                    cards: item.carousel,
+                    template: CardCarouselTemplate
                 }
-                links.push(
-                    <Link to={linkItem.link}><Button outlined={true} icon={img} className="p-button-tiny" label={linkItem.label}/></Link>
-                )
-            }
+            } as AssociatedProjectProps));
+    
+            projects.push({
+                image: proj.image,
+                descriptionContent: {
+                    header: proj.header,
+                    links: links,
+                    associatedProjects: associatedProjects
+                },
+                children: <div dangerouslySetInnerHTML={{
+                    __html: markdownToHtml(proj.text)
+                }}>
+                </div>,
+                tags: proj.tags.map(stringToTag)
+            })
         }
-        
-        projects.push({
-            otherProjectsLinkSpace: <>
-                <p><span>Fund</span> <span>NGI0 Assure</span></p>
-                <p><span>2022-12</span> - <span>active</span></p>
-                <p className="flex align-items-center gap-1"><span>Part of the {"dos" ? "Nix" : "Geography"} dossier</span>
-                    <Link to={`/${contentType}`} className="flex align-items-center" style={{textDecoration: "none"}}>
-                        <ClickableTag name="Visit"/>
-                    </Link>
-                </p>
-            </>,
-            image: contentType === 'dos' ? inputDos.cards[0].image : inputGeo.cards[0].image,
-            tags: NIX_TAGS,
-            descriptionContent: {
-                header: proj.header,
-                links: links,
-                associatedProjects: [
-                    {
-                        heading: similarNGI0Projects,
-                        carousel: {
-                            cards: fillWithRandomStuff(3, contentType),
-                            template: CardCarouselTemplate
-                        }
-                    },
-                    {
-                        heading: similarCorporateProjects,
-                        carousel: {
-                            cards: fillWithRandomStuff(4, contentType),
-                            template: CardCarouselTemplate
-                        }
-                    }
-                ]
-            },
-            children: <div dangerouslySetInnerHTML={{
-                __html: markdownToHtml(proj.text)
-            }}>
-            </div>
-        })
     }
 
     return projects;

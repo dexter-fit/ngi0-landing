@@ -117,17 +117,18 @@ const NIX_LANGUAGE_DETAIL: ProjectDescriptionType[] = [
         header: "Nix Language",
         linkHeader: "Part of the Nix dossier",
         text: "Nix is a functional programming language specifically designed for configuration management and package management. It is the core language of the Nix package manager and the NixOS Linux distribution. The primary objective of Nix is to provide reproducible and deterministic builds, which ensures that software builds and configurations are consistent across different environments.\n\nKey Features:\n-------------\n\n*   **Purely Functional:** Nix treats packages and configurations as pure functions without side effects. This functional nature allows for precise dependency tracking and ensures that builds are reproducible.\n*   **Declarative:** Users declare the desired state of the system in a Nix expression file, and Nix takes care of building and managing the system to match this state. This approach contrasts with imperative package managers that execute a series of commands.\n*   **Reproducibility:** Nix aims to produce identical outputs given the same input, making builds reproducible. It uses content-addressed storage to uniquely identify package dependencies and their versions.\n*   **Isolation:** Each package is built in a sandboxed environment, ensuring that builds are isolated from the rest of the system and from each other. This reduces the risk of interference between packages.\n*   **Atomic Upgrades and Rollbacks:** Nix supports atomic upgrades, meaning a system can be upgraded without downtime. If an upgrade fails, users can easily roll back to the previous working state.\n*   **Multi-User Support:** Nix can manage dependencies and configurations for multiple users on the same system, maintaining isolation between their environments.\n*   **Cross-Platform:** While primarily used on NixOS, Nix can be used on other Linux distributions and macOS, providing the same functional benefits across different platforms.\n\nNix is particularly useful in environments where consistency, reproducibility, and reliability are paramount. It is popular in DevOps, CI/CD pipelines, and environments where managing complex dependencies and configurations is a challenge.\n\nBrief with examples",
-        tags: tagsFromProjectCardType(NIX_LANGUAGE_RELATED_PROJECT_CARDS)
+        tags: tagsFromProjectCardType(NIX_LANGUAGE_RELATED_PROJECT_CARDS),
+        image: "https://nlnet.nl/project/NixDebugAdaptor/nix.logo.svg"
     } as ProjectDescriptionType
 ];
 
 const NIX_VS_DOCKER_COMPARISON: ProjectDescriptionType[] = [
     {
-        "header": "Choosing Between Dockerfile and Nix for Building Docker Images",
-        "header2": "Nix vs Docker",
-        "linkHeader": "Part of the Nix dossier",
-        "link2Header": "Visit the Nix page",
-        "text": "In the realm of containerization, Docker has long been a dominant force, offering a simple and effective way to package applications and their dependencies into lightweight, portable containers. Central to Docker’s workflow is the Dockerfile, a text file that contains instructions for building Docker images. However, as alternative approaches emerge, developers are faced with the question: should they stick with Dockerfiles or explore alternatives like Nix for building Docker images?\n\nUnderstanding Dockerfile\n------------------------\n\nDockerfile is the de facto standard for building Docker images. Its simplicity and familiarity have made it widely adopted in the developer community. Dockerfiles consist of a series of instructions that are executed sequentially to build an image layer by layer. These instructions include actions like copying files into the image, installing packages, setting environment variables, and defining the default command to run when the container starts. Pros\n\n*   Simplicity and Familiarity\n\nCons\n\n*   Reproducibility\n\nExploring Nix\n-------------\n\nNix is a powerful package manager and build tool known for its emphasis on reproducibility and declarative approach. While not as ubiquitous as Dockerfiles, Nix offers unique advantages for building Docker images. Pros\n\n*   Reproducibility\n\nCons\n\n*   Learning Curve\n\nChoosing the Right Tool for the Job\n-----------------------------------\n\nBoth Dockerfile and Nix have their strengths and weaknesses, and the choice between them depends on the specific requirements of your project.\n\nHow to switch\n-------------\n\nExamples on how to switch, switching from the 3rd party tool to the NGI0 one."
+        header: "Choosing Between Dockerfile and Nix for Building Docker Images",
+        header2: "Nix vs Docker",
+        linkHeader: "Part of the Nix dossier",
+        link2Header: "Visit the Nix page",
+        text: "In the realm of containerization, Docker has long been a dominant force, offering a simple and effective way to package applications and their dependencies into lightweight, portable containers. Central to Docker’s workflow is the Dockerfile, a text file that contains instructions for building Docker images. However, as alternative approaches emerge, developers are faced with the question: should they stick with Dockerfiles or explore alternatives like Nix for building Docker images?\n\nUnderstanding Dockerfile\n------------------------\n\nDockerfile is the de facto standard for building Docker images. Its simplicity and familiarity have made it widely adopted in the developer community. Dockerfiles consist of a series of instructions that are executed sequentially to build an image layer by layer. These instructions include actions like copying files into the image, installing packages, setting environment variables, and defining the default command to run when the container starts. Pros\n\n*   Simplicity and Familiarity\n\nCons\n\n*   Reproducibility\n\nExploring Nix\n-------------\n\nNix is a powerful package manager and build tool known for its emphasis on reproducibility and declarative approach. While not as ubiquitous as Dockerfiles, Nix offers unique advantages for building Docker images. Pros\n\n*   Reproducibility\n\nCons\n\n*   Learning Curve\n\nChoosing the Right Tool for the Job\n-----------------------------------\n\nBoth Dockerfile and Nix have their strengths and weaknesses, and the choice between them depends on the specific requirements of your project.\n\nHow to switch\n-------------\n\nExamples on how to switch, switching from the 3rd party tool to the NGI0 one."
     } as ProjectDescriptionType
 ]
 
@@ -143,8 +144,6 @@ export const DOSSIER = {
     cards: NIX_CARDS,
     tagsDossierDetail: NIX_TAGS,
     projects: NIX_DOSSIER_PROJECTS,
-    detailedProject: NIX_LANGUAGE_DETAIL, // deprecated
-    comparison: NIX_VS_DOCKER_COMPARISON, // deprecated
     detailedProjects: {
         "nix_language": NIX_LANGUAGE_DETAIL
     },
@@ -153,10 +152,12 @@ export const DOSSIER = {
     }
 }
 
-export default {
+const nix = {
     cards: NIX_CARDS,
     tags: NIX_TAGS,
     projects: NIX_DOSSIER_PROJECTS,
     detailedProject: NIX_LANGUAGE_DETAIL,
     comparison: NIX_VS_DOCKER_COMPARISON
 }
+
+export default nix;

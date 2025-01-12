@@ -34,7 +34,7 @@ function loadProjects(contentType: ContentType) {
     const dossier = dossiers[contentType];
     let projects: ProjectDescriptionProps[] = [];
 
-    let tags = [];
+    let tags: any[] = [];
 
     for (const proj of dossier.projects) {
         const links = proj.links?.map((item: ProjectDescriptionLinkType) => createLinkFromProjectLinkItem(item));

@@ -18,6 +18,7 @@
 
 img {
     padding: 10px;
+    max-width: 20vw;
 }
 
 .image-content-wrapper {

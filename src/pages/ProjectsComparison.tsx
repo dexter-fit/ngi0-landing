@@ -1,17 +1,19 @@
-import {Tag} from "primereact/tag";
 import {ProjectDescriptionProps} from "../types";
-import {Link, useOutletContext} from "react-router-dom";
-import {ClickableTag} from "../components/ClickableTag";
-import React, {useEffect} from "react";
+import {useLocation } from "react-router-dom";
+import React from "react";
 import {replaceSpacesWith} from "../util/replaceSpacesWith";
 import {ProjectDescription} from "../components/ProjectDescription";
-import inputDos from "../data/nix";
-import inputGeo from "../data/geo";
 import { markdownToHtml } from "../util/markdownToHtml";
-import {tagsFromProjectCardType} from "../util/tagsFromProjectCardType";
+import { getContentTypeFromLocation } from "../util/getContentTypeFromLocation";
+import { ContentType } from "../types/ContentType";
+import { dossiers } from "../data/dossiers";
+import { ProjectDescriptionLinkType } from "../types/ProjectDescriptionLinkType";
+import { createLinkWithLabelFromProjectLinkItem } from "../util/createLinkWithLabelFromProjectLinkItem";
+import { stringToTag } from "../util/stringToTag";
 
-const ProjectsComparison = (props: {contentType: "dos" | "geo"}) => {
-    const projects: ProjectDescriptionProps[] = loadProjects(props.contentType);
+const ProjectsComparison = () => {
+    const dossier = getContentTypeFromLocation(useLocation());
+    const projects: ProjectDescriptionProps[] = loadProjects(dossier);
 
     return <>
         {projects.map(item =>
@@ -19,46 +21,43 @@ const ProjectsComparison = (props: {contentType: "dos" | "geo"}) => {
                                 otherProjectsLinkSpace={item.otherProjectsLinkSpace}
                                 image={item.image}
                                 tags={item.tags}
-                                descriptionContent={{
-                                    ...item.descriptionContent,
-                                    anchor: item.descriptionContent.header.replace(/ /g, "_")
-                                }}>
+                                descriptionContent={{...item.descriptionContent, anchor: replaceSpacesWith(item.descriptionContent.header, "_")}}>
                 {item.children}
             </ProjectDescription>
         )}
     </>;
 };
 
-function loadProjects(contentType: "dos" | "geo") {
+function loadProjects(contentType: ContentType) {
+    const dossier = dossiers[contentType];
     let projects: ProjectDescriptionProps[] = [];
 
-    const NIX_TAGS = tagsFromProjectCardType(contentType === 'dos' ?
-        inputDos.cards :
-        inputGeo.cards
-    ).map(item => <Tag value={item} key={item}></Tag>);
+    for (const compGroupName in dossier.comparisons) {
+        for (const comp of dossier.comparisons[compGroupName]) {
+            const links = [
+                {
+                    label: comp.linkHeader,
+                    link: `/${contentType}`
+                },
+                {
+                    label: comp.link2Header,
+                    link: `/${contentType}/detail`
+                }
+            ].map((item: ProjectDescriptionLinkType) => createLinkWithLabelFromProjectLinkItem(item));
 
-    for (const proj of contentType === 'dos' ? inputDos.comparison : inputGeo.comparison) {
-        projects.push({
-            otherProjectsLinkSpace: <div className="full-width flex flex-column">
-                <p className="flex align-items-center gap-1"><span>{proj?.linkHeader}</span>
-                    <Link to={`/${contentType}`} className="flex align-items-center"
-                          style={{textDecoration: "none"}}><ClickableTag name="Visit"/></Link>
-                </p>
-                <p className="flex align-items-center gap-1"><span>{proj?.link2Header}</span>
-                    <Link to={`/${contentType}/detail`} className="flex align-items-center"
-                          style={{textDecoration: "none"}}><ClickableTag name="Visit"/></Link>
-                </p>
-            </div>,
-            image: contentType === 'dos' ? inputDos.cards[0].image : inputGeo.cards[0].image,
-            tags: NIX_TAGS,
-            descriptionContent: {
-                header: proj.header
-            },
-            children: <div dangerouslySetInnerHTML={{
-                __html: markdownToHtml(proj.text)
-            }}>
-            </div>
-        })
+            projects.push({
+                otherProjectsLinkSpace: links,
+                image: dossier.image,
+                descriptionContent: {
+                    header: comp.header
+                },
+                tags: dossier.tags.map(stringToTag),
+                children: <div dangerouslySetInnerHTML={{
+                    __html: markdownToHtml(comp.text)
+                }}>
+                </div>
+            })
+        }
     }
 
     return projects;

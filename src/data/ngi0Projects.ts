@@ -162,6 +162,20 @@ export const ngi0Projects = {
         "fund": funds.entrust,
         "start": "2023-04"
     },
+    umap: {
+        "image": "/ngi0/img/umap.logo.svg",
+        "header": "uMap",
+        "subheader": "Collaborative custom mapping with OpenStreetMap data",
+        "tags": [
+            "Verticals",
+            "Search",
+            "Maps",
+            "OpenStreetMap"
+        ],
+        "link": "https://nlnet.nl/project/uMap/",
+        "fund": funds.entrust,
+        "start": "2023-10"
+    },
 
     typeInferenceForNix: {
         image: "https://nlnet.nl/project/NixDebugAdaptor/nix.logo.svg",
