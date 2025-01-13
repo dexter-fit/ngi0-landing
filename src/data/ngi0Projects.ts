@@ -312,7 +312,7 @@ export const ngi0Projects = {
         start: ""
     },
     selfPrivacy: {
-        image: "ihttps://nlnet.nl/project/SelfPrivacy/SelfPrivacy.logo.svg",
+        image: "https://nlnet.nl/project/SelfPrivacy/SelfPrivacy.logo.svg",
         header: "SelfPrivacy",
         subheader: "Reproducible self-hosting stack based on NixOS",
         tags: ["Self-hosting", "NixOS", "SelfPrivacy", "Open source services", "Infrastructure management"],
