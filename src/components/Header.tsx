@@ -65,22 +65,22 @@ const Header = (props: {menuItems: MenuItem[]}) => {
         },
         {
             label: "Nix Projects",
-            url: "/ngi0/dos",
+            url: "/ngi0/nix",
             icon: "pi pi-home",
             items: [
                 {
                     label: "Projects",
-                    url: "/ngi0/dos/projects",
+                    url: "/ngi0/nix/projects",
                     icon: "pi pi-file"
                 },
                 {
                     label: "Project Detail",
-                    url: "/ngi0/dos/detail",
+                    url: "/ngi0/nix/detail",
                     icon: "pi pi-file"
                 },
                 {
                     label: "Project Comparison",
-                    url: "/ngi0/dos/comparison",
+                    url: "/ngi0/nix/comparison",
                     icon: "pi pi-file"
                 }
             ]

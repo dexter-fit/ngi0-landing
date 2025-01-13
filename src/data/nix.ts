@@ -71,11 +71,11 @@ const NIX_DOSSIER_PROJECTS: ProjectDescriptionType[] = [
                 label: "GitHub"
             },
             {
-                link: "/dos/detail",
+                link: "/nix/detail",
                 label: "Nix Language"
             },
             {
-                link: "/dos/comparison",
+                link: "/nix/comparison",
                 label: "Nix vs Docker"
             }
         ]
@@ -132,7 +132,7 @@ const NIX_VS_DOCKER_COMPARISON: ProjectDescriptionType[] = [
     } as ProjectDescriptionType
 ]
 
-export const NIX_DOSSIER_PATHNAME = "dos";
+export const NIX_DOSSIER_PATHNAME = "nix";
 
 export const DOSSIER = {
     pathName: NIX_DOSSIER_PATHNAME,

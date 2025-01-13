@@ -1,3 +1,3 @@
 export type ContentType =
-    "dos" | // nix
+    "nix" | // nix
     "geo";  // geovisualizations

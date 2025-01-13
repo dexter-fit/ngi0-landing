@@ -1,8 +1,5 @@
 import {ProjectCardType} from "../types";
-
-import inputDos from "./nix";
-import inputGeo from "./geo";
-import {dossiersArray} from "./dossiers";
+import {dossiers, dossiersArray} from "./dossiers";
 import {ContentType} from "../types/ContentType";
 
 const compare = (a: ProjectCardType, b: ProjectCardType) => {
@@ -22,11 +19,9 @@ const getCards = (contentType?: ContentType | "projects"): ProjectCardType[] => 
     if (contentType) {
         switch (contentType) {
             case "projects":
-                return [...inputDos.cards, ...inputGeo.cards].sort(compare);
-            case "dos":
-                return inputDos.cards.sort(compare);
-            case "geo":
-                return inputGeo.cards.sort(compare);
+                return dossiersArray.flatMap((item: any) => item.cards).sort(compare);
+            default:
+                return dossiers[contentType].cards.sort(compare);
         }
     }
 
