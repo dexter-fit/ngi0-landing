@@ -348,5 +348,134 @@ export const ngi0Projects = {
         fund: funds.pet,
         start: "2019-04",
         end: "2022-10"
-    }
+    },
+
+    libspngAPNG: {
+        image: "",
+        header: "libspng APNG",
+        subheader: "Add Animated PNG (APNG) image read- and write support to libspng",
+        tags: ["C Library", "PNG File Format", "APNG Support", "Image Processing", "Security and Ease of Use"],
+        link: "https://nlnet.nl/project/libspng-animated/",
+        funds: funds.entrust,
+        start: "2023-04"
+    },
+    calligraSVG: {
+        image: "",
+        header: "Calligra-SVG",
+        subheader: "Improve fallback mechanisms in Calligra ODF loading and saving",
+        tags: ["ODF Standard", "adraw:frame", "Fallback Mechanism", "SVG Format", "Calligra Suite"],
+        link: "https://nlnet.nl/project/calligra-svg/",
+    },
+    libvips: {
+        image: "",
+        header: "libvips",
+        subheader: "Add animated PNG and enhanced JPEG XL support to libvips",
+        tags: ["Image Processing", "Libvips", "Animated PNG Support", "JXL Format", "Node Binding"],
+        link: "https://nlnet.nl/project/libvips/",
+        funds: funds.zeroCore,
+        start: "2024-04"
+    },
+
+    blenderWeb: {
+        image: "https://www.fit.vut.cz/person/ivlnas/public/entry-point/def-img/blender.svg",
+        header: "BlenderWeb",
+        subheader: "free 3D animation and compositing suite",
+        tags: ["Open Source Platform", "Rich Web Content", "Game Engine", "2D and 3D Content", "Adobe Flash Alternative"],
+        link: "https://nlnet.nl/project/blenderweb/"
+    },
+    icosaGallery: {
+        image: "https://nlnet.nl/project/IcosaGallery/icosia.logo.svg",
+        header: "Icosa Gallery",
+        subheader: "Open, decentralised platform for 3D assets",
+        tags: ["3D Model Sharing", "ActivityPub", "Fediverse", "3D Viewer", "Open Source Platform"],
+        link: "https://nlnet.nl/project/IcosaGallery/",
+        funds: funds.entrust,
+        start: "2023-02"
+    },
+    manyfold: {
+        image: "https://nlnet.nl/project/Personal-3D-archive/manyfold.logo.svg",
+        header: "Manyfold",
+        subheader: "Manage private collections of 3D models",
+        tags: ["3D Model Management", "3D Printing Community", "Decentralized Platform", "ActivityPub Integration", "Progressive 3D Mesh Transmission"],
+        link: "https://nlnet.nl/project/Personal-3D-archive/",
+        funds: funds.entrust,
+        start: "2023-10"
+    },
+    cablesGl: {
+        image: "https://nlnet.nl/project/cables.gl/cables.logo.svg",
+        header: "cables.gl",
+        subheader: "Creative tool for graphics and 3D content",
+        tags: ["Interactive Web Content", "No-Code Tool", "Cables Patches", "Standalone Version", "Open Source Community"],
+        link: "https://nlnet.nl/project/cables.gl/",
+        funds: funds.entrust,
+        start: "2024-02"
+    },
+
+    hurd: {
+        image: "https://nlnet.nl/project/Hurd-Audio/Hurd.logo.svg",
+        header: "Sound in Hurd",
+        subheader: "Add audio capabilities to the multiserver microkernel from GNU",
+        tags: ["GNU Hurd", "Lightweight Kernel", "POSIX Compatibility", "Mach Microkernel", "Audio System Development"],
+        link: "https://nlnet.nl/project/Hurd-Audio/",
+        funds: funds.pet,
+        start: "2019-10",
+        end: "2019-10"
+    },
+    pulseAudio: {
+        image: "https://nlnet.nl/project/pulseaudio/pulseaudio.png",
+        header: "PulseAudio",
+        subheader: "PulseAudio echo cancellation",
+        tags: ["PulseAudio", "Echo Cancellation", "VoIP Conferencing", "Linux Audio Layer", "ALSA Integration"],
+        link: "https://nlnet.nl/project/pulseaudio/"
+    },
+
+    libreSOC: {
+        image: "https://nlnet.nl/project/LibreSoC-Video/libresoc.logo.svg",
+        header: "Libre-SOC Video Acceleration",
+        subheader: "Optimised video acceleration instructions for Libre RISC-V SoC",
+        tags: ["Libre-SoC", "FPGA-Proven", "Video Acceleration", "ffmpeg Integration", "Hardware Decoder"],
+        link: "https://nlnet.nl/project/LibreSoC-Video/",
+        funds: funds.pet,
+        start: "2019-12",
+        end: "2022-10"
+    },
+    miru: {
+        image: "https://nlnet.nl/project/Miru/miru.logo.svg",
+        header: "Miru",
+        subheader: "Multi-track video editing and real-time AR effects",
+        tags: ["Miru", "Web Platform Tools", "Real-Time AR", "WebGL and WebAssembly", "Privacy-Focused Editing"],
+        link: "https://nlnet.nl/project/Miru/",
+        funds: funds.zeroCore,
+        start: "2024-04",
+    },
+    peertube: {
+        image: "https://nlnet.nl/project/PeerTube/PeerTube.logo.svg",
+        header: "PeerTube",
+        subheader: "A decentralised streaming video platform",
+        tags: ["PeerTube", "Federated Video Platform", "ActivityPub", "P2P Distribution", "Privacy and Ethics"],
+        link: "https://nlnet.nl/project/PeerTube/",
+        funds: funds.discovery,
+        start: "2021-02",
+        end: "2022-10"
+    },
+    peertubeRemoteTranscoding: {
+        image: "https://nlnet.nl/project/PeerTube/PeerTube.logo.svg",
+        header: "PeerTube - Remote Transcoding",
+        subheader: "Remote Transcoding for distributed video sharing network",
+        tags: ["PeerTube", "Federated Video Platform", "Self-Hosting", "ActivityPub Federation", "Video Transcoding"],
+        link: "https://nlnet.nl/project/Peertube-Transcode/",
+        funds: funds.entrust,
+        start: "2022-10",
+        end: "2024-01"
+    },
+    videobox: {
+        image: "https://nlnet.nl/project/VideoBox/fosdem.videobox.logo.svg",
+        header: "Video Box",
+        subheader: "Affordable open hardware video-to-network",
+        tags: ["FOSDEM Video Box", "Open Hardware", "Free Software", "Video Encoding", "Compact Network Solution"],
+        link: "https://nlnet.nl/project/VideoBox/",
+        funds: funds.pet,
+        start: "2019-12",
+        end: "2022-10"
+    },
 }
