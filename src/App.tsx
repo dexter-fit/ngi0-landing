@@ -65,7 +65,7 @@ const App = () => {
                     },
                     {
                         path: "projects",
-                        element: <Index contentType="all"/>
+                        element: <Index/>
                     },
                     ...Object.keys(dossiers).map((pathName: string) => getDossierPathsBasedOnTheDossierPathname(pathName))
                 ]
