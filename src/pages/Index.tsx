@@ -6,10 +6,13 @@ import {ClickableTag} from "../components/ClickableTag";
 import {ProjectCard} from "../components/ProjectCard";
 import {ProjectCardType} from "../types";
 import {tagsFromProjectCardType} from "../util/tagsFromProjectCardType";
+import {getContentTypeFromLocation} from "../util/getContentTypeFromLocation";
+import {useLocation} from "react-router-dom";
 
 
-const Index = (props: {contentType?: "dos" | "geo" | "all"}) => {
-    const cards = getCards(props.contentType);
+const Index = () => {
+    const contentType = getContentTypeFromLocation(useLocation());
+    const cards = getCards(contentType);
     const allAvailableTags = Object.fromEntries(tagsFromProjectCardType(cards).map(tag => [tag, false]));
     const [searchString, setSearchString] = useState('');
     const [searchClearDisabled, setSearchClearDisabled] = useState(true);

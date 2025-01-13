@@ -3,6 +3,7 @@ import {ProjectCardType} from "../types";
 import inputDos from "./nix";
 import inputGeo from "./geo";
 import {dossiersArray} from "./dossiers";
+import {ContentType} from "../types/ContentType";
 
 const compare = (a: ProjectCardType, b: ProjectCardType) => {
     const headerA = a.header.toUpperCase();
@@ -17,10 +18,10 @@ const compare = (a: ProjectCardType, b: ProjectCardType) => {
     return 0;
 }
 
-const getCards = (contentType?: "dos" | "geo" | "all"): ProjectCardType[] => {
+const getCards = (contentType?: ContentType | "projects"): ProjectCardType[] => {
     if (contentType) {
         switch (contentType) {
-            case "all":
+            case "projects":
                 return [...inputDos.cards, ...inputGeo.cards].sort(compare);
             case "dos":
                 return inputDos.cards.sort(compare);
