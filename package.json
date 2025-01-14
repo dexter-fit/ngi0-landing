@@ -25,14 +25,19 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-	"build-ssg": "npm run build && react-snap",
+    "build-ssg": "npm run build && react-snap",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
   "reactSnap": {
-	"skipThirdPartyRequests": true,
-	"puppeteer": { "timeout": 100000000 },
-	"puppeteerArgs": ["--no-sandbox", "--disable-setuid-sandbox"]
+    "skipThirdPartyRequests": true,
+    "puppeteer": {
+      "timeout": 100000000
+    },
+    "puppeteerArgs": [
+      "--no-sandbox",
+      "--disable-setuid-sandbox"
+    ]
   },
   "eslintConfig": {
     "extends": [
@@ -53,6 +58,7 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@types/showdown": "^2.0.6"
   },
   "homepage": "/ngi0"

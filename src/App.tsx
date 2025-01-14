@@ -72,8 +72,6 @@ const App = () => {
         }
     ];
 
-    console.log(routes[0]);
-
     const router = createBrowserRouter(routes, {basename: "/ngi0"});
 
     return (

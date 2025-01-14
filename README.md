@@ -23,7 +23,7 @@ docker buildx
 ```
 If so crossbuild the target image using
 ```sh
-docker buildx build --platform linux/arm64  --push -t dexter.fit.vutbr.cz/ngi0/landing:latest .
+docker buildx build --platform linux/arm64  --push -t tyrion.fit.vutbr.cz/ngi0/landing:latest .
 ```
 replace `linux/arm64` with a comma separated list of values as needed.
 
