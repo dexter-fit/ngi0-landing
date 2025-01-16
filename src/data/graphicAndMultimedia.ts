@@ -185,15 +185,15 @@ const GRAPHICS_DOSSIER_PROJECTS: ProjectDescriptionType[] = [
     },
 ];
 
-export const NIX_DOSSIER_PATHNAME = "graphics";
+export const GRAPHICS_DOSSIER_PATHNAME = "graphics";
 
 export const DOSSIER = {
-    pathName: NIX_DOSSIER_PATHNAME,
+    pathName: GRAPHICS_DOSSIER_PATHNAME,
     image: "https://nlnet.nl/project/NixDebugAdaptor/nix.logo.svg",
     header: "Graphics Dossier",
     subheader: "Graphics and Multimedia",
     tags: ["Graphics", "Multimedia", "GIMP", "Blender"],
-    link: `/ngi0/${NIX_DOSSIER_PATHNAME}`,
+    link: `/ngi0/${GRAPHICS_DOSSIER_PATHNAME}`,
     cards: GRAPHICS_CARDS,
     tagsDossierDetail: GRAPHICS_TAGS,
     projects: GRAPHICS_DOSSIER_PROJECTS,
