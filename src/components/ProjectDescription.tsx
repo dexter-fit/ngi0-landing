@@ -2,6 +2,7 @@ import "./ProjectDescription.css";
 import React from "react";
 import {ProjectDescriptionProps} from "../types";
 import {AssociatedProjectTemplate} from "./AssociatedProjectTemplate";
+import {Divider} from "primereact/divider";
 
 const ProjectDescription = (props: ProjectDescriptionProps) => {
     return <>
@@ -21,7 +22,6 @@ const ProjectDescription = (props: ProjectDescriptionProps) => {
             {props.tags}
         </div> : <></>}
 
-        {props.otherProjectsLinkSpace ? props.otherProjectsLinkSpace : <></>}
 
         <article key={props.descriptionContent.anchor}>
             <section>
@@ -32,6 +32,13 @@ const ProjectDescription = (props: ProjectDescriptionProps) => {
                 />)}
             </section>
         </article>
+
+        {props.otherProjectsLinkSpace ? <><Divider align="left">
+            <div className="inline-flex align-items-center">
+                <i className="pi pi-link mr-2"></i>
+                <b>Related Content</b>
+            </div>
+        </Divider>{props.otherProjectsLinkSpace}</> : <></>}
     </>
 }
 

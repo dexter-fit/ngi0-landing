@@ -8,7 +8,7 @@ import { getContentTypeFromLocation } from "../util/getContentTypeFromLocation";
 import { ContentType } from "../types/ContentType";
 import { dossiers } from "../data/dossiers";
 import { ProjectDescriptionLinkType } from "../types/ProjectDescriptionLinkType";
-import { createLinkWithLabelFromProjectLinkItem } from "../util/createLinkWithLabelFromProjectLinkItem";
+import { createLinkWithLabelFromProjectLinkItems } from "../util/createLinkWithLabelFromProjectLinkItems";
 import { stringToTag } from "../util/stringToTag";
 
 const ProjectsComparison = () => {
@@ -34,19 +34,22 @@ function loadProjects(contentType: ContentType) {
 
     for (const compGroupName in dossier.comparisons) {
         for (const comp of dossier.comparisons[compGroupName]) {
-            const links = [
-                {
-                    label: comp.linkHeader,
+            const otherProjectsLinkSpace = [
+                createLinkWithLabelFromProjectLinkItems(`Part of the ${dossier.header} Dossier`, [{
+                    label: 'Visit',
                     link: `/${contentType}`
-                },
-                {
-                    label: comp.link2Header,
-                    link: `/${contentType}/detail`
-                }
-            ].map((item: ProjectDescriptionLinkType) => createLinkWithLabelFromProjectLinkItem(item));
+                }])
+            ];
+
+            if (comp?.relatedContent) {
+                otherProjectsLinkSpace.push(...comp?.relatedContent?.map(
+                    (item: { label: string; links: ProjectDescriptionLinkType[]; }) =>
+                        createLinkWithLabelFromProjectLinkItems(item.label, item.links)
+                ));
+            }
 
             projects.push({
-                otherProjectsLinkSpace: links,
+                otherProjectsLinkSpace,
                 image: dossier.image,
                 descriptionContent: {
                     header: comp.header

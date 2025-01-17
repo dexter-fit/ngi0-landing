@@ -13,6 +13,7 @@ import {AssociatedProjectType} from "../types/AssociatedProjectType";
 import {createLinkFromProjectLinkItem} from "../util/createLinkFromProjectLinkItem";
 import {stringToTag} from "../util/stringToTag";
 import {getContentTypeFromLocation} from "../util/getContentTypeFromLocation";
+import {createLinkWithLabelFromProjectLinkItems} from "../util/createLinkWithLabelFromProjectLinkItems";
 
 const Dossiers = () => {
     const dossier = getContentTypeFromLocation(useLocation());
@@ -23,6 +24,7 @@ const Dossiers = () => {
                 <ProjectDescription key={item.descriptionContent.header}
                                     image={item.image}
                                     tags={item.tags}
+                                    otherProjectsLinkSpace={item.otherProjectsLinkSpace}
                                     descriptionContent={{...item.descriptionContent, anchor: replaceSpacesWith(item.descriptionContent.header, "_")}}>
                     {item.children}
                 </ProjectDescription>
@@ -69,9 +71,24 @@ function loadProjects(contentType: ContentType) {
         })
     }
 
+    const otherProjectsLinkSpace = [
+        createLinkWithLabelFromProjectLinkItems(`Detailed Projects Within the Dossier`,
+            Object.entries(dossier.detailedProjects).map(([path, item]) =>
+                ({link: `detail/${path}`, label: path}))
+        ),
+        createLinkWithLabelFromProjectLinkItems(`Project Comparisons Within the Dossier`,
+            Object.entries(dossier.comparisons).map(([path, item]) =>
+                ({link: `comparison/${path}`, label: path}))
+        ),
+        createLinkWithLabelFromProjectLinkItems("Projects",
+            [{label: "Visit", link: `projects`}]
+        )
+    ];
+
     // Add dossier tags to the first description block
     tags = dossier.tagsDossierDetail.map(stringToTag);
     projects[0].tags = tags;
+    projects[projects.length - 1].otherProjectsLinkSpace = otherProjectsLinkSpace;
 
     return projects;
 }

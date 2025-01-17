@@ -58,7 +58,7 @@ export const OFFICE_DOSSIER_PATHNAME = "office";
 export const DOSSIER = {
     pathName: OFFICE_DOSSIER_PATHNAME,
     image: "https://nlnet.nl/project/NixDebugAdaptor/nix.logo.svg",
-    header: "Office Dossier",
+    header: "Office",
     subheader: "Open-Source Office Dossier",
     tags: ["Word", "Excel", "Alternatives", "Open-Source"],
     link: `/ngi0/${OFFICE_DOSSIER_PATHNAME}`,

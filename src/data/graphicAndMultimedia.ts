@@ -190,7 +190,7 @@ export const GRAPHICS_DOSSIER_PATHNAME = "graphics";
 export const DOSSIER = {
     pathName: GRAPHICS_DOSSIER_PATHNAME,
     image: "https://nlnet.nl/project/NixDebugAdaptor/nix.logo.svg",
-    header: "Graphics Dossier",
+    header: "Graphics",
     subheader: "Graphics and Multimedia",
     tags: ["Graphics", "Multimedia", "GIMP", "Blender"],
     link: `/ngi0/${GRAPHICS_DOSSIER_PATHNAME}`,

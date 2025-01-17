@@ -4,6 +4,8 @@ import {ProjectDescriptionType} from "../types/ProjectDescriptionType";
 import {ASSOCIATED_NGI0_PROJECTS} from "./commonStrings";
 import {tagsFromProjectCardType} from "../util/tagsFromProjectCardType";
 
+export const NIX_DOSSIER_PATHNAME = "nix";
+
 const NIX_LANGUAGE_RELATED_PROJECT_CARDS: ProjectCardType[] = [
     ngi0Projects.typeInferenceForNix,
     ngi0Projects.debugAdapterWithNix
@@ -69,14 +71,6 @@ const NIX_DOSSIER_PROJECTS: ProjectDescriptionType[] = [
                 icon: "pi pi-github",
                 link: "https://github.com/NixOS/nix",
                 label: "GitHub"
-            },
-            {
-                link: "/nix/detail",
-                label: "Nix Language"
-            },
-            {
-                link: "/nix/comparison",
-                label: "Nix vs Docker"
             }
         ]
     },
@@ -128,16 +122,26 @@ const NIX_VS_DOCKER_COMPARISON: ProjectDescriptionType[] = [
         header2: "Nix vs Docker",
         linkHeader: "Part of the Nix dossier",
         link2Header: "Visit the Nix page",
-        text: "In the realm of containerization, Docker has long been a dominant force, offering a simple and effective way to package applications and their dependencies into lightweight, portable containers. Central to Docker’s workflow is the Dockerfile, a text file that contains instructions for building Docker images. However, as alternative approaches emerge, developers are faced with the question: should they stick with Dockerfiles or explore alternatives like Nix for building Docker images?\n\nUnderstanding Dockerfile\n------------------------\n\nDockerfile is the de facto standard for building Docker images. Its simplicity and familiarity have made it widely adopted in the developer community. Dockerfiles consist of a series of instructions that are executed sequentially to build an image layer by layer. These instructions include actions like copying files into the image, installing packages, setting environment variables, and defining the default command to run when the container starts. Pros\n\n*   Simplicity and Familiarity\n\nCons\n\n*   Reproducibility\n\nExploring Nix\n-------------\n\nNix is a powerful package manager and build tool known for its emphasis on reproducibility and declarative approach. While not as ubiquitous as Dockerfiles, Nix offers unique advantages for building Docker images. Pros\n\n*   Reproducibility\n\nCons\n\n*   Learning Curve\n\nChoosing the Right Tool for the Job\n-----------------------------------\n\nBoth Dockerfile and Nix have their strengths and weaknesses, and the choice between them depends on the specific requirements of your project.\n\nHow to switch\n-------------\n\nExamples on how to switch, switching from the 3rd party tool to the NGI0 one."
+        text: "In the realm of containerization, Docker has long been a dominant force, offering a simple and effective way to package applications and their dependencies into lightweight, portable containers. Central to Docker’s workflow is the Dockerfile, a text file that contains instructions for building Docker images. However, as alternative approaches emerge, developers are faced with the question: should they stick with Dockerfiles or explore alternatives like Nix for building Docker images?\n\nUnderstanding Dockerfile\n------------------------\n\nDockerfile is the de facto standard for building Docker images. Its simplicity and familiarity have made it widely adopted in the developer community. Dockerfiles consist of a series of instructions that are executed sequentially to build an image layer by layer. These instructions include actions like copying files into the image, installing packages, setting environment variables, and defining the default command to run when the container starts. Pros\n\n*   Simplicity and Familiarity\n\nCons\n\n*   Reproducibility\n\nExploring Nix\n-------------\n\nNix is a powerful package manager and build tool known for its emphasis on reproducibility and declarative approach. While not as ubiquitous as Dockerfiles, Nix offers unique advantages for building Docker images. Pros\n\n*   Reproducibility\n\nCons\n\n*   Learning Curve\n\nChoosing the Right Tool for the Job\n-----------------------------------\n\nBoth Dockerfile and Nix have their strengths and weaknesses, and the choice between them depends on the specific requirements of your project.\n\nHow to switch\n-------------\n\nExamples on how to switch, switching from the 3rd party tool to the NGI0 one.",
+        relatedContent: [
+            {
+                label: "Related Project Details",
+                links: [
+                    {
+                        label: "Nix Language",
+                        link: `/${NIX_DOSSIER_PATHNAME}/detail/nix_language`
+                    }
+                ]
+            }
+        ]
     } as ProjectDescriptionType
 ]
 
-export const NIX_DOSSIER_PATHNAME = "nix";
 
 export const DOSSIER = {
     pathName: NIX_DOSSIER_PATHNAME,
     image: "https://nlnet.nl/project/NixDebugAdaptor/nix.logo.svg",
-    header: "Nix Dossier",
+    header: "Nix",
     subheader: "Nix, Nixpkg, NixOS",
     tags: ["Nix", "NixOS", "Package Manager", "Operating System", "Reliability"],
     link: `/ngi0/${NIX_DOSSIER_PATHNAME}`,

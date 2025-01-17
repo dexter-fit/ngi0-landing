@@ -12,6 +12,7 @@ import { AssociatedProjectType } from "../types/AssociatedProjectType";
 import { stringToTag } from "../util/stringToTag";
 import { ProjectDescriptionLinkType } from "../types/ProjectDescriptionLinkType";
 import { createLinkFromProjectLinkItem } from "../util/createLinkFromProjectLinkItem";
+import {createLinkWithLabelFromProjectLinkItems} from "../util/createLinkWithLabelFromProjectLinkItems";
 
 const ProjectDetail = () => {
     const dossier = getContentTypeFromLocation(useLocation());
@@ -37,6 +38,12 @@ function loadProjects(contentType: ContentType) {
     for (const projGroupName in dossier.detailedProjects) {
         for (const proj of dossier.detailedProjects[projGroupName]) {
             const links = proj.links?.map((item: ProjectDescriptionLinkType) => createLinkFromProjectLinkItem(item));
+            const otherProjectsLinkSpace = [
+                createLinkWithLabelFromProjectLinkItems(`Part of the ${dossier.header} Dossier`, [{
+                    label: 'Visit',
+                    link: `/${contentType}`
+                }])
+            ];
 
             let associatedProjects = [];
     
@@ -60,7 +67,8 @@ function loadProjects(contentType: ContentType) {
                     __html: markdownToHtml(proj.text)
                 }}>
                 </div>,
-                tags: proj.tags.map(stringToTag)
+                tags: proj.tags.map(stringToTag),
+                otherProjectsLinkSpace
             })
         }
     }

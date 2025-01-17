@@ -6,6 +6,12 @@ export type ProjectDescriptionType = {
     tags?: string[],
     header: string,
     links?: ProjectDescriptionLinkType[],
-    associatedProjects?: AssociatedProjectType[]
+    associatedProjects?: AssociatedProjectType[],
+    relatedContent?: [
+        {
+            label: string,
+            links: ProjectDescriptionLinkType[]
+        }
+    ]
     text: string
 };

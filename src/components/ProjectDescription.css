@@ -33,3 +33,13 @@ img {
 .image {
     float: left;
 }
+
+.p-divider-solid.p-divider-horizontal:before {
+    color: var(--main-color);
+    border-color: var(--main-color);
+    border-width: 2px;
+}
+
+.p-divider-content {
+    background-color: #f0f0f0;
+}
