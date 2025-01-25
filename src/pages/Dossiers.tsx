@@ -7,7 +7,6 @@ import {replaceSpacesWith} from "../util/replaceSpacesWith";
 import {markdownToHtml} from "../util/markdownToHtml";
 import {dossiers} from "../data/dossiers";
 import {tagsFromProjectCardType} from "../util/tagsFromProjectCardType";
-import {ContentType} from "../types/ContentType";
 import {ProjectDescriptionLinkType} from "../types/ProjectDescriptionLinkType";
 import {AssociatedProjectType} from "../types/AssociatedProjectType";
 import {createLinkFromProjectLinkItem} from "../util/createLinkFromProjectLinkItem";
@@ -32,7 +31,7 @@ const Dossiers = () => {
     </>
 }
 
-function loadProjects(contentType: ContentType) {
+function loadProjects(contentType: string) {
     const dossier = dossiers[contentType];
     let projects: ProjectDescriptionProps[] = [];
 

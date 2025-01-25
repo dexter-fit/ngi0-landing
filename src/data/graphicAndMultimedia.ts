@@ -2,6 +2,7 @@ import {ProjectCardType} from "../types";
 import {ngi0Projects} from "./ngi0Projects";
 import {ProjectDescriptionType} from "../types/ProjectDescriptionType";
 import {ASSOCIATED_NGI0_PROJECTS} from "./commonStrings";
+import {DossierType} from "../types/DossierType";
 
 const TWO_D_RELATED_PROJECT_CARDS: ProjectCardType[] = [
     ngi0Projects.libspngAPNG,
@@ -187,7 +188,7 @@ const GRAPHICS_DOSSIER_PROJECTS: ProjectDescriptionType[] = [
 
 export const GRAPHICS_DOSSIER_PATHNAME = "graphics";
 
-export const DOSSIER = {
+export const DOSSIER: DossierType = {
     pathName: GRAPHICS_DOSSIER_PATHNAME,
     image: "https://nlnet.nl/project/NixDebugAdaptor/nix.logo.svg",
     header: "Graphics",

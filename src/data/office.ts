@@ -1,5 +1,6 @@
 import {ProjectCardType} from "../types";
 import {ProjectDescriptionType} from "../types/ProjectDescriptionType";
+import {DossierType} from "../types/DossierType";
 
 
 const OFFICE_CARDS: ProjectCardType[] = [];
@@ -55,7 +56,7 @@ This dependency is technically unnecessary. For most use cases, a switch can be 
 
 export const OFFICE_DOSSIER_PATHNAME = "office";
 
-export const DOSSIER = {
+export const DOSSIER: DossierType = {
     pathName: OFFICE_DOSSIER_PATHNAME,
     image: "https://nlnet.nl/project/NixDebugAdaptor/nix.logo.svg",
     header: "Office",
@@ -67,4 +68,4 @@ export const DOSSIER = {
     projects: OFFICE_PROJECTS,
     detailedProjects: {},
     comparisons: {}
-}
+};

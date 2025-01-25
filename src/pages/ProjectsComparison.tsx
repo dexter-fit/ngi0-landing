@@ -5,7 +5,6 @@ import {replaceSpacesWith} from "../util/replaceSpacesWith";
 import {ProjectDescription} from "../components/ProjectDescription";
 import { markdownToHtml } from "../util/markdownToHtml";
 import { getContentTypeFromLocation } from "../util/getContentTypeFromLocation";
-import { ContentType } from "../types/ContentType";
 import { dossiers } from "../data/dossiers";
 import { ProjectDescriptionLinkType } from "../types/ProjectDescriptionLinkType";
 import { createLinkWithLabelFromProjectLinkItems } from "../util/createLinkWithLabelFromProjectLinkItems";
@@ -28,7 +27,7 @@ const ProjectsComparison = () => {
     </>;
 };
 
-function loadProjects(contentType: ContentType) {
+function loadProjects(contentType: string) {
     const dossier = dossiers[contentType];
     let projects: ProjectDescriptionProps[] = [];
 

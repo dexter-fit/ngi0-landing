@@ -1,6 +1,5 @@
 import {ProjectCardType} from "../types";
 import {dossiers, dossiersArray} from "./dossiers";
-import {ContentType} from "../types/ContentType";
 
 const compare = (a: ProjectCardType, b: ProjectCardType) => {
     const headerA = a.header.toUpperCase();
@@ -15,7 +14,7 @@ const compare = (a: ProjectCardType, b: ProjectCardType) => {
     return 0;
 }
 
-const getCards = (contentType?: ContentType | "projects"): ProjectCardType[] => {
+const getCards = (contentType?: string): ProjectCardType[] => {
     if (contentType) {
         switch (contentType) {
             case "projects":

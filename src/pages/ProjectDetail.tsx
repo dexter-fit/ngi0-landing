@@ -6,7 +6,6 @@ import {ProjectDescription} from "../components/ProjectDescription";
 import {replaceSpacesWith} from "../util/replaceSpacesWith";
 import { markdownToHtml } from "../util/markdownToHtml";
 import { getContentTypeFromLocation } from "../util/getContentTypeFromLocation";
-import { ContentType } from "../types/ContentType";
 import { dossiers } from "../data/dossiers";
 import { AssociatedProjectType } from "../types/AssociatedProjectType";
 import { stringToTag } from "../util/stringToTag";
@@ -31,7 +30,7 @@ const ProjectDetail = () => {
     </>;
 };
 
-function loadProjects(contentType: ContentType) {
+function loadProjects(contentType: string) {
     const dossier = dossiers[contentType];
     let projects: ProjectDescriptionProps[] = [];
 

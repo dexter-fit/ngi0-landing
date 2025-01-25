@@ -2,7 +2,6 @@ import "primereact/resources/themes/lara-light-cyan/theme.css";
 import './App.css';
 import 'primeicons/primeicons.css';
 import 'primeflex/primeflex.css';
-
 import {PrimeReactProvider} from 'primereact/api';
 import {createBrowserRouter, Outlet, RouterProvider} from "react-router-dom";
 import {Index} from "./pages/Index";

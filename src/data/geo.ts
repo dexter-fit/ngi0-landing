@@ -3,6 +3,7 @@ import { ProjectDescriptionType } from "../types/ProjectDescriptionType";
 import { tagsFromProjectCardType } from "../util/tagsFromProjectCardType";
 import { ASSOCIATED_NGI0_PROJECTS } from "./commonStrings";
 import {ngi0Projects} from "./ngi0Projects";
+import {DossierType} from "../types/DossierType";
 
 const OSM_RELATED_PROJECT_CARDS: ProjectCardType[] = [
     ngi0Projects.nominatim,
@@ -202,7 +203,7 @@ const GEO_COMPARISON: ProjectDescriptionType[] = [
 
 export const GEO_DOSSIER_PATHNAME = "geo";
 
-export const DOSSIER = {
+export const DOSSIER: DossierType = {
     pathName: GEO_DOSSIER_PATHNAME,
     image: "/ngi0/img/openstreetmap.logo.svg",
     header: "Geography",
@@ -219,13 +220,3 @@ export const DOSSIER = {
         "mapcomplete_vs_streetcomplete": GEO_COMPARISON
     }
 }
-
-const geo = {
-    cards: GEO_CARDS,
-    tags: GEO_TAGS,
-    projects: GEO_DOSSIER_PROJECTS,
-    detailedProject: OSM_DETAIL,
-    comparison: GEO_COMPARISON
-}
-
-export default geo;
