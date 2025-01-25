@@ -1,8 +1,6 @@
 import {ProjectDescriptionLinkType} from "../types/ProjectDescriptionLinkType";
 import React from "react";
-import {Link} from "react-router-dom";
-import {Button} from "primereact/button";
-import {createLinkFromProjectLinkItem, createLinkImageFromLinkedItemIconOrImage} from "./createLinkFromProjectLinkItem";
+import {createLinkFromProjectLinkItem} from "./createLinkFromProjectLinkItem";
 
 export const createLinkWithLabelFromProjectLinkItems = (label: string, linkItem: ProjectDescriptionLinkType[]) => {
     const buttons = linkItem.map(createLinkFromProjectLinkItem)

@@ -10,7 +10,7 @@ const ProjectDescription = (props: ProjectDescriptionProps) => {
                 {props.descriptionContent.header}
         </h1>
         <div className="image-content-wrapper">
-            {props?.image ? <img className="image" src={props.image} alt="image" key={props.image}/>: <></>}
+            {props?.image ? <img className="image" src={props.image} alt="header_image" key={props.image}/>: <></>}
             {props.children}
         </div>
 

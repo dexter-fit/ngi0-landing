@@ -14,8 +14,8 @@ import { createLinkFromProjectLinkItem } from "../util/createLinkFromProjectLink
 import {createLinkWithLabelFromProjectLinkItems} from "../util/createLinkWithLabelFromProjectLinkItems";
 
 const ProjectDetail = () => {
-    const dossier = getContentTypeFromLocation(useLocation());
-    const projects: ProjectDescriptionProps[] = loadProjects(dossier);
+    const location = getContentTypeFromLocation(useLocation());
+    const projects: ProjectDescriptionProps[] = loadProjects(location[0], location[2]);
 
     return <>
         {projects.map(item =>
@@ -30,17 +30,17 @@ const ProjectDetail = () => {
     </>;
 };
 
-function loadProjects(contentType: string) {
+function loadProjects(contentType: string, projGroupName: string) {
     const dossier = dossiers[contentType];
     let projects: ProjectDescriptionProps[] = [];
 
-    for (const projGroupName in dossier.detailedProjects) {
-        for (const proj of dossier.detailedProjects[projGroupName]) {
+    if (dossier.detailedProjects[projGroupName].content) {
+        for (const proj of dossier.detailedProjects[projGroupName].content) {
             const links = proj.links?.map((item: ProjectDescriptionLinkType) => createLinkFromProjectLinkItem(item));
             const otherProjectsLinkSpace = [
                 createLinkWithLabelFromProjectLinkItems(`Part of the ${dossier.header} Dossier`, [{
                     label: 'Visit',
-                    link: `/${contentType}`
+                    link: `/${dossierType}`
                 }])
             ];
 

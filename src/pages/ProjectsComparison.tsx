@@ -11,8 +11,8 @@ import { createLinkWithLabelFromProjectLinkItems } from "../util/createLinkWithL
 import { stringToTag } from "../util/stringToTag";
 
 const ProjectsComparison = () => {
-    const dossier = getContentTypeFromLocation(useLocation());
-    const projects: ProjectDescriptionProps[] = loadProjects(dossier);
+    const location = getContentTypeFromLocation(useLocation());
+    const projects: ProjectDescriptionProps[] = loadProjects(location[0], location[2]);
 
     return <>
         {projects.map(item =>
@@ -27,16 +27,18 @@ const ProjectsComparison = () => {
     </>;
 };
 
-function loadProjects(contentType: string) {
-    const dossier = dossiers[contentType];
+function loadProjects(dossierType: string, compGroupName: string) {
+    const dossier = dossiers[dossierType];
     let projects: ProjectDescriptionProps[] = [];
 
-    for (const compGroupName in dossier.comparisons) {
-        for (const comp of dossier.comparisons[compGroupName]) {
+
+
+    if (dossier.comparisons[compGroupName].content) {
+        for (const comp of dossier.comparisons[compGroupName].content) {
             const otherProjectsLinkSpace = [
                 createLinkWithLabelFromProjectLinkItems(`Part of the ${dossier.header} Dossier`, [{
                     label: 'Visit',
-                    link: `/${contentType}`
+                    link: `/${dossierType}`
                 }])
             ];
 
