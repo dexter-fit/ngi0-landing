@@ -15,7 +15,7 @@ import {getContentTypeFromLocation} from "../util/getContentTypeFromLocation";
 import {createLinkWithLabelFromProjectLinkItems} from "../util/createLinkWithLabelFromProjectLinkItems";
 
 const Dossiers = () => {
-    const dossier = getContentTypeFromLocation(useLocation());
+    const dossier = getContentTypeFromLocation(useLocation())[0];
     const projects: ProjectDescriptionProps[] = loadProjects(dossier);
 
     return <>
@@ -44,9 +44,7 @@ function loadProjects(contentType: string) {
             proj.associatedProjects?.flatMap((item: AssociatedProjectType) => item.carousel) || []
         ).map(stringToTag);
 
-        let associatedProjects = [];
-
-        associatedProjects = proj.associatedProjects?.map((item: AssociatedProjectType) => ({
+        let associatedProjects = proj.associatedProjects?.map((item: AssociatedProjectType) => ({
             heading: item.heading,
             description: item.description,
             carousel: {
