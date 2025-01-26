@@ -150,15 +150,9 @@ export const DOSSIER: DossierType = {
     tagsDossierDetail: NIX_TAGS,
     projects: NIX_DOSSIER_PROJECTS,
     detailedProjects: {
-        "nix_language": {
-            header: "Nix Language",
-            content: NIX_LANGUAGE_DETAIL
-        }
+        "nix_language": NIX_LANGUAGE_DETAIL
     },
     comparisons: {
-        "nix_vs_docker": {
-            header: "Nix vs Docker",
-            content: NIX_VS_DOCKER_COMPARISON
-        }
+        "nix_vs_docker": NIX_VS_DOCKER_COMPARISON
     }
 }

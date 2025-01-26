@@ -190,7 +190,7 @@ export const GRAPHICS_DOSSIER_PATHNAME = "graphics";
 
 export const DOSSIER: DossierType = {
     pathName: GRAPHICS_DOSSIER_PATHNAME,
-    image: "https://nlnet.nl/project/NixDebugAdaptor/nix.logo.svg",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Gimp-wilber-scalable.svg/1024px-Gimp-wilber-scalable.svg.png",
     header: "Graphics",
     subheader: "Graphics and Multimedia",
     tags: ["Graphics", "Multimedia", "GIMP", "Blender"],

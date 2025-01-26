@@ -214,18 +214,9 @@ export const DOSSIER: DossierType = {
     tagsDossierDetail: GEO_TAGS,
     projects: GEO_DOSSIER_PROJECTS,
     detailedProjects: {
-        "open_street_map": {
-            header: "OpenStreetMap",
-            content: OSM_DETAIL
-        },
-        "open_street_map2": {
-            header: "OpenStreetMap2"
-        }
+        "open_street_map": OSM_DETAIL
     },
     comparisons: {
-        "mapcomplete_vs_streetcomplete": {
-            header: "Map complete vs Street complete",
-            content: GEO_COMPARISON
-        }
+        "mapcomplete_vs_streetcomplete": GEO_COMPARISON
     }
 }

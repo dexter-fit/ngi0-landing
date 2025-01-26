@@ -30,23 +30,21 @@ const ProjectDetail = () => {
     </>;
 };
 
-function loadProjects(contentType: string, projGroupName: string) {
-    const dossier = dossiers[contentType];
+function loadProjects(dossierName: string, projGroupName: string) {
+    const dossier = dossiers[dossierName];
     let projects: ProjectDescriptionProps[] = [];
 
-    if (dossier.detailedProjects[projGroupName].content) {
-        for (const proj of dossier.detailedProjects[projGroupName].content) {
+    if (dossier.detailedProjects[projGroupName]) {
+        for (const proj of dossier.detailedProjects[projGroupName]) {
             const links = proj.links?.map((item: ProjectDescriptionLinkType) => createLinkFromProjectLinkItem(item));
             const otherProjectsLinkSpace = [
                 createLinkWithLabelFromProjectLinkItems(`Part of the ${dossier.header} Dossier`, [{
                     label: 'Visit',
-                    link: `/${dossierType}`
+                    link: `/${dossierName}`
                 }])
             ];
 
-            let associatedProjects = [];
-    
-            associatedProjects = proj.associatedProjects?.map((item: AssociatedProjectType) => ({
+            let associatedProjects = proj.associatedProjects?.map((item: AssociatedProjectType) => ({
                 heading: item.heading,
                 description: item.description,
                 carousel: {
@@ -66,7 +64,7 @@ function loadProjects(contentType: string, projGroupName: string) {
                     __html: markdownToHtml(proj.text)
                 }}>
                 </div>,
-                tags: proj.tags.map(stringToTag),
+                tags: proj.tags?.map(stringToTag),
                 otherProjectsLinkSpace
             })
         }

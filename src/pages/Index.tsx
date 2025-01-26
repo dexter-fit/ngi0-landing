@@ -11,8 +11,8 @@ import {useLocation} from "react-router-dom";
 
 
 const Index = () => {
-    const contentType = getContentTypeFromLocation(useLocation())[0];
-    const cards = getCards(contentType);
+    const dossierName = getContentTypeFromLocation(useLocation())[0];
+    const cards = getCards(dossierName);
     const allAvailableTags = Object.fromEntries(tagsFromProjectCardType(cards).map(tag => [tag, false]));
     const [searchString, setSearchString] = useState('');
     const [searchClearDisabled, setSearchClearDisabled] = useState(true);

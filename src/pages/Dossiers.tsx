@@ -15,8 +15,8 @@ import {getContentTypeFromLocation} from "../util/getContentTypeFromLocation";
 import {createLinkWithLabelFromProjectLinkItems} from "../util/createLinkWithLabelFromProjectLinkItems";
 
 const Dossiers = () => {
-    const dossier = getContentTypeFromLocation(useLocation())[0];
-    const projects: ProjectDescriptionProps[] = loadProjects(dossier);
+    const dossierName = getContentTypeFromLocation(useLocation())[0];
+    const projects: ProjectDescriptionProps[] = loadProjects(dossierName);
 
     return <>
         {projects.map(item =>

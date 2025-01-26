@@ -8,10 +8,8 @@ const Header = () => {
     const findBreadcrumbs = (currentUrl: string): BreadcrumbsType[] => {
         let resultBreadcrumbs: BreadcrumbsType[] = [];
         const currentUrlArr = currentUrl.split('/').splice(2);
-        console.log(currentUrlArr);
         for (const item of Object.values(dossiers)) {
             // Dossier home
-            console.log(currentUrlArr)
             if (item.pathName === currentUrlArr[0]) {
                 resultBreadcrumbs.push({label: item.header, url: item.link});
 
@@ -22,16 +20,17 @@ const Header = () => {
 
                 // Detail project
                 if (currentUrlArr[1] === 'detail') {
-                    resultBreadcrumbs.push({label: item.detailedProjects[currentUrlArr[2]].header, url: `${item.link}/detail/${currentUrlArr[2]}`});
+                    resultBreadcrumbs.push({label: item.detailedProjects[currentUrlArr[2]][0]?.header, url: `${item.link}/detail/${currentUrlArr[2]}`});
                 }
 
                 // Project comparison
                 if (currentUrlArr[1] === 'comparison') {
-                    resultBreadcrumbs.push({label: item.comparisons[currentUrlArr[2]].header, url: `${item.link}/comparison/${currentUrlArr[2]}`});
+                    resultBreadcrumbs.push({label: item.comparisons[currentUrlArr[2]][0]?.header, url: `${item.link}/comparison/${currentUrlArr[2]}`});
                 }
             }
 
             if (resultBreadcrumbs.length > 0) {
+                document.title = resultBreadcrumbs.pop().label;
                 return resultBreadcrumbs;
             }
         }
@@ -103,7 +102,7 @@ const Header = () => {
                                     Object.keys(item.detailedProjects).map((name) =>
                                         <div className="css-menu-links">
                                             <i className={fileIcon + " css-menu-icon"}></i>
-                                            <a href={`${item.link}/detail/${name}`} className="css-menu-a">{item.detailedProjects[name].header}</a>
+                                            <a href={`${item.link}/detail/${name}`} className="css-menu-a">{item.detailedProjects[name][0]?.header}</a>
                                         </div>
                                     )
                                 }
@@ -111,7 +110,7 @@ const Header = () => {
                                     Object.keys(item.comparisons).map((name) =>
                                         <div className="css-menu-links">
                                             <i className={fileIcon + " css-menu-icon"}></i>
-                                            <a href={`${item.link}/comparison/${name}`} className="css-menu-a">{item.comparisons[name].header}</a>
+                                            <a href={`${item.link}/comparison/${name}`} className="css-menu-a">{item.comparisons[name][0]?.header}</a>
                                         </div>
                                     )
                                 }

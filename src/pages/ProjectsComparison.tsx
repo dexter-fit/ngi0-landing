@@ -27,18 +27,18 @@ const ProjectsComparison = () => {
     </>;
 };
 
-function loadProjects(dossierType: string, compGroupName: string) {
-    const dossier = dossiers[dossierType];
+function loadProjects(dossierName: string, compGroupName: string) {
+    const dossier = dossiers[dossierName];
     let projects: ProjectDescriptionProps[] = [];
 
 
 
-    if (dossier.comparisons[compGroupName].content) {
-        for (const comp of dossier.comparisons[compGroupName].content) {
+    if (dossier.comparisons[compGroupName]) {
+        for (const comp of dossier.comparisons[compGroupName]) {
             const otherProjectsLinkSpace = [
                 createLinkWithLabelFromProjectLinkItems(`Part of the ${dossier.header} Dossier`, [{
                     label: 'Visit',
-                    link: `/${dossierType}`
+                    link: `/${dossierName}`
                 }])
             ];
 
