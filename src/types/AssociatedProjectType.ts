@@ -1,4 +1,4 @@
-import {ProjectCardType} from "./projectCardType";
+import {ProjectCardType} from "./ProjectCardType";
 
 export type AssociatedProjectType = {
     heading: string,
