@@ -8,29 +8,33 @@ const Header = () => {
     const findBreadcrumbs = (currentUrl: string): BreadcrumbsType[] => {
         let resultBreadcrumbs: BreadcrumbsType[] = [];
         const currentUrlArr = currentUrl.split('/').splice(2);
+        let currentlyViewedItem = undefined;
         for (const item of Object.values(dossiers)) {
             // Dossier home
             if (item.pathName === currentUrlArr[0]) {
                 resultBreadcrumbs.push({label: item.header, url: item.link});
 
                 // Dossier projects
-                if (item.projects.length && currentUrlArr[1] === 'projects') {
+                if (item.projects && currentUrlArr[1] === 'projects') {
+                    currentlyViewedItem = item.projects
                     resultBreadcrumbs.push({label: "Projects", url: `${item.link}/projects`});
                 }
 
                 // Detail project
                 if (currentUrlArr[1] === 'detail') {
-                    resultBreadcrumbs.push({label: item.detailedProjects[currentUrlArr[2]][0]?.header, url: `${item.link}/detail/${currentUrlArr[2]}`});
+                    currentlyViewedItem = item.detailedProjects[currentUrlArr[2]];
+                    resultBreadcrumbs.push({label: currentlyViewedItem.menuTitle, url: `${item.link}/detail/${currentUrlArr[2]}`});
                 }
 
                 // Project comparison
                 if (currentUrlArr[1] === 'comparison') {
-                    resultBreadcrumbs.push({label: item.comparisons[currentUrlArr[2]][0]?.header, url: `${item.link}/comparison/${currentUrlArr[2]}`});
+                    currentlyViewedItem = item.comparisons[currentUrlArr[2]];
+                    resultBreadcrumbs.push({label: currentlyViewedItem.menuTitle, url: `${item.link}/comparison/${currentUrlArr[2]}`});
                 }
             }
 
             if (resultBreadcrumbs.length > 0) {
-                document.title = resultBreadcrumbs.pop().label;
+                document.title = currentlyViewedItem?.menuTitle;
                 return resultBreadcrumbs;
             }
         }
@@ -102,7 +106,7 @@ const Header = () => {
                                     Object.keys(item.detailedProjects).map((name) =>
                                         <div className="css-menu-links">
                                             <i className={fileIcon + " css-menu-icon"}></i>
-                                            <a href={`${item.link}/detail/${name}`} className="css-menu-a">{item.detailedProjects[name][0]?.header}</a>
+                                            <a href={`${item.link}/detail/${name}`} className="css-menu-a">{item.detailedProjects[name].menuTitle}</a>
                                         </div>
                                     )
                                 }
@@ -110,7 +114,7 @@ const Header = () => {
                                     Object.keys(item.comparisons).map((name) =>
                                         <div className="css-menu-links">
                                             <i className={fileIcon + " css-menu-icon"}></i>
-                                            <a href={`${item.link}/comparison/${name}`} className="css-menu-a">{item.comparisons[name][0]?.header}</a>
+                                            <a href={`${item.link}/comparison/${name}`} className="css-menu-a">{item.comparisons[name].menuTitle}</a>
                                         </div>
                                     )
                                 }

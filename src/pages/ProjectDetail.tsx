@@ -35,7 +35,7 @@ function loadProjects(dossierName: string, projGroupName: string) {
     let projects: ProjectDescriptionProps[] = [];
 
     if (dossier.detailedProjects[projGroupName]) {
-        for (const proj of dossier.detailedProjects[projGroupName]) {
+        for (const proj of dossier.detailedProjects[projGroupName].projectDescription) {
             const links = proj.links?.map((item: ProjectDescriptionLinkType) => createLinkFromProjectLinkItem(item));
             const otherProjectsLinkSpace = [
                 createLinkWithLabelFromProjectLinkItems(`Part of the ${dossier.header} Dossier`, [{

@@ -1,16 +1,16 @@
-import {ProjectCardType} from "../types";
-import {ProjectDescriptionType} from "../types/ProjectDescriptionType";
-import {DossierType} from "../types/DossierType";
-
+import {ProjectCardType, ProjectPageType, DossierType} from "../types";
 
 const OFFICE_CARDS: ProjectCardType[] = [];
 
 const OFFICE_TAGS: string[] = [];
 
-const OFFICE_PROJECTS: ProjectDescriptionType[] = [
-    {
-        header: "Office applications/productivity tools",
-        text: `
+const OFFICE_PROJECTS: ProjectPageType = {
+    pageTitle: "Dossier about Office Applications and Productivity Tools",
+    menuTitle: "Office and Productivity Dossier",
+    projectDescription: [
+        {
+            header: "Office applications/productivity tools",
+            text: `
 What is the problem?
 --------------------
 
@@ -51,8 +51,9 @@ The operational leg of the European Commission recently hit public policy rock b
 
 This dependency is technically unnecessary. For most use cases, a switch can be made today. Ambitions should be bigger: this is dealing with our productivity, which is a core aspect of our economy. This is too strategic to leave to a few very large commercial actors. Even by allocating a small percentage of the budget spent on Microsoft licenses annually today, we can broaden this and spark more productivity at lower cost using digital commons. Currently, there is no such dedicated investment to be found anywhere, apart from the ability for such projects to get small grants from generic open calls via NLnet within the [Next Generation Internet](https://nlnet.nl/NGI) initiative. Taking political responsibility means having a structured longer term approach: we know that this need is here to stay, and by embracing the collective need we can escape from the technical debt that is productivity tools and make our economy and society function better.
         `,
-    }
-];
+        }
+    ]
+};
 
 export const OFFICE_DOSSIER_PATHNAME = "office";
 

@@ -34,7 +34,7 @@ function loadProjects(dossierName: string, compGroupName: string) {
 
 
     if (dossier.comparisons[compGroupName]) {
-        for (const comp of dossier.comparisons[compGroupName]) {
+        for (const comp of dossier.comparisons[compGroupName].projectDescription) {
             const otherProjectsLinkSpace = [
                 createLinkWithLabelFromProjectLinkItems(`Part of the ${dossier.header} Dossier`, [{
                     label: 'Visit',

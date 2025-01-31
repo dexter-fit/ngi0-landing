@@ -5,6 +5,7 @@ import {FundInfoType} from "./FundInfoType";
 import {ProjectCardType} from "./ProjectCardType";
 import {ProjectDescriptionLinkType} from "./ProjectDescriptionLinkType";
 import {ProjectDescriptionType} from "./ProjectDescriptionType";
+import {ProjectPageType} from "./ProjectPageType";
 
 
 export type {
@@ -15,4 +16,5 @@ export type {
     ProjectDescriptionLinkType,
     ProjectDescriptionType,
     ProjectCardType,
+    ProjectPageType
 };
