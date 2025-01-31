@@ -1,6 +1,6 @@
 import "./ProjectDescription.css";
 import React from "react";
-import {ProjectDescriptionProps} from "../types";
+import {ProjectDescriptionProps} from "../props";
 import {AssociatedProjectTemplate} from "./AssociatedProjectTemplate";
 import {Divider} from "primereact/divider";
 

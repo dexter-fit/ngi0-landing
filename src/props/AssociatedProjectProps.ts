@@ -1,4 +1,4 @@
-import {CarouselProps} from "./carouselProps";
+import {CarouselProps} from "./CarouselProps";
 
 export type AssociatedProjectProps = {
     heading: string,

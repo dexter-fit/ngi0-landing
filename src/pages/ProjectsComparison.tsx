@@ -1,4 +1,4 @@
-import {ProjectDescriptionProps} from "../types";
+import {ProjectDescriptionProps} from "../props";
 import {useLocation } from "react-router-dom";
 import React from "react";
 import {replaceSpacesWith} from "../util/replaceSpacesWith";

@@ -1,6 +1,6 @@
 import {Carousel} from "primereact/carousel";
 import React from "react";
-import {AssociatedProjectProps} from "../types";
+import {AssociatedProjectProps} from "../props";
 
 const AssociatedProjectTemplate = (props: AssociatedProjectProps) => {
 

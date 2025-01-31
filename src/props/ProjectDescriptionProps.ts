@@ -1,5 +1,5 @@
 import {ReactNode} from "react";
-import {AssociatedProjectProps} from "./associatedProjectProps";
+import {AssociatedProjectProps} from "./AssociatedProjectProps";
 
 export type ProjectDescriptionProps = {
     otherProjectsLinkSpace?: ReactNode,

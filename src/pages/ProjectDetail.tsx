@@ -1,4 +1,4 @@
-import {AssociatedProjectProps, ProjectDescriptionProps} from "../types";
+import {AssociatedProjectProps, ProjectDescriptionProps} from "../props";
 import {CardCarouselTemplate} from "../components/CardCarouselTemplate";
 import {useLocation} from "react-router-dom";
 import React from "react";

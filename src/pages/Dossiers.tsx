@@ -1,6 +1,6 @@
 import React from "react";
 import {ProjectDescription} from "../components/ProjectDescription";
-import {AssociatedProjectProps, ProjectDescriptionProps} from "../types";
+import {AssociatedProjectProps, ProjectDescriptionProps} from "../props";
 import {useLocation} from "react-router-dom";
 import {CardCarouselTemplate} from "../components/CardCarouselTemplate";
 import {replaceSpacesWith} from "../util/replaceSpacesWith";
