@@ -1,0 +1,362 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "definitions": {
+    "AssociatedProjectType": {
+      "additionalProperties": false,
+      "description": "Associated project carousel type with description and header. Through this you can make more dynamic associations. For example this project can be related to some nlnet projects, and you can outline how in the description, but it may also be related to some proprietary projects, and you want to distinguish between the two. You use two of these types, and you can specify in the description how they differ / some optional info.",
+      "properties": {
+        "carousel": {
+          "description": "The projects, that are related in this \"class\".",
+          "items": {
+            "additionalProperties": false,
+            "description": "Information about the project to fill in the card",
+            "properties": {
+              "end": {
+                "description": "End of the project funding from this fund, in the same format as used on nlnet page (e.g.: 2026-07).",
+                "type": "string"
+              },
+              "fund": {
+                "description": "Fund name (e.g.: \"NGI Zero Core\")",
+                "type": "string"
+              },
+              "header": {
+                "description": "A header / name of the project.",
+                "type": "string"
+              },
+              "image": {
+                "description": "An image representing the project (e.g.: project logo, or something similar).",
+                "type": "string"
+              },
+              "link": {
+                "description": "Link to the nlnet page detail.",
+                "type": "string"
+              },
+              "start": {
+                "description": "Start of the project funding from this fund, in the same format as used on nlnet page (e.g.: 2026-01).",
+                "type": "string"
+              },
+              "subheader": {
+                "description": "A subheader of the project. This is the short description title in nlnet page, or something short that describes the project quickly.",
+                "type": "string"
+              },
+              "tags": {
+                "description": "Tags of the project (e.g.: \"software distribution\", \"security\").",
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              }
+            },
+            "required": [
+              "header",
+              "image",
+              "link",
+              "subheader",
+              "tags"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "description": {
+          "description": "A description of the \"class\". Maybe outlining why it may be beneficial for the user to look into these projects, or similar info.",
+          "type": "string"
+        },
+        "heading": {
+          "description": "A header outlining the \"class\" of the projects (e.g.: NGI0 Related, From the Same Developers, Commercial Alternatives).",
+          "type": "string"
+        }
+      },
+      "required": [
+        "heading",
+        "carousel"
+      ],
+      "type": "object"
+    },
+    "BreadcrumbsType": {
+      "additionalProperties": false,
+      "properties": {
+        "label": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "url",
+        "label"
+      ],
+      "type": "object"
+    },
+    "DossierType": {
+      "additionalProperties": false,
+      "description": "A type for the entire Dossier.",
+      "properties": {
+        "cards": {
+          "description": "All cards of the projects available in the dossier.",
+          "items": {
+            "additionalProperties": false,
+            "description": "Information about the project to fill in the card",
+            "properties": {
+              "end": {
+                "description": "End of the project funding from this fund, in the same format as used on nlnet page (e.g.: 2026-07).",
+                "type": "string"
+              },
+              "fund": {
+                "description": "Fund name (e.g.: \"NGI Zero Core\")",
+                "type": "string"
+              },
+              "header": {
+                "description": "A header / name of the project.",
+                "type": "string"
+              },
+              "image": {
+                "description": "An image representing the project (e.g.: project logo, or something similar).",
+                "type": "string"
+              },
+              "link": {
+                "description": "Link to the nlnet page detail.",
+                "type": "string"
+              },
+              "start": {
+                "description": "Start of the project funding from this fund, in the same format as used on nlnet page (e.g.: 2026-01).",
+                "type": "string"
+              },
+              "subheader": {
+                "description": "A subheader of the project. This is the short description title in nlnet page, or something short that describes the project quickly.",
+                "type": "string"
+              },
+              "tags": {
+                "description": "Tags of the project (e.g.: \"software distribution\", \"security\").",
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              }
+            },
+            "required": [
+              "header",
+              "image",
+              "link",
+              "subheader",
+              "tags"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "comparisons": {
+          "additionalProperties": {
+            "$ref": "#/definitions/ProjectPageType"
+          },
+          "description": "Comparisons between some projects. This can be used to represent \"how to switch\" pages or pages detailing the benefits of the open-source sw when compared to the proprietary ones (e.g.: you can pay for Google Plus to have more cloud storage, or you can self-host next cloud, but you have to have the HW to do it.",
+          "type": "object"
+        },
+        "detailedProjects": {
+          "additionalProperties": {
+            "$ref": "#/definitions/ProjectPageType"
+          },
+          "description": "A single page designed to introduce one project. This can be a page introducing a Nix Language in a Nix dossier, or Some other concrete project, that is part of the dossier (e.g.: Open Office in word, etc.).",
+          "type": "object"
+        },
+        "header": {
+          "description": "The name of the dossier, used on the main page.",
+          "type": "string"
+        },
+        "image": {
+          "description": "An image of the dossier, which should be on the dossiers page.",
+          "type": "string"
+        },
+        "link": {
+          "description": "A relative link to the dossier, will be computed later. For now set ngi0/pathName.",
+          "type": "string"
+        },
+        "pathName": {
+          "description": "Name of the path, that the dossier is under.",
+          "type": "string"
+        },
+        "projects": {
+          "$ref": "#/definitions/ProjectPageType",
+          "description": "The main page outline of the projects in the dossier."
+        },
+        "subheader": {
+          "description": "An additional description of the dossier. This should be kept short, so it fits on one row in the card.",
+          "type": "string"
+        },
+        "tags": {
+          "description": "An array of tags of the dossier. Keep this short to prevent crowding the front page by tags.",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "tagsDossierDetail": {
+          "description": "An array of tags to be shown on the dossier page.",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "pathName",
+        "image",
+        "header",
+        "subheader",
+        "tags",
+        "link",
+        "tagsDossierDetail",
+        "cards",
+        "projects",
+        "detailedProjects",
+        "comparisons"
+      ],
+      "type": "object"
+    },
+    "FundInfoType": {
+      "additionalProperties": false,
+      "description": "Type representing information about a fund, that the project is currently under.",
+      "properties": {
+        "end": {
+          "description": "End of the project funding from this fund, in the same format as used on nlnet page (e.g.: 2026-07).",
+          "type": "string"
+        },
+        "fund": {
+          "description": "Fund name (e.g.: \"NGI Zero Core\")",
+          "type": "string"
+        },
+        "start": {
+          "description": "Start of the project funding from this fund, in the same format as used on nlnet page (e.g.: 2026-01).",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "ProjectDescriptionLinkType": {
+      "additionalProperties": false,
+      "description": "A type representing a link / button / transition out of the current page. Can relate external sources (e.g.: project GitHub, home page, wiki page, etc.).",
+      "properties": {
+        "icon": {
+          "description": "A primereact icon, that should be used next to the link label in a button.",
+          "type": "string"
+        },
+        "img": {
+          "description": "A custom img, that should be used next to the link label in a button. This could be both the path and a base64.",
+          "type": "string"
+        },
+        "label": {
+          "description": "Hyperlink label <a ...>ProjectDescriptionLinkType.label<>",
+          "type": "string"
+        },
+        "link": {
+          "description": "Hyperlink link <a href=\"ProjectDescriptionLinkType.link\">...<>",
+          "type": "string"
+        }
+      },
+      "required": [
+        "link",
+        "label"
+      ],
+      "type": "object"
+    },
+    "ProjectDescriptionType": {
+      "additionalProperties": false,
+      "description": "A description of a project. You can use more blocks to build the project description. You might want to split your description into multiple sections, with each having a header, some main image and associated projects.",
+      "properties": {
+        "associatedProjects": {
+          "description": "Projects, that are associated with this (e.g.: some proprietary tools).",
+          "items": {
+            "$ref": "#/definitions/AssociatedProjectType"
+          },
+          "type": "array"
+        },
+        "header": {
+          "description": "The starting header of the description. Can be a bit longer, but keep it concise, so it looks good on mobile.",
+          "type": "string"
+        },
+        "image": {
+          "description": "An optional image, that represents the project (e.g.: the logo, or something important to the project).",
+          "type": "string"
+        },
+        "links": {
+          "description": "Links to outside sources (project home page, GitHub, GitLab, wiki, resource links, documentations).",
+          "items": {
+            "$ref": "#/definitions/ProjectDescriptionLinkType"
+          },
+          "type": "array"
+        },
+        "relatedContent": {
+          "description": "Related content within this project. For example if this is a comparison of an open source project to some proprietary one you might want to link to the page of the open source option within this Dossier application. May be left out and possibly will be generated in the future.",
+          "items": {
+            "additionalProperties": false,
+            "properties": {
+              "label": {
+                "description": "Label outlining how these links are related. For example links to previous projects in the dossier application, or link to the Dossier, or any other specific link you want to include. I would advise on adding this content only in the last block of the entire description.",
+                "type": "string"
+              },
+              "links": {
+                "description": "The links themselves.",
+                "items": {
+                  "$ref": "#/definitions/ProjectDescriptionLinkType"
+                },
+                "type": "array"
+              }
+            },
+            "required": [
+              "label",
+              "links"
+            ],
+            "type": "object"
+          },
+          "maxItems": 1,
+          "minItems": 1,
+          "type": "array"
+        },
+        "tags": {
+          "description": "The tags of the project, can be left out.",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "text": {
+          "description": "A nice text about the description. This should be written in markdown.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "header",
+        "text"
+      ],
+      "type": "object"
+    },
+    "ProjectPageType": {
+      "additionalProperties": false,
+      "description": "Type representing the project page.",
+      "properties": {
+        "menuTitle": {
+          "description": "A menu title, should be short and outlining what is the purpose of the page (e.g.: Docker vs Nix, Nix for Docker).",
+          "type": "string"
+        },
+        "pageTitle": {
+          "description": "Title that will be used at the top of the card. For example in the https://nlnet.nl/ the text is currently \"NLnet; Welcome to the Nlnet Foundation\". You can tinker with this, but I recommend something short, so it can be seen it the card easily. For example \"Nix Dossier\", \"Open Street Map Detail\" and so on.",
+          "type": "string"
+        },
+        "projectDescription": {
+          "description": "The content itself.",
+          "items": {
+            "$ref": "#/definitions/ProjectDescriptionType"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "pageTitle",
+        "menuTitle",
+        "projectDescription"
+      ],
+      "type": "object"
+    }
+  }
+}
