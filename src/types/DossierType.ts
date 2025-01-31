@@ -33,8 +33,23 @@ export type DossierType = {
      * An array of tags to be shown on the dossier page.
      */
     tagsDossierDetail: string[],
+    /**
+     * All cards of the projects available in the dossier.
+     */
     cards: ProjectCardType[],
+    /**
+     * The main page outline of the projects in the dossier.
+     */
     projects: ProjectDescriptionType[],
+    /**
+     * A single page designed to introduce one project. This can be a page introducing a Nix Language in a Nix dossier, or
+     * Some other concrete project, that is part of the dossier (e.g.: Open Office in word, etc.).
+     */
     detailedProjects: {[key: string]: ProjectDescriptionType[]},
+    /**
+     * Comparisons between some projects. This can be used to represent "how to switch" pages or pages detailing the benefits
+     * of the open-source sw when compared to the proprietary ones (e.g.: you can pay for Google Plus to have more cloud storage,
+     * or you can self-host next cloud, but you have to have the HW to do it.
+     */
     comparisons: {[key: string]: ProjectDescriptionType[]}
 }
