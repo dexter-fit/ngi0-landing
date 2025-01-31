@@ -4,7 +4,8 @@ const funds = {
     assure: "NGI Assure",
     pet: "NGI0 PET",
     internetHardening: "Internet Hardening Fund",
-    discovery: "NGI0 Discovery"
+    discovery: "NGI0 Discovery",
+    binaryAnalysis: "Binary Analysis Fund"
 }
 
 export {funds};

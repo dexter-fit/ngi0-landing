@@ -478,4 +478,24 @@ export const ngi0Projects = {
         start: "2019-12",
         end: "2022-10"
     },
+
+    zipFileFormatDescription: {
+        image: "https://nlnet.nl/project/ZIP-format/zip.logo.svg",
+        header: "ZIP file format description",
+        subheader: "Documenting the ZIP file format for reverse engineers and developers",
+        tags: ["ZIP File Format", "Compression Standards", "File Specification Analysis", "Edge Cases & Variants", "Format Documentation"],
+        link: "https://nlnet.nl/project/ZIP-format/",
+        funds: funds.binaryAnalysis,
+        start: "2022-12",
+        end: "2023-12"
+    },
+    zipLinting: {
+        image: "https://nlnet.nl/project/ZIP-format/zip.logo.svg",
+        header: "Zip linting and bzip2 in Rust",
+        subheader: "More secure handling of popular archive formats",
+        tags: ["ZIP Security", "Compression Formats", "Zip Bomb Prevention", "Memory-Safe bzip2", "Supply Chain Security"],
+        link: "https://nlnet.nl/project/ZipLinting/",
+        funds: funds.zeroCore,
+        start: "2024-06"
+    },
 }

@@ -113,3 +113,26 @@ body {
 .p-button-tiny {
     padding: 5px;
 }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+th, td {
+    border: 1px solid #d0d7de;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f6f8fa;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f6f8fa;
+}

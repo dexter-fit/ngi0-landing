@@ -12,6 +12,7 @@ const Header = () => {
         for (const item of Object.values(dossiers)) {
             // Dossier home
             if (item.pathName === currentUrlArr[0]) {
+                currentlyViewedItem = item.projects
                 resultBreadcrumbs.push({label: item.header, url: item.link});
 
                 // Dossier projects
@@ -34,7 +35,8 @@ const Header = () => {
             }
 
             if (resultBreadcrumbs.length > 0) {
-                document.title = currentlyViewedItem?.menuTitle;
+                console.log(currentlyViewedItem);
+                document.title = currentlyViewedItem?.pageTitle;
                 return resultBreadcrumbs;
             }
         }
