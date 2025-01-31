@@ -27,7 +27,8 @@
     "build": "react-scripts build",
     "build-ssg": "npm run build && react-snap",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+	"typescript-json-schema": "typescript-json-schema  --required true \"src/types/*.ts\" \"*\" > typescript-json-schema-dossier.json"
   },
   "reactSnap": {
     "skipThirdPartyRequests": true,
@@ -59,7 +60,8 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "@types/showdown": "^2.0.6"
+    "@types/showdown": "^2.0.6",
+	"typescript-json-schema": "0.65.1"
   },
   "homepage": "/ngi0"
 }
