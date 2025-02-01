@@ -8,7 +8,7 @@ const Header = () => {
     const findBreadcrumbs = (currentUrl: string): BreadcrumbsType[] => {
         let resultBreadcrumbs: BreadcrumbsType[] = [];
         const currentUrlArr = currentUrl.split('/').splice(2);
-        let currentlyViewedItem = undefined;
+        let currentlyViewedItem: {menuTitle: string, pageTitle: string} = {menuTitle: "", pageTitle: ""};
         for (const item of Object.values(dossiers)) {
             // Dossier home
             if (item.pathName === currentUrlArr[0]) {

@@ -75,11 +75,14 @@
     },
     "BreadcrumbsType": {
       "additionalProperties": false,
+      "description": "Type for automatic header generation, can not be used outside app.",
       "properties": {
         "label": {
+          "description": "Header item label.",
           "type": "string"
         },
         "url": {
+          "description": "Header item location link.",
           "type": "string"
         }
       },
