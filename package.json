@@ -28,7 +28,7 @@
     "build-ssg": "npm run build && react-snap",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-	"schema": "ts-json-schema-generator --path \"src/types/*.ts\" --tsconfig \"tsconfig.json\" > dossier-schema.json"
+	"schema": "ts-json-schema-generator --path \"src/types/*.ts\" --tsconfig \"tsconfig.json\" > src/dossier-schema.json"
   },
   "reactSnap": {
     "skipThirdPartyRequests": true,

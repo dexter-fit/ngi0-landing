@@ -12,6 +12,7 @@ import {MenuItem} from "primereact/menuitem";
 import {ProjectDetail} from "./pages/ProjectDetail";
 import {ProjectsComparison} from "./pages/ProjectsComparison";
 import {dossiers} from "./data/dossiers";
+import {Schema} from "./pages/Schema";
 
 const App = () => {
     const [menuItems] = useState([] as MenuItem[]);
@@ -68,6 +69,10 @@ const App = () => {
                     },
                     ...Object.keys(dossiers).map((pathName: string) => getDossierPathsBasedOnTheDossierPathname(pathName))
                 ]
+        },
+        {
+            path: "/schema",
+            element: <Schema/>
         }
     ];
 
