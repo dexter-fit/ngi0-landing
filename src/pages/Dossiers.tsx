@@ -71,11 +71,11 @@ function loadProjects(contentType: string) {
     const otherProjectsLinkSpace = [
         createLinkWithLabelFromProjectLinkItems(`Detailed Projects Within the Dossier`,
             Object.entries(dossier.detailedProjects).map(([path, item]) =>
-                ({link: `detail/${path}`, label: path}))
+                ({link: `detail/${path}`, label: item.menuTitle}))
         ),
         createLinkWithLabelFromProjectLinkItems(`Project Comparisons Within the Dossier`,
             Object.entries(dossier.comparisons).map(([path, item]) =>
-                ({link: `comparison/${path}`, label: path}))
+                ({link: `comparison/${path}`, label: item.menuTitle}))
         ),
         createLinkWithLabelFromProjectLinkItems("Projects",
             [{label: "Visit", link: `projects`}]
