@@ -35,7 +35,6 @@ const Header = () => {
             }
 
             if (resultBreadcrumbs.length > 0) {
-                console.log(currentlyViewedItem);
                 document.title = currentlyViewedItem?.pageTitle;
                 return resultBreadcrumbs;
             }
