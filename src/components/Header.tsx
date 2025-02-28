@@ -3,6 +3,7 @@ import {Button} from "primereact/button";
 import "./Header.css";
 import { dossiers } from "../data/dossiers";
 import { BreadcrumbsType } from "../types/BreadcrumbsType"
+import {Link} from "react-router-dom";
 
 const Header = () => {
     const findBreadcrumbs = (currentUrl: string): BreadcrumbsType[] => {
@@ -81,6 +82,7 @@ const Header = () => {
                     <div className="css-menu-sidebar">
                         <div className="css-menu-header-div">
                             <h3 className="css-menu-header">NLnet; Projects</h3>
+                            <Link to="/schema"><span style={{display: "none"}}>schema</span></Link>
                         </div>
 
                         {
