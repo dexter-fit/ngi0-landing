@@ -1,5 +1,6 @@
 import {ProjectDescriptionLinkType} from "./ProjectDescriptionLinkType";
 import {AssociatedProjectType} from "./AssociatedProjectType";
+import { GalleryType } from "./GalleryType";
 
 /**
  * A description of a project.
@@ -49,5 +50,9 @@ export type ProjectDescriptionType = {
     /**
      * A nice text about the description. This should be written in markdown.
      */
-    text: string
+    text: string,
+    /**
+     * Gallery of images related to the topic.
+     */
+    gallery?: GalleryType[]
 };

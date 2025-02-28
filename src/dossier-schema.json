@@ -236,6 +236,50 @@
       },
       "type": "object"
     },
+    "GalleryType": {
+      "additionalProperties": false,
+      "description": "The image gallery can be used either in the description of the dossier itself or in the case of a detailed project description  or project comparison. Images can be inserted either by URL link or by relative path into a public folder on the server.",
+      "properties": {
+        "description": {
+          "description": "A description of the \"class\". Maybe outlining why it may be beneficial for the user to look into these projects, or similar info.",
+          "type": "string"
+        },
+        "heading": {
+          "description": "A header outlining the \"class\" of the projects (e.g.: NGI0 Related, From the Same Developers, Commercial Alternatives).",
+          "type": "string"
+        },
+        "images": {
+          "description": "Images included in gallery",
+          "items": {
+            "additionalProperties": false,
+            "description": "Information about the image to fill intro the gallery",
+            "properties": {
+              "alt": {
+                "description": "Image content description",
+                "type": "string"
+              },
+              "itemImageSrc": {
+                "description": "Image src, can be provided as URL link, or relative path to server public directory",
+                "type": "string"
+              },
+              "title": {
+                "description": "Image title",
+                "type": "string"
+              }
+            },
+            "required": [
+              "itemImageSrc"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "images"
+      ],
+      "type": "object"
+    },
     "ProjectDescriptionLinkType": {
       "additionalProperties": false,
       "description": "A type representing a link / button / transition out of the current page. Can relate external sources (e.g.: project GitHub, home page, wiki page, etc.).",
@@ -271,6 +315,13 @@
           "description": "Projects, that are associated with this (e.g.: some proprietary tools).",
           "items": {
             "$ref": "#/definitions/AssociatedProjectType"
+          },
+          "type": "array"
+        },
+        "gallery": {
+          "description": "Gallery of images related to the topic.",
+          "items": {
+            "$ref": "#/definitions/GalleryType"
           },
           "type": "array"
         },

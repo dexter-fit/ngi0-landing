@@ -12,6 +12,7 @@ import { stringToTag } from "../util/stringToTag";
 import { ProjectDescriptionLinkType } from "../types/ProjectDescriptionLinkType";
 import { createLinkFromProjectLinkItem } from "../util/createLinkFromProjectLinkItem";
 import {createLinkWithLabelFromProjectLinkItems} from "../util/createLinkWithLabelFromProjectLinkItems";
+import { GalleryType } from "../types";
 
 const ProjectDetail = () => {
     const location = getContentTypeFromLocation(useLocation());
@@ -52,13 +53,20 @@ function loadProjects(dossierName: string, projGroupName: string) {
                     template: CardCarouselTemplate
                 }
             } as AssociatedProjectProps));
+
+            let gallery = proj.gallery?.map((item: GalleryType) => ({
+                heading: item.heading,
+                description: item.description,
+                images: item.images
+            } as GalleryType));
     
             projects.push({
                 image: proj.image,
                 descriptionContent: {
                     header: proj.header,
                     links: links,
-                    associatedProjects: associatedProjects
+                    associatedProjects: associatedProjects,
+                    gallery: gallery
                 },
                 children: <div dangerouslySetInnerHTML={{
                     __html: markdownToHtml(proj.text)

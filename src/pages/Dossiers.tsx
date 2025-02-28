@@ -13,6 +13,7 @@ import {createLinkFromProjectLinkItem} from "../util/createLinkFromProjectLinkIt
 import {stringToTag} from "../util/stringToTag";
 import {getContentTypeFromLocation} from "../util/getContentTypeFromLocation";
 import {createLinkWithLabelFromProjectLinkItems} from "../util/createLinkWithLabelFromProjectLinkItems";
+import { GalleryType } from "../types";
 
 const Dossiers = () => {
     const dossierName = getContentTypeFromLocation(useLocation())[0];
@@ -53,13 +54,20 @@ function loadProjects(contentType: string) {
             }
         } as AssociatedProjectProps));
 
+        let gallery = proj.gallery?.map((item: GalleryType) => ({
+            heading: item.heading,
+            description: item.description,
+            images: item.images
+        } as GalleryType));
+
         projects.push({
             image: proj.image,
             // tags, // I don't know if we want this here. This allows us to add tags bellow each section with associated ngi0 projects
             descriptionContent: {
                 header: proj.header,
                 links: links,
-                associatedProjects: associatedProjects
+                associatedProjects: associatedProjects,
+                gallery: gallery
             },
             children: <div dangerouslySetInnerHTML={{
                 __html: markdownToHtml(proj.text)

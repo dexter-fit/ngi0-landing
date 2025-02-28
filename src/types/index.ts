@@ -6,6 +6,8 @@ import {ProjectCardType} from "./ProjectCardType";
 import {ProjectDescriptionLinkType} from "./ProjectDescriptionLinkType";
 import {ProjectDescriptionType} from "./ProjectDescriptionType";
 import {ProjectPageType} from "./ProjectPageType";
+import {GalleryType} from "./GalleryType";
+import {ImageType} from "./ImageType";
 
 
 export type {
@@ -16,5 +18,7 @@ export type {
     ProjectDescriptionLinkType,
     ProjectDescriptionType,
     ProjectCardType,
-    ProjectPageType
+    ProjectPageType,
+    GalleryType,
+    ImageType
 };

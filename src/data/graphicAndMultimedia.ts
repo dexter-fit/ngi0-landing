@@ -1,6 +1,6 @@
-import {ProjectCardType, ProjectPageType} from "../types";
+import {ProjectCardType, ProjectPageType, ImageType} from "../types";
 import {ngi0Projects} from "./ngi0Projects";
-import {ProjectDescriptionType} from "../types/ProjectDescriptionType";
+import {ngi0Images} from "./ngi0Images";
 import {ASSOCIATED_NGI0_PROJECTS} from "./commonStrings";
 import {DossierType} from "../types/DossierType";
 
@@ -40,6 +40,21 @@ const GRAPHICS_CARDS = [
 const GRAPHICS_TAGS: string[] = [
 ];
 
+const GRAPHIC_GALLERY: ImageType[] = [
+    ngi0Images.image_1,
+    ngi0Images.image_2,
+    ngi0Images.image_3,
+    ngi0Images.image_4,
+    ngi0Images.image_5
+]
+
+const GRAPHIC_GALLERY_CMP: ImageType[] = [
+    ngi0Images.image_2,
+    ngi0Images.image_4,
+    ngi0Images.image_5
+]
+
+
 const GRAPHICS_DOSSIER_PROJECTS: ProjectPageType = {
     pageTitle: "Graphics and Multimedia Dossier",
     menuTitle: "Graphics Dossier",
@@ -47,6 +62,13 @@ const GRAPHICS_DOSSIER_PROJECTS: ProjectPageType = {
         {
             header: "Graphic and Multimedia Software Entry Point",
             text: "This is an introduction to the world of free and open-source software (FOSS) focused on various problems in computer graphics and multimedia. The following programs can serve as alternatives to proprietary products and sometimes even surpass them in certain aspects. The obvious general advantages of FOSS over proprietary software are that FOSS is accessible for free, multiplatform, often updated, extensible with a lot of plugins, open for code contributions, bug fixes, and new ideas, and often has a large and active community.",
+            gallery: [
+                {
+                    heading: "Test Gallery",
+                    description: "Here can be also some description for all gallery images, or it can be used as only clear gallery as is showed below",
+                    images: GRAPHIC_GALLERY
+                }
+            ]
         },
         {
             image: "https://www.fit.vut.cz/person/ivlnas/public/entry-point/def-img/gimp.svg",
@@ -57,6 +79,11 @@ const GRAPHICS_DOSSIER_PROJECTS: ProjectPageType = {
                 {
                     link: "https://www.gimp.org/",
                     label: "GIMP"
+                }
+            ],
+            gallery: [
+                {
+                    images: GRAPHIC_GALLERY_CMP
                 }
             ]
         },

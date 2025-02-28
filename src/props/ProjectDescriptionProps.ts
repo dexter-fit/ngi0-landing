@@ -1,5 +1,6 @@
 import {ReactNode} from "react";
 import {AssociatedProjectProps} from "./AssociatedProjectProps";
+import { GalleryProps } from "./GalleryProps";
 
 export type ProjectDescriptionProps = {
     otherProjectsLinkSpace?: ReactNode,
@@ -9,7 +10,8 @@ export type ProjectDescriptionProps = {
         header: string,
         anchor?: string,
         links?: ReactNode[],
-        associatedProjects?: AssociatedProjectProps[]
+        associatedProjects?: AssociatedProjectProps[],
+        gallery?: GalleryProps[]
     },
     children: ReactNode
 };

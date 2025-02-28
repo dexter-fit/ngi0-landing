@@ -3,6 +3,7 @@ import React from "react";
 import {ProjectDescriptionProps} from "../props";
 import {AssociatedProjectTemplate} from "./AssociatedProjectTemplate";
 import {Divider} from "primereact/divider";
+import {GalleryTemplate} from "./Gallery";
 
 const ProjectDescription = (props: ProjectDescriptionProps) => {
     return <>
@@ -29,6 +30,16 @@ const ProjectDescription = (props: ProjectDescriptionProps) => {
                     description={project.description}
                     carousel={project.carousel}
                     heading={project.heading}
+                />)}
+            </section>
+        </article>
+
+        <article key={props.descriptionContent.anchor}>
+            <section>
+                {props.descriptionContent.gallery?.map(project => <GalleryTemplate
+                    description={project.description}
+                    heading={project.heading}
+                    images={project.images}
                 />)}
             </section>
         </article>

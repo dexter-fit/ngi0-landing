@@ -1,0 +1,29 @@
+.item-img {
+    padding: 0;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.thumbnail-img {
+    padding: 0;
+    width: 20vh;
+    min-width: 20vh;
+}
+
+.p-galleria-caption {
+    padding: 0;
+}
+
+.p-galleria-item {
+    max-width: 100%;
+    max-height: 40vh;
+    height: 40vh;
+}
+
+.alt-div {
+    padding: 1rem;
+}
+
+.gallery-cmp {
+    max-width: 100%;
+}
