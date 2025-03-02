@@ -1,28 +1,14 @@
 import {Galleria} from 'primereact/galleria';
-import React from "react";
+import { Button } from 'primereact/button';
+import React, { useRef, useState } from "react";
 import "./Gallery.css";
 import {GalleryProps} from "../props";
 
 const GalleryTemplate = (props: GalleryProps) => {
 
-    const responsiveOptions = [
-        {
-            breakpoint: '1400px',
-            numVisible: 5
-        },
-        {
-            breakpoint: '1199px',
-            numVisible: 5
-        },
-        {
-            breakpoint: '950px',
-            numVisible: 3
-        },
-        {
-            breakpoint: '690px',
-            numVisible: 1
-        },
-    ];
+    const galleria = useRef(null);
+
+    const [activeIndex, setActiveIndex] = useState(0);
 
     const itemTemplate = (item: any) => {
         return <img src={item.itemImageSrc} alt={item.alt} className='item-img' />
@@ -47,8 +33,27 @@ const GalleryTemplate = (props: GalleryProps) => {
         {props.heading ? <h2>{props.heading}</h2> : <></>}
         {props.description ? <p>{props.description}</p> : <></>}
         <div>
-            <Galleria value={props.images} responsiveOptions={responsiveOptions} numVisible={3} className='gallery-cmp' 
-                    item={itemTemplate} thumbnail={thumbnailTemplate} caption={caption}/>
+            <Galleria ref={galleria} value={props.images} numVisible={3}
+                caption={caption} activeIndex={activeIndex} onItemChange={(e) => setActiveIndex(e.index)}
+                fullScreen showItemNavigators showThumbnails={false} item={itemTemplate} thumbnail={thumbnailTemplate} />
+                <div className='gallery-cmp'>
+                    {
+                        props.images && props.images.map((image, index) => {
+                            return (
+                                <div className="gallery-item-div" key={index}>
+                                    <img src={image.itemImageSrc} alt={image.alt} className='gallery-item-img' onClick={
+                                        () => {
+                                            setActiveIndex(index);
+                                            if (galleria.current !== null) {
+                                                galleria.current.show();
+                                            }
+                                        }
+                                    } />
+                                </div>
+                            )
+                        })
+                    }
+                </div>
         </div>
     </div>
 }
