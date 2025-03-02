@@ -40,20 +40,47 @@ const GRAPHICS_CARDS = [
 const GRAPHICS_TAGS: string[] = [
 ];
 
-const GRAPHIC_GALLERY: ImageType[] = [
-    ngi0Images.image_1,
-    ngi0Images.image_2,
-    ngi0Images.image_3,
-    ngi0Images.image_4,
-    ngi0Images.image_5
+const GALLERY_GIMP: ImageType[] = [
+    ngi0Images.gimp_0,
+    ngi0Images.gimp_1,
+    ngi0Images.gimp_2,
+    ngi0Images.gimp_3
 ]
 
-const GRAPHIC_GALLERY_CMP: ImageType[] = [
-    ngi0Images.image_2,
-    ngi0Images.image_4,
-    ngi0Images.image_5
+const GALLERY_INKSCAPE: ImageType[] = [
+    ngi0Images.inkscape_0,
+    ngi0Images.inkscape_1,
+    ngi0Images.inkscape_2,
+    ngi0Images.inkscape_3
 ]
 
+const GALLERY_KRITA: ImageType[] = [
+    ngi0Images.krita_0,
+    ngi0Images.krita_1,
+    ngi0Images.krita_2,
+    ngi0Images.krita_3
+]
+
+const GALLERY_BLENDER: ImageType[] = [
+    ngi0Images.blender_0,
+    ngi0Images.blender_1,
+    ngi0Images.blender_2,
+    ngi0Images.blender_3
+]
+
+const GALLERY_AUDACITY: ImageType[] = [
+    ngi0Images.audacity_0,
+    ngi0Images.audacity_1,
+    ngi0Images.audacity_2,
+    ngi0Images.audacity_3
+]
+
+const GALLERY_KDENLIVE: ImageType[] = [
+    ngi0Images.kdenlive_0,
+    ngi0Images.kdenlive_1,
+    ngi0Images.kdenlive_2,
+    ngi0Images.kdenlive_3
+]
 
 const GRAPHICS_DOSSIER_PROJECTS: ProjectPageType = {
     pageTitle: "Graphics and Multimedia Dossier",
@@ -61,14 +88,7 @@ const GRAPHICS_DOSSIER_PROJECTS: ProjectPageType = {
     projectDescription: [
         {
             header: "Graphic and Multimedia Software Entry Point",
-            text: "This is an introduction to the world of free and open-source software (FOSS) focused on various problems in computer graphics and multimedia. The following programs can serve as alternatives to proprietary products and sometimes even surpass them in certain aspects. The obvious general advantages of FOSS over proprietary software are that FOSS is accessible for free, multiplatform, often updated, extensible with a lot of plugins, open for code contributions, bug fixes, and new ideas, and often has a large and active community.",
-            gallery: [
-                {
-                    heading: "Test Gallery",
-                    description: "Here can be also some description for all gallery images, or it can be used as only clear gallery as is showed below",
-                    images: GRAPHIC_GALLERY
-                }
-            ]
+            text: "This is an introduction to the world of free and open-source software (FOSS) focused on various problems in computer graphics and multimedia. The following programs can serve as alternatives to proprietary products and sometimes even surpass them in certain aspects. The obvious general advantages of FOSS over proprietary software are that FOSS is accessible for free, multiplatform, often updated, extensible with a lot of plugins, open for code contributions, bug fixes, and new ideas, and often has a large and active community."
         },
         {
             image: "https://www.fit.vut.cz/person/ivlnas/public/entry-point/def-img/gimp.svg",
@@ -83,7 +103,8 @@ const GRAPHICS_DOSSIER_PROJECTS: ProjectPageType = {
             ],
             gallery: [
                 {
-                    images: GRAPHIC_GALLERY_CMP
+                    heading: "Examples",
+                    images: GALLERY_GIMP
                 }
             ]
         },
@@ -101,6 +122,12 @@ const GRAPHICS_DOSSIER_PROJECTS: ProjectPageType = {
                     link: "https://inkscape.org/",
                     label: "Inkscape"
                 }
+            ],
+            gallery: [
+                {
+                    heading: "Examples",
+                    images: GALLERY_INKSCAPE
+                }
             ]
         },
         {
@@ -116,6 +143,12 @@ const GRAPHICS_DOSSIER_PROJECTS: ProjectPageType = {
                 {
                     link: "https://krita.org/en/",
                     label: "Krita"
+                }
+            ],
+            gallery: [
+                {
+                    heading: "Examples",
+                    images: GALLERY_KRITA
                 }
             ]
         },
@@ -140,6 +173,12 @@ const GRAPHICS_DOSSIER_PROJECTS: ProjectPageType = {
                     link: "https://www.blender.org/",
                     label: "Blender"
                 }
+            ],
+            gallery: [
+                {
+                    heading: "Examples",
+                    images: GALLERY_BLENDER
+                }
             ]
         },
         {
@@ -160,8 +199,14 @@ const GRAPHICS_DOSSIER_PROJECTS: ProjectPageType = {
             tags: ["audio", "sound", "sfx", "signal processing"],
             links: [
                 {
-                    link: "https://www.blender.org/",
-                    label: "Blender"
+                    link: "https://www.audacityteam.org/",
+                    label: "Audacity"
+                }
+            ],
+            gallery: [
+                {
+                    heading: "Examples",
+                    images: GALLERY_AUDACITY
                 }
             ]
         },
@@ -175,23 +220,7 @@ const GRAPHICS_DOSSIER_PROJECTS: ProjectPageType = {
                 }
             ]
         },
-
-        {
-            image: "https://www.fit.vut.cz/person/ivlnas/public/entry-point/def-img/blender.svg",
-            header: "Blender for VFX",
-            text: "Blender is mainly a 3D editor but offers a lot of other options, such as 2D editing and animation, drawing, video editing, compositing, realistic rendering, etc. Its open-source nature makes it a popular choice for amateurs and professionals. The large community support with forums and tutorials makes learning with this tool easy. A lot of community add-ons and the option to use the built-in Python scripting environment make the software highly flexible and suitable for many various tasks in the field of computer graphics, game development, science, education, filmmaking, etc.",
-            tags: ["3D editing", "animation", "multimedia processing", "video editing"],
-            links: [
-                {
-                    link: "https://www.blender.org/",
-                    label: "Blender"
-                }
-            ]
-        },
-        {
-            header: "Comparison",
-            text: "The main advantage of Blender compared to the alternatives is its rich variety of free features. Proprietary 3D editors are usually quite expensive. Software like 3Ds Max, Maya, or Cinema 4D offer professional tools, but they can be replaced with Blender easily. The internal Blender path-tracing renderer Cycles is highly optimized and can be used with GPU as well. It can simulate most of the realistic effects. Alternative paid renderers might offer more advanced features, but they can also be imported to Blender to replace Cycles and keep the workflow. Sony Vegas, Adobe Premiere Pro, or Adobe After Effects are tools specifically designed for 2D video editing and VFX production. They might surpass Blender in this field, but the video editor and compositor in Blender offer a lot of advanced tools that can compete with the mentioned software. Their usage may not be as straightforward as that with specialized software. Similarly, Photoshop, Krita, or GIMP definitely offer better workflow for 2D drawing, but Blender is gaining a lot of feature updates in this direction, as 2D animation is being actively developed there. Game engines such as Unity or Unreal are often used for 3D scene composition. However, these engines lack the powerful designing and editing options of Blender. In terms of game development, Blender contained a game engine that was deprecated in newer versions.",
-        },
+        
         {
             image: "https://www.fit.vut.cz/person/ivlnas/public/entry-point/def-img/kdenlive.png",
             header: "Kdenlive",
@@ -200,7 +229,13 @@ const GRAPHICS_DOSSIER_PROJECTS: ProjectPageType = {
             links: [
                 {
                     link: "https://kdenlive.org/en/",
-                    label: "Blender"
+                    label: "Kdenlive"
+                }
+            ],
+            gallery: [
+                {
+                    heading: "Examples",
+                    images: GALLERY_KDENLIVE
                 }
             ]
         },
