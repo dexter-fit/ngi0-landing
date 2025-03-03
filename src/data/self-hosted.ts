@@ -37,27 +37,27 @@ const PEER_TUBE: ProjectPageType = {
             header: "Comparison",
             text: `**Alternative to:** YouTube, Twitch, Vimeo, (partially TikTok)
 
-Decentralized archiecture and storage
+✅ Decentralized archiecture and storage
 
-No reliance on a central company
+✅ No reliance on a central company
 
-Reducing censorship risks/Community-driven governance
+✅ Reducing censorship risks/Community-driven governance
 
-No restrictive nor opaque content policies
+✅ No restrictive nor opaque content policies
 
-No extensive data collection
+✅ No extensive data collection
 
-You own your data
+✅ You own your data
 
-P2P between clients to lower bandwidth consumption
+✅ P2P between clients to lower bandwidth consumption
 
-Expertise required for setup and maintenance
+❌ Expertise required for setup and maintenance
 
-Limited audience reach for now
+❌ Limited audience reach for now
 
-Scalability can be challenging
+❌ Scalability can be challenging
 
-Lacks advanced analytics`
+❌ Lacks advanced analytics`
         },
         {
             header: "Highlights",
