@@ -35,15 +35,16 @@ function loadProjects(dossierName: string, projGroupName: string) {
     const dossier = dossiers[dossierName];
     let projects: ProjectDescriptionProps[] = [];
 
+    const otherProjectsLinkSpace = [
+        createLinkWithLabelFromProjectLinkItems(`Part of the ${dossier.header} Dossier`, [{
+            label: 'Visit',
+            link: `/${dossierName}`
+        }])
+    ];
+
     if (dossier.detailedProjects[projGroupName]) {
         for (const proj of dossier.detailedProjects[projGroupName].projectDescription) {
             const links = proj.links?.map((item: ProjectDescriptionLinkType) => createLinkFromProjectLinkItem(item));
-            const otherProjectsLinkSpace = [
-                createLinkWithLabelFromProjectLinkItems(`Part of the ${dossier.header} Dossier`, [{
-                    label: 'Visit',
-                    link: `/${dossierName}`
-                }])
-            ];
 
             let associatedProjects = proj.associatedProjects?.map((item: AssociatedProjectType) => ({
                 heading: item.heading,
@@ -73,8 +74,11 @@ function loadProjects(dossierName: string, projGroupName: string) {
                 }}>
                 </div>,
                 tags: proj.tags?.map(stringToTag),
-                otherProjectsLinkSpace
             })
+        }
+
+        if (projects.length) {
+            projects[projects.length - 1].otherProjectsLinkSpace = otherProjectsLinkSpace;
         }
     }
 
