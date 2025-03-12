@@ -31,16 +31,15 @@ function loadProjects(dossierName: string, compGroupName: string) {
     const dossier = dossiers[dossierName];
     let projects: ProjectDescriptionProps[] = [];
 
-
+    const otherProjectsLinkSpace = [
+        createLinkWithLabelFromProjectLinkItems(`Part of the ${dossier.header} Dossier`, [{
+            label: 'Visit',
+            link: `/${dossierName}`
+        }])
+    ];
 
     if (dossier.comparisons[compGroupName]) {
         for (const comp of dossier.comparisons[compGroupName].projectDescription) {
-            const otherProjectsLinkSpace = [
-                createLinkWithLabelFromProjectLinkItems(`Part of the ${dossier.header} Dossier`, [{
-                    label: 'Visit',
-                    link: `/${dossierName}`
-                }])
-            ];
 
             if (comp?.relatedContent) {
                 otherProjectsLinkSpace.push(...comp?.relatedContent?.map(
@@ -50,17 +49,22 @@ function loadProjects(dossierName: string, compGroupName: string) {
             }
 
             projects.push({
-                otherProjectsLinkSpace,
-                image: dossier.image,
                 descriptionContent: {
                     header: comp.header
                 },
-                tags: dossier.tags.map(stringToTag),
                 children: <div dangerouslySetInnerHTML={{
                     __html: markdownToHtml(comp.text)
                 }}>
                 </div>
             })
+        }
+
+        if (projects.length) {
+            projects[0].tags = dossier.tags.map(stringToTag);
+        }
+
+        if (projects.length) {
+            projects[projects.length - 1].otherProjectsLinkSpace = otherProjectsLinkSpace;
         }
     }
 
