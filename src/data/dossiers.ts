@@ -4,6 +4,8 @@ import {DOSSIER as GRAPHICS_DOSSIER} from "./graphicAndMultimedia";
 import {DOSSIER as OFFICE_DOSSIER} from "./office";
 import {DOSSIER as COMPRESSION_DOSSIER} from "./compression";
 import {DOSSIER as SELF_HOSTED_DOSSIER} from "./self-hosted";
+import {DOSSIER as PCB_DOSSIER} from "./pcb";
+
 import {ProjectCardType} from "../types";
 import {DossierType} from "../types/DossierType";
 
@@ -13,7 +15,8 @@ const dossiers = {
     [GRAPHICS_DOSSIER.pathName]: GRAPHICS_DOSSIER,
     [OFFICE_DOSSIER.pathName]: OFFICE_DOSSIER,
     [COMPRESSION_DOSSIER.pathName]: COMPRESSION_DOSSIER,
-    [SELF_HOSTED_DOSSIER.pathName]: SELF_HOSTED_DOSSIER
+    [SELF_HOSTED_DOSSIER.pathName]: SELF_HOSTED_DOSSIER,
+    [PCB_DOSSIER.pathName]: PCB_DOSSIER
 } as {[pathName: string]: DossierType}
 
 const dossiersArray = Object.values(dossiers) as ProjectCardType[];
