@@ -498,4 +498,52 @@ export const ngi0Projects = {
         funds: funds.zeroCore,
         start: "2024-06"
     },
+
+    librePCB: {
+        image: "https://nlnet.nl/project/LibrePCB/librepcb.logo.svg",
+        header: "LibrePCB",
+        subheader: "EDA software suite to develop printed circuit boards",
+        tags: ["LibrePCB", "OpenSource", "PCBDesign", "EDAsoftware"],
+        link: "https://nlnet.nl/project/LibrePCB/",
+        funds: funds.entrust,
+        start: "2023-02",
+        stop: "2024-04"
+    },
+    librePCB_2_0: {
+        image: "https://nlnet.nl/project/LibrePCB/librepcb.logo.svg",
+        header: "LibrePCB 2.0",
+        subheader: "New UI & powerful features for a future-proof LibrePCB",
+        tags: ["LibrePCB", "RustLang", "PCBDesign", "EDAsoftware"],
+        link: "https://nlnet.nl/project/LibrePCB2.0/",
+        funds: funds.ngi0Commons,
+        stop: "2024-06"
+    },
+
+    KiCad: {
+        image: "https://nlnet.nl/project/KiCad/KiCad.logo.svg",
+        header: "KiCad",
+        subheader: "Professional open source electronics design application",
+        tags: ["KiCad", "OpenSource", "PCBDesign", "EDAsoftware"],
+        link: "https://nlnet.nl/project/KiCad/",
+        funds: funds.userOperatedInternet,
+        start: "2022-02",
+    },
+    KiCad_IPC: {
+        image: "https://nlnet.nl/project/KiCad/KiCad.logo.svg",
+        header: "KiCad-IPC",
+        subheader: "Add RPC API, multichannel designs and schematic variant system to FOSS EDA suite",
+        tags: ["KiCad", "OpenSource", "PCBDesign", "EDAsoftware"],
+        link: "https://nlnet.nl/project/KiCad-IPC/",
+        funds: funds.zeroCore,
+        start: "2023-12",
+    },
+    KiKit: {
+        image: "https://nlnet.nl/project/KiKit/kikit.logo.svg",
+        header: "KiKit",
+        subheader: "Tooling for automation of production of PCB designed in KiCAD",
+        tags: ["KiCad", "OpenSource", "PCBDesign", "Automation"],
+        link: "https://nlnet.nl/project/KiKit/",
+        funds: funds.entrust,
+        start: "2022-10",
+    },
 }

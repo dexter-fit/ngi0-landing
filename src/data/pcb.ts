@@ -1,4 +1,7 @@
 import {ProjectCardType, ProjectPageType, DossierType} from "../types";
+import {ASSOCIATED_NGI0_PROJECTS, SIMILAR_CLOSED_SOURCE_PROJECTS, SIMILAR_NGI0_PROJECTS} from "./commonStrings";
+import {ngi0Projects} from "./ngi0Projects";
+import {corporateProjects} from "./corporateProjects";
 
 const PCB_CARDS: ProjectCardType[] = [];
 
@@ -125,8 +128,14 @@ assembly), and mechanical drawings. These files provide manufacturers with the n
 information to produce, assemble, and verify the PCB. The process involves running Design Rule
 Checks (DRC) and Design for Manufacturability (DFM) analysis to detect potential issues such as
 clearance violations, missing vias, or incorrect footprints before fabrication. 
-            `
-        }
+            `,
+            associatedProjects: [
+                {
+                    heading: SIMILAR_NGI0_PROJECTS,
+                    carousel: [ngi0Projects.librePCB, ngi0Projects.librePCB_2_0, ngi0Projects.KiCad, ngi0Projects.KiCad_IPC, ngi0Projects.KiKit]
+                }
+            ]
+        },
     ]
 };
 
@@ -229,6 +238,12 @@ applications. Interface to the generation of various output data types is shown 
                     }],
                     largeImage: true
                 }
+            ],
+            associatedProjects: [
+                {
+                    heading: ASSOCIATED_NGI0_PROJECTS,
+                    carousel: [ngi0Projects.librePCB, ngi0Projects.librePCB_2_0]
+                }
             ]
         }
     ]
@@ -240,7 +255,12 @@ const kicad: ProjectPageType = {
     projectDescription: [
         {
             header: "KiCad",
-            text: ``
+            text: `KiCad is a free and open source electronics design application (EDA) that can handle everything from
+the most basic schematic to a complex hierarchical design with hundreds of sheets. It allows electronics designers to
+use a toolchain that itself is technically transparent, and that can be customised when needed. KiCad has already been
+successfully used for key open hardware projects such as the LibreRouter, the HackRF, MNT Reform and UPSAT. This
+project will contribute to furthering the mission of providing professional level tools for users who design electronics
+for a living.`
         },
         {
             header: "Schematic Editor Features",
@@ -333,6 +353,12 @@ is shown is shown in the following Figure.
                     }],
                     largeImage: true
                 }
+            ],
+            associatedProjects: [
+                {
+                    heading: ASSOCIATED_NGI0_PROJECTS,
+                    carousel: [ngi0Projects.KiCad, ngi0Projects.KiCad_IPC, ngi0Projects.KiKit]
+                }
             ]
         }
     ]
@@ -344,7 +370,14 @@ const librePCB: ProjectPageType = {
     projectDescription: [
         {
             header: "LibrePCB",
-            text: ``
+            text: `LibrePCB is a free and open source electronics design automation (EDA) software suite to develop
+printed circuit boards (PCBs). It runs on all major platforms and aims to be easy to use, while still beeing able to
+create professional schematics and PCBs. The goal is to make creating electronics easier, more efficient and less
+error-prone by using modern technologies and user interface concepts. LibrePCB therefore streamlines the whole PCB
+design process — from installing part libraries to ordering the final PCB design. Having such a free, powerful EDA
+software is the basement for the whole open hardware community as it allows us to reduce the dependency to proprietary
+and expensive technologies and empowers everyone to develop hardware for free, from hobbyists to professionals.            
+            `
         },
         {
             header: "Schematic Editor Features",
@@ -550,7 +583,17 @@ features. Professionals working on industrial designs will benefit from Altium�
 toolset, while those looking for a cost-effective, open-source solution will find KiCad to be a
 powerful alternative. Hobbyists and beginners, however, will appreciate LibrePCB’s simplicity as
 an accessible starting point in PCB design.
-            `
+            `,
+            associatedProjects: [
+                {
+                    heading: ASSOCIATED_NGI0_PROJECTS,
+                    carousel: [ngi0Projects.librePCB, ngi0Projects.librePCB_2_0, ngi0Projects.KiCad, ngi0Projects.KiCad_IPC, ngi0Projects.KiKit]
+                },
+                {
+                    heading: SIMILAR_CLOSED_SOURCE_PROJECTS,
+                    carousel: [corporateProjects.altiumDesigner]
+                }
+            ]
         }
     ]
 };

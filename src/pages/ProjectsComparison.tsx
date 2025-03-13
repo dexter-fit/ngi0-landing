@@ -1,4 +1,4 @@
-import {ProjectDescriptionProps} from "../props";
+import {AssociatedProjectProps, ProjectDescriptionProps} from "../props";
 import {useLocation } from "react-router-dom";
 import React from "react";
 import {replaceSpacesWith} from "../util/replaceSpacesWith";
@@ -9,6 +9,8 @@ import { dossiers } from "../data/dossiers";
 import { ProjectDescriptionLinkType } from "../types/ProjectDescriptionLinkType";
 import { createLinkWithLabelFromProjectLinkItems } from "../util/createLinkWithLabelFromProjectLinkItems";
 import { stringToTag } from "../util/stringToTag";
+import {AssociatedProjectType, GalleryType} from "../types";
+import {CardCarouselTemplate} from "../components/CardCarouselTemplate";
 
 const ProjectsComparison = () => {
     const location = getContentTypeFromLocation(useLocation());
@@ -48,9 +50,27 @@ function loadProjects(dossierName: string, compGroupName: string) {
                 ));
             }
 
+            let associatedProjects = comp.associatedProjects?.map((item: AssociatedProjectType) => ({
+                heading: item.heading,
+                description: item.description,
+                carousel: {
+                    cards: item.carousel,
+                    template: CardCarouselTemplate
+                }
+            } as AssociatedProjectProps));
+
+            let gallery = comp.gallery?.map((item: GalleryType) => ({
+                heading: item.heading,
+                description: item.description,
+                images: item.images,
+                largeImage: item.largeImage
+            } as GalleryType));
+
             projects.push({
                 descriptionContent: {
-                    header: comp.header
+                    header: comp.header,
+                    associatedProjects,
+                    gallery
                 },
                 children: <div dangerouslySetInnerHTML={{
                     __html: markdownToHtml(comp.text)
