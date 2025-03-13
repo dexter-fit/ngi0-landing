@@ -40,6 +40,7 @@ const ProjectDescription = (props: ProjectDescriptionProps) => {
                     description={project.description}
                     heading={project.heading}
                     images={project.images}
+                    largeImage={project.largeImage}
                 />)}
             </section>
         </article>

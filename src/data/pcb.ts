@@ -151,7 +151,16 @@ directly within the tool. Additionally, Altium Designer enables real-time collab
 allowing multiple engineers to work on the same schematic while
 maintaining version control and design consistency. An example of how the schematic editor GUI
 looks like in Altium Designer is shown in the following Figure.
-` // TODO: Image
+            `,
+            gallery: [
+                {
+                    images: [{
+                        itemImageSrc: "/ngi0/img/pcb/schematic_editor_Altium.bmp",
+                        title: "Appearance of schematic editor GUI in Altium Designer."
+                    }],
+                    largeImage: true
+                }
+            ]
         },
         {
             header: "PCB Layout Editor Features",
@@ -165,7 +174,16 @@ Altium Designer includes 3D visualization and collision detection, enabling desi
 mechanical compatibility of their PCB before manufacturing. Its seamless integration with
 component libraries, design rule checks (DRC), and Altium 365 cloud collaboration make it a
 robust solution for teams working on complex designs. An example of how the PCB editor GUI in
-action like in Altium Designer is shown in the following Figure.`,// TODO: Image
+action like in Altium Designer is shown in the following Figure.`,
+            gallery: [
+                {
+                    images: [{
+                        itemImageSrc: "/ngi0/img/pcb/pcb_editor_Altium.bmp",
+                        title: "Appearance of PCB editor GUI in Altium Designer."
+                    }],
+                    largeImage: true
+                }
+            ]
         },
         {
             header: "Components Libraries and Management",
@@ -180,7 +198,16 @@ resistance, capacitance, voltage ratings, and supplier links. Additionally, Alti
 provides template-based component creation tools, making it easy to generate custom parts with
 symbols, footprints, and models in a structured way. An example of powerful and complex GUI for
 components creation and management in Altium Designer is shown in the following Figure.
-            `// TODO: Image
+            `,
+            gallery: [
+                {
+                    images: [{
+                        itemImageSrc: "/ngi0/img/pcb/library_management_Altium.bmp",
+                        title: "Complex interface for components creation and management in Altium Designer."
+                    }],
+                    largeImage: true
+                }
+            ]
         },
         {
             header: "Output Generation",
@@ -193,7 +220,16 @@ including Gerber (RS-274X and X2), ODB++, IPC-2581, NC Drill files, and Bill of 
 The built-in Design Rule Checks (DRC) and Design for Manufacturability (DFM) analysis help
 prevent potential production issues, making Altium an excellent choice for high-reliability
 applications. Interface to the generation of various output data types is shown in the following Figure. 
-            `// TODO: Image
+            `,
+            gallery: [
+                {
+                    images: [{
+                        itemImageSrc: "/ngi0/img/pcb/fabrication_data_Altium.bmp",
+                        title: "Module for generation various types of output data from Altium Designer."
+                    }],
+                    largeImage: true
+                }
+            ]
         }
     ]
 };
@@ -217,8 +253,16 @@ external Git integration. While the interface may not be as polished as commerci
 it remains an efficient and highly flexible tool, particularly for small-to-medium projects and users
 who prefer open-source solutions. Furthermore, KiCad supports SPICE simulation through
 integration with external simulation tools, allowing users to verify circuit behavior before PCB
-layout. An example of how the schematic editor GUI looks like in KiCAD environment is shown in the following Figure.
-` // TODO: Image
+layout. An example of how the schematic editor GUI looks like in KiCAD environment is shown in the following Figure.`,
+            gallery: [
+                {
+                    images: [{
+                        itemImageSrc: "/ngi0/img/pcb/schematic_editor_KiCAD.bmp",
+                        title: "Appearance of schematic editor GUI in KiCAD."
+                    }],
+                    largeImage: true
+                }
+            ]
         },
         {
             header: "PCB Layout Editor Features",
@@ -231,7 +275,16 @@ placement and board alignment. While it lacks advanced AI-driven routing and som
 simulation tools found in Altium, KiCad compensates with strong design rule enforcement, a 
 flexible user interface, and community-driven plugin support. An example of how the PCB editor
 GUI in action like in KiCAD environment is shown in the following Figure.
-            `, // TODO: Image
+            `,
+            gallery: [
+                {
+                    images: [{
+                        itemImageSrc: "/ngi0/img/pcb/pcb_editor_KiCAD.bmp",
+                        title: "Appearance of PCB editor GUI in KiCAD environment."
+                    }],
+                    largeImage: true
+                }
+            ]
         },
         {
             header: "Components Libraries and Management",
@@ -247,7 +300,16 @@ footprints. Creating new components in KiCad requires manual entry of parameters
 but built-in wizards simplify the process, making it accessible even for beginners. An example of
 open-source GUI for components creation and management in KiCAD, which is roughly matching
 the capabilities of Altium Designer, is shown in the following Figure.
-            ` // TODO: Image
+            `,
+            gallery: [
+                {
+                    images: [{
+                        itemImageSrc: "/ngi0/img/pcb/library_management_KiCAD.bmp",
+                        title: "An example of GUI for components creation and management in KiCAD tool."
+                    }],
+                    largeImage: true
+                }
+            ]
         },
         {
             header: "Output Generation",
@@ -262,7 +324,16 @@ machines. Though it does not offer as many automated documentation tools as Alti
 remains a reliable option for small to medium-sized projects, especially for users looking for a
 cost-effective solution. An approach to the generation of various output data types in KiCAD tool
 is shown is shown in the following Figure.
-            ` // TODO: Image
+            `,
+            gallery: [
+                {
+                    images: [{
+                        itemImageSrc: "/ngi0/img/pcb/fabrication_data_KiCAD.bmp",
+                        title: "Module for generation fabrication data from KiCAD tool."
+                    }],
+                    largeImage: true
+                }
+            ]
         }
     ]
 };
@@ -286,8 +357,16 @@ be intuitive and user-friendly, reducing the complexity often associated with co
 in other tools. However, LibrePCB currently lacks some advanced features like SPICE simulation
 and deep integration with external verification tools, making it better suited for small projects,
 hobbyists, and beginners rather than large-scale professional designs. An example of how the
-schematic editor GUI looks like in KiCAD environment is shown in the following Figure.
-` // TODO: Image
+schematic editor GUI looks like in KiCAD environment is shown in the following Figure.`,
+            gallery: [
+                {
+                    images: [{
+                        itemImageSrc: "/ngi0/img/pcb/schematic_editor_LibrePCB.bmp",
+                        title: "Appearance of schematic editor GUI in LibrePCB."
+                    }],
+                    largeImage: true
+                }
+            ]
         },
         {
             header: "PCB Layout Editor Features",
@@ -301,7 +380,16 @@ settings or configuration steps. However, it currently lacks features such as di
 routing, impedance control, and advanced high-speed design support, making it more suitable
 for beginners, hobbyists, or small-scale projects rather than complex professional applications.
 An example of how the PCB editor GUI in action like in LibrePCB tool is shown in the following Figure.
-            `, // TODO: Image
+            `,
+            gallery: [
+                {
+                    images: [{
+                        itemImageSrc: "/ngi0/img/pcb/pcb_editor_LibrePCB.bmp",
+                        title: "Appearance of PCB editor GUI in LibrePCB tool."
+                    }],
+                    largeImage: true
+                }
+            ]
         },
         {
             header: "Components Libraries and Management",
@@ -315,7 +403,16 @@ directly from online sources rather than manually downloading and importing file
 selection of pre-existing libraries in LibrePCB is smaller compared to KiCad and Altium, meaning
 users may need to create custom components more frequently. An example of open-source GUI
 for components creation and management in LibrePCB is shown in the following Figure.
-            ` // TODO: Image
+            `,
+            gallery: [
+                {
+                    images: [{
+                        itemImageSrc: "/ngi0/img/pcb/library_management_LibrePCB.bmp",
+                        title: "An example of GUI for components creation and management in LibrePCB tool."
+                    }],
+                    largeImage: true
+                }
+            ]
         },
         {
             header: "Output Generation",
@@ -330,7 +427,16 @@ to verify fabrication files before submission. Despite these limitations, LibreP
 streamlined approach that suits hobbyists and small-scale projects where simplicity is preferred
 over complex fabrication requirements. An approach to the generation of various output data
 types in LibrePCB tool is shown on in the following Figure.
-            ` // TODO: Image
+            `,
+            gallery: [
+                {
+                    images: [{
+                        itemImageSrc: "/ngi0/img/pcb/fabrication_data_LibrePCB.bmp",
+                        title: "Module for generation fabrication data from LibrePCB tool."
+                    }],
+                    largeImage: true
+                }
+            ]
         }
     ]
 };
@@ -395,8 +501,8 @@ KiCad’s open-source flexibility, or LibrePCB’s straightforward approach.
         {
             header: "Summary",
             text: `
-When comparing Altium Designer, KiCad, and LibrePCB, it becomes clear that each tool caters
-to different user needs and project requirements. Altium Designer stands out as a high-end
+When comparing **Altium Designer**, **KiCad**, and **LibrePCB**, it becomes clear that each tool caters
+to different user needs and project requirements. **Altium Designer** stands out as a high-end
 commercial solution, offering powerful features such as advanced schematic capture, intelligent
 PCB layout editing, robust component library management, and seamless fabrication output
 generation. Its cloud-based Altium 365 platform and real-time collaboration tools make it the
@@ -406,7 +512,7 @@ extensive design automation, built-in rule verification, and direct manufacturer
 significantly enhance productivity, making it a preferred tool for aerospace, automotive, medical,
 and telecommunications industries.
 
-On the other hand, KiCad presents itself as the most feature-rich open-source alternative,
+On the other hand, **KiCad** presents itself as the most feature-rich open-source alternative,
 providing a balance between flexibility, functionality, and affordability. With its powerful
 schematic and PCB layout editors, extensive community-driven component libraries, and opensource adaptability,
 KiCad is a strong choice for small-to-medium professional projects, startups,
@@ -417,7 +523,7 @@ However, its Git-based version control and strong community plugin support allow
 its capabilities, making it a practical option for those who need an open and customizable design
 environment without a commercial price tag.
 
-Finally, LibrePCB offers a lightweight, beginner-friendly, and simplified approach to PCB design,
+Finally, **LibrePCB** offers a lightweight, beginner-friendly, and simplified approach to PCB design,
 making it a great entry point for hobbyists, students, and small-scale projects. Its intuitive library
 management, straightforward schematic capture, and basic PCB layout tools make it easy to use,
 but it lacks advanced features like differential pair routing, DFM analysis, and real-time rule
@@ -430,13 +536,13 @@ advanced design capabilities.
         {
             header: "Final Recommendation",
             text: `
-- Altium Designer is ideal for large-scale, high-reliability, and industry-grade PCB designs,
+- **Altium Designer** is ideal for large-scale, high-reliability, and industry-grade PCB designs,
 offering automation, collaboration, and professional manufacturing support.
 Page 12
-- KiCad is a strong open-source alternative, balancing advanced design features with
+- **KiCad** is a strong open-source alternative, balancing advanced design features with
 flexibility, making it a great fit for independent designers, startups, and small-to-medium
 professional projects.
-- LibrePCB is best for hobbyists, beginners, and simple PCB projects, prioritizing ease of
+- **LibrePCB** is best for hobbyists, beginners, and simple PCB projects, prioritizing ease of
 use and accessibility over advanced functionality.
 
 Ultimately, the choice between these tools depends on budget, project complexity, and required
