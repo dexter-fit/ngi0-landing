@@ -1,81 +1,19 @@
 import React from "react";
-import {ProjectDescription} from "../components/ProjectDescription";
-import {AssociatedProjectProps, ProjectDescriptionProps} from "../props";
+import {ProjectDescriptionProps} from "../props";
 import {useLocation} from "react-router-dom";
-import {CardCarouselTemplate} from "../components/CardCarouselTemplate";
-import {replaceSpacesWith} from "../util/replaceSpacesWith";
-import {markdownToHtml} from "../util/markdownToHtml";
 import {dossiers} from "../data/dossiers";
-import {tagsFromProjectCardType} from "../util/tagsFromProjectCardType";
-import {ProjectDescriptionLinkType} from "../types/ProjectDescriptionLinkType";
-import {AssociatedProjectType} from "../types/AssociatedProjectType";
-import {createLinkFromProjectLinkItem} from "../util/createLinkFromProjectLinkItem";
 import {stringToTag} from "../util/stringToTag";
 import {getContentTypeFromLocation} from "../util/getContentTypeFromLocation";
 import {createLinkWithLabelFromProjectLinkItems} from "../util/createLinkWithLabelFromProjectLinkItems";
-import { GalleryType } from "../types";
+import {projectDescriptionsToProjectDescriptionProps} from "../utils/projectDescriptionsToProjectDescriptionProps";
+import {projectDescriptionPropsToProjectDescriptions} from "../util/projectDescriptionPropsToProjectDescriptions";
 
 const Dossiers = () => {
     const dossierName = getContentTypeFromLocation(useLocation())[0];
-    const projects: ProjectDescriptionProps[] = loadProjects(dossierName);
 
-    return <>
-        {projects.map(item =>
-                <ProjectDescription key={item.descriptionContent.header}
-                                    image={item.image}
-                                    tags={item.tags}
-                                    otherProjectsLinkSpace={item.otherProjectsLinkSpace}
-                                    descriptionContent={{...item.descriptionContent, anchor: replaceSpacesWith(item.descriptionContent.header, "_")}}>
-                    {item.children}
-                </ProjectDescription>
-        )}
-    </>
-}
+    const dossier = dossiers[dossierName];
 
-function loadProjects(contentType: string) {
-    const dossier = dossiers[contentType];
-    let projects: ProjectDescriptionProps[] = [];
-
-    let tags: any[] = [];
-
-    for (const proj of dossier.projects.projectDescription) {
-        const links = proj.links?.map((item: ProjectDescriptionLinkType) => createLinkFromProjectLinkItem(item));
-
-        tags = tagsFromProjectCardType(
-            proj.associatedProjects?.flatMap((item: AssociatedProjectType) => item.carousel) || []
-        ).map(stringToTag);
-
-        let associatedProjects = proj.associatedProjects?.map((item: AssociatedProjectType) => ({
-            heading: item.heading,
-            description: item.description,
-            carousel: {
-                cards: item.carousel,
-                template: CardCarouselTemplate
-            }
-        } as AssociatedProjectProps));
-
-        let gallery = proj.gallery?.map((item: GalleryType) => ({
-            heading: item.heading,
-            description: item.description,
-            images: item.images,
-            largeImage: item.largeImage
-        } as GalleryType));
-
-        projects.push({
-            image: proj.image,
-            // tags, // I don't know if we want this here. This allows us to add tags bellow each section with associated ngi0 projects
-            descriptionContent: {
-                header: proj.header,
-                links: links,
-                associatedProjects: associatedProjects,
-                gallery: gallery
-            },
-            children: <div dangerouslySetInnerHTML={{
-                __html: markdownToHtml(proj.text)
-            }}>
-            </div>
-        })
-    }
+    const projects: ProjectDescriptionProps[] = projectDescriptionsToProjectDescriptionProps(dossier.projects.projectDescription);
 
     const otherProjectsLinkSpace = [
         createLinkWithLabelFromProjectLinkItems(`Detailed Projects Within the Dossier`,
@@ -91,12 +29,13 @@ function loadProjects(contentType: string) {
         )
     ];
 
-    // Add dossier tags to the first description block
-    tags = dossier.tagsDossierDetail.map(stringToTag);
-    projects[0].tags = tags;
-    projects[projects.length - 1].otherProjectsLinkSpace = otherProjectsLinkSpace;
+    if (projects[0]?.tags) {
+        projects[0].tags = [...projects[0].tags, ...dossier.tagsDossierDetail.map(stringToTag)];
+    }
 
-    return projects;
+    projects[projects.length - 1].otherProjectsLinkSpace = <>{projects[projects.length - 1].otherProjectsLinkSpace}{otherProjectsLinkSpace}</>;
+
+    return projectDescriptionPropsToProjectDescriptions(projects);
 }
 
 export {Dossiers};
