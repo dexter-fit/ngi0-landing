@@ -3,11 +3,11 @@ import './App.css';
 import 'primeicons/primeicons.css';
 import 'primeflex/primeflex.css';
 import {PrimeReactProvider} from 'primereact/api';
-import {createBrowserRouter, Outlet, RouterProvider} from "react-router-dom";
+import {createBrowserRouter, Outlet, RouterProvider, useLocation} from "react-router-dom";
 import {Index} from "./pages/Index";
 import {Dossiers} from "./pages/Dossiers";
 import {Header} from "./components/Header";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import {MenuItem} from "primereact/menuitem";
 import {ProjectDetail} from "./pages/ProjectDetail";
 import {ProjectsComparison} from "./pages/ProjectsComparison";
@@ -17,12 +17,20 @@ import {Schema} from "./pages/Schema";
 const App = () => {
     const [menuItems] = useState([] as MenuItem[]);
 
-    const Layout = <PrimeReactProvider>
-        <Header menuItems={menuItems}/>
-        <div className="my-cards-container">
-            <Outlet/>
-        </div>
-    </PrimeReactProvider>
+    const Layout = () => {
+        const {pathname} = useLocation();
+
+        useEffect(() => {
+            window.scrollTo(0, 0);
+        }, [pathname]);
+
+        return <PrimeReactProvider>
+            <Header menuItems={menuItems}/>
+            <div className="my-cards-container">
+                <Outlet/>
+            </div>
+        </PrimeReactProvider>
+    }
 
     const getDossierPathsBasedOnTheDossierPathname = (pathName: string) => ({
         path: pathName,
@@ -56,7 +64,7 @@ const App = () => {
     const routes = [
         {
             path: "/",
-            element: Layout,
+            element: <Layout/>,
             children:
                 [
                     {
