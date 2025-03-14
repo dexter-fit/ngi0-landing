@@ -29,8 +29,9 @@ const Dossiers = () => {
         )
     ];
 
-    if (projects[0]?.tags) {
-        projects[0].tags = [...projects[0].tags, ...dossier.tagsDossierDetail.map(stringToTag)];
+    if (projects[0]) {
+        const otherTags = dossier.tagsDossierDetail.map(stringToTag);
+        projects[0].tags = projects[0]?.tags ? [...projects[0].tags, ...otherTags] : otherTags;
     }
 
     projects[projects.length - 1].otherProjectsLinkSpace = <>{projects[projects.length - 1].otherProjectsLinkSpace}{otherProjectsLinkSpace}</>;
