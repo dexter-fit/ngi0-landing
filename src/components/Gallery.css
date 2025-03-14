@@ -53,7 +53,7 @@
     margin: 1rem;
 }
 
-.gallery-item-img,.large  {
-    width: 60%;
-    height: auto;
+.gallery-item-img.large  {
+    width: 60% !important;
+    height: auto !important;
 }
