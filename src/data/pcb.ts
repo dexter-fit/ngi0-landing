@@ -615,7 +615,7 @@ export const PCB_DOSSIER_PATHNAME = "pcb";
 
 export const DOSSIER: DossierType = {
     pathName: PCB_DOSSIER_PATHNAME,
-    image: "https://upload.wikimedia.org/wikipedia/commons/e/e6/LibreOffice_4.0_Writer_Icon.svg",
+    image: "/ngi0/img/pcb/PCB.png",
     header: "PCB Design",
     subheader: "FOSS PCB Design",
     tags: ["Printed Circuit Board", "LibrePCB", "KiCad"],
