@@ -603,9 +603,9 @@ nano /var/www/html/nextcloud/config/config.php
 
 Add the following lines at the end:
 \`\`\`
-'memcache.locking' => '\OC\Memcache\Redis',
-'memcache.distributed' => '\OC\Memcache\Redis',
-'memcache.local' => '\OC\Memcache\Redis',
+'memcache.locking' => '\\OC\\Memcache\\Redis',
+'memcache.distributed' => '\\OC\\Memcache\\Redis',
+'memcache.local' => '\\OC\\Memcache\\Redis',
 'redis' => [
     'host' => '127.0.0.1',
     'port' => '6379',
