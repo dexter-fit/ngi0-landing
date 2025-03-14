@@ -351,7 +351,7 @@ export const ngi0Projects = {
     },
 
     libspngAPNG: {
-        image: "",
+        image: "/ngi0/img/default.svg",
         header: "libspng APNG",
         subheader: "Add Animated PNG (APNG) image read- and write support to libspng",
         tags: ["C Library", "PNG File Format", "APNG Support", "Image Processing", "Security and Ease of Use"],
@@ -360,14 +360,14 @@ export const ngi0Projects = {
         start: "2023-04"
     },
     calligraSVG: {
-        image: "",
+        image: "/ngi0/img/default.svg",
         header: "Calligra-SVG",
         subheader: "Improve fallback mechanisms in Calligra ODF loading and saving",
         tags: ["ODF Standard", "adraw:frame", "Fallback Mechanism", "SVG Format", "Calligra Suite"],
         link: "https://nlnet.nl/project/calligra-svg/",
     },
     libvips: {
-        image: "",
+        image: "/ngi0/img/default.svg",
         header: "libvips",
         subheader: "Add animated PNG and enhanced JPEG XL support to libvips",
         tags: ["Image Processing", "Libvips", "Animated PNG Support", "JXL Format", "Node Binding"],
