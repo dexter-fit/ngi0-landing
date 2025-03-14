@@ -603,9 +603,9 @@ nano /var/www/html/nextcloud/config/config.php
 
 Add the following lines at the end:
 \`\`\`
-'memcache.locking' => '\\OC\\Memcache\\Redis',
-'memcache.distributed' => '\\OC\\Memcache\\Redis',
-'memcache.local' => '\\OC\\Memcache\\Redis',
+'memcache.locking' => '\OC\Memcache\Redis',
+'memcache.distributed' => '\OC\Memcache\Redis',
+'memcache.local' => '\OC\Memcache\Redis',
 'redis' => [
     'host' => '127.0.0.1',
     'port' => '6379',
@@ -662,10 +662,10 @@ export const SELF_HOSTED_DOSSIER_PATHNAME = "self-hosted";
 
 export const DOSSIER: DossierType = {
     pathName: SELF_HOSTED_DOSSIER_PATHNAME,
-    image: "https://upload.wikimedia.org/wikipedia/commons/e/e6/LibreOffice_4.0_Writer_Icon.svg",
+    image: "https://upload.wikimedia.org/wikipedia/commons/0/09/Network-server.svg",
     header: "Self-Hosting",
     subheader: "Self-Hosting Dossier",
-    tags: ["self-hosting", "privacy","Open-Source"],
+    tags: ["Self-Hosting", "Privacy","Open-Source"],
     link: `/ngi0/${SELF_HOSTED_DOSSIER_PATHNAME}`,
     cards: SELF_HOSTED_CARDS,
     tagsDossierDetail: SELF_HOSTED_TAGS,
