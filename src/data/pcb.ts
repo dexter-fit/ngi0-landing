@@ -80,7 +80,7 @@ PCB editors encompass several key aspects that facilitate the design and manufac
 The schematic editor enables engineers to define the logical structure of a circuit, ensuring proper component connections 
 and verification before layout. The PCB layout editor translates the schematic into a physical board design, considering
 factors like signal integrity, thermal management, and manufacturability. Component libraries provide standardized symbols, 
-footprints, and metadata to streamline design consistency and sourcing. Finally, output generation ensures that all necessary 
+footprints, and metadata to streamline design consistency and sourcing. Finally, generation of production data ensures that all necessary 
 files, such as Gerber files and Bills of Materials (BOM), are created for fabrication and assembly. Together, these aspects form the 
 foundation of an efficient PCB design workflow.
 
@@ -119,7 +119,7 @@ for mechanical verification. Advanced library management systems also include me
 as manufacturer details, part numbers, and sourcing information, helping designers ensure
 component availability and compliance with design requirements.
 
-## Output Generation
+## Generation of Production Data
 The creation of fabrication data is a critical step in the PCB design process, ensuring that a circuit
 board can be manufactured accurately according to the designer’s specifications. Fabrication
 data includes essential files such as Gerber files (for copper layers, silkscreen, solder mask), drill
@@ -138,7 +138,6 @@ clearance violations, missing vias, or incorrect footprints before fabrication.
         },
     ]
 };
-
 
 const altium: ProjectPageType = {
     pageTitle: "Altium Designer",
@@ -226,7 +225,7 @@ components creation and management in Altium Designer is shown in the following 
             ]
         },
         {
-            header: "Output Generation",
+            header: "Generation of Production Data",
             text: `
 Altium Designer offers a highly automated and professional-grade fabrication output generation
 system, ensuring seamless transition from design to manufacturing. The software provides a CAM
@@ -339,7 +338,7 @@ the capabilities of Altium Designer, is shown in the following Figure.
             ]
         },
         {
-            header: "Output Generation",
+            header: "Generation of Production Data",
             text: `
 KiCad provides a flexible and open-source solution for generating fabrication outputs, supporting
 standard formats such as Gerber (RS-274X), Excellon drill files, BOM, and IPC-D-356 netlist files.
@@ -455,7 +454,7 @@ for components creation and management in LibrePCB is shown in the following Fig
             ]
         },
         {
-            header: "Output Generation",
+            header: "Generation of Production Data",
             text: `
 LibrePCB simplifies the process of generating fabrication outputs with an easy-to-use CAM
 export system. It supports essential formats such as Gerber, Excellon drill files, and BOM,
@@ -480,7 +479,6 @@ types in LibrePCB tool is shown on in the following Figure.
         }
     ]
 };
-
 
 const comparison: ProjectPageType = {
     pageTitle: "PCB Design Tools Comparison",
@@ -533,7 +531,7 @@ or LibrePCB’s simplicity.
             `
         },
         {
-            header: "Output Generation",
+            header: "Generation of Production Data",
             text: `
 When comparing fabrication output capabilities, Altium Designer provides the most advanced
 and comprehensive solution, including automated documentation, real-time manufacturer
