@@ -5,6 +5,7 @@ import {createLinkWithLabelFromProjectLinkItems} from "../util/createLinkWithLab
 import {stringToTag} from "../util/stringToTag";
 import {projectDescriptionsToProjectDescriptionProps} from "../utils/projectDescriptionsToProjectDescriptionProps";
 import {projectDescriptionPropsToProjectDescriptions} from "../util/projectDescriptionPropsToProjectDescriptions";
+import React from "react";
 
 const ProjectsComparison = () => {
     const location = getContentTypeFromLocation(useLocation());
@@ -16,13 +17,15 @@ const ProjectsComparison = () => {
         projects[0].tags = dossier.tags.map(stringToTag);
     }
 
+    const otherProjectsLinkSpace = [
+        createLinkWithLabelFromProjectLinkItems(`Part of the ${dossier.header} Dossier`, [{
+            label: 'Visit',
+            link: `/${dossier.pathName}`
+        }])
+    ];
+
     if (projects.length) {
-        projects[projects.length - 1].otherProjectsLinkSpace = [
-            createLinkWithLabelFromProjectLinkItems(`Part of the ${dossier.header} Dossier`, [{
-                label: 'Visit',
-                link: `/${dossier.pathName}`
-            }])
-        ];
+        projects[projects.length - 1].otherProjectsLinkSpace = <>{projects[projects.length - 1].otherProjectsLinkSpace}{otherProjectsLinkSpace}</>;
     }
 
     return projectDescriptionPropsToProjectDescriptions(projects);

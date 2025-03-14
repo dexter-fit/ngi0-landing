@@ -4,6 +4,7 @@ import { dossiers } from "../data/dossiers";
 import {createLinkWithLabelFromProjectLinkItems} from "../util/createLinkWithLabelFromProjectLinkItems";
 import {projectDescriptionsToProjectDescriptionProps} from "../utils/projectDescriptionsToProjectDescriptionProps";
 import {projectDescriptionPropsToProjectDescriptions} from "../util/projectDescriptionPropsToProjectDescriptions";
+import React from "react";
 
 const ProjectDetail = () => {
     const location = getContentTypeFromLocation(useLocation());
@@ -20,7 +21,7 @@ const ProjectDetail = () => {
     ];
 
     if (projects.length) {
-        projects[projects.length - 1].otherProjectsLinkSpace = otherProjectsLinkSpace;
+        projects[projects.length - 1].otherProjectsLinkSpace = <>{projects[projects.length - 1].otherProjectsLinkSpace}{otherProjectsLinkSpace}</>;
     }
 
     return projectDescriptionPropsToProjectDescriptions(projects);
