@@ -8,10 +8,10 @@ import {GalleryTemplate} from "./Gallery";
 const ProjectDescription = (props: ProjectDescriptionProps) => {
     return <>
         <h1 id={props.descriptionContent.anchor}>
-                {props.descriptionContent.header}
+            {props.descriptionContent.header}
         </h1>
         <div className="image-content-wrapper">
-            {props?.image ? <img className="image" src={props.image} alt="header_image" key={props.image}/>: <></>}
+            {props?.image ? <img className="image" src={props.image} alt="header_image" key={props.image}/> : <></>}
             {props.children}
         </div>
 
@@ -23,17 +23,6 @@ const ProjectDescription = (props: ProjectDescriptionProps) => {
             {props.tags}
         </div> : <></>}
 
-
-        <article key={props.descriptionContent.anchor}>
-            <section>
-                {props.descriptionContent.associatedProjects?.map(project => <AssociatedProjectTemplate
-                    description={project.description}
-                    carousel={project.carousel}
-                    heading={project.heading}
-                />)}
-            </section>
-        </article>
-
         <article key={props.descriptionContent.anchor}>
             <section>
                 {props.descriptionContent.gallery?.map(project => <GalleryTemplate
@@ -41,6 +30,16 @@ const ProjectDescription = (props: ProjectDescriptionProps) => {
                     heading={project.heading}
                     images={project.images}
                     largeImage={project.largeImage}
+                />)}
+            </section>
+        </article>
+
+        <article key={props.descriptionContent.anchor}>
+            <section>
+                {props.descriptionContent.associatedProjects?.map(project => <AssociatedProjectTemplate
+                    description={project.description}
+                    carousel={project.carousel}
+                    heading={project.heading}
                 />)}
             </section>
         </article>
