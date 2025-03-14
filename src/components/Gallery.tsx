@@ -41,7 +41,8 @@ const GalleryTemplate = (props: GalleryProps) => {
                         props.images && props.images.map((image, index) => {
                             return (
                                 <div className="gallery-item-div" key={index}>
-                                    <img src={image.itemImageSrc} alt={image.alt} className='gallery-item-img' onClick={
+                                    <img src={image.itemImageSrc} alt={image.alt}
+                                         className={props?.largeImage ? "gallery-item-img large" : "gallery-item-img"} onClick={
                                         () => {
                                             setActiveIndex(index);
                                             if (galleria.current !== null) {

@@ -58,7 +58,8 @@ function loadProjects(dossierName: string, projGroupName: string) {
             let gallery = proj.gallery?.map((item: GalleryType) => ({
                 heading: item.heading,
                 description: item.description,
-                images: item.images
+                images: item.images,
+                largeImage: item.largeImage
             } as GalleryType));
     
             projects.push({

@@ -17,5 +17,9 @@ export type GalleryType = {
     /**
      * Images included in gallery
      */
-    images: ImageType[]
+    images: ImageType[],
+    /**
+     * Output large previous, useful, if you want only one centered item instead of the entire gallery
+     */
+    largeImage?: boolean
 };
