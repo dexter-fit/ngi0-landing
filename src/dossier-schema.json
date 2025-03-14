@@ -273,6 +273,10 @@
             "type": "object"
           },
           "type": "array"
+        },
+        "largeImage": {
+          "description": "Output large previous, useful, if you want only one centered item instead of the entire gallery",
+          "type": "boolean"
         }
       },
       "required": [
