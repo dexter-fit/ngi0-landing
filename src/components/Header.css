@@ -22,7 +22,6 @@
 }
 
 .header-heading {
-    margin-right: 3rem;
     flex-grow: 1;
 }
 
@@ -49,11 +48,6 @@
 
 
 /* CSS Menu feature */
-.css-menu-main-div {
-    position: absolute;
-    left: 0;
-    top: 0;
-}
 
 .css-menu-shadow {
     position: fixed;
@@ -63,6 +57,7 @@
     height: 100vh;
     background-color:rgba(0, 0, 0, 0.5);
     display: none;
+    scroll-behavior: unset;
 }
 
 .css-menu-sidebar {
@@ -75,6 +70,8 @@
     z-index: 1000;
     width: 18em;
     height: 100vh;
+    max-height: 100vh;
+    overflow-x: scroll;
 }
 
 .css-menu-main-div:hover .css-menu-sidebar {
@@ -83,6 +80,16 @@
 
 .css-menu-sidebar:hover + .css-menu-shadow {
     display: block;
+}
+
+.css-submenu-items {
+    display: none;
+    transition-delay: 250ms;
+}
+
+.css-submenu-shadow:hover .css-submenu-items {
+    display: block;
+    transition-delay: 250ms;
 }
 
 .css-menu-btn {

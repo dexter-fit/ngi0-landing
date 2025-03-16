@@ -69,13 +69,6 @@ const Header = () => {
     return <>
         <div className="header">
             <div className="header-container">
-                <div className="header-heading">{
-                    breadcrumbs.map((item, index) => <>
-                        <span><a href={item.url}>{item.label}</a></span>
-                        {index < breadcrumbs.length - 1 ? <span>; </span> : <></>}
-                    </>)}
-                </div>
-
                 <div className="css-menu-main-div">
                     <Button icon="pi pi-bars" size="small" text raised className="css-menu-btn"/>
 
@@ -96,36 +89,44 @@ const Header = () => {
 
                         {
                             Object.values(dossiers).map((item) =>
-                                <>
-                                <div className="css-menu-links bold">
-                                    <i className={homeIcon + " css-menu-icon"}></i>
-                                    <a href={item.link} className="css-menu-a">{item.header}</a>
-                                </div>
-                                <div className="css-menu-links">
-                                    <i className={fileIcon + " css-menu-icon"}></i>
-                                    <a href={`${item.link}/projects`} className="css-menu-a">Projects</a>
-                                </div>
-                                {
-                                    Object.keys(item.detailedProjects).map((name) =>
+                                <span className="css-submenu-shadow">
+                                    <div className="css-menu-links bold css-submenu-header">
+                                        <i className={homeIcon + " css-menu-icon"}></i>
+                                        <a href={item.link} className="css-menu-a">{item.header}</a>
+                                    </div>
+                                    <span className="css-submenu-items">
                                         <div className="css-menu-links">
                                             <i className={fileIcon + " css-menu-icon"}></i>
-                                            <a href={`${item.link}/detail/${name}`} className="css-menu-a">{item.detailedProjects[name].menuTitle}</a>
+                                            <a href={`${item.link}/projects`} className="css-menu-a">Projects</a>
                                         </div>
-                                    )
-                                }
-                                {
-                                    Object.keys(item.comparisons).map((name) =>
-                                        <div className="css-menu-links">
-                                            <i className={fileIcon + " css-menu-icon"}></i>
-                                            <a href={`${item.link}/comparison/${name}`} className="css-menu-a">{item.comparisons[name].menuTitle}</a>
-                                        </div>
-                                    )
-                                }
-                                </>
+                                        {
+                                            Object.keys(item.detailedProjects).map((name) =>
+                                                <div className="css-menu-links">
+                                                    <i className={fileIcon + " css-menu-icon"}></i>
+                                                    <a href={`${item.link}/detail/${name}`} className="css-menu-a">{item.detailedProjects[name].menuTitle}</a>
+                                                </div>
+                                            )
+                                        }
+                                        {
+                                            Object.keys(item.comparisons).map((name) =>
+                                                <div className="css-menu-links">
+                                                    <i className={fileIcon + " css-menu-icon"}></i>
+                                                    <a href={`${item.link}/comparison/${name}`} className="css-menu-a">{item.comparisons[name].menuTitle}</a>
+                                                </div>
+                                            )
+                                        }
+                                    </span>
+                                </span>
                             )
                         }
                     </div>
                     <div className="css-menu-shadow"/>
+                </div>
+                <div className="header-heading">{
+                    breadcrumbs.map((item, index) => <>
+                        <span><a href={item.url}>{item.label}</a></span>
+                        {index < breadcrumbs.length - 1 ? <span>; </span> : <></>}
+                    </>)}
                 </div>
             </div>
         </div>
