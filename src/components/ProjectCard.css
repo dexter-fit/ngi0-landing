@@ -9,6 +9,7 @@
     transition: opacity 300ms ease-in-out;
     max-width: 22rem;
     min-width: 22rem;
+    margin: 1em 0;
 }
 
 .my-card:hover {
@@ -78,6 +79,14 @@
     margin-right: 0;
 }
 
+.p-carousel-prev {
+    margin: 0.5rem 0.5rem 0.5rem 0;
+}
+
+.p-carousel-next {
+    margin: 0.5rem 0 0.5rem 0.5rem;
+}
+
 @media only screen and (max-width: 1400px) {
     .my-card {
         max-width: 25rem;
@@ -94,14 +103,14 @@
 
 @media only screen and (max-width: 950px) {
     .my-card {
-        max-width: 16rem;
-        min-width: 16rem;
+        max-width: 100%;
+        min-width: 100%;
     }
 }
 
 @media only screen and (max-width: 690px) {
     .my-card {
-        max-width: 22rem;
-        min-width: 22rem;
+        max-width: 100%;
+        min-width: 100%;
     }
 }

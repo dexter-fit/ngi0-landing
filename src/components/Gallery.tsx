@@ -1,5 +1,4 @@
 import {Galleria} from 'primereact/galleria';
-import { Button } from 'primereact/button';
 import React, { useRef, useState } from "react";
 import "./Gallery.css";
 import {GalleryProps} from "../props";
