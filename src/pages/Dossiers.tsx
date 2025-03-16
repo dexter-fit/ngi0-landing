@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import {ProjectDescriptionProps} from "../props";
 import {useLocation} from "react-router-dom";
 import {dossiers} from "../data/dossiers";
@@ -15,19 +15,31 @@ const Dossiers = () => {
 
     const projects: ProjectDescriptionProps[] = projectDescriptionsToProjectDescriptionProps(dossier.projects.projectDescription);
 
-    const otherProjectsLinkSpace = [
-        createLinkWithLabelFromProjectLinkItems(`Detailed Projects Within the Dossier`,
+    const otherProjectsLinkSpace: ReactNode[] = [];
+
+    if (Object.keys(dossier.detailedProjects).length > 0) {
+        otherProjectsLinkSpace.push(
+            createLinkWithLabelFromProjectLinkItems(`Detailed Projects Within the Dossier`,
             Object.entries(dossier.detailedProjects).map(([path, item]) =>
                 ({link: `detail/${path}`, label: item.menuTitle}))
-        ),
-        createLinkWithLabelFromProjectLinkItems(`Project Comparisons Within the Dossier`,
+            )
+        )
+    }
+
+    if (Object.keys(dossier.comparisons).length > 0) {
+        otherProjectsLinkSpace.push(
+            createLinkWithLabelFromProjectLinkItems(`Project Comparisons Within the Dossier`,
             Object.entries(dossier.comparisons).map(([path, item]) =>
                 ({link: `comparison/${path}`, label: item.menuTitle}))
-        ),
+            )
+        )
+    }
+
+    otherProjectsLinkSpace.push(
         createLinkWithLabelFromProjectLinkItems("Projects",
             [{label: "Visit", link: `projects`}]
         )
-    ];
+    )
 
     if (projects[0]) {
         const otherTags = dossier.tagsDossierDetail.map(stringToTag);

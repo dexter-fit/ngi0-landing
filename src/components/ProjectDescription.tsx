@@ -15,7 +15,7 @@ const ProjectDescription = (props: ProjectDescriptionProps) => {
             {props.children}
         </div>
 
-        <div className="flex gap-1 margin-btm">
+        <div className="links-div">
             {props.descriptionContent.links?.map(item => item)}
         </div>
 

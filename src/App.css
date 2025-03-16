@@ -136,3 +136,34 @@ th {
 tr:nth-child(even) {
     background-color: #f6f8fa;
 }
+
+.content-links-div {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1rem;
+    align-items: center;
+    column-gap: 1rem;
+    row-gap: 0.5rem;
+}
+
+.content-links-btns {
+    display: flex;
+    max-width: 100%;
+    flex-wrap: wrap;
+    column-gap: 0.5rem;
+    row-gap: 0.5rem;
+}
+
+@media only screen and (max-width: 950px) {
+    .content-links-div {
+        flex-direction: column;
+        align-items: start;
+    }
+}
+
+@media only screen and (max-width: 690px) {
+    .content-links-div {
+        flex-direction: column;
+        align-items: start;
+    }
+}

@@ -42,6 +42,16 @@
     background-color: #f0f0f0;
 }
 
+.links-div {
+    display: flex;
+    max-width: 100;
+    row-gap: 0.5rem;
+    margin-bottom: 1rem;
+    justify-content: start;
+    column-gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
 @media only screen and (max-width: 950px) {
     .image {
         margin: auto;

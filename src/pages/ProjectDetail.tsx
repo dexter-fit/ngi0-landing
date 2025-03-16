@@ -10,7 +10,6 @@ const ProjectDetail = () => {
     const location = getContentTypeFromLocation(useLocation());
 
     const dossier = dossiers[location[0]];
-    console.log(dossier, location[1]);
     const projects = projectDescriptionsToProjectDescriptionProps(dossier.detailedProjects[location[2]].projectDescription);
 
     const otherProjectsLinkSpace = [
