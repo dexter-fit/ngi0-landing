@@ -16,9 +16,11 @@
     gap: 0.25rem;
 }
 
-img {
+.image {
     padding: 10px;
-    max-width: 20vw;
+    height: 20vh;
+    width: fit-content;
+    float: left;
 }
 
 .image-content-wrapper {
@@ -30,10 +32,6 @@ img {
     margin-bottom: 1rem;
 }
 
-.image {
-    float: left;
-}
-
 .p-divider-solid.p-divider-horizontal:before {
     color: var(--main-color);
     border-color: var(--main-color);
@@ -42,4 +40,16 @@ img {
 
 .p-divider-content {
     background-color: #f0f0f0;
+}
+
+@media only screen and (max-width: 950px) {
+    .image {
+        margin: auto;
+    }
+}
+
+@media only screen and (max-width: 690px) {
+    .image {
+        margin: auto;
+    }
 }
