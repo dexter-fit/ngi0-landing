@@ -1,5 +1,7 @@
 import {ProjectCardType, ProjectPageType, DossierType} from "../types";
 
+export const VULKAN_DOSSIER_PATHNAME = "vulkan";
+
 const VULKAN_CARDS: ProjectCardType[] = [];
 
 const VULKAN_TAGS: string[] = [];
@@ -74,7 +76,7 @@ OpenGL is platform neutral, but faced difficulties anyway. On macOS, it was alwa
 
 Vulkan is amazing by its low-level approach, because we can work very efficiently with underlying hardware and optimize our code in many details. However, it has also its downsides. Few lines of OpenGL code might need tens or even hundreds lines of code when using Vulkan. Low-level Vulkan code brings new flexibility. But many programmers might feel unprepared to deal with such amount of low-level code and to understand it. And exactly to this situation comes this tutorial - to make an attempt to help and to introduce a programmer into basics of Vulkan programming.
 
-In our tutorial, we will use modern C++20 or newer. Normally, we would use Vulkan C++ binding called [Vulkan-Hpp](https://github.com/KhronosGroup/Vulkan-Hpp). However, Vulkan-Hpp has some design limitations which advanced users might struggle with from time to time, but most importantly, the current version 1.3.283 takes about quarter of million lines of code that must be included and processed by the compiler. It takes roughly about 3-4 seconds to process such large headers by a modern processor of today. Another Vulkan-Hpp limitation is memory overhead of Unique_\* and raii classes. Both mentioned issues are solved by vkg Vulkan binding. Vkg means Vulkan generated. Being generated, its another advantage is that not used parts of the API can be switched off and omitted from vkg.h and vkg.cpp. This results in a smaller API, a little smaller output binary, and usually less function pointers which, in turn, results in a little better cache effectivity.
+In our tutorial, we will use modern C++20 or newer. Normally, we would use Vulkan C++ binding called [Vulkan-Hpp](https://github.com/KhronosGroup/Vulkan-Hpp). However, Vulkan-Hpp has some design limitations which advanced users might struggle with from time to time, but most importantly, the current version 1.3.283 takes about quarter of million lines of code that must be included and processed by the compiler. It takes roughly about 3-4 seconds to process such large headers by a modern processor of today. Another Vulkan-Hpp limitation is memory overhead of Unique_* and raii classes. Both mentioned issues are solved by vkg Vulkan binding. Vkg means Vulkan generated. Being generated, its another advantage is that not used parts of the API can be switched off and omitted from vkg.h and vkg.cpp. This results in a smaller API, a little smaller output binary, and usually less function pointers which, in turn, results in a little better cache effectivity.
 
 Now a little controversial thing: C++ exceptions. While not being expert on C++ effectivity, my experiments show that using exceptions results in higher application performance and make code shorter and more readable. The reason seems to be simple: The use of exceptions removes much of the error handling logic from our code. The error status does not need to be returned from subrutine to current rutine and from the current rutine to parent rutine. And each routine level might require some condition logic to handle error conditions, incuring extra overhead even if no error was returned. Having exceptions, all this error condition logic and overhead might be removed, making the code faster and more readable. Instead of the error handling code, the task is handled by exceptions. Many compilers implement them by tables that control the process of exception handling. In other words, the error handling functionality is moved from our code into the tables, making our code faster and cleaner. The tables might make executables a little bigger, some say by 20%, but what usually matters is performance and speed of development.
 
@@ -93,7 +95,7 @@ And we have to wrap our code to catch exceptions if one is raised:
 ---
 vkg
 \`\`\`
-int main(int, char\*\*)
+int main(int, char**)
 {
 \t// catch exceptions
 \t// (vk functions throw if they fail)
@@ -237,7 +239,17 @@ Physical devices:
 We can see number of graphics cards. Depending on our system, we will usually see one or two devices. Here, we see Nvidia and AMD graphics as first two graphics cards. So, the user is probably developer who wants to test his applications on various graphics cards and various vendors. There is also integrated Intel graphics. The last one is llvmpipe that I often see on Linux. It is software implementation of Vulkan. It is useful on some special circumstances.
 
 If you see some error instead of graphics card list, there might be some problem on the computer. We shall fix it in the next article.
-`,
+            `, relatedContent: [
+                {
+                    label: "Next part of the tutorial",
+                    links: [
+                        {
+                            label: "1-2 - Development Tools",
+                            link: `/${VULKAN_DOSSIER_PATHNAME}/detail/developmentTools`
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }
@@ -302,7 +314,9 @@ In the screenshot, we can see Intel UHD Graphics that is connected to the real I
 
 Another way to test our application are Vulkan Validation Layers (VVL). Vulkan Validation Layers (VVL) stays between our application and Vulkan implementation and perform validation of Vulkan API calls. In other words, VVL checks for the correct Vulkan API usage. Vulkan is designed for performance, so it is not expected to waste computing resources on checking of the correct API usage. Instead, VVL are usually activated only by the developer using vkconfig tool that simplifies their setup using relatively simple GUI:
 
-![](https://vulkan-fit.github.io/VulkanTutorial/1-2-DevelopmentTools/vkconfig-gui.png) More on Vulkan Validation Layers and vkconfig
+![](https://vulkan-fit.github.io/VulkanTutorial/1-2-DevelopmentTools/vkconfig-gui.png)
+
+More on Vulkan Validation Layers and vkconfig
 
 Vulkan Validation Layers are part of Vulkan SDK. So, we can [download Vulkan SDK](https://vulkan.lunarg.com/sdk/home) for our platform and install it. On Linux, it is possible that packages for Vulkan Validation Layers and vkconfig exist for our Linux distribution. I usually had problem that vkconfig was not present in the packages.
 
@@ -376,7 +390,26 @@ Sometimes, Valgrind is extremely valuable tool.
 ### Other tools
 
 Much more tools exist. If one is interested, he might take a look on Nvidia Nsight, for instance, or on [Vulkan Hardware Capability Viewer](https://github.com/SaschaWillems/VulkanCapsViewer) (vulkanCapsViewer) that is part of Vulkan SDK, or one of the tools on [vulkan.org -> Tools -> Profiling and debugging](https://vulkan.org/tools#profilers-and-debuggers).
-`,
+            `, relatedContent: [
+                {
+                    label: "Previous part of the tutorial",
+                    links: [
+                        {
+                            label: "1-1 - Device List",
+                            link: `/${VULKAN_DOSSIER_PATHNAME}/detail/deviceList`
+                        }
+                    ]
+                },
+                {
+                    label: "Next part of the tutorial",
+                    links: [
+                        {
+                            label: "1-3 - Development Tools",
+                            link: `/${VULKAN_DOSSIER_PATHNAME}/detail/deviceInfo`
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }
@@ -685,7 +718,26 @@ Vulkan 1.0 supports few more query functions:
 *   vkEnumerateDeviceLayerProperties() - device layers are deprecated and they were probably never used seriously
 
 In the case of interest, they are described in Vulkan specification. Concerning vkEnumerateDeviceExtensionProperties(), we will deal with the topic of device extensions in the next article.
-`,
+            `, relatedContent: [
+                {
+                    label: "Previous part of the tutorial",
+                    links: [
+                        {
+                            label: "1-2 - Development Tools",
+                            link: `/${VULKAN_DOSSIER_PATHNAME}/detail/developmentTools`
+                        }
+                    ]
+                },
+                {
+                    label: "Next part of the tutorial",
+                    links: [
+                        {
+                            label: "1-4 - Advanced Info",
+                            link: `/${VULKAN_DOSSIER_PATHNAME}/detail/advancedInfo`
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }
@@ -1024,7 +1076,26 @@ if(properties.apiVersion >= vk::ApiVersion13) {
 } else
 \tcout << "         ASTC (ASTC_4x4_SFLOAT):     no" << endl;
 \`\`\`
----`,
+            `, relatedContent: [
+                {
+                    label: "Previous part of the tutorial",
+                    links: [
+                        {
+                            label: "1-3 - Development Tools",
+                            link: `/${VULKAN_DOSSIER_PATHNAME}/detail/deviceInfo`
+                        }
+                    ]
+                },
+                {
+                    label: "Next part of the tutorial",
+                    links: [
+                        {
+                            label: "1-5 - Logical Device",
+                            link: `/${VULKAN_DOSSIER_PATHNAME}/detail/logicalDevice`
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }
@@ -1133,12 +1204,21 @@ Device function pointers:
 ---
 
 So, Vulkan loader is implemented by libvulkan.so.1 on Linux and vulkan-1.dll on Windows. The names of the drivers can be seen in the rest of the output.
-`,
+            `, relatedContent: [
+                {
+                    label: "Previous part of the tutorial",
+                    links: [
+                        {
+                            label: "1-4 - Advanced Info",
+                            link: `/${VULKAN_DOSSIER_PATHNAME}/detail/advancedInfo`
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }
 
-export const VULKAN_DOSSIER_PATHNAME = "vulkan";
 
 export const DOSSIER: DossierType = {
     pathName: VULKAN_DOSSIER_PATHNAME,
