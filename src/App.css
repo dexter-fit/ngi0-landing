@@ -171,3 +171,9 @@ tr:nth-child(even) {
 pre , code {
     white-space : pre-wrap !important;
 }
+
+.md-image {
+    max-width: 100%;
+    display: block;
+    margin: auto;
+}
