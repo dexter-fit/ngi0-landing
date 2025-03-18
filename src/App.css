@@ -167,3 +167,13 @@ tr:nth-child(even) {
         align-items: start;
     }
 }
+
+pre , code {
+    white-space : pre-wrap !important;
+}
+
+.md-image {
+    max-width: 100%;
+    display: block;
+    margin: auto;
+}

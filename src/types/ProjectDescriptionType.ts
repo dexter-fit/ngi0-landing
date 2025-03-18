@@ -1,6 +1,7 @@
 import {ProjectDescriptionLinkType} from "./ProjectDescriptionLinkType";
 import {AssociatedProjectType} from "./AssociatedProjectType";
-import { GalleryType } from "./GalleryType";
+import {GalleryType} from "./GalleryType";
+import {RelatedContentType} from "./RelatedContentType";
 
 /**
  * A description of a project.
@@ -33,20 +34,7 @@ export type ProjectDescriptionType = {
      * proprietary one you might want to link to the page of the open source option within this Dossier application.
      * May be left out and possibly will be generated in the future.
      */
-    relatedContent?: [
-        {
-            /**
-             * Label outlining how these links are related. For example links to previous projects in the dossier application,
-             * or link to the Dossier, or any other specific link you want to include.
-             * I would advise on adding this content only in the last block of the entire description.
-             */
-            label: string,
-            /**
-             * The links themselves.
-             */
-            links: ProjectDescriptionLinkType[]
-        }
-    ],
+    relatedContent?: RelatedContentType[],
     /**
      * A nice text about the description. This should be written in markdown.
      */

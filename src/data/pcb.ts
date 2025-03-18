@@ -3,7 +3,9 @@ import {ASSOCIATED_NGI0_PROJECTS, SIMILAR_CLOSED_SOURCE_PROJECTS, SIMILAR_NGI0_P
 import {ngi0Projects} from "./ngi0Projects";
 import {corporateProjects} from "./corporateProjects";
 
-const PCB_CARDS: ProjectCardType[] = [ngi0Projects.librePCB, ngi0Projects.librePCB_2_0, ngi0Projects.KiCad, ngi0Projects.KiCad_IPC, ngi0Projects.KiKit];
+const PCB_CARDS: ProjectCardType[] = [
+    ngi0Projects.librePCB, ngi0Projects.librePCB_2_0, ngi0Projects.KiCad, ngi0Projects.KiCad_IPC, ngi0Projects.KiKit
+];
 
 const PCB_TAGS: string[] = [];
 
