@@ -2,7 +2,7 @@ import {funds} from "./funds";
 
 export const ngi0Projects = {
     dataPackages: {
-        "image": "/ngi0/img/dream2nix.logo.svg",
+        "image": "https://nlnet.nl/project/FrictionlessStandards/datapackage.logo.svg",
         "header": "Data packages",
         "subheader": "Specification + improved tooling for external data set descriptions",
         "tags": [
@@ -14,22 +14,8 @@ export const ngi0Projects = {
         "fund": funds.entrust,
         "start": "2023-04"
     },
-    kGen: {
-        "image": "/ngi0/img/dream2nix.logo.svg",
-        "header": "K-Gen",
-        "subheader": "From datasets in DCAT catalogs to knowledge graphs",
-        "tags": [
-            "Data",
-            "AI",
-            "Data Set Descriptions",
-            "Knowledge Graphs"
-        ],
-        "link": "https://nlnet.nl/project/K-Gen/",
-        "fund": funds.assure,
-        "start": "2022-12"
-    },
     atomicTables: {
-        "image": "/ngi0/img/dream2nix.logo.svg",
+        "image": "https://nlnet.nl/project/AtomicTables/atomicdata.logo.svg",
         "header": "Atomic Tables",
         "subheader": "Self-hostable tabular structured data solution",
         "tags": [
@@ -42,7 +28,7 @@ export const ngi0Projects = {
         "start": "2022-10"
     },
     atomicData: {
-        "image": "/ngi0/img/dream2nix.logo.svg",
+        "image": "https://nlnet.nl/project/AtomicData/atomicdata.logo.svg",
         "header": "Atomic Data",
         "subheader": "Typesafe handling of LinkedData",
         "tags": [
@@ -55,6 +41,45 @@ export const ngi0Projects = {
         "fund": funds.assure,
         "start": "2021-10",
         "end": "2023-06"
+    },
+    ontogen: {
+        image: "https://nlnet.nl/project/Ontogen/ontogen.logo.svg",
+        header: "Ontogen",
+        subheader: "From datasets in DCAT catalogs to knowledge graphs",
+        tags: ["Open Data", "Data Catalogs", "Knowledge Graphs", "Metadata Management", "DCAT Standard"],
+        link: "https://nlnet.nl/project/Ontogen/",
+        funds: funds.assure,
+        start: "2022-12",
+        stop: "2024-08"
+    },
+    maDada: {
+        image: "/ngi0/img/default.svg",
+        header: "MaData",
+        subheader: "From datasets in DCAT catalogs to knowledge graphs",
+        tags: ["Open Data", "Freedom of Information", "Transparency", "Linked Data", "Public Records"],
+        link: "https://nlnet.nl/project/MaDada/",
+        funds: funds.discovery,
+        start: "2021-08",
+        stop: "2022-10"
+    },
+    linkedDataHub: {
+        image: "/ngi0/img/default.svg",
+        header: "LinkedDataHub",
+        subheader: "Framework to handle Linked Data at scale",
+        tags: ["Open Data", "Linked Data", "Knowledge Graphs", "SPARQL", "RDF"],
+        link: "https://nlnet.nl/project/LinkedDataHub/",
+        funds: funds.discovery,
+        start: "2021-10",
+        stop: "2022-10"
+    },
+    wikirateFrameworks: {
+        image: "https://nlnet.nl/project/FrameworksFraming/wikirate.logo.svg",
+        header: "Wikirate Frameworks",
+        subheader: "Open corporate data in Wikirate through the lens of standards",
+        tags: ["Open Data", "Corporate Transparency", "ESG Data", "Open Standards", "Data Metrics"],
+        link: "https://nlnet.nl/project/FrameworksFraming/",
+        funds: funds.ngi0Commons,
+        start: "2025-01"
     },
     organicMaps: {
         "image": "/ngi0/img/organicmaps.svg",
