@@ -115,10 +115,10 @@ export const ROS_DOSSIER_PATHNAME = "ros";
 
 export const DOSSIER: DossierType = {
     pathName: ROS_DOSSIER_PATHNAME,
-    image: "https://upload.wikimedia.org/wikipedia/commons/e/e6/LibreOffice_4.0_Writer_Icon.svg",
-    header: "ROS",
-    subheader: "Open-Source Office Dossier",
-    tags: ["Word", "Excel", "Alternatives", "Open-Source"],
+    image: "https://www.fit.vut.cz/person/ikapinus/public/ngi0_robo_entrypoint/img/ROS1.png",
+    header: "ROS and Robotics",
+    subheader: "ROS and Robotics Dossier",
+    tags: ["ROS 1", "ROS 2", "MoveIt!", "Gazebo"],
     link: `/ngi0/${ROS_DOSSIER_PATHNAME}`,
     cards: ROS_CARDS,
     tagsDossierDetail: ROS_TAGS,
