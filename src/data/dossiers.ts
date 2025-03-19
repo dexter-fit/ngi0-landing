@@ -1,6 +1,9 @@
 import {DOSSIER as NIX_DOSSIER} from "./nix";
 import {DOSSIER as GEO_DOSSIER} from "./geo"
-import {DOSSIER as GRAPHICS_DOSSIER} from "./graphicAndMultimedia";
+import {DOSSIER as GRAPHICS2D_DOSSIER} from "./2Dgraphics";
+import {DOSSIER as GRAPHICS3D_DOSSIER} from "./3Dgraphics";
+import {DOSSIER as VIDEO_DOSSIER} from "./video";
+import {DOSSIER as AUDIO_DOSSIER} from "./audio";
 import {DOSSIER as OFFICE_DOSSIER} from "./office";
 import {DOSSIER as COMPRESSION_DOSSIER} from "./compression";
 import {DOSSIER as SELF_HOSTED_DOSSIER} from "./self-hosted";
@@ -15,7 +18,10 @@ import {DossierType} from "../types/DossierType";
 const dossiers = {
     [NIX_DOSSIER.pathName]: NIX_DOSSIER,
     [GEO_DOSSIER.pathName]: GEO_DOSSIER,
-    [GRAPHICS_DOSSIER.pathName]: GRAPHICS_DOSSIER,
+    [GRAPHICS2D_DOSSIER.pathName]: GRAPHICS2D_DOSSIER,
+    [GRAPHICS3D_DOSSIER.pathName]: GRAPHICS3D_DOSSIER,
+    [VIDEO_DOSSIER.pathName]: VIDEO_DOSSIER,
+    [AUDIO_DOSSIER.pathName]: AUDIO_DOSSIER,
     [OFFICE_DOSSIER.pathName]: OFFICE_DOSSIER,
     [COMPRESSION_DOSSIER.pathName]: COMPRESSION_DOSSIER,
     [SELF_HOSTED_DOSSIER.pathName]: SELF_HOSTED_DOSSIER,
