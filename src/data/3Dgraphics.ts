@@ -37,7 +37,7 @@ const GRAPHICS3D_DOSSIER_PROJECTS: ProjectPageType = {
             image: "https://www.fit.vut.cz/person/ivlnas/public/entry-point/def-img/blender.svg",
             header: "Blender",
             text: "Blender is mainly a 3D editor but offers a lot of other options, such as 2D editing and animation, drawing, video editing, compositing, realistic rendering, etc. Its open-source nature makes it a popular choice for amateurs and professionals. The large community support with forums and tutorials makes learning with this tool easy. A lot of community add-ons and the option to use the built-in Python scripting environment make the software highly flexible and suitable for many various tasks in the field of computer graphics, game development, science, education, filmmaking, etc.",
-            tags: ["3D editing", "animation", "multimedia processing", "video editing"],
+            tags: ["3D editing", "Animation", "Multimedia Processing", "Video Editing"],
             links: [
                 {
                     link: "https://www.blender.org/",
