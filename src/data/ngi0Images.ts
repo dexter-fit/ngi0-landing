@@ -94,5 +94,21 @@ export const ngi0Images = {
     kdenlive_3: {
         itemImageSrc: "https://www.fit.vut.cz/person/ivlnas/public/entry-point/def-img/kdenliveExample4.webp",
         title: "Multiple strips and subtitles editor"
+    },
+    cutie_0: {
+        itemImageSrc: "https://www.fit.vut.cz/person/ivlnas/public/entry-point/def-img/cutieExample1.jpg",
+        title: "Basic window with loaded video"
+    },
+    cutie_1: {
+        itemImageSrc: "https://www.fit.vut.cz/person/ivlnas/public/entry-point/def-img/cutieExample2.jpg",
+        title: "Selected mask"
+    },
+    cutie_2: {
+        itemImageSrc: "https://www.fit.vut.cz/person/ivlnas/public/entry-point/def-img/cutieExample3.jpg",
+        title: "Propagated mask with background removal"
+    },
+    cutie_3: {
+        itemImageSrc: "https://www.fit.vut.cz/person/ivlnas/public/entry-point/def-img/cutieExample4.jpg",
+        title: "Export window"
     }
 }

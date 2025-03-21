@@ -9,7 +9,9 @@ const VFX_RELATED_PROJECT_CARDS = [
     ngi0Projects.miru,
     ngi0Projects.peertube,
     ngi0Projects.peertubeRemoteTranscoding,
-    ngi0Projects.videobox
+    ngi0Projects.videobox,
+    ngi0Projects.loops,
+    ngi0Projects.vframe
 ]
 
 const VIDEO_CARDS = [
@@ -24,6 +26,13 @@ const GALLERY_KDENLIVE: ImageType[] = [
     ngi0Images.kdenlive_1,
     ngi0Images.kdenlive_2,
     ngi0Images.kdenlive_3
+]
+
+const GALLERY_CUTIE: ImageType[] = [
+    ngi0Images.cutie_0,
+    ngi0Images.cutie_1,
+    ngi0Images.cutie_2,
+    ngi0Images.cutie_3
 ]
 
 const VIDEO_DOSSIER_PROJECTS: ProjectPageType = {
@@ -55,6 +64,28 @@ const VIDEO_DOSSIER_PROJECTS: ProjectPageType = {
         {
             header: "Comparison",
             text: "Kdenlive is focused on video editing and offers more features in this field than Blender. Kdenlive is often considered a worthy alternative to Sony Vegas, Adobe Premiere, or Final Cut. It is optimized and is one of the few professional video editor that runs well on Linux. Commercial software contains a lot of fancy features that can be often recreated in Kdenlive but the user needs to get used to the UI and options.",
+        },
+        {
+            image: "https://raw.githubusercontent.com/Zarxrax/Cutie-Roto/refs/heads/main/gui/cutie_r.ico",
+            header: "Cutie Roto",
+            text: "This GUI application is based on the deep learning Cutie object segmentation framework. It serves as an AI assistant for rotoscoping a video sequence where a mask around an object is required to be updated through the whole video. The user can simply click on the desired object in the video, this object gets selected, additional adjustments can be applied, and the mask can be propagated to other frames.",
+            tags: ["video", "movie", "vfx", "mask"],
+            links: [
+                {
+                    link: "https://github.com/Zarxrax/Cutie-Roto",
+                    label: "Cutie Roto"
+                }
+            ],
+            gallery: [
+                {
+                    heading: "Examples",
+                    images: GALLERY_CUTIE
+                }
+            ]
+        },
+        {
+            header: "Comparison",
+            text: " Adobe’s Roto Brush or DaVinci Resolve Magic Mask are alternative commercial products integrated into video editors. Cutie Roto is used as a standalone application where masks are exported as an image sequence and imported into the video editor. However, the open nature of Cutie Roto and its extensibility with newer versions of Cutie or other neural networks for the segmentation might be advantegous as an easy way to improve the quality of the results in the future. Also, the simple user interface makes it easier to use.",
             associatedProjects: [
                 {
                     heading: ASSOCIATED_NGI0_PROJECTS,
