@@ -69,58 +69,68 @@ const Header = () => {
     return <>
         <div className="header">
             <div className="header-container">
-                <div className="css-menu-main-div">
-                    <Button icon="pi pi-bars" size="small" text raised className="css-menu-btn"/>
-
-                    <div className="css-menu-sidebar">
-                        <div className="css-menu-header-div">
-                            <h3 className="css-menu-header">NLnet; Projects</h3>
+                <div className="menu-btn-div">
+                    <label htmlFor="mainMenu" className="menu-dropdown pi"></label>
+                    <input className="menu-dropdown-input" type="checkbox" id="mainMenu" />
+                    <div className="menu-sidebar">
+                        <div className="menu-header-div">
+                            <h3 className="menu-header">NLnet; Projects</h3>
                             <Link to="/schema"><span style={{display: "none"}}>schema</span></Link>
+                            <label htmlFor="mainMenu" className="menu-dropdown pi menu-dropdown-in"></label>
                         </div>
-
                         {
                             basicMenuItems.map((item) =>
-                                <div className="css-menu-links bold">
-                                    <i className={homeIcon + " css-menu-icon"}></i>
-                                    <a href={item.url} className="css-menu-a">{item.label}</a>
+                                <div className="menu-links bold">
+                                    <i className={homeIcon + " menu-icon"}></i>
+                                    <a href={item.url} className="menu-a">{item.label}</a>
                                 </div>
                             )
                         }
-
                         {
                             Object.values(dossiers).map((item) =>
-                                <span className="css-submenu-shadow">
-                                    <div className="css-menu-links bold css-submenu-header">
-                                        <i className={homeIcon + " css-menu-icon"}></i>
-                                        <a href={item.link} className="css-menu-a">{item.header}</a>
-                                    </div>
-                                    <span className="css-submenu-items">
-                                        <div className="css-menu-links">
-                                            <i className={fileIcon + " css-menu-icon"}></i>
-                                            <a href={`${item.link}/projects`} className="css-menu-a">Projects</a>
+                                <span>
+                                    <label htmlFor={item.header} className="sub-menu-dropdown">
+                                        <div className="menu-links">
+                                            <i className={homeIcon + " menu-icon"}></i>
+                                            <p>{item.header}</p>
+                                        </div>
+                                    </label>
+                                    <input className="menu-dropdown-input" type="checkbox" id={item.header} />
+                                    <div className="sub-menu-sidebar">
+                                        <div className="menu-header-div">
+                                            <h3 className="menu-header">{item.header}</h3>
+                                            <label htmlFor={item.header} className="menu-dropdown pi menu-dropdown-sub-in"></label>
+                                        </div>
+                                        <div className="menu-links bold">
+                                            <i className={homeIcon + " menu-icon"}></i>
+                                            <a href={item.link} className="menu-a">Main Dossier Page</a>
+                                        </div>
+                                        <div className="menu-links">
+                                            <i className={fileIcon + " menu-icon"}></i>
+                                            <a href={`${item.link}/projects`} className="menu-a">Projects</a>
                                         </div>
                                         {
                                             Object.keys(item.detailedProjects).map((name) =>
-                                                <div className="css-menu-links">
-                                                    <i className={fileIcon + " css-menu-icon"}></i>
-                                                    <a href={`${item.link}/detail/${name}`} className="css-menu-a">{item.detailedProjects[name].menuTitle}</a>
+                                                <div className="menu-links">
+                                                    <i className={fileIcon + " menu-icon"}></i>
+                                                    <a href={`${item.link}/detail/${name}`} className="menu-a">{item.detailedProjects[name].menuTitle}</a>
                                                 </div>
                                             )
                                         }
                                         {
                                             Object.keys(item.comparisons).map((name) =>
-                                                <div className="css-menu-links">
-                                                    <i className={fileIcon + " css-menu-icon"}></i>
-                                                    <a href={`${item.link}/comparison/${name}`} className="css-menu-a">{item.comparisons[name].menuTitle}</a>
+                                                <div className="menu-links">
+                                                    <i className={fileIcon + " menu-icon"}></i>
+                                                    <a href={`${item.link}/comparison/${name}`} className="menu-a">{item.comparisons[name].menuTitle}</a>
                                                 </div>
                                             )
                                         }
-                                    </span>
+                                    </div>
                                 </span>
                             )
                         }
                     </div>
-                    <div className="css-menu-shadow"/>
+                    <div className="menu-sidebar-shadow"></div>
                 </div>
                 <div className="header-heading">{
                     breadcrumbs.map((item, index) => <>

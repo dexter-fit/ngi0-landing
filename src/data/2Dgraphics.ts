@@ -50,7 +50,7 @@ const GRAPHICS2D_DOSSIER_PROJECTS: ProjectPageType = {
             image: "https://www.fit.vut.cz/person/ivlnas/public/entry-point/def-img/gimp.svg",
             header: "GIMP",
             text: "This raster editor can be used for production of drawings, posters, photo editing, etc. It contains various types of painting brushes, image-editing tools, filters, and color-adjustment options. The program offers a layered workflow for complex editing. Higher color bit-depths than standard 8-bit are also supported. Its UI is higly customizable",
-            tags: ["photo editing", "2D Graphics", "drawing", "raster"],
+            tags: ["Photo Editing", "2D Graphics", "Drawing", "Raster"],
             links: [
                 {
                     link: "https://www.gimp.org/",
@@ -72,7 +72,7 @@ const GRAPHICS2D_DOSSIER_PROJECTS: ProjectPageType = {
             image: "https://www.fit.vut.cz/person/ivlnas/public/entry-point/def-img/inkscape.svg",
             header: "Inkscape",
             text: "This 2D vector editor is a widely used software that maintains a high position among users interested in vector graphics. It allows editing of many vector formats, including the widely used SVG. Vector graphics, containing various texts, diagrams, or schemes, do not lose quality when being zoomed in and are often smaller in size. This tool can be easily extended by plugins and can be used to create various schemes, figures, and design elements for all kinds of articles, presentations, etc.",
-            tags: ["image editting", "vector", "svg"],
+            tags: ["Image Editting", "Vector", "SVG"],
             links: [
                 {
                     link: "https://inkscape.org/",
@@ -94,7 +94,7 @@ const GRAPHICS2D_DOSSIER_PROJECTS: ProjectPageType = {
             image: "https://www.fit.vut.cz/person/ivlnas/public/entry-point/def-img/krita.svg",
             header: "Krita",
             text: "Krita is a graphics program specialized in artistic painting. Various types of brushes with stroke stabilization and support of input hardware such as graphic tablets make this tool suitable for artists. Additional tools like vector elements and text editors allow for quick enhancement of the artwork. The editor also supports production of animations with sound and export of the finished video. It can also be used as a standard image editor.",
-            tags: ["artwork", "raster", "paint", "animation"],
+            tags: ["Artwork", "Raster", "Paint", "Animation"],
             links: [
                 {
                     link: "https://krita.org/en/",

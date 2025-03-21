@@ -47,7 +47,7 @@ const VIDEO_DOSSIER_PROJECTS: ProjectPageType = {
             image: "https://www.fit.vut.cz/person/ivlnas/public/entry-point/def-img/kdenlive.png",
             header: "Kdenlive",
             text: "KDE Non-Linear Video Editor, is a free, open-source video editing software that caters to both amateur and professional video editors. Developed by the KDE community, Kdenlive offers a comprehensive set of features, including multi-track video editing, a wide array of effects and transitions, keyframe animations, and support for a vast range of video and audio formats. Its intuitive interface and powerful tools make it suitable for creating high-quality video content, from simple home movies to complex video projects.",
-            tags: ["video", "movie", "film", "cut"],
+            tags: ["Video", "Movie", "Film", "Cut"],
             links: [
                 {
                     link: "https://kdenlive.org/en/",

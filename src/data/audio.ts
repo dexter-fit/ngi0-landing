@@ -35,7 +35,7 @@ const AUDIO_DOSSIER_PROJECTS: ProjectPageType = {
             image: "https://www.fit.vut.cz/person/ivlnas/public/entry-point/def-img/audacity.png",
             header: "Audacity",
             text: "Audacity supports a wide range of audio formats and provides various tools for cutting, copying, mixing, and applying effects to audio files. Its functionality is further enhanced by support for plug-ins, making it suitable for both beginners and advanced users in fields such as music production, podcasting, and sound design.",
-            tags: ["audio", "sound", "sfx", "signal processing"],
+            tags: ["Audio", "Sound", "SFX", "Signal Processing"],
             links: [
                 {
                     link: "https://www.audacityteam.org/",
@@ -69,7 +69,7 @@ export const DOSSIER: DossierType = {
     image: "https://upload.wikimedia.org/wikipedia/commons/4/47/Sound-icon.svg",
     header: "Audio",
     subheader: "Sound and Music Editing",
-    tags: ["Graphics", "Multimedia", "music", "sound"],
+    tags: ["Graphics", "Multimedia", "Music", "Sound"],
     link: `/ngi0/${AUDIO_DOSSIER_PATHNAME}`,
     cards: AUDIO_CARDS,
     tagsDossierDetail: AUDIO_TAGS,
