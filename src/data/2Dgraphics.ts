@@ -7,7 +7,14 @@ import {DossierType} from "../types/DossierType";
 const TWO_D_RELATED_PROJECT_CARDS: ProjectCardType[] = [
     ngi0Projects.libspngAPNG,
     ngi0Projects.calligraSVG,
-    ngi0Projects.libvips
+    ngi0Projects.libvips,
+    ngi0Projects.hwengine,
+    ngi0Projects.hwaccel,
+    ngi0Projects.imagecodecs,
+    ngi0Projects.sensif,
+    ngi0Projects.pixeldroid,
+    ngi0Projects.panoramax,
+    ngi0Projects.datalab
 ];
 
 const GRAPHICS2D_CARDS = [

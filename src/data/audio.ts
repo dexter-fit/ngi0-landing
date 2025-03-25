@@ -6,6 +6,9 @@ import {DossierType} from "../types/DossierType";
 
 const AUDIO_RELATED_PROJECT_CARDS: ProjectCardType[] = [
     ngi0Projects.hurd,
+    ngi0Projects.faircamp,
+    ngi0Projects.multisoni,
+    ngi0Projects.tiliqua,
     ngi0Projects.pulseAudio
 ];
 

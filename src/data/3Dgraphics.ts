@@ -8,7 +8,14 @@ const THREE_D_RELATED_PROJECT_CARDS: ProjectCardType[] = [
     ngi0Projects.blenderWeb,
     ngi0Projects.icosaGallery,
     ngi0Projects.manyfold,
-    ngi0Projects.cablesGl
+    ngi0Projects.cablesGl,
+    ngi0Projects.replicant,
+    ngi0Projects.py3d,
+    ngi0Projects.f3d,
+    ngi0Projects.itowns,
+    ngi0Projects.minetestedu,
+    ngi0Projects.libreSoc,
+    ngi0Projects.xrfragments
 ];
 
 const GRAPHICS3D_CARDS = [

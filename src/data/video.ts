@@ -11,6 +11,7 @@ const VFX_RELATED_PROJECT_CARDS = [
     ngi0Projects.peertubeRemoteTranscoding,
     ngi0Projects.videobox,
     ngi0Projects.loops,
+    ngi0Projects.tisg,
     ngi0Projects.vframe
 ]
 
