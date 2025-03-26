@@ -18,8 +18,8 @@
 
 .image {
     padding: 10px;
-    height: 20vh;
-    width: fit-content;
+    max-height: 20vh;
+    max-width: 20vh;
     float: left;
 }
 
