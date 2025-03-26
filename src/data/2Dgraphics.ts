@@ -45,6 +45,13 @@ const GALLERY_KRITA: ImageType[] = [
     ngi0Images.krita_3
 ]
 
+const GALLERY_MYPAINT: ImageType[] = [
+    ngi0Images.mypaint_0,
+    ngi0Images.mypaint_1,
+    ngi0Images.mypaint_2,
+    ngi0Images.mypaint_3
+]
+
 const GRAPHICS2D_DOSSIER_PROJECTS: ProjectPageType = {
     pageTitle: "2D Graphics and Image Editor",
     menuTitle: "2D Graphics Dossier",
@@ -79,7 +86,7 @@ const GRAPHICS2D_DOSSIER_PROJECTS: ProjectPageType = {
             image: "https://www.fit.vut.cz/person/ivlnas/public/entry-point/def-img/inkscape.svg",
             header: "Inkscape",
             text: "This 2D vector editor is a widely used software that maintains a high position among users interested in vector graphics. It allows editing of many vector formats, including the widely used SVG. Vector graphics, containing various texts, diagrams, or schemes, do not lose quality when being zoomed in and are often smaller in size. This tool can be easily extended by plugins and can be used to create various schemes, figures, and design elements for all kinds of articles, presentations, etc.",
-            tags: ["Image Editting", "Vector", "SVG"],
+            tags: ["Image Editing", "Vector", "SVG"],
             links: [
                 {
                     link: "https://inkscape.org/",
@@ -96,6 +103,28 @@ const GRAPHICS2D_DOSSIER_PROJECTS: ProjectPageType = {
         {
             header: "Comparison",
             text: "Proprietary software like Adobe Illustrator, or CorelDRAW is focused on artistic features while Inkscape maintains its general vector editing workflow. Inkscape is often used also in the professional field as alternatives do not offer significant additional features. Recently, online editors such as Figma have been used by many users due to their simple workflow. However, these editors often lack advanced features.",
+        },
+        {
+            image: "https://upload.wikimedia.org/wikipedia/commons/3/38/Mypaint-icon.svg",
+            header: "MyPaint",
+            text: "MyPaint is an idea tool for fast sketches and drawings with its infinite canvas and simple user interface. Basic raster drawing tools including layers, customizable brushes of different styles, and graphic tablet support are available. The project also offers many of its features as standalone libraries and, for example, brushes can be also used in Krita or GIMP.",
+            tags: ["Image Editing", "Ddrawing", "Infinite Canvas"],
+            links: [
+                {
+                    link: "https://www.mypaint.app/",
+                    label: "MyPaint"
+                }
+            ],
+            gallery: [
+                {
+                    heading: "Examples",
+                    images: GALLERY_MYPAINT
+                }
+            ]
+        },
+        {
+            header: "Comparison",
+            text: "Compared to alternative image editors, MyPaint is lightweight and focuses more on the simplicity and convenience for sketching and drawing. The infinite canvas is one of its main features which is the reason why many users select MyPaint for drawings where boundaries are not known, for example, for lecturing purposes, mockups, or artistic experiments. Advanced image editing filters and operations are missing but the user interface id clean and easy to use.",
         },
         {
             image: "https://www.fit.vut.cz/person/ivlnas/public/entry-point/def-img/krita.svg",

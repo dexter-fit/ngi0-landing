@@ -110,5 +110,134 @@ export const ngi0Images = {
     cutie_3: {
         itemImageSrc: "https://www.fit.vut.cz/person/ivlnas/public/entry-point/def-img/cutieExample4.jpg",
         title: "Export window"
-    }
+    },
+    mypaint_0: {
+        itemImageSrc: "https://www.fit.vut.cz/person/ivlnas/public/entry-point/def-img/mypaintExample1.jpg",
+        title: "Basic canvas"
+    },
+    mypaint_1: {
+        itemImageSrc: "https://www.fit.vut.cz/person/ivlnas/public/entry-point/def-img/mypaintExample2.jpg",
+        title: "Different types of brushes"
+    },
+    mypaint_2: {
+        itemImageSrc: "https://www.fit.vut.cz/person/ivlnas/public/entry-point/def-img/mypaintExample3.jpg",
+        title: "Reciprocal mirrored drawing"
+    },
+    mypaint_3: {
+        itemImageSrc: "https://www.fit.vut.cz/person/ivlnas/public/entry-point/def-img/mypaintExample4.jpg",
+        title: "Basic circle and curve shape"
+    },
+    meshlab_0: {
+        itemImageSrc: "https://www.fit.vut.cz/person/ivlnas/public/entry-point/def-img/meshlabExample1.jpg",
+        title: "Basic window with imported 3D model"
+    },
+    meshlab_1: {
+        itemImageSrc: "https://www.fit.vut.cz/person/ivlnas/public/entry-point/def-img/meshlabExample2.jpg",
+        title: "Wireframe view and allignment window"
+    },
+    meshlab_2: {
+        itemImageSrc: "https://www.fit.vut.cz/person/ivlnas/public/entry-point/def-img/meshlabExample3.jpg",
+        title: "Measurement tool"
+    },
+    meshlab_3: {
+        itemImageSrc: "https://www.fit.vut.cz/person/ivlnas/public/entry-point/def-img/meshlabExample4.jpg",
+        title: "Visualization of different elements, such as normals, and texturing"
+    },
+    meshroom_0: {
+        itemImageSrc: "https://www.fit.vut.cz/person/ivlnas/public/entry-point/def-img/meshroomExample1.jpg",
+        title: "Basic window"
+    },
+    meshroom_1: {
+        itemImageSrc: "https://www.fit.vut.cz/person/ivlnas/public/entry-point/def-img/meshroomExample2.jpg",
+        title: "Imported images and zoomed pipeline"
+    },
+    meshroom_2: {
+        itemImageSrc: "https://www.fit.vut.cz/person/ivlnas/public/entry-point/def-img/meshroomExample3.jpg",
+        title: "Reconstructed point cloud"
+    },
+    meshroom_3: {
+        itemImageSrc: "https://www.fit.vut.cz/person/ivlnas/public/entry-point/def-img/meshroomExample3.jpg",
+        title: "Reconstructed mesh"
+    },
+    lmms_0: {
+        itemImageSrc: "https://www.fit.vut.cz/person/ivlnas/public/entry-point/def-img/lmmsExample1.jpg",
+        title: "Basic window"
+    },
+    lmms_1: {
+        itemImageSrc: "https://www.fit.vut.cz/person/ivlnas/public/entry-point/def-img/lmmsExample2.jpg",
+        title: "Piano roll"
+    },
+    lmms_2: {
+        itemImageSrc: "https://www.fit.vut.cz/person/ivlnas/public/entry-point/def-img/lmmsExample3.jpg",
+        title: "Beat editor"
+    },
+    lmms_3: {
+        itemImageSrc: "https://www.fit.vut.cz/person/ivlnas/public/entry-point/def-img/lmmsExample4.jpg",
+        title: "Sound font, VST, and audio file input"
+    },
+    linthesia_0: {
+        itemImageSrc: "https://www.fit.vut.cz/person/ivlnas/public/entry-point/def-img/linthesiaExample1.jpg",
+        title: "Setting of the MIDI tracks"
+    },
+    linthesia_1: {
+        itemImageSrc: "https://www.fit.vut.cz/person/ivlnas/public/entry-point/def-img/linthesiaExample2.jpg",
+        title: "Stopped playback with shortcuts"
+    },
+    linthesia_2: {
+        itemImageSrc: "https://www.fit.vut.cz/person/ivlnas/public/entry-point/def-img/linthesiaExample3.jpg",
+        title: "Standard playback"
+    },
+    linthesia_3: {
+        itemImageSrc: "https://www.fit.vut.cz/person/ivlnas/public/entry-point/def-img/linthesiaExample4.jpg",
+        title: "Settings of outputs and inputs"
+    },
+    openshot_0: {
+        itemImageSrc: "https://www.fit.vut.cz/person/ivlnas/public/entry-point/def-img/openshotExample1.jpg",
+        title: "Basic window"
+    },
+    openshot_1: {
+        itemImageSrc: "https://www.fit.vut.cz/person/ivlnas/public/entry-point/def-img/openshotExample2.jpg",
+        title: "Preview and several tracks"
+    },
+    openshot_2: {
+        itemImageSrc: "https://www.fit.vut.cz/person/ivlnas/public/entry-point/def-img/openshotExample3.jpg",
+        title: "Title editor"
+    },
+    openshot_3: {
+        itemImageSrc: "https://www.fit.vut.cz/person/ivlnas/public/entry-point/def-img/openshotExample4.jpg",
+        title: "Properties of the video strip and filters"
+    },
+    vlc_0: {
+        itemImageSrc: "https://www.fit.vut.cz/person/ivlnas/public/entry-point/def-img/vlcExample1.jpg",
+        title: "Basic window with a video"
+    },
+    vlc_1: {
+        itemImageSrc: "https://www.fit.vut.cz/person/ivlnas/public/entry-point/def-img/vlcExample2.jpg",
+        title: "Information about the input video"
+    },
+    vlc_2: {
+        itemImageSrc: "https://www.fit.vut.cz/person/ivlnas/public/entry-point/def-img/vlcExample3.jpg",
+        title: "Filters"
+    },
+    vlc_3: {
+        itemImageSrc: "https://www.fit.vut.cz/person/ivlnas/public/entry-point/def-img/vlcExample4.jpg",
+        title: "Conversion tools"
+    },
+    obs_0: {
+        itemImageSrc: "https://www.fit.vut.cz/person/ivlnas/public/entry-point/def-img/obsExample1.jpg",
+        title: "Basic window"
+    },
+    obs_1: {
+        itemImageSrc: "https://www.fit.vut.cz/person/ivlnas/public/entry-point/def-img/obsExample2.jpg",
+        title: "Capturing the current screen"
+    },
+    obs_2: {
+        itemImageSrc: "https://www.fit.vut.cz/person/ivlnas/public/entry-point/def-img/obsExample3.jpg",
+        title: "Real-time color filters"
+    },
+    obs_3: {
+        itemImageSrc: "https://www.fit.vut.cz/person/ivlnas/public/entry-point/def-img/obsExample4.jpg",
+        title: "Overlay and input from image and video file"
+    },
+
 }

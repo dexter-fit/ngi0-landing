@@ -32,6 +32,20 @@ const GALLERY_BLENDER: ImageType[] = [
     ngi0Images.blender_3
 ]
 
+const GALLERY_MESHLAB: ImageType[] = [
+    ngi0Images.meshlab_0,
+    ngi0Images.meshlab_1,
+    ngi0Images.meshlab_2,
+    ngi0Images.meshlab_3
+]
+
+const GALLERY_MESHROOM: ImageType[] = [
+    ngi0Images.meshroom_0,
+    ngi0Images.meshroom_1,
+    ngi0Images.meshroom_2,
+    ngi0Images.meshroom_3
+]
+
 const GRAPHICS3D_DOSSIER_PROJECTS: ProjectPageType = {
     pageTitle: "3D Graphics and Modeling",
     menuTitle: "3D Graphics Dossier",
@@ -40,6 +54,50 @@ const GRAPHICS3D_DOSSIER_PROJECTS: ProjectPageType = {
             header: "3D Graphics Editing Software Entry Point",
             text: "3D editors are programs capable of complex editing operations on 3D models. The editors usually offer imports of various 3D model types and also their import or rendering options to create, sometimes realistic, 2D renders of the 3D scene."
         },
+        {
+            image: "https://upload.wikimedia.org/wikipedia/commons/3/39/Meshroom_Logo_-_visualization.png",
+            header: "Meshroom",
+            text: "This program serves for photogrammetry and 3D reconstruction purposes. Based on an input set of images, capturing the scene from different points of view, sparse or dense point cloud can be reconstructed, followed by conversion to fully textured 3D mesh. Its highly extensible and adjustable pipeline and also commandline tools make Meshroom easy to integrate into various workflows. GPU acceleration as well as different feature extractors and matching options are available. ",
+            tags: ["photogrammetry", "3D reconstruction", "mesh", "point cloud" ],
+            links: [
+                {
+                    link: "https://alicevision.org/#meshroom",
+                    label: "Meshroom"
+                }
+            ],
+            gallery: [
+                {
+                    heading: "Examples",
+                    images: GALLERY_MESHROOM
+                }
+            ]
+        },
+        {
+            header: "Comparison",
+            text: "Alternative products, such as 3DF Zephyr or Agisoft Metashape are more precise for the mesh reconstruction. However, the customizable pipeline allows the user to fine tune the reconstruction process for performance or quality purposes. The pipeline is also easily editable using graphical nodes-based programming whereas other software usually offers only limited options defined in various presets.",
+        },
+         {
+            image: "https://upload.wikimedia.org/wikipedia/commons/4/4e/MeshLab_logo_left_eye.png",
+            header: "MeshLab",
+            text: "MeshLab offers various advanced tools for 3D mesh editing, analysis, and processing. Simplification of meshes, alignment, refinement, removal or highlighting of specific mesh elements, subdivision, boolean operators, curvature analysis or point cloud processing are available. This software is often used in academic and scientific use cases.",
+            tags: ["Mesh Editting", "Triangles", "3D Models", "Geometry" ],
+            links: [
+                {
+                    link: "https://www.meshlab.net",
+                    label: "MeshLab"
+                }
+            ],
+            gallery: [
+                {
+                    heading: "Examples",
+                    images: GALLERY_MESHLAB
+                }
+            ]
+        },
+        {
+            header: "Comparison",
+            text: "MeshLab is not a standard 3D modeling software. The main purpose of MeshLab is the analysis or processing of existing meshes, not the interactive artistic modeling proces. Existing tools often do not provide the advanced tools for allignment or highlighting of geometrical patterns.",
+        },        
         {
             image: "https://www.fit.vut.cz/person/ivlnas/public/entry-point/def-img/blender.svg",
             header: "Blender",

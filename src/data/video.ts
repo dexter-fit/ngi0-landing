@@ -36,6 +36,27 @@ const GALLERY_CUTIE: ImageType[] = [
     ngi0Images.cutie_3
 ]
 
+const GALLERY_OPENSHOT: ImageType[] = [
+    ngi0Images.openshot_0,
+    ngi0Images.openshot_1,
+    ngi0Images.openshot_2,
+    ngi0Images.openshot_3
+]
+
+const GALLERY_VLC: ImageType[] = [
+    ngi0Images.vlc_0,
+    ngi0Images.vlc_1,
+    ngi0Images.vlc_2,
+    ngi0Images.vlc_3
+]
+
+const GALLERY_OBS: ImageType[] = [
+    ngi0Images.obs_0,
+    ngi0Images.obs_1,
+    ngi0Images.obs_2,
+    ngi0Images.obs_3
+]
+
 const VIDEO_DOSSIER_PROJECTS: ProjectPageType = {
     pageTitle: "Video Editing Dossier",
     menuTitle: "Video Dossier",
@@ -65,6 +86,72 @@ const VIDEO_DOSSIER_PROJECTS: ProjectPageType = {
         {
             header: "Comparison",
             text: "Kdenlive is focused on video editing and offers more features in this field than Blender. Kdenlive is often considered a worthy alternative to Sony Vegas, Adobe Premiere, or Final Cut. It is optimized and is one of the few professional video editor that runs well on Linux. Commercial software contains a lot of fancy features that can be often recreated in Kdenlive but the user needs to get used to the UI and options.",
+        },
+        {
+            image: "https://upload.wikimedia.org/wikipedia/commons/1/17/OpenShot_logo_%282016%29.svg",
+            header: "OpenShot",
+            text: "This video editor offers basic and also advanced editing options, such as image, video, audio, and text input, curve-based animations, transitions, filters, transformations of the video clips, and more. OpenShot is lighweight, suitable for quick editing without additional software and tools.",
+            tags: ["Video", "Movie", "Film", "Cut" ],
+            links: [
+                {
+                    link: "https://www.openshot.org",
+                    label: "OpenShot"
+                }
+            ],
+            gallery: [
+                {
+                    heading: "Examples",
+                    images: GALLERY_OPENSHOT
+                }
+            ]
+        },
+        {
+            header: "Comparison",
+            text: "OpenShot does not provide too complex features but is a great option for standard users who need to cut video without overly complex user interface. Compared to other products, OpenShot might be lacking in hardware acceleration support and stability.",
+        },
+        {
+            image: "https://upload.wikimedia.org/wikipedia/commons/e/e6/VLC_Icon.svg",
+            header: "VLC Media Player",
+            text: "This player supports a wide range of audio and video formats which can be played. It uses custom implementations and also FFmpeg-supported codecs and muxers. Many advanced functions can be used to avoid opening and editing the videos in editors, for example, audio or subtitle retiming, filters and transforms, etc. The playback is fast and often offers hardware acceleration.",
+            tags: ["Video Player", "Multimedia", "Film", "Movie" ],
+            links: [
+                {
+                    link: "https://www.videolan.org/vlc",
+                    label: "VLC Media Player"
+                }
+            ],
+            gallery: [
+                {
+                    heading: "Examples",
+                    images: GALLERY_VLC
+                }
+            ]
+        },
+        {
+            header: "Comparison",
+            text: "Compared to other software, such as Windows Media Player or QuickTime, VLC supports almost all standardly used vidoe and audio formats and also offers tools that can be used to transcode videos, work with streaming, and more. The user interface is adjustable and different skins can be created by the users. It is also multiplatform and stable.",
+        },
+        {
+            image: "https://upload.wikimedia.org/wikipedia/commons/d/d3/OBS_Studio_Logo.svg",
+            header: "OBS Studio",
+            text: "OBS is a screencasting and streaming application suitable for real-time video capturing, processing, encoding, and streaming purposes. It is often used for creating of tutorials to record the user desktop or to stream either capmera captured video or screen content, for example, when playing video games. Various edits and overlays can be added to the video in real time.",
+            tags: ["Streaming", "Multimedia", "Video", "Capturing" ],
+            links: [
+                {
+                    link: "https://obsproject.com",
+                    label: "OBS Studio"
+                }
+            ],
+            gallery: [
+                {
+                    heading: "Examples",
+                    images: GALLERY_OBS
+                }
+            ]
+        },
+        {
+            header: "Comparison",
+            text: "OBS is a general video capturing and streaming tool and offers all the necessary features. Additional support for features like chat, connected mobile apps, store integrations, etc. are available in commercial alternatives, such as Streamlabs, which is based on a fork of OBS. Professional tools, such as vMix focus on industrial setups with several devices and user interface which is quick to use. OBS can be customized and extended to support many professional features. It might encounter some stability issues when performance demanding setups are used.",
         },
         {
             image: "https://raw.githubusercontent.com/Zarxrax/Cutie-Roto/refs/heads/main/gui/cutie_r.ico",
