@@ -6,6 +6,9 @@ import {DossierType} from "../types/DossierType";
 
 const AUDIO_RELATED_PROJECT_CARDS: ProjectCardType[] = [
     ngi0Projects.hurd,
+    ngi0Projects.faircamp,
+    ngi0Projects.multisoni,
+    ngi0Projects.tiliqua,
     ngi0Projects.pulseAudio
 ];
 
@@ -23,6 +26,20 @@ const GALLERY_AUDACITY: ImageType[] = [
     ngi0Images.audacity_3
 ]
 
+const GALLERY_LMMS: ImageType[] = [
+    ngi0Images.lmms_0,
+    ngi0Images.lmms_1,
+    ngi0Images.lmms_2,
+    ngi0Images.lmms_3
+]
+
+const GALLERY_LINTHESIA: ImageType[] = [
+    ngi0Images.linthesia_0,
+    ngi0Images.linthesia_1,
+    ngi0Images.linthesia_2,
+    ngi0Images.linthesia_3
+]
+
 const AUDIO_DOSSIER_PROJECTS: ProjectPageType = {
     pageTitle: "Audio Editors Dossier",
     menuTitle: "Audio Dossier",
@@ -30,6 +47,50 @@ const AUDIO_DOSSIER_PROJECTS: ProjectPageType = {
         {
             header: "Audio Editing Software Entry Point",
             text: "Audio editors are used to edit the sound wavefronts by cutting, moving or adjusting their shapes. On a higher level, various filters, denoisers, or sound effects can be applied. Different sound tracks can be mixed or new sounds can be synthesized, for example, simulating muscial instruments."
+        },
+        {
+            image: "https://upload.wikimedia.org/wikipedia/commons/c/cb/LMMS_logo_v1.2.2.png",
+            header: "LMMS",
+            text: "This audio workstation program can be used to compose music in general. It offers multi-track workflow for various instruments or sound tracks and variety of effects and filters that can be applied on these tracks. Sound fonts can be easily imported into the program and the melodies can be composed by inserting separate tones using standard mouse and keyboard or with a connected MIDI or USB musical instrument, such as digital keyboard or piano.",
+            tags: ["Music", "Composing", "Soundtrack", "Musical Instrument" ],
+            links: [
+                {
+                    link: "https://lmms.io/",
+                    label: "LMMS"
+                }
+            ],
+            gallery: [
+                {
+                    heading: "Examples",
+                    images: GALLERY_LMMS
+                }
+            ]
+        },
+        {
+            header: "Comparison",
+            text: "Alternative products, such as FL Studio, Abbleton, Logic Pro X, or Reaper focus more on the professional needs and outperform LMMS in the amount and quality of professional features. LMMS is a smaller project but reflects the needs or amateur music composers and is easy to use. The extra features it misses can be supplemented with other software, such as Audacity, or by existing plugins.",
+        },
+         {
+            image: "https://www.fit.vut.cz/person/ivlnas/public/entry-point/def-img/linthesia.png",
+            header: "Linthesia",
+            text: "Linthesia is a game-like music visualizer, often used for learning of playing various songs on piano. A MIDI file can be imported and played with setting of various instruments to each MIDI track. The played tones are visualized on a virtual keyboard and a connected electronic instrument can be used to match the visualization.",
+            tags: ["Muisic", "Piano", "Learning", "MIDI" ],
+            links: [
+                {
+                    link: "https://linthesia.sourceforge.net",
+                    label: "Linthesia"
+                }
+            ],
+            gallery: [
+                {
+                    heading: "Examples",
+                    images: GALLERY_LINTHESIA
+                }
+            ]
+        },
+        {
+            header: "Comparison",
+            text: "Linthesia was created as a fork of a similar software called Synthesia. Synthesia project, however, stopped being open source and free and turned into a commercial project. Linthesia focuses primarily on the basic piano learning interface and migh miss some visual effects available in tools, such as Spectral Piano.",
         },
         {
             image: "https://www.fit.vut.cz/person/ivlnas/public/entry-point/def-img/audacity.png",
