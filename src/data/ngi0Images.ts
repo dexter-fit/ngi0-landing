@@ -239,5 +239,39 @@ export const ngi0Images = {
         itemImageSrc: "https://www.fit.vut.cz/person/ivlnas/public/entry-point/def-img/obsExample4.jpg",
         title: "Overlay and input from image and video file"
     },
+    shotcut_0: {
+        itemImageSrc: "https://www.fit.vut.cz/person/ivlnas/public/entry-point/def-img/shotcutExample1.jpg",
+        title: "Basic window"
+    },
+    shotcut_1: {
+        itemImageSrc: "https://www.fit.vut.cz/person/ivlnas/public/entry-point/def-img/shotcutExample2.jpg",
+        title: "Imported video"
+    },
+    shotcut_2: {
+        itemImageSrc: "https://www.fit.vut.cz/person/ivlnas/public/entry-point/def-img/shotcutExample3.jpg",
+        title: "Subtitle editor"
+    },
+    shotcut_3: {
+        itemImageSrc: "https://www.fit.vut.cz/person/ivlnas/public/entry-point/def-img/shotcutExample4.jpg",
+        title: "Color filters"
+    },
+   online_0: {
+        itemImageSrc: "https://www.fit.vut.cz/person/ivlnas/public/entry-point/def-img/online3DExample1.jpg",
+        title: "Start window with example formats"
+    },
+   online_1: {
+        itemImageSrc: "https://www.fit.vut.cz/person/ivlnas/public/entry-point/def-img/online3DExample2.jpg",
+        title: "Complex model tree"
+    },
+   online_2: {
+        itemImageSrc: "https://www.fit.vut.cz/person/ivlnas/public/entry-point/def-img/online3DExample3.jpg",
+        title: "Sharing options"
+    },
+   online_3: {
+        itemImageSrc: "https://www.fit.vut.cz/person/ivlnas/public/entry-point/def-img/online3DExample4.jpg",
+        title: "Measurement tool"
+    },
+
+
 
 }
