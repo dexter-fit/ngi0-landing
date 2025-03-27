@@ -1,8 +1,22 @@
-import {ProjectCardType, ProjectPageType, DossierType} from "../types";
+import {ProjectCardType, ProjectPageType, ImageType} from "../types";
+import {ngi0Projects} from "./ngi0Projects";
+import {ngi0Images} from "./ngi0Images";
+import {ASSOCIATED_NGI0_PROJECTS} from "./commonStrings";
+import {DossierType} from "../types/DossierType";
 
 export const VULKAN_DOSSIER_PATHNAME = "vulkan";
 
-const VULKAN_CARDS: ProjectCardType[] = [];
+const VULKAN_RELATED_PROJECT_CARDS = [
+    ngi0Projects.libreSoc, 
+    ngi0Projects.replicant,
+    ngi0Projects.gpgpu,
+    ngi0Projects.wgmath,
+    ngi0Projects.renderling
+]
+
+const VULKAN_CARDS = [
+    ...VULKAN_RELATED_PROJECT_CARDS
+];
 
 const VULKAN_TAGS: string[] = [];
 
@@ -51,6 +65,13 @@ const VULKAN_PROJECTS: ProjectPageType = {
 *   [Khronos Vulkan Tutorial](https://docs.vulkan.org/tutorial/latest/00_Introduction.html) - using C Vulkan API and GLFW
 *   Website of [vulkan.org](https://vulkan.org), especially [Key resources section](https://vulkan.org/learn#key-resources) and [Vulkan Tutorials](https://vulkan.org/learn#vulkan-tutorials).
 *   [Vulkan tutorial on root.cz](https://www.root.cz/serialy/tutorial-vulkan/) - Czech language only, using vulkan.hpp, source code on [github](https://github.com/pc-john/VulkanTutorial).        `,
+
+            associatedProjects: [
+                {
+                    heading: ASSOCIATED_NGI0_PROJECTS,
+                    carousel: VULKAN_RELATED_PROJECT_CARDS
+                }
+            ]
         }
     ]
 };
@@ -1204,7 +1225,8 @@ Device function pointers:
 ---
 
 So, Vulkan loader is implemented by libvulkan.so.1 on Linux and vulkan-1.dll on Windows. The names of the drivers can be seen in the rest of the output.
-            `, relatedContent: [
+            `,
+              relatedContent: [
                 {
                     label: "Previous part of the tutorial",
                     links: [
@@ -1212,17 +1234,16 @@ So, Vulkan loader is implemented by libvulkan.so.1 on Linux and vulkan-1.dll on 
                             label: "1-4 - Advanced Info",
                             link: `/${VULKAN_DOSSIER_PATHNAME}/detail/advancedInfo`
                         }
-                    ]
+                    ],
                 }
             ]
         }
     ]
 }
 
-
 export const DOSSIER: DossierType = {
     pathName: VULKAN_DOSSIER_PATHNAME,
-    image: "https://vulkan-fit.github.io/VulkanTutorial/common/volcano.jpg",
+    image: "https://upload.wikimedia.org/wikipedia/commons/3/30/Vulkan.svg",
     header: "Vulkan Tutorial",
     subheader: "Learn Vulkan with this Simple Tutorial",
     tags: ["Vulkan", "Rendering"],

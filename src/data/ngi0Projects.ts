@@ -751,5 +751,32 @@ export const ngi0Projects = {
         funds: funds.ngi0Commons,
         start: "2025-01",
     },
+    gpgpu: {
+        image: "https://nlnet.nl/image/ic_projects.svg",
+        header: "GPGPU Playground",
+        subheader: "A virtual GPU to learn GPU programming",
+        tags: ["gpu", "gpgpu", "Vulkan", "OpenGL"],
+        link: "https://nlnet.nl/project/GPGPU/",
+        funds: funds.zeroCore,
+        start: "2024-02",
+    },
+    wgmath: {
+        image: "https://nlnet.nl/image/ic_projects.svg",
+        header: "WgMath",
+        subheader: "Open GPU scientific computing for every platform",
+        tags: ["gpu", "gpgpu", "Vulkan", "OpenGL"],
+        link: "https://nlnet.nl/project/WgMath/",
+        funds: funds.zeroCore,
+        start: "2024-12",
+    },
+    renderling: {
+        image: "https://nlnet.nl/image/ic_projects.svg",
+        header: "Renderling",
+        subheader: "Real-time rendering library on top of WebGPU",
+        tags: ["gpu", "gpgpu", "Vulkan", "OpenGL"],
+        link: "https://nlnet.nl/project/Renderling/",
+        funds: funds.zeroCore,
+        start: "2024-02",
+    },
     
 }

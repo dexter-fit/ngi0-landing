@@ -57,6 +57,13 @@ const GALLERY_OBS: ImageType[] = [
     ngi0Images.obs_3
 ]
 
+const GALLERY_SHOTCUT: ImageType[] = [
+    ngi0Images.shotcut_0,
+    ngi0Images.shotcut_1,
+    ngi0Images.shotcut_2,
+    ngi0Images.shotcut_3
+]
+
 const VIDEO_DOSSIER_PROJECTS: ProjectPageType = {
     pageTitle: "Video Editing Dossier",
     menuTitle: "Video Dossier",
@@ -108,6 +115,28 @@ const VIDEO_DOSSIER_PROJECTS: ProjectPageType = {
         {
             header: "Comparison",
             text: "OpenShot does not provide too complex features but is a great option for standard users who need to cut video without overly complex user interface. Compared to other products, OpenShot might be lacking in hardware acceleration support and stability.",
+        },
+        {
+            image: "https://www.fit.vut.cz/person/ivlnas/public/entry-point/def-img/shotcut.png",
+            header: "Shotcut",
+            text: "This video editor is suitable as an easy-to-use tool to edit videos with prepared templates of titles and effects. The user interface is friendly and not bloated with too complex features which are not necessary for simple projects.",
+            tags: ["Video", "Movie", "Film", "Cut" ],
+            links: [
+                {
+                    link: "https://shotcut.org",
+                    label: "Shotcut"
+                }
+            ],
+            gallery: [
+                {
+                    heading: "Examples",
+                    images: GALLERY_SHOTCUT
+                }
+            ]
+        },
+        {
+            header: "Comparison",
+            text: "Shotcut is similar to OpenShot, providing simple user interface but might not be as performant as other tools.",
         },
         {
             image: "https://upload.wikimedia.org/wikipedia/commons/e/e6/VLC_Icon.svg",
