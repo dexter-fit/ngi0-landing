@@ -14,7 +14,8 @@ const TWO_D_RELATED_PROJECT_CARDS: ProjectCardType[] = [
     ngi0Projects.sensif,
     ngi0Projects.pixeldroid,
     ngi0Projects.panoramax,
-    ngi0Projects.datalab
+    ngi0Projects.datalab,
+    ngi0Projects.epe
 ];
 
 const GRAPHICS2D_CARDS = [
@@ -50,6 +51,13 @@ const GALLERY_MYPAINT: ImageType[] = [
     ngi0Images.mypaint_1,
     ngi0Images.mypaint_2,
     ngi0Images.mypaint_3
+]
+
+const GALLERY_DALLE: ImageType[] = [
+    ngi0Images.dalle_0,
+    ngi0Images.dalle_1,
+    ngi0Images.dalle_2,
+    ngi0Images.dalle_3
 ]
 
 const GRAPHICS2D_DOSSIER_PROJECTS: ProjectPageType = {
@@ -125,6 +133,28 @@ const GRAPHICS2D_DOSSIER_PROJECTS: ProjectPageType = {
         {
             header: "Comparison",
             text: "Compared to alternative image editors, MyPaint is lightweight and focuses more on the simplicity and convenience for sketching and drawing. The infinite canvas is one of its main features which is the reason why many users select MyPaint for drawings where boundaries are not known, for example, for lecturing purposes, mockups, or artistic experiments. Advanced image editing filters and operations are missing but the user interface id clean and easy to use.",
+        },
+        {
+            image: "https://www.fit.vut.cz/person/ivlnas/public/entry-point/def-img/dalle.png",
+            header: "DALL·E Mini",
+            text: "Neural networks capable of generating text prompt to image offer and easy way to create images of various kinds. No special graphics or image editing skills are necessary. The results might not be always ideal but the user might be able to choose a good result after several generation attempts.",
+            tags: ["Image Editting", "AI", "Text to Image", "Generative AI" ],
+            links: [
+                {
+                    link: "https://github.com/borisdayma/dalle-mini",
+                    label: "DALL·E Mini"
+                }
+            ],
+            gallery: [
+                {
+                    heading: "Examples",
+                    images: GALLERY_DALLE
+                }
+            ]
+        },
+        {
+            header: "Comparison",
+            text: "The main advantage is the permissive licence which makes this network open and free. It can be also run locally. The results might be less accurate than commercial networks due to the lower amount maintainance and retraining.",
         },
         {
             image: "https://www.fit.vut.cz/person/ivlnas/public/entry-point/def-img/krita.svg",

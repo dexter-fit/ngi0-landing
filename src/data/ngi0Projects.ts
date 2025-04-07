@@ -778,5 +778,23 @@ export const ngi0Projects = {
         funds: funds.zeroCore,
         start: "2024-02",
     },
+    epe: {
+        image: "https://nlnet.nl/project/EPE/EPE.hex.svg",
+        header: "EPE",
+        subheader: "Creative libre software tools for print media",
+        tags: ["graphics", "print", "design", "art"],
+        link: "https://nlnet.nl/project/EPE/",
+        funds: funds.ngi0Commons,
+        start: "2024-06",
+    },
+    inochi: {
+        image: "https://nlnet.nl/project/Inochi2D/inochi2d.logo.svg",
+        header: "Inochi2D",
+        subheader: "Open source 2D animation/puppeteering framework",
+        tags: ["game", "animation", "design", "art"],
+        link: "https://nlnet.nl/project/Inochi2D/",
+        funds: funds.entrust,
+        start: "2024-02",
+    },
     
 }

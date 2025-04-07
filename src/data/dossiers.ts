@@ -3,6 +3,7 @@ import {DOSSIER as GEO_DOSSIER} from "./geo"
 import {DOSSIER as GRAPHICS2D_DOSSIER} from "./2Dgraphics";
 import {DOSSIER as GRAPHICS3D_DOSSIER} from "./3Dgraphics";
 import {DOSSIER as VIDEO_DOSSIER} from "./video";
+import {DOSSIER as GAMES_DOSSIER} from "./games";
 import {DOSSIER as AUDIO_DOSSIER} from "./audio";
 import {DOSSIER as OFFICE_DOSSIER} from "./office";
 import {DOSSIER as COMPRESSION_DOSSIER} from "./compression";
@@ -21,6 +22,7 @@ const dossiers = {
     [GRAPHICS2D_DOSSIER.pathName]: GRAPHICS2D_DOSSIER,
     [GRAPHICS3D_DOSSIER.pathName]: GRAPHICS3D_DOSSIER,
     [VIDEO_DOSSIER.pathName]: VIDEO_DOSSIER,
+    [GAMES_DOSSIER.pathName]: GAMES_DOSSIER,
     [AUDIO_DOSSIER.pathName]: AUDIO_DOSSIER,
     [OFFICE_DOSSIER.pathName]: OFFICE_DOSSIER,
     [COMPRESSION_DOSSIER.pathName]: COMPRESSION_DOSSIER,
