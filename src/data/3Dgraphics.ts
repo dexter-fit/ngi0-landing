@@ -46,6 +46,13 @@ const GALLERY_MESHROOM: ImageType[] = [
     ngi0Images.meshroom_3
 ]
 
+const GALLERY_ONLINE: ImageType[] = [
+    ngi0Images.online_0,
+    ngi0Images.online_1,
+    ngi0Images.online_2,
+    ngi0Images.online_3
+]
+
 const GRAPHICS3D_DOSSIER_PROJECTS: ProjectPageType = {
     pageTitle: "3D Graphics and Modeling",
     menuTitle: "3D Graphics Dossier",
@@ -97,6 +104,28 @@ const GRAPHICS3D_DOSSIER_PROJECTS: ProjectPageType = {
         {
             header: "Comparison",
             text: "MeshLab is not a standard 3D modeling software. The main purpose of MeshLab is the analysis or processing of existing meshes, not the interactive artistic modeling proces. Existing tools often do not provide the advanced tools for allignment or highlighting of geometrical patterns.",
+        },        
+         {
+            image: "https://www.fit.vut.cz/person/ivlnas/public/entry-point/def-img/online3d.svg",
+            header: "Online 3D Viewer",
+            text: "This simple web-based tool is a convenient way to quickly display 3D models and apply basic transforms, measurements, and rendering operations.",
+            tags: ["Mesh Viewing", "Triangles", "3D Models", "Geometry" ],
+            links: [
+                {
+                    link: "https://3dviewer.net/",
+                    label: "Online 3D Viewer"
+                }
+            ],
+            gallery: [
+                {
+                    heading: "Examples",
+                    images: GALLERY_ONLINE
+                }
+            ]
+        },
+        {
+            header: "Comparison",
+            text: "This viewer does not offer any editing tools but can be used to quickly inspect 3D model files in web browser. It might be more convenient when working remotedely without the need to install any heavyweight software.",
         },        
         {
             image: "https://www.fit.vut.cz/person/ivlnas/public/entry-point/def-img/blender.svg",

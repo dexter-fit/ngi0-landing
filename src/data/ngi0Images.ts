@@ -239,5 +239,117 @@ export const ngi0Images = {
         itemImageSrc: "https://www.fit.vut.cz/person/ivlnas/public/entry-point/def-img/obsExample4.jpg",
         title: "Overlay and input from image and video file"
     },
+    shotcut_0: {
+        itemImageSrc: "https://www.fit.vut.cz/person/ivlnas/public/entry-point/def-img/shotcutExample1.jpg",
+        title: "Basic window"
+    },
+    shotcut_1: {
+        itemImageSrc: "https://www.fit.vut.cz/person/ivlnas/public/entry-point/def-img/shotcutExample2.jpg",
+        title: "Imported video"
+    },
+    shotcut_2: {
+        itemImageSrc: "https://www.fit.vut.cz/person/ivlnas/public/entry-point/def-img/shotcutExample3.jpg",
+        title: "Subtitle editor"
+    },
+    shotcut_3: {
+        itemImageSrc: "https://www.fit.vut.cz/person/ivlnas/public/entry-point/def-img/shotcutExample4.jpg",
+        title: "Color filters"
+    },
+   online_0: {
+        itemImageSrc: "https://www.fit.vut.cz/person/ivlnas/public/entry-point/def-img/online3DExample1.jpg",
+        title: "Start window with example formats"
+    },
+   online_1: {
+        itemImageSrc: "https://www.fit.vut.cz/person/ivlnas/public/entry-point/def-img/online3DExample2.jpg",
+        title: "Complex model tree"
+    },
+   online_2: {
+        itemImageSrc: "https://www.fit.vut.cz/person/ivlnas/public/entry-point/def-img/online3DExample3.jpg",
+        title: "Sharing options"
+    },
+   online_3: {
+        itemImageSrc: "https://www.fit.vut.cz/person/ivlnas/public/entry-point/def-img/online3DExample4.jpg",
+        title: "Measurement tool"
+    },
+    dalle_0: {
+        itemImageSrc: "https://www.fit.vut.cz/person/ivlnas/public/entry-point/def-img/dalleExample1.jpg",
+        title: "Prompt: Photo of beautiful natural landscape with meadows, hills, and trees"
+    },
+    dalle_1: {
+        itemImageSrc: "https://www.fit.vut.cz/person/ivlnas/public/entry-point/def-img/dalleExample2.jpg",
+        title: "Prompt: An old house at the river"
+    },
+    dalle_2: {
+        itemImageSrc: "https://www.fit.vut.cz/person/ivlnas/public/entry-point/def-img/dalleExample3.jpg",
+        title: "Prompt: Sunset in a big city with skyscrapers"
+    },
+    dalle_3: {
+        itemImageSrc: "https://www.fit.vut.cz/person/ivlnas/public/entry-point/def-img/dalleExample4.jpg",
+        title: "Prompt: Night sky with stars and moon"
+    },
+    luanti_0: {
+        itemImageSrc: "https://www.luanti.org/media/gallery/1.jpg",
+        title: "Backrooms Test, a game about liminal spaces"
+    },
+    luanti_1: {
+        itemImageSrc: "https://www.luanti.org/media/gallery/8.jpg",
+        title: "Minetest Game, the game where everything began"
+    },
+    luanti_2: {
+        itemImageSrc: "https://www.luanti.org/media/gallery/5.jpg",
+        title: "Steampunk Blimp mod for Minetest Game"
+    },
+    luanti_3: {
+        itemImageSrc: "https://www.luanti.org/media/gallery/3.jpg",
+        title: "Customized inventory screen from the i3 mod"
+    },
+    openarena_0: {
+        itemImageSrc: "https://upload.wikimedia.org/wikipedia/commons/8/87/Open_Arena_0.6.0.jpg",
+        title: "Players running through a hallway"
+    },
+    openarena_1: {
+        itemImageSrc: "https://upload.wikimedia.org/wikipedia/commons/1/1a/Openarena-machinegun.png",
+        title: "Shooting with a machinegun"
+    },
+    openarena_2: {
+        itemImageSrc: "https://upload.wikimedia.org/wikipedia/commons/b/b9/OpenArena-Gauntlet.jpg",
+        title: "Close range weapon"
+    },
+    openarena_3: {
+        itemImageSrc: "https://upload.wikimedia.org/wikipedia/commons/a/a0/OpenArena_0.8.8_rocket.jpg",
+        title: "A random moment from the game"
+    },
+    ad_0: {
+        itemImageSrc: "https://play0ad.com/wp-content/gallery/screenshots/colossus_of_rhodes_by_nifa.jpg",
+        title: "Colossus of Rhodes"
+    },
+    ad_1: {
+        itemImageSrc: "https://play0ad.com/wp-content/gallery/screenshots/vale_of_tempe_2025.jpg",
+        title: "Vale of Tempe 2025"
+    },
+    ad_2: {
+        itemImageSrc: "https://play0ad.com/wp-content/gallery/screenshots/PersianTradeRoute.jpg",
+        title: "Persian Trade Route"
+    },
+    ad_3: {
+        itemImageSrc: "https://play0ad.com/wp-content/gallery/screenshots/roman_buildings.jpg",
+        title: "Roman Buildings"
+    },
+    openttd_0: {
+        itemImageSrc: "https://www.openttd.org/screenshots/1.9-alexthedacian_1.png",
+        title: "Industrial setting"
+    },
+    openttd_1: {
+        itemImageSrc: "https://www.openttd.org/screenshots/1.9-coldice_1.png",
+        title: "Natural scenery"
+    },
+    openttd_2: {
+        itemImageSrc: "https://www.openttd.org/screenshots/1.2-Bluescreen-opengfx-1920x1200.png",
+        title: "Transportation around the city"
+    },
+    openttd_3: {
+        itemImageSrc: "https://www.openttd.org/screenshots/1.0-20100717_paulo_pereira.png",
+        title: "Island city"
+    },
 
 }
