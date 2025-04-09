@@ -843,7 +843,7 @@ export const ngi0Projects = {
         subheader: "Implement Routing Protocol for Low-Power and Lossy networks",
         tags: ["Network Infrastructure"],
         link: "https://nlnet.nl/project/Smoltcp/",
-        fund: "funds.assure",
+        fund: funds.assure,
         start: "2022-10",
         stop: "2024-08"
     },
