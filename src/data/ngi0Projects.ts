@@ -796,5 +796,179 @@ export const ngi0Projects = {
         funds: funds.entrust,
         start: "2024-02",
     },
-    
+
+
+    secushareBox: {
+        image: "https://nlnet.nl/project/secushare-box/secushare.svg",
+        header: "Secushare Box",
+        subheader: "Operating system extension of Secushare for hardware devices",
+        tags: ["Security", "Privacy", "Communication"],
+        link: "https://nlnet.nl/project/secushare-box/",
+        start: "2017-12",
+        stop: "2019-05"
+    },
+    purl2sym: {
+        image: "https://nlnet.nl/project/purl2sym/aboutcode.logo.svg",
+        header: "purl2sym",
+        subheader: "FOSS code symbols indexing system",
+        tags: ["Software Engineering", "Measurement"],
+        link: "https://nlnet.nl/project/purl2sym/",
+        fund: funds.entrust,
+        start: "2023-10",
+        stop: "2024-05"
+    },
+    zSipOs: {
+        image: "https://nlnet.nl/project/ZSipOs/zsipos.svg",
+        header: "ZSipOs",
+        subheader: "Open hardware for telephony encryption",
+        tags: ["Hardware", "Operating Systems"],
+        link: "https://nlnet.nl/project/ZSipOs/",
+        fund: funds.pet,
+        start: "2019-06",
+        stop: "2019-06"
+    },
+    wpeAndroid: {
+        image: "https://nlnet.nl/project/WPE-Android/wpe.logo.svg",
+        header: "WPE Android",
+        subheader: "Embedded-friendly Webview based on WebKit",
+        tags: ["Services", "Applications"],
+        link: "https://nlnet.nl/project/WPE-Android/",
+        fund: funds.zeroCore,
+        start: "2023-04",
+        stop: "2024-10"
+    },
+    smoltcp: {
+        image: "https://nlnet.nl/project/Smoltcp/logo.svg",
+        header: "smoltcp RPL",
+        subheader: "Implement Routing Protocol for Low-Power and Lossy networks",
+        tags: ["Network Infrastructure"],
+        link: "https://nlnet.nl/project/Smoltcp/",
+        fund: "funds.assure",
+        start: "2022-10",
+        stop: "2024-08"
+    },
+    rauthy: {
+        image: "https://nlnet.nl/project/Rauthy/rauthy.logo.svg",
+        header: "Rauthy",
+        subheader: "Reliable OpenID Connect IdP and IAM solution",
+        tags: ["Network Infrastructure"],
+        link: "https://nlnet.nl/project/Rauthy/",
+        fund: funds.zeroCore,
+        start: "2025-01",
+    },
+    openEnergyProfilerToolset: {
+        image: "https://nlnet.nl/project/OpenEnergyProfiler/",
+        header: "Open Energy Profiler Toolset",
+        subheader: "Modular open hardware Energy Profiling",
+        tags: ["Network Infrastructure"],
+        link: "https://nlnet.nl/project/OpenEnergyProfiler/openept.logo.svg",
+        fund: funds.entrust,
+        start: "2023-06",
+    },
+    openCryptoLinux: {
+        image: "/ngi0/img/default.svg",
+        header: "OpenCryptoLinux",
+        subheader: "Make Linux run on OpenCryptoHW",
+        tags: ["Network Infrastructure"],
+        link: "https://nlnet.nl/project/OpenCryptoLinux/",
+        fund: funds.assure,
+        start: "2022-06",
+        stop: "2024-07"
+    },
+    openCryptoHW: {
+        image: "/ngi0/img/default.svg",
+        header: "OpenCryptoHW",
+        subheader: "CGRA-based reconfigurable open-source cryptographic IP cores",
+        tags: ["Network Infrastructure"],
+        link: "https://nlnet.nl/project/OpenCryptoHW/",
+        fund: funds.assure,
+        start: "2021-06",
+        stop: "2024-07"
+    },
+    neuropil: {
+        image: "https://nlnet.nl/project/Neuropil/neuropil.logo.svg",
+        header: "neuropil",
+        subheader: "Privacy by design P2P search including IoT",
+        tags: ["Network Infrastructure"],
+        link: "https://nlnet.nl/project/Neuropil/",
+        fund: funds.discovery,
+        start: "2019-06",
+        stop: "2019-06"
+    },
+    neuropilDHT: {
+        image: "https://nlnet.nl/project/Neuropil/neuropil.logo.svg",
+        header: "neuropil DHT",
+        subheader: "DHT based overlay network",
+        tags: ["Network Infrastructure"],
+        link: "https://nlnet.nl/project/Neuropil-DHT/",
+        fund: funds.assure,
+        start: "2021-08",
+        stop: "2024-08"
+    },
+    lunaPnR: {
+        image: "https://nlnet.nl/project/Luna/luna.logo.svg",
+        header: "Luna PnR",
+        subheader: "A versatile and fast new open-source place and route tool",
+        tags: ["Network Infrastructure"],
+        link: "https://nlnet.nl/project/Luna/",
+        fund: funds.pet,
+        start: "2021-02",
+        stop: "2022-10"
+    },
+    lunaPnRPhase2: {
+        image: "https://nlnet.nl/project/Luna/luna.logo.svg",
+        header: "LunaPnR Phase 2",
+        subheader: "A versatile and fast new open-source place and route tool",
+        tags: ["Network Infrastructure"],
+        link: "https://nlnet.nl/project/LunaPnR/",
+        fund: funds.entrust,
+        start: "2022-12"
+    },
+    letsConnectP2P: {
+        image: "https://nlnet.nl/project/LetsConnect-P2P/letsconnect.logo.svg",
+        header: "LetsConnect P2P",
+        subheader: "Add P2P features to Let's Connect!",
+        tags: ["Network Infrastructure"],
+        link: "https://nlnet.nl/project/LetsConnect-P2P/",
+        fund: funds.assure,
+        start: "2022-12",
+        stop: "2024-08"
+    },
+    KEMTLS: {
+        image: "https://nlnet.nl/project/KEMTLS/ietf.hex.svg",
+        header: "Standardizing KEMTLS",
+        subheader: "Post-quantum TLS without handshake signatures",
+        tags: ["Network Infrastructure"],
+        link: "https://nlnet.nl/project/KEMTLS/",
+        fund: funds.assure,
+        start: "2021-06",
+        stop: "2023-11"
+    },
+    jellyfishOPP: {
+        image: "https://nlnet.nl/project/JellyfishOPP/jellyfishopp.logo.svg",
+        header: "JellyfishOPP",
+        subheader: "Open Hardware device for power profiling",
+        tags: ["Network Infrastructure"],
+        link: "https://nlnet.nl/project/JellyfishOPP/",
+        fund: funds.entrust,
+        start: "2023-06",
+    },
+    ellipticCurveSIMDS: {
+        image: "/ngi0/img/default.svg",
+        header: "Elliptic curve encryption speed-up using SIMD",
+        subheader: "Low-level instructin optimisation for curve25519-dalek & Arkworks",
+        tags: ["Network Infrastructure"],
+        link: "https://nlnet.nl/project/curve25519-dalek/",
+        fund: funds.entrust,
+        start: "2024-02",
+    },
+    iso14229: {
+        image: "/ngi0/img/default.svg",
+        header: "iso14229",
+        subheader: "Universal Diagnostic Services for automotive diagnostics",
+        tags: ["Network Infrastructure"],
+        link: "https://nlnet.nl/project/iso14229/",
+        fund: funds.zeroCore,
+        start: "2025-01",
+    }
 }

@@ -1,0 +1,156 @@
+import {ProjectCardType, ProjectPageType, DossierType} from "../types";
+import {ngi0Projects} from "./ngi0Projects";
+import {ASSOCIATED_NGI0_PROJECTS} from "./commonStrings";
+
+const IoT_SECURITY_AND_PRIVACY_CARDS: ProjectCardType[] = [
+    ngi0Projects.secushareBox,
+    ngi0Projects.zSipOs,
+    ngi0Projects.openCryptoHW,
+    ngi0Projects.openCryptoLinux,
+    ngi0Projects.neuropil,
+    ngi0Projects.neuropilDHT,
+    ngi0Projects.letsConnectP2P,
+    ngi0Projects.rauthy,
+    ngi0Projects.KEMTLS,
+    ngi0Projects.iso14229,
+    ngi0Projects.ellipticCurveSIMDS
+];
+
+const IoT_DEVELOPMENT_TOOLS_AND_FRAMEWORKS_CARDS: ProjectCardType[] = [
+    ngi0Projects.smoltcp,
+    ngi0Projects.purl2sym,
+    ngi0Projects.wpeAndroid,
+    ngi0Projects.lunaPnR,
+    ngi0Projects.lunaPnRPhase2,
+    ngi0Projects.jellyfishOPP,
+    ngi0Projects.openEnergyProfilerToolset
+];
+
+const IoT_INTELLIGENCE_AND_NETWORKING_CARDS: ProjectCardType[] = [
+    ngi0Projects.neuropil,
+    ngi0Projects.secushareBox,
+    ngi0Projects.letsConnectP2P,
+];
+
+const IoT_CROSS_CUTTING_AND_OPEN_HW: ProjectCardType[] = [
+    ngi0Projects.lunaPnR,
+    ngi0Projects.lunaPnRPhase2,
+    ngi0Projects.openCryptoLinux,
+];
+
+const IoT_INFRASTRUCTURE_ENABLERS: ProjectCardType[] = [
+    ngi0Projects.rauthy,
+    ngi0Projects.purl2sym,
+    ngi0Projects.KEMTLS,
+];
+
+const IoT_CARDS: ProjectCardType[] = [
+    ...IoT_SECURITY_AND_PRIVACY_CARDS,
+    ...IoT_DEVELOPMENT_TOOLS_AND_FRAMEWORKS_CARDS,
+    ...IoT_INTELLIGENCE_AND_NETWORKING_CARDS,
+    ...IoT_CROSS_CUTTING_AND_OPEN_HW,
+    ...IoT_INFRASTRUCTURE_ENABLERS
+];
+
+const IoT_TAGS: string[] = [];
+
+const IoT_PROJECTS: ProjectPageType = {
+    pageTitle: "Internet of Things and Smart Devices",
+    menuTitle: "IoT Dossier",
+    projectDescription: [
+        {
+            header: "🌐 Internet of Things and Smart Devices",
+            text: `
+The Internet of Things (IoT) is transforming how the digital and physical worlds interact—enabling smart cities, intelligent industry, precision agriculture, and more. At the heart of this revolution are the open projects and technologies that shape, secure, and scale IoT systems. This web space is a curated hub of innovative projects that are pushing the boundaries of IoT development, deployment, and governance. From security protocols to open hardware platforms, these initiatives lay the foundation for a smarter, more connected future.
+
+Explore the following categories to discover groundbreaking work happening across the IoT landscape—each playing a key role in shaping robust, intelligent, and inclusive systems.
+`,
+        },
+        {
+            header: "🛡️ IoT Security & Privacy",
+            text: `
+Securing IoT devices and networks is no longer optional—it’s foundational. As connected devices proliferate across sensitive environments, ensuring confidentiality, integrity, and availability becomes mission-critical. Projects in this space prioritize privacy-by-design, integrating encryption, authentication, and secure communication protocols from the ground up. These initiatives aim to reduce the attack surface of IoT ecosystems, minimize data exposure, and empower users with more control over their digital identities.
+
+Beyond technical safeguards, these projects also engage with evolving regulatory frameworks and ethical considerations. From GDPR-aligned architectures to tools enabling secure edge computing, the goal is to build trust into the IoT stack itself. As threat landscapes evolve, these projects serve as the frontline defense—balancing usability, transparency, and resilience in increasingly complex environments.
+`,
+            associatedProjects: [
+                {
+                    heading: ASSOCIATED_NGI0_PROJECTS,
+                    carousel: IoT_SECURITY_AND_PRIVACY_CARDS
+                }
+            ]
+        },
+        {
+            header: "🛠️ IoT Development Tools & Frameworks",
+            text: `
+Building reliable IoT systems demands more than just hardware—it requires the right set of tools and frameworks to streamline development, testing, and deployment. Projects in this area provide software libraries, SDKs, platforms, and integration toolkits that help developers create interoperable and scalable IoT applications faster and with fewer bugs. These resources abstract complexity and encourage best practices, making IoT development accessible to a broader community.
+
+Whether targeting microcontrollers, gateways, or cloud infrastructure, these tools often embrace open standards and modular architectures. They support rapid prototyping, device management, remote configuration, and data visualization—all essential capabilities for bringing IoT solutions to life. As IoT matures, these frameworks will be central to creating sustainable, upgradable, and secure systems at scale.
+`,
+            associatedProjects: [
+                {
+                    heading: ASSOCIATED_NGI0_PROJECTS,
+                    carousel: IoT_DEVELOPMENT_TOOLS_AND_FRAMEWORKS_CARDS
+                }
+            ]
+        },
+        {
+            header: "🧠 IoT Intelligence & Networking",
+            text: `
+The intelligence of IoT lies in how data is communicated, processed, and acted upon. This category includes projects focused on enhancing device-to-device communication, decentralized discovery, and intelligent networking. Whether through mesh networks, semantic data protocols, or adaptive routing algorithms, these efforts aim to make IoT networks more autonomous, scalable, and responsive.
+
+Beyond connectivity, these projects often integrate lightweight AI and edge inference, enabling smarter decisions closer to where data is generated. They also explore new paradigms in distributed computing and data handling—reducing latency, enhancing privacy, and improving overall system efficiency. The result is a new class of IoT architectures that not only connect devices but empower them with context-aware intelligence.
+`,
+            associatedProjects: [
+                {
+                    heading: ASSOCIATED_NGI0_PROJECTS,
+                    carousel: IoT_INTELLIGENCE_AND_NETWORKING_CARDS
+                }
+            ]
+        },
+        {
+            header: "🧬 Cross-Cutting Infrastructure & Open Hardware",
+            text: `
+Some of the most impactful IoT projects don’t fit neatly into one domain—they provide the essential building blocks for many. These include open hardware platforms, firmware toolkits, and shared communication infrastructure that fuel innovation across sectors. From microcontroller boards and sensor modules to interoperable operating systems and testbeds, these resources are the unsung heroes of the IoT world.
+
+Open-source ethos is strong here, driving collaboration and transparency. By lowering barriers to entry and encouraging reuse, these cross-cutting tools accelerate innovation and help smaller players experiment and scale. Their value extends across verticals—from smart agriculture to industrial automation—providing a shared foundation for building resilient and adaptable IoT systems.
+`,
+            associatedProjects: [
+                {
+                    heading: ASSOCIATED_NGI0_PROJECTS,
+                    carousel: IoT_CROSS_CUTTING_AND_OPEN_HW
+                }
+            ]
+        },
+        {
+            header: "🧩 Multi-Domain / Infrastructure Enablers",
+            text: `
+Not every project fits into a tidy category—but that doesn't make them any less important. These are the bridging technologies and platforms that support multiple facets of IoT without being tied to a single application or layer. They often address critical challenges like data interoperability, orchestration, orchestration between verticals, or managing hybrid cloud-edge environments.
+
+Projects in this space often emerge as glue between ecosystems—enabling cross-domain innovation and holistic IoT solutions. Whether it's a semantic metadata framework, a universal protocol converter, or an integrated test platform, these enablers make it easier to stitch together disparate components. In a world where IoT ecosystems are becoming more complex and interconnected, these flexible solutions are essential to scaling beyond silos.
+`,
+            associatedProjects: [
+                {
+                    heading: ASSOCIATED_NGI0_PROJECTS,
+                    carousel: IoT_INFRASTRUCTURE_ENABLERS
+                }
+            ]
+        }
+    ]
+};
+
+export const IoT_DOSSIER_PATHNAME = "iot";
+
+export const DOSSIER: DossierType = {
+    pathName: IoT_DOSSIER_PATHNAME,
+    image: "/ngi0/img/iot.png",
+    header: "IoT",
+    subheader: "Internet of Things and Smart Devices",
+    tags: ["IoT", "Internet of Things", "Smart Devices"],
+    link: `/ngi0/${IoT_DOSSIER_PATHNAME}`,
+    cards: IoT_CARDS,
+    tagsDossierDetail: IoT_TAGS,
+    projects: IoT_PROJECTS,
+    detailedProjects: {},
+    comparisons: {}
+};
