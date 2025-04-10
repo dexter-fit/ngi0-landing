@@ -1,6 +1,6 @@
 import {ProjectCardType, ProjectPageType, DossierType} from "../types";
 import {ngi0Projects} from "./ngi0Projects";
-import {ASSOCIATED_NGI0_PROJECTS} from "./commonStrings";
+import {ASSOCIATED_NGI0_PROJECTS, SIMILAR_OPEN_SOURCE_PROJECTS} from "./commonStrings";
 
 const IoT_SECURITY_AND_PRIVACY_CARDS: ProjectCardType[] = [
     ngi0Projects.secushareBox,
@@ -65,6 +65,20 @@ The Internet of Things (IoT) is transforming how the digital and physical worlds
 
 Explore the following categories to discover groundbreaking work happening across the IoT landscape—each playing a key role in shaping robust, intelligent, and inclusive systems.
 `,
+        },
+        {
+            header: "📡 Communication Protocols",
+            text: `
+In the Internet of Things (IoT), devices such as sensors, actuators, gateways, and cloud services must constantly exchange information to function effectively. This could be anything from a temperature sensor reporting readings to a central server, to a smart light turning on after receiving a command from a mobile app.
+
+Because these devices often operate in environments with limited bandwidth, unreliable connections, or power constraints, traditional communication methods like HTTP are too heavy. Instead, lightweight, efficient messaging protocols like MQTT (Message Queuing Telemetry Transport) and AMQP (Advanced Message Queuing Protocol) are widely used. They are designed specifically for real-time, low-overhead, and reliable communication between machines.
+`,
+            associatedProjects: [
+                {
+                    heading: SIMILAR_OPEN_SOURCE_PROJECTS,
+                    carousel: IoT_SECURITY_AND_PRIVACY_CARDS
+                }
+            ]
         },
         {
             header: "🛡️ IoT Security & Privacy",
