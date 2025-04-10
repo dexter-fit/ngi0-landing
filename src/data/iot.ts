@@ -1,6 +1,24 @@
 import {ProjectCardType, ProjectPageType, DossierType} from "../types";
 import {ngi0Projects} from "./ngi0Projects";
 import {ASSOCIATED_NGI0_PROJECTS, SIMILAR_OPEN_SOURCE_PROJECTS} from "./commonStrings";
+import {openSourceProjects} from "./openSourceProjects";
+
+
+const IoT_COMMUNICATION_PROTOCOLS_CARDS: ProjectCardType[] = [
+    openSourceProjects.mosquitto,
+    openSourceProjects.vernemq,
+    openSourceProjects.emqx,
+    openSourceProjects.rabbitmq,
+    openSourceProjects.activemq
+];
+
+const IoT_AUTOMATION_CARDS: ProjectCardType[] = [
+    openSourceProjects.blockly,
+    openSourceProjects.pocketix,
+    openSourceProjects.nodeRED,
+    openSourceProjects.homeAssistant,
+    openSourceProjects.openHAB
+];
 
 const IoT_SECURITY_AND_PRIVACY_CARDS: ProjectCardType[] = [
     ngi0Projects.secushareBox,
@@ -61,31 +79,48 @@ const IoT_PROJECTS: ProjectPageType = {
         {
             header: "🌐 Internet of Things and Smart Devices",
             text: `
-The Internet of Things (IoT) is transforming how the digital and physical worlds interact—enabling smart cities, intelligent industry, precision agriculture, and more. At the heart of this revolution are the open projects and technologies that shape, secure, and scale IoT systems. This web space is a curated hub of innovative projects that are pushing the boundaries of IoT development, deployment, and governance. From security protocols to open hardware platforms, these initiatives lay the foundation for a smarter, more connected future.
+The Internet of Things (IoT) is transforming how the digital and physical worlds interact—enabling smart cities, 
+intelligent industry, precision agriculture, and more. At the heart of this revolution are the open projects and 
+technologies that shape, secure, and scale IoT systems. This web space is a curated hub of innovative projects that 
+are pushing the boundaries of IoT development, deployment, and governance. From security protocols to open hardware 
+platforms, these initiatives lay the foundation for a smarter, more connected future.
 
-Explore the following categories to discover groundbreaking work happening across the IoT landscape—each playing a key role in shaping robust, intelligent, and inclusive systems.
+Explore the following categories to discover groundbreaking work happening across the IoT landscape—each playing a key 
+role in shaping robust, intelligent, and inclusive systems.
 `,
         },
         {
             header: "📡 Communication Protocols",
             text: `
-In the Internet of Things (IoT), devices such as sensors, actuators, gateways, and cloud services must constantly exchange information to function effectively. This could be anything from a temperature sensor reporting readings to a central server, to a smart light turning on after receiving a command from a mobile app.
+In the Internet of Things (IoT), devices such as sensors, actuators, gateways, and cloud services must constantly 
+exchange information to function effectively. This could be anything from a temperature sensor reporting readings to a 
+central server, to a smart light turning on after receiving a command from a mobile app.
 
-Because these devices often operate in environments with limited bandwidth, unreliable connections, or power constraints, traditional communication methods like HTTP are too heavy. Instead, lightweight, efficient messaging protocols like MQTT (Message Queuing Telemetry Transport) and AMQP (Advanced Message Queuing Protocol) are widely used. They are designed specifically for real-time, low-overhead, and reliable communication between machines.
+Because these devices often operate in environments with limited bandwidth, unreliable connections, or power 
+constraints, traditional communication methods like HTTP are too heavy. Instead, lightweight, efficient messaging 
+protocols like MQTT (Message Queuing Telemetry Transport) and AMQP (Advanced Message Queuing Protocol) are widely used. 
+They are designed specifically for real-time, low-overhead, and reliable communication between machines.
 `,
             associatedProjects: [
                 {
                     heading: SIMILAR_OPEN_SOURCE_PROJECTS,
-                    carousel: IoT_SECURITY_AND_PRIVACY_CARDS
+                    carousel: IoT_COMMUNICATION_PROTOCOLS_CARDS
                 }
             ]
         },
         {
             header: "🛡️ IoT Security & Privacy",
             text: `
-Securing IoT devices and networks is no longer optional—it’s foundational. As connected devices proliferate across sensitive environments, ensuring confidentiality, integrity, and availability becomes mission-critical. Projects in this space prioritize privacy-by-design, integrating encryption, authentication, and secure communication protocols from the ground up. These initiatives aim to reduce the attack surface of IoT ecosystems, minimize data exposure, and empower users with more control over their digital identities.
+Securing IoT devices and networks is no longer optional—it’s foundational. As connected devices proliferate across 
+sensitive environments, ensuring confidentiality, integrity, and availability becomes mission-critical. Projects in this 
+space prioritize privacy-by-design, integrating encryption, authentication, and secure communication protocols from the 
+ground up. These initiatives aim to reduce the attack surface of IoT ecosystems, minimize data exposure, and empower 
+users with more control over their digital identities.
 
-Beyond technical safeguards, these projects also engage with evolving regulatory frameworks and ethical considerations. From GDPR-aligned architectures to tools enabling secure edge computing, the goal is to build trust into the IoT stack itself. As threat landscapes evolve, these projects serve as the frontline defense—balancing usability, transparency, and resilience in increasingly complex environments.
+Beyond technical safeguards, these projects also engage with evolving regulatory frameworks and ethical considerations. 
+From GDPR-aligned architectures to tools enabling secure edge computing, the goal is to build trust into the IoT stack 
+itself. As threat landscapes evolve, these projects serve as the frontline defense—balancing usability, transparency, 
+and resilience in increasingly complex environments.
 `,
             associatedProjects: [
                 {
@@ -97,9 +132,16 @@ Beyond technical safeguards, these projects also engage with evolving regulatory
         {
             header: "🛠️ IoT Development Tools & Frameworks",
             text: `
-Building reliable IoT systems demands more than just hardware—it requires the right set of tools and frameworks to streamline development, testing, and deployment. Projects in this area provide software libraries, SDKs, platforms, and integration toolkits that help developers create interoperable and scalable IoT applications faster and with fewer bugs. These resources abstract complexity and encourage best practices, making IoT development accessible to a broader community.
+Building reliable IoT systems demands more than just hardware—it requires the right set of tools and frameworks to 
+streamline development, testing, and deployment. Projects in this area provide software libraries, SDKs, platforms, 
+and integration toolkits that help developers create interoperable and scalable IoT applications faster and with fewer 
+bugs. These resources abstract complexity and encourage best practices, making IoT development accessible to a broader 
+community.
 
-Whether targeting microcontrollers, gateways, or cloud infrastructure, these tools often embrace open standards and modular architectures. They support rapid prototyping, device management, remote configuration, and data visualization—all essential capabilities for bringing IoT solutions to life. As IoT matures, these frameworks will be central to creating sustainable, upgradable, and secure systems at scale.
+Whether targeting microcontrollers, gateways, or cloud infrastructure, these tools often embrace open standards and 
+modular architectures. They support rapid prototyping, device management, remote configuration, and data 
+visualization—all essential capabilities for bringing IoT solutions to life. As IoT matures, these frameworks will be 
+central to creating sustainable, upgradable, and secure systems at scale.
 `,
             associatedProjects: [
                 {
@@ -125,9 +167,15 @@ Beyond connectivity, these projects often integrate lightweight AI and edge infe
         {
             header: "🧬 Cross-Cutting Infrastructure & Open Hardware",
             text: `
-Some of the most impactful IoT projects don’t fit neatly into one domain—they provide the essential building blocks for many. These include open hardware platforms, firmware toolkits, and shared communication infrastructure that fuel innovation across sectors. From microcontroller boards and sensor modules to interoperable operating systems and testbeds, these resources are the unsung heroes of the IoT world.
+Some of the most impactful IoT projects don’t fit neatly into one domain—they provide the essential building blocks for 
+many. These include open hardware platforms, firmware toolkits, and shared communication infrastructure that fuel 
+innovation across sectors. From microcontroller boards and sensor modules to interoperable operating systems and 
+testbeds, these resources are the unsung heroes of the IoT world.
 
-Open-source ethos is strong here, driving collaboration and transparency. By lowering barriers to entry and encouraging reuse, these cross-cutting tools accelerate innovation and help smaller players experiment and scale. Their value extends across verticals—from smart agriculture to industrial automation—providing a shared foundation for building resilient and adaptable IoT systems.
+Open-source ethos is strong here, driving collaboration and transparency. By lowering barriers to entry and encouraging 
+reuse, these cross-cutting tools accelerate innovation and help smaller players experiment and scale. Their value 
+extends across verticals—from smart agriculture to industrial automation—providing a shared foundation for building 
+resilient and adaptable IoT systems.
 `,
             associatedProjects: [
                 {
@@ -139,14 +187,46 @@ Open-source ethos is strong here, driving collaboration and transparency. By low
         {
             header: "🧩 Multi-Domain / Infrastructure Enablers",
             text: `
-Not every project fits into a tidy category—but that doesn't make them any less important. These are the bridging technologies and platforms that support multiple facets of IoT without being tied to a single application or layer. They often address critical challenges like data interoperability, orchestration, orchestration between verticals, or managing hybrid cloud-edge environments.
+Not every project fits into a tidy category—but that doesn't make them any less important. These are the bridging 
+technologies and platforms that support multiple facets of IoT without being tied to a single application or layer. 
+They often address critical challenges like data interoperability, orchestration, orchestration between verticals, or 
+managing hybrid cloud-edge environments.
 
-Projects in this space often emerge as glue between ecosystems—enabling cross-domain innovation and holistic IoT solutions. Whether it's a semantic metadata framework, a universal protocol converter, or an integrated test platform, these enablers make it easier to stitch together disparate components. In a world where IoT ecosystems are becoming more complex and interconnected, these flexible solutions are essential to scaling beyond silos.
+Projects in this space often emerge as glue between ecosystems—enabling cross-domain innovation and holistic IoT 
+solutions. Whether it's a semantic metadata framework, a universal protocol converter, or an integrated test platform, 
+these enablers make it easier to stitch together disparate components. In a world where IoT ecosystems are becoming 
+more complex and interconnected, these flexible solutions are essential to scaling beyond silos.
 `,
             associatedProjects: [
                 {
                     heading: ASSOCIATED_NGI0_PROJECTS,
                     carousel: IoT_INFRASTRUCTURE_ENABLERS
+                }
+            ]
+        },
+        {
+            header: "⚙️ User-Friendly Automation in IoT",
+            text: `
+In the evolving world of the Internet of Things, tools like **Blockly**, **Node-RED**, **OpenHAB**, **Home Assistant**, 
+and emerging tools like **Pocketix** are reshaping how users interact with smart systems. **Blockly** and **Pocketix** 
+serve as visual programming environments that simplify code creation through intuitive drag-and-drop interfaces—ideal 
+for users with little to no coding experience. Blockly, originally designed for the web, provides a foundational 
+platform for building logic visually, while Pocketix brings that same ease of use to mobile devices, making IoT 
+programming more accessible and on-the-go. These tools emphasize the importance of clear, block-based logic in 
+constructing smart workflows, especially in educational or user-centric environments.
+
+Meanwhile, platforms like **Node-RED**, **OpenHAB**, and **Home Assistant** focus on enabling low-code or no-code 
+automation of event-driven systems, empowering users to connect devices, set up triggers, and build smart behaviors 
+with minimal technical hurdles. Node-RED’s wire-based editor lets users visually wire together IoT devices and services, 
+while OpenHAB and Home Assistant focus on comprehensive smart home control with robust automation capabilities. 
+As smart environments grow more complex, the need for user-friendly automation tools becomes critical—bridging the gap 
+between tech-savvy developers and everyday users. These platforms lower the barrier to entry, making it possible for 
+anyone to create intelligent, responsive environments without needing to write traditional code.
+`,
+            associatedProjects: [
+                {
+                    heading: SIMILAR_OPEN_SOURCE_PROJECTS,
+                    carousel: IoT_AUTOMATION_CARDS
                 }
             ]
         }
