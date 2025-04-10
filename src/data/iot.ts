@@ -4,6 +4,8 @@ import {ASSOCIATED_NGI0_PROJECTS, SIMILAR_OPEN_SOURCE_PROJECTS} from "./commonSt
 import {openSourceProjects} from "./openSourceProjects";
 
 
+export const IoT_DOSSIER_PATHNAME = "iot";
+
 const IoT_COMMUNICATION_PROTOCOLS_CARDS: ProjectCardType[] = [
     openSourceProjects.mosquitto,
     openSourceProjects.vernemq,
@@ -105,6 +107,17 @@ They are designed specifically for real-time, low-overhead, and reliable communi
                 {
                     heading: SIMILAR_OPEN_SOURCE_PROJECTS,
                     carousel: IoT_COMMUNICATION_PROTOCOLS_CARDS
+                }
+            ],
+            relatedContent: [
+                {
+                    label: "More about communication protocols",
+                    links: [
+                        {
+                            label: "IoT - Communication Protocols",
+                            link: `/${IoT_DOSSIER_PATHNAME}/detail/communication_protocols`
+                        }
+                    ]
                 }
             ]
         },
@@ -228,12 +241,108 @@ anyone to create intelligent, responsive environments without needing to write t
                     heading: SIMILAR_OPEN_SOURCE_PROJECTS,
                     carousel: IoT_AUTOMATION_CARDS
                 }
+            ],
+            relatedContent: [
+                {
+                    label: "More about communication protocols",
+                    links: [
+                        {
+                            label: "IoT - Communication Protocols",
+                            link: `/${IoT_DOSSIER_PATHNAME}/detail/communication_protocols`
+                        }
+                    ]
+                }
             ]
         }
     ]
 };
 
-export const IoT_DOSSIER_PATHNAME = "iot";
+const IoT_COMMUNICATION_PROTOCOLS: ProjectPageType = {
+    pageTitle: "IoT - Communication Protocols",
+    menuTitle: "Communication",
+    projectDescription: [
+        {
+            header: "📡 Communication Protocols",
+            text: `
+In the landscape of modern software systems—especially those involving distributed architectures, IoT, and 
+microservices—robust, efficient, and reliable messaging protocols are essential. Two popular contenders in this space 
+are **MQTT (Message Queuing Telemetry Transport)** and **AMQP (Advanced Message Queuing Protocol)**. Though they both 
+serve the same general purpose—facilitating message exchange between devices or services—their design philosophies and 
+ideal use cases differ significantly.
+
+## MQTT: Lightweight and IoT-Friendly
+
+MQTT is a lightweight publish-subscribe messaging protocol designed for low-bandwidth, high-latency, or unreliable 
+networks. Originally created by IBM in the late 1990s, MQTT has gained widespread adoption in the Internet of Things 
+(IoT) space. Its low overhead makes it ideal for constrained devices such as sensors, wearables, and embedded systems.
+
+MQTT operates on a **pub/sub model**, where clients publish messages to specific "topics" and subscribe to topics 
+they're interested in. A central broker (like Eclipse Mosquitto or HiveMQ) handles all message routing. This decouples 
+senders and receivers, enabling scalable and loosely coupled communication.
+
+**Key features include:**
+- Small code footprint and low network usage.
+- Quality of Service (QoS) levels to ensure reliable message delivery.
+- Persistent sessions and retained messages for intermittent connections.
+
+## AMQP: Enterprise-Grade and Feature-Rich
+
+AMQP is a more comprehensive and robust messaging protocol, designed with enterprise messaging in mind. It was 
+developed to standardize messaging middleware and is widely used in financial services, enterprise systems, and any 
+domain requiring strong delivery guarantees and complex routing.
+
+Unlike MQTT, AMQP supports both **pub/sub** and **message queue** patterns. It provides features such as message 
+acknowledgment, transactions, security, and sophisticated routing through exchanges and bindings. Popular 
+implementations include RabbitMQ and Apache Qpid.
+
+**Key characteristics include:**
+- Message delivery guarantees (at-most-once, at-least-once, exactly-once).
+- Flexible message routing (direct, topic, fanout, headers).
+- Support for transactions and security mechanisms (e.g., TLS, SASL).
+
+## When to Use What
+
+- Choose **MQTT** if you're working with IoT devices, need minimal overhead, or are dealing with unreliable networks.
+- Opt for **AMQP** if your application requires advanced messaging patterns, strong reliability, or operates in a 
+regulated, enterprise environment.
+
+---
+
+In essence, both protocols are powerful tools in a developer’s toolkit. The right choice depends on the specific 
+requirements of your system: simplicity and efficiency vs. richness and reliability.
+`,
+            relatedContent: [
+                {
+                    label: "MQTT and AMQP Python Examples",
+                    links: [
+                        {
+                            label: "Paho MQTT",
+                            link: "https://github.com/eclipse-paho/paho.mqtt.python?tab=readme-ov-file#subscriber-example"
+                        },
+                        {
+                            label: "RabbitMQ AMQP",
+                            link: "https://www.rabbitmq.com/tutorials/tutorial-one-python#putting-it-all-together"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+};
+
+const IoT_AUTOMATION: ProjectPageType = {
+    pageTitle: "IoT - Automation",
+    menuTitle: "Automation",
+    projectDescription: [
+        {
+            header: "⚙️ User-Friendly Automation in IoT",
+            text: `
+
+`,
+        }
+    ]
+};
+
 
 export const DOSSIER: DossierType = {
     pathName: IoT_DOSSIER_PATHNAME,
@@ -245,6 +354,9 @@ export const DOSSIER: DossierType = {
     cards: IoT_CARDS,
     tagsDossierDetail: IoT_TAGS,
     projects: IoT_PROJECTS,
-    detailedProjects: {},
+    detailedProjects: {
+        "communication_protocols": IoT_COMMUNICATION_PROTOCOLS,
+        "automation": IoT_AUTOMATION
+    },
     comparisons: {}
 };
