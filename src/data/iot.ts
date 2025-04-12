@@ -394,8 +394,33 @@ it not only a great learning tool but also a flexible option for rapid developme
 In summary, Blockly is a versatile and beginner-friendly visual programming tool that lowers the barrier to entry for
 both education and IoT development, helping users focus on what really matters: building functional, intelligent
 systems.
-[Explore Blockly here](https://developers.google.com/blockly)
-`
+`,
+            links: [
+                {
+                    icon: "pi pi-google",
+                    link: "https://developers.google.com/blockly",
+                    label: "Google Profile"
+                },
+                {
+                    icon: "pi pi-github",
+                    link: "https://github.com/google/blockly",
+                    label: "GitHub"
+                }
+            ],
+            gallery: [
+                {
+                    images: [
+                        {
+                            itemImageSrc: "/ngi0/img/iot/blockly_1.png",
+                            title: "A simple program in Blockly, that alerts the user three times with the message \"Hello World!\""
+                        },
+                        {
+                            itemImageSrc: "https://cdn-learn.adafruit.com/assets/assets/000/127/895/original/community_support_Screenshot_2024-02-21_154517.png?1708547200",
+                            title: "Example of IoT usage in Blockly in Adafruit system"
+                        }
+                    ]
+                }
+            ]
         },
         {
             header: "Pocketix",
@@ -424,11 +449,24 @@ In addition to debugging, the upcoming editor will introduce:
 - **Usage tracking** features to help the development team identify pain points and improve the experience over time
 
 These enhancements aim to make Pocketix not only a learning tool, but a practical and intelligent automation environment 
-for users of all ages and skill levels.
-
-[Explore Pocketix here](https://github.com/pocketix)
-
-`
+for users of all ages and skill levels.`,
+            links: [
+                {
+                    icon: "pi pi-github",
+                    link: "https://github.com/pocketix",
+                    label: "GitHub"
+                },
+                {
+                    img: "https://avatars.githubusercontent.com/u/176171814?s=200&v=4",
+                    link: "https://pocketixng.iot.petr-john.cz/",
+                    label: "Pocketixng"
+                },
+                {
+                    img: "https://avatars.githubusercontent.com/u/176171814?s=200&v=4",
+                    link: "https://pocketix-react.iot.petr-john.cz/",
+                    label: "Pocketix React"
+                }
+            ]
         },
         {
             header: "Node-RED",
@@ -469,11 +507,19 @@ Node-RED is particularly well-suited for scenarios such as:
 - Cloud service integration
 
 Its visual approach, extensibility, and active community make it a leading choice for building smart, connected
-applications with minimal effort.
-
-
-[Explore Node-RED here](https://nodered.org)
-`
+applications with minimal effort.`,
+            links: [
+                {
+                    icon: "pi pi-github",
+                    link: "https://github.com/node-red/node-red",
+                    label: "GitHub"
+                },
+                {
+                    img: "/ngi0/img/iot/node-red-icon-2.svg",
+                    link: "https://nodered.org/",
+                    label: "Homepage"
+                }
+            ]
         },
         {
             header: "OpenHAB",
@@ -511,10 +557,19 @@ rapidly. It's particularly favored by smart home enthusiasts, tinkerers, and pro
 privacy-conscious solution that puts users fully in control of their environments—free from proprietary lock-in.
 
 Whether you're looking to automate a single room or orchestrate an entire smart building, OpenHAB provides the
-flexibility, scalability, and transparency to make it possible.
-
-[Explore OpenHAB here](https://www.openhab.org)
-`
+flexibility, scalability, and transparency to make it possible.`,
+            links: [
+                {
+                    icon: "pi pi-github",
+                    link: "https://github.com/openhab",
+                    label: "GitHub"
+                },
+                {
+                    img: "https://avatars.githubusercontent.com/u/1007353?s=200&v=4",
+                    link: "https://www.openhab.org/",
+                    label: "Homepage"
+                }
+            ]
         },
         {
             header: "Home Assistant",
@@ -558,11 +613,19 @@ a go-to solution for smart home enthusiasts, makers, and professionals. It empow
 intelligent environments** while staying in control of how their data is collected, stored, and used.
 
 Whether you're automating a few lights or building a fully autonomous home, Home Assistant provides a solid, flexible
-foundation that grows with your smart home ambitions.
-
-
-[Explore Home Assistant here](https://www.home-assistant.io)
-`
+foundation that grows with your smart home ambitions.`,
+            links: [
+                {
+                    icon: "pi pi-github",
+                    link: "https://github.com/home-assistant",
+                    label: "GitHub"
+                },
+                {
+                    img: "https://avatars.githubusercontent.com/u/13844975?s=200&v=4",
+                    link: "https://www.home-assistant.io/",
+                    label: "Homepage"
+                }
+            ]
         },
         {
             header: "The Importance of User-Friendly IoT Automation",
