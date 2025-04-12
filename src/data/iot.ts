@@ -2,6 +2,7 @@ import {ProjectCardType, ProjectPageType, DossierType} from "../types";
 import {ngi0Projects} from "./ngi0Projects";
 import {ASSOCIATED_NGI0_PROJECTS, SIMILAR_OPEN_SOURCE_PROJECTS} from "./commonStrings";
 import {openSourceProjects} from "./openSourceProjects";
+import {ngi0Images} from "./ngi0Images";
 
 export const IoT_DOSSIER_PATHNAME = "iot";
 
@@ -249,11 +250,11 @@ anyone to create intelligent, responsive environments without needing to write t
             ],
             relatedContent: [
                 {
-                    label: "More about communication protocols",
+                    label: "More about automation",
                     links: [
                         {
-                            label: "IoT - Communication Protocols",
-                            link: `/${IoT_DOSSIER_PATHNAME}/detail/communication_protocols`
+                            label: "IoT - Automation",
+                            link: `/${IoT_DOSSIER_PATHNAME}/detail/automation`
                         }
                     ]
                 }
@@ -410,14 +411,8 @@ systems.
             gallery: [
                 {
                     images: [
-                        {
-                            itemImageSrc: "/ngi0/img/iot/blockly_1.png",
-                            title: "A simple program in Blockly, that alerts the user three times with the message \"Hello World!\""
-                        },
-                        {
-                            itemImageSrc: "https://cdn-learn.adafruit.com/assets/assets/000/127/895/original/community_support_Screenshot_2024-02-21_154517.png?1708547200",
-                            title: "Example of IoT usage in Blockly in Adafruit system"
-                        }
+                        ngi0Images.blockly_0,
+                        ngi0Images.blockly_1
                     ]
                 }
             ]
@@ -465,6 +460,15 @@ for users of all ages and skill levels.`,
                     img: "https://avatars.githubusercontent.com/u/176171814?s=200&v=4",
                     link: "https://pocketix-react.iot.petr-john.cz/",
                     label: "Pocketix React"
+                }
+            ],
+            gallery: [
+                {
+                    images: [
+                        ngi0Images.pocketix_0,
+                        ngi0Images.pocketix_1,
+                        ngi0Images.pocketix_2
+                    ]
                 }
             ]
         },
@@ -519,6 +523,14 @@ applications with minimal effort.`,
                     link: "https://nodered.org/",
                     label: "Homepage"
                 }
+            ],
+            gallery: [
+                {
+                    images: [
+                        ngi0Images.nodered_0,
+                        ngi0Images.nodered_1
+                    ]
+                }
             ]
         },
         {
@@ -568,6 +580,15 @@ flexibility, scalability, and transparency to make it possible.`,
                     img: "https://avatars.githubusercontent.com/u/1007353?s=200&v=4",
                     link: "https://www.openhab.org/",
                     label: "Homepage"
+                }
+            ],
+            gallery: [
+                {
+                    images: [
+                        ngi0Images.openhab_0,
+                        ngi0Images.openhab_1,
+                        ngi0Images.openhab_2
+                    ]
                 }
             ]
         },
@@ -624,6 +645,15 @@ foundation that grows with your smart home ambitions.`,
                     img: "https://avatars.githubusercontent.com/u/13844975?s=200&v=4",
                     link: "https://www.home-assistant.io/",
                     label: "Homepage"
+                }
+            ],
+            gallery: [
+                {
+                    images: [
+                        ngi0Images.homeassistant_0,
+                        ngi0Images.homeassistant_1,
+                        ngi0Images.homeassistant_2
+                    ]
                 }
             ]
         },

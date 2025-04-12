@@ -352,4 +352,57 @@ export const ngi0Images = {
         title: "Island city"
     },
 
+    blockly_0: {
+        itemImageSrc: "/ngi0/img/iot/blockly_1.png",
+        title: "A simple program in Blockly, that alerts the user three times with the message \"Hello World!\""
+    },
+    blockly_1:  {
+        itemImageSrc: "https://cdn-learn.adafruit.com/assets/assets/000/127/895/original/community_support_Screenshot_2024-02-21_154517.png?1708547200",
+        title: "Example of IoT usage in Blockly in Adafruit system"
+    },
+    pocketix_0: {
+        itemImageSrc: "/ngi0/img/iot/pocketix_react_1.png",
+        title: "A simple program in Pocketix React, that toggles a state of a power strip if a water level condition is met"
+    },
+    pocketix_1: {
+        itemImageSrc: "/ngi0/img/iot/pocketix_react_2.png",
+        title: "A simple program in Pocketix React on mobile view, that toggles a state of a power strip if a water level condition is met"
+    },
+    pocketix_2: {
+        itemImageSrc: "/ngi0/img/iot/pocketixng_1.png",
+        title: "A simple program in Pocketixng, that toggles a state of a power strip if a water level condition is met"
+    },
+    nodered_0: {
+        itemImageSrc: "/ngi0/img/iot/nodered_0.png",
+        title: "Simple program that filters the JSON contents of a MQTT messages and republishes it in Node-RED"
+    },
+    nodered_1: {
+        itemImageSrc: "/ngi0/img/iot/nodered_1.png",
+        title: "LHT52 Decoder example program"
+    },
+    openhab_0: {
+        itemImageSrc: "/ngi0/img/iot/openhab_0.png",
+        title: "OpenHAB dashboard on desktop"
+    },
+    openhab_1: {
+        itemImageSrc: "/ngi0/img/iot/openhab_1.png",
+        title: "OpenHAB floorplan view"
+    },
+    openhab_2: {
+        itemImageSrc: "/ngi0/img/iot/openhab_2.png",
+        title: "OpenHAB mobile UI"
+    },
+    homeassistant_0: {
+        itemImageSrc: "/ngi0/img/iot/homeassistant_0.png",
+        title: "Home Assistant mobile UI"
+    },
+    homeassistant_1: {
+        itemImageSrc: "/ngi0/img/iot/homeassistant_1.png",
+        title: "Home Assistant desktop dashboard"
+    },
+    homeassistant_2: {
+        itemImageSrc: "/ngi0/img/iot/homeassistant_2.png",
+        title: "Home Assistant automations"
+    }
+
 }
