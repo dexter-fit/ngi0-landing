@@ -838,7 +838,7 @@ export const ngi0Projects = {
         stop: "2024-10"
     },
     smoltcp: {
-        image: "https://nlnet.nl/project/Smoltcp/logo.svg",
+        image: "/ngi0/img/default.svg",
         header: "smoltcp RPL",
         subheader: "Implement Routing Protocol for Low-Power and Lossy networks",
         tags: ["smoltcp", "Rust", "RPL", "IoT", "6LoWPAN"],
