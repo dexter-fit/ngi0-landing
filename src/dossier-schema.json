@@ -347,28 +347,8 @@
         "relatedContent": {
           "description": "Related content within this project. For example if this is a comparison of an open source project to some proprietary one you might want to link to the page of the open source option within this Dossier application. May be left out and possibly will be generated in the future.",
           "items": {
-            "additionalProperties": false,
-            "properties": {
-              "label": {
-                "description": "Label outlining how these links are related. For example links to previous projects in the dossier application, or link to the Dossier, or any other specific link you want to include. I would advise on adding this content only in the last block of the entire description.",
-                "type": "string"
-              },
-              "links": {
-                "description": "The links themselves.",
-                "items": {
-                  "$ref": "#/definitions/ProjectDescriptionLinkType"
-                },
-                "type": "array"
-              }
-            },
-            "required": [
-              "label",
-              "links"
-            ],
-            "type": "object"
+            "$ref": "#/definitions/RelatedContentType"
           },
-          "maxItems": 1,
-          "minItems": 1,
           "type": "array"
         },
         "tags": {
@@ -413,6 +393,54 @@
         "pageTitle",
         "menuTitle",
         "projectDescription"
+      ],
+      "type": "object"
+    },
+    "RelatedContentType": {
+      "additionalProperties": false,
+      "properties": {
+        "label": {
+          "description": "Label outlining how these links are related. For example links to previous projects in the dossier application, or link to the Dossier, or any other specific link you want to include. I would advise on adding this content only in the last block of the entire description.",
+          "type": "string"
+        },
+        "links": {
+          "description": "The links themselves.",
+          "items": {
+            "$ref": "#/definitions/ProjectDescriptionLinkType"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "label",
+        "links"
+      ],
+      "type": "object"
+    },
+    "TitleType": {
+      "additionalProperties": false,
+      "description": "Type for title page header content, can not be used outside app.",
+      "properties": {
+        "header": {
+          "description": "Main page title.",
+          "type": "string"
+        },
+        "highLights": {
+          "description": "Important questions.",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "mainText": {
+          "description": "Title page text.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "header",
+        "highLights",
+        "mainText"
       ],
       "type": "object"
     }

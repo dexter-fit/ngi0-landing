@@ -8,6 +8,7 @@ import {ProjectCardType} from "../types";
 import {tagsFromProjectCardType} from "../util/tagsFromProjectCardType";
 import {getContentTypeFromLocation} from "../util/getContentTypeFromLocation";
 import {useLocation} from "react-router-dom";
+import { TITLE_PAGE_INFO } from '../data/title';
 
 
 const Index = () => {
@@ -107,6 +108,11 @@ const Index = () => {
     return (
         <>
             <div>
+                <div>
+                    <h1>{TITLE_PAGE_INFO.header}</h1>
+                    {TITLE_PAGE_INFO.highLights.map(text => { return <h3>{ text }</h3> })}
+                    <p>{TITLE_PAGE_INFO.mainText}</p>
+                </div>
                 <div className="tag-heading">
                     <h2>Tags</h2>
                     <div className="tag-search-input-container">
