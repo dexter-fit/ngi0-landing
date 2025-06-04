@@ -4,7 +4,7 @@ import {ngi0Projects} from "./ngi0Projects";
 import {corporateProjects} from "./corporateProjects";
 
 const PCB_CARDS: ProjectCardType[] = [
-    ngi0Projects.librePCB, ngi0Projects.librePCB_2_0, ngi0Projects.KiCad, ngi0Projects.KiCad_IPC, ngi0Projects.KiKit
+    ngi0Projects.librePCB, ngi0Projects.librePCB_2_0, ngi0Projects.KiCad, ngi0Projects.KiCad_IPC, ngi0Projects.kikit
 ];
 
 const PCB_TAGS: string[] = [];
@@ -134,7 +134,7 @@ clearance violations, missing vias, or incorrect footprints before fabrication.
             associatedProjects: [
                 {
                     heading: SIMILAR_NGI0_PROJECTS,
-                    carousel: [ngi0Projects.librePCB, ngi0Projects.librePCB_2_0, ngi0Projects.KiCad, ngi0Projects.KiCad_IPC, ngi0Projects.KiKit]
+                    carousel: [ngi0Projects.librePCB, ngi0Projects.librePCB_2_0, ngi0Projects.KiCad, ngi0Projects.KiCad_IPC, ngi0Projects.kikit]
                 }
             ]
         },
@@ -365,7 +365,7 @@ is shown is shown in the following Figure.
             associatedProjects: [
                 {
                     heading: ASSOCIATED_NGI0_PROJECTS,
-                    carousel: [ngi0Projects.KiCad, ngi0Projects.KiCad_IPC, ngi0Projects.KiKit]
+                    carousel: [ngi0Projects.KiCad, ngi0Projects.KiCad_IPC, ngi0Projects.kikit]
                 }
             ]
         }
@@ -602,7 +602,7 @@ an accessible starting point in PCB design.
             associatedProjects: [
                 {
                     heading: ASSOCIATED_NGI0_PROJECTS,
-                    carousel: [ngi0Projects.librePCB, ngi0Projects.librePCB_2_0, ngi0Projects.KiCad, ngi0Projects.KiCad_IPC, ngi0Projects.KiKit]
+                    carousel: [ngi0Projects.librePCB, ngi0Projects.librePCB_2_0, ngi0Projects.KiCad, ngi0Projects.KiCad_IPC, ngi0Projects.kikit]
                 },
                 {
                     heading: SIMILAR_CLOSED_SOURCE_PROJECTS,
