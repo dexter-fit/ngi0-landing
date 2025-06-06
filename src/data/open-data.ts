@@ -118,7 +118,7 @@ export const DOSSIER: DossierType = {
     header: "Open Data",
     subheader: "Exploring the Impact and Innovation of Open Data Solutions",
     tags: ["Open Data", "Knowledge Graphs", "Transparency", "Data Integration", "ESG Data"],
-    link: `/ngi0/${OPEN_DATA_DOSSIER_PATHNAME}`,
+    link: `/${OPEN_DATA_DOSSIER_PATHNAME}`,
     cards: OPEN_DATA_CARDS,
     tagsDossierDetail: OPEN_DATA_TAGS,
     projects: OPEN_DATA_PROJECTS,

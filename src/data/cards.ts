@@ -14,13 +14,13 @@ const compare = (a: ProjectCardType, b: ProjectCardType) => {
     return 0;
 }
 
-const getCards = (contentType?: string): ProjectCardType[] => {
-    if (contentType) {
-        switch (contentType) {
+const getCards = (dossier?: string): ProjectCardType[] => {
+    if (dossier) {
+        switch (dossier) {
             case "projects":
                 return dossiersArray.flatMap((item: any) => item.cards).sort(compare);
             default:
-                return dossiers[contentType].cards.sort(compare);
+                return dossiers[dossier].cards.sort(compare);
         }
     }
 

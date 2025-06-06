@@ -158,7 +158,7 @@ export const DOSSIER: DossierType = {
     header: "Games",
     subheader: "Video games",
     tags: ["Graphics", "Multimedia", "Gaming", "Entertainment"],
-    link: `/ngi0/${GAMES_DOSSIER_PATHNAME}`,
+    link: `/${GAMES_DOSSIER_PATHNAME}`,
     cards: GAMES_CARDS,
     tagsDossierDetail: GAMES_TAGS,
     projects: GAMES_DOSSIER_PROJECTS,

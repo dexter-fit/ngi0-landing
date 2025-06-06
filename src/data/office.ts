@@ -63,7 +63,7 @@ export const DOSSIER: DossierType = {
     header: "Office",
     subheader: "Open-Source Office Dossier",
     tags: ["Word", "Excel", "Alternatives", "Open-Source"],
-    link: `/ngi0/${OFFICE_DOSSIER_PATHNAME}`,
+    link: `/${OFFICE_DOSSIER_PATHNAME}`,
     cards: OFFICE_CARDS,
     tagsDossierDetail: OFFICE_TAGS,
     projects: OFFICE_PROJECTS,

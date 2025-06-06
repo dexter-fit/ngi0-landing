@@ -166,7 +166,7 @@ export const DOSSIER: DossierType = {
     header: "3D Graphics",
     subheader: "3D Modeling Software",
     tags: ["Graphics", "Multimedia", "3D", "Blender"],
-    link: `/ngi0/${GRAPHICS3D_DOSSIER_PATHNAME}`,
+    link: `/${GRAPHICS3D_DOSSIER_PATHNAME}`,
     cards: GRAPHICS3D_CARDS,
     tagsDossierDetail: GRAPHICS3D_TAGS,
     projects: GRAPHICS3D_DOSSIER_PROJECTS,

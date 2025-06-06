@@ -990,7 +990,7 @@ export const DOSSIER: DossierType = {
     header: "Self-Hosting",
     subheader: "Self-Hosting Dossier",
     tags: ["Self-Hosting", "Privacy","Open-Source"],
-    link: `/ngi0/${SELF_HOSTED_DOSSIER_PATHNAME}`,
+    link: `/${SELF_HOSTED_DOSSIER_PATHNAME}`,
     cards: SELF_HOSTED_CARDS,
     tagsDossierDetail: SELF_HOSTED_TAGS,
     projects: SELF_HOSTED_PROJECTS,

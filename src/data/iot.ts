@@ -677,11 +677,11 @@ connected systems.
 
 export const DOSSIER: DossierType = {
     pathName: IoT_DOSSIER_PATHNAME,
-    image: "/ngi0/img/iot.png",
+    image: "/img/iot.png",
     header: "IoT",
     subheader: "Internet of Things and Smart Devices",
     tags: ["IoT", "Internet of Things", "Smart Devices"],
-    link: `/ngi0/${IoT_DOSSIER_PATHNAME}`,
+    link: `/${IoT_DOSSIER_PATHNAME}`,
     cards: IoT_CARDS,
     tagsDossierDetail: IoT_TAGS,
     projects: IoT_PROJECTS,

@@ -621,7 +621,7 @@ export const DOSSIER: DossierType = {
     header: "PCB Design",
     subheader: "FOSS PCB Design",
     tags: ["Printed Circuit Board", "LibrePCB", "KiCad"],
-    link: `/ngi0/${PCB_DOSSIER_PATHNAME}`,
+    link: `/${PCB_DOSSIER_PATHNAME}`,
     cards: PCB_CARDS,
     tagsDossierDetail: PCB_TAGS,
     projects: PCB_PROJECTS,

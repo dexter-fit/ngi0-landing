@@ -1,9 +1,8 @@
 import React from "react";
-import {Button} from "primereact/button";
 import "./Header.css";
-import { dossiers } from "../data/dossiers";
-import { BreadcrumbsType } from "../types/BreadcrumbsType"
-import {Link} from "react-router-dom";
+import { dossiers } from "@/data/dossiers";
+import { BreadcrumbsType } from "@/types";
+import Link from "next/link";
 
 const Header = () => {
     const findBreadcrumbs = (currentUrl: string): BreadcrumbsType[] => {
@@ -36,7 +35,7 @@ const Header = () => {
             }
 
             if (resultBreadcrumbs.length > 0) {
-                document.title = currentlyViewedItem?.pageTitle;
+                document.title = currentlyViewedItem?.pageTitle || "";
                 return resultBreadcrumbs;
             }
         }
@@ -44,22 +43,22 @@ const Header = () => {
         return [];
     };
 
-    const location = window.location.pathname;
+    const location = "";
     const locationAlwaysWithoutSlash = location.endsWith('/') ? location.slice(0, -1) : location
 
     const breadcrumbs = [
-        {label: "NGI0 Projects", url: "/ngi0"},
+        {label: "NGI0 Projects", url: "/"},
         ...findBreadcrumbs(locationAlwaysWithoutSlash)
     ]
 
     const basicMenuItems: BreadcrumbsType[] = [
         {
             label: "Dossiers",
-            url: "/ngi0/"
+            url: "/"
         },
         {
             label: "Projects",
-            url: "/ngi0/projects"
+            url: "/projects"
         }
     ]
 
@@ -75,12 +74,12 @@ const Header = () => {
                     <div className="menu-sidebar">
                         <div className="menu-header-div">
                             <h3 className="menu-header">NLnet; Projects</h3>
-                            <Link to="/schema"><span style={{display: "none"}}>schema</span></Link>
+                            <Link href="/schema"><span style={{display: "none"}}>schema</span></Link>
                             <label htmlFor="mainMenu" className="menu-dropdown pi menu-dropdown-in"></label>
                         </div>
                         {
-                            basicMenuItems.map((item) =>
-                                <div className="menu-links bold">
+                            basicMenuItems.map((item, index) =>
+                                <div key={index} className="menu-links bold">
                                     <i className={homeIcon + " menu-icon"}></i>
                                     <a href={item.url} className="menu-a">{item.label}</a>
                                 </div>
@@ -88,7 +87,7 @@ const Header = () => {
                         }
                         {
                             Object.values(dossiers).map((item) =>
-                                <span>
+                                <span key={item.header}>
                                     <label htmlFor={item.header} className="sub-menu-dropdown">
                                         <div className="menu-links">
                                             <i className={homeIcon + " menu-icon"}></i>
@@ -111,7 +110,7 @@ const Header = () => {
                                         </div>
                                         {
                                             Object.keys(item.detailedProjects).map((name) =>
-                                                <div className="menu-links">
+                                                <div key={name} className="menu-links">
                                                     <i className={fileIcon + " menu-icon"}></i>
                                                     <a href={`${item.link}/detail/${name}`} className="menu-a">{item.detailedProjects[name].menuTitle}</a>
                                                 </div>
@@ -119,7 +118,7 @@ const Header = () => {
                                         }
                                         {
                                             Object.keys(item.comparisons).map((name) =>
-                                                <div className="menu-links">
+                                                <div key={name} className="menu-links">
                                                     <i className={fileIcon + " menu-icon"}></i>
                                                     <a href={`${item.link}/comparison/${name}`} className="menu-a">{item.comparisons[name].menuTitle}</a>
                                                 </div>
@@ -133,10 +132,10 @@ const Header = () => {
                     <div className="menu-sidebar-shadow"></div>
                 </div>
                 <div className="header-heading">{
-                    breadcrumbs.map((item, index) => <>
+                    breadcrumbs.map((item, index) => <div key={index}>
                         <span><a href={item.url}>{item.label}</a></span>
                         {index < breadcrumbs.length - 1 ? <span>; </span> : <></>}
-                    </>)}
+                    </div>)}
                 </div>
             </div>
         </div>

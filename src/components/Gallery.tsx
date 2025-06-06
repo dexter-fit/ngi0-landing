@@ -1,3 +1,4 @@
+"use client"
 import {Galleria} from 'primereact/galleria';
 import React, { useRef, useState } from "react";
 import "./Gallery.css";
@@ -45,7 +46,7 @@ const GalleryTemplate = (props: GalleryProps) => {
                                         () => {
                                             setActiveIndex(index);
                                             if (galleria.current !== null) {
-                                                galleria.current.show();
+                                                (galleria.current as any).show();
                                             }
                                         }
                                     } />

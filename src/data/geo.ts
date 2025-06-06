@@ -217,7 +217,7 @@ export const DOSSIER: DossierType = {
     header: "Geography",
     subheader: "Charting, routing, maps",
     tags: ["Charting", "Routing", "Maps", "OpenStreetMap", "Decentralised Solutions"],
-    link: `/ngi0/${GEO_DOSSIER_PATHNAME}`,
+    link: `/${GEO_DOSSIER_PATHNAME}`,
     cards: GEO_CARDS,
     tagsDossierDetail: GEO_TAGS,
     projects: GEO_DOSSIER_PROJECTS,

@@ -119,7 +119,7 @@ export const DOSSIER: DossierType = {
     header: "ROS and Robotics",
     subheader: "ROS and Robotics Dossier",
     tags: ["ROS 1", "ROS 2", "MoveIt!", "Gazebo"],
-    link: `/ngi0/${ROS_DOSSIER_PATHNAME}`,
+    link: `/${ROS_DOSSIER_PATHNAME}`,
     cards: ROS_CARDS,
     tagsDossierDetail: ROS_TAGS,
     projects: ROS_PROJECTS,

@@ -151,7 +151,7 @@ export const DOSSIER: DossierType = {
     header: "Compression",
     subheader: "Data Compression",
     tags: ["Data", "Compression", "Comparison"],
-    link: `/ngi0/${COMPRESSION_DOSSIER_PATHNAME}`,
+    link: `/${COMPRESSION_DOSSIER_PATHNAME}`,
     cards: COMPRESSION_CARDS,
     tagsDossierDetail: COMPRESSION_TAGS,
     projects: COMPRESSION_PROJECTS,

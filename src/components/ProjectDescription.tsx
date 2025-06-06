@@ -1,6 +1,6 @@
 import "./ProjectDescription.css";
 import React from "react";
-import {ProjectDescriptionProps} from "../props";
+import {ProjectDescriptionProps} from "@/props";
 import {AssociatedProjectTemplate} from "./AssociatedProjectTemplate";
 import {Divider} from "primereact/divider";
 import {GalleryTemplate} from "./Gallery";
@@ -23,7 +23,7 @@ const ProjectDescription = (props: ProjectDescriptionProps) => {
             {props.tags}
         </div> : <></>}
 
-        <article key={props.descriptionContent.anchor}>
+        <article key={`${props.descriptionContent.anchor}-gallery`}>
             <section>
                 {props.descriptionContent.gallery?.map(project => <GalleryTemplate
                     description={project.description}
@@ -34,9 +34,10 @@ const ProjectDescription = (props: ProjectDescriptionProps) => {
             </section>
         </article>
 
-        <article key={props.descriptionContent.anchor}>
+        <article key={`${props.descriptionContent.anchor}-associatedProjects`}>
             <section>
-                {props.descriptionContent.associatedProjects?.map(project => <AssociatedProjectTemplate
+                {props.descriptionContent.associatedProjects?.map((project, index) => <AssociatedProjectTemplate
+                    key={index}
                     description={project.description}
                     carousel={project.carousel}
                     heading={project.heading}

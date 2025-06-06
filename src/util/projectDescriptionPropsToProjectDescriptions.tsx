@@ -1,5 +1,5 @@
-import {ProjectDescriptionProps} from "../props";
-import {ProjectDescription} from "../components/ProjectDescription";
+import {ProjectDescriptionProps} from "@/props";
+import {ProjectDescription} from "@/components/ProjectDescription";
 import {replaceSpacesWith} from "./replaceSpacesWith";
 import React from "react";
 

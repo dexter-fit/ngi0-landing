@@ -195,7 +195,7 @@ export const DOSSIER: DossierType = {
     header: "2D Graphics",
     subheader: "Image Editors",
     tags: ["Graphics", "Image", "GIMP", "Krita"],
-    link: `/ngi0/${GRAPHICS2D_DOSSIER_PATHNAME}`,
+    link: `/${GRAPHICS2D_DOSSIER_PATHNAME}`,
     cards: GRAPHICS2D_CARDS,
     tagsDossierDetail: GRAPHICS2D_TAGS,
     projects: GRAPHICS2D_DOSSIER_PROJECTS,

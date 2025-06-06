@@ -1,10 +1,10 @@
 import {ProjectDescriptionLinkType, ProjectDescriptionType} from "../types";
-import {stringToTag} from "../util/stringToTag";
-import {createLinkFromProjectLinkItem} from "../util/createLinkFromProjectLinkItem";
-import {extractAssociatedProjectsFromProjectDescription} from "../util/extractAssociatedProjectsFromProjectDescription";
-import {extractGalleryFromProjectDescription} from "../util/extractGalleryFromProjectDescription";
-import {createLinkWithLabelFromProjectLinkItems} from "../util/createLinkWithLabelFromProjectLinkItems";
-import {markdownToHtml} from "../util/markdownToHtml";
+import {stringToTag} from "./stringToTag";
+import {createLinkFromProjectLinkItem} from "./createLinkFromProjectLinkItem";
+import {extractAssociatedProjectsFromProjectDescription} from "./extractAssociatedProjectsFromProjectDescription";
+import {extractGalleryFromProjectDescription} from "./extractGalleryFromProjectDescription";
+import {createLinkWithLabelFromProjectLinkItems} from "./createLinkWithLabelFromProjectLinkItems";
+import {markdownToHtml} from "./markdownToHtml";
 import React from "react";
 import {ProjectDescriptionProps} from "../props";
 

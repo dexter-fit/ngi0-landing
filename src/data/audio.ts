@@ -131,7 +131,7 @@ export const DOSSIER: DossierType = {
     header: "Audio",
     subheader: "Sound and Music Editing",
     tags: ["Graphics", "Multimedia", "Music", "Sound"],
-    link: `/ngi0/${AUDIO_DOSSIER_PATHNAME}`,
+    link: `/${AUDIO_DOSSIER_PATHNAME}`,
     cards: AUDIO_CARDS,
     tagsDossierDetail: AUDIO_TAGS,
     projects: AUDIO_DOSSIER_PROJECTS,

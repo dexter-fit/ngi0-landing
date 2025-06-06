@@ -221,7 +221,7 @@ export const DOSSIER: DossierType = {
     header: "Video",
     subheader: "Video Editors",
     tags: ["Graphics", "Multimedia", "Kdenlive", "Video"],
-    link: `/ngi0/${VIDEO_DOSSIER_PATHNAME}`,
+    link: `/${VIDEO_DOSSIER_PATHNAME}`,
     cards: VIDEO_CARDS,
     tagsDossierDetail: VIDEO_TAGS,
     projects: VIDEO_DOSSIER_PROJECTS,

@@ -1,3 +1,4 @@
+"use client"
 import {ProjectCardType} from "../types";
 import "./ProjectCard.css";
 import {useEffect, useState} from "react";

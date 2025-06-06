@@ -1247,7 +1247,7 @@ export const DOSSIER: DossierType = {
     header: "Vulkan Tutorial",
     subheader: "Learn Vulkan with this Simple Tutorial",
     tags: ["Vulkan", "Rendering"],
-    link: `/ngi0/${VULKAN_DOSSIER_PATHNAME}`,
+    link: `/${VULKAN_DOSSIER_PATHNAME}`,
     cards: VULKAN_CARDS,
     tagsDossierDetail: VULKAN_TAGS,
     projects: VULKAN_PROJECTS,

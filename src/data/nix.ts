@@ -61,7 +61,7 @@ const NIX_DOSSIER_PROJECTS: ProjectPageType =
         menuTitle: "Nix Ecosystem",
         projectDescription: [
             {
-                image: "/ngi0/img/dream2nix.logo.svg",
+                image: "/img/dream2nix.logo.svg",
                 header: "Nix Ecosystem",
                 text: "Nix is a powerful system that integrates a declarative programming language, a versatile package\nmanager, and a comprehensive operating system. As a declarative language, Nix allows users to\ndescribe their system configurations in a high-level, human-readable format, ensuring consistency\nand reproducibility across different environments. Its package manager, also named Nix, facilitates\nthe installation, upgrading, and management of software packages with atomic upgrades and rollbacks,\nisolation of dependencies, and a robust versioning system. Moreover, NixOS, the operating system\nbuilt on Nix, leverages these capabilities to provide a highly reliable and customizable platform,\nmaking it an ideal choice for developers and system administrators seeking a modern approach to\nsystem management. In the sections below, we will delve into each of these components in detail,\nexploring their functionalities and the associated NGI0 projects that enhance and support the Nix\necosystem.",
                 links: [
@@ -151,7 +151,7 @@ export const DOSSIER: DossierType = {
     header: "Nix",
     subheader: "Nix, Nixpkg, NixOS",
     tags: ["Nix", "NixOS", "Package Manager", "Operating System", "Reliability"],
-    link: `/ngi0/${NIX_DOSSIER_PATHNAME}`,
+    link: `/${NIX_DOSSIER_PATHNAME}`,
     cards: NIX_CARDS,
     tagsDossierDetail: NIX_TAGS,
     projects: NIX_DOSSIER_PROJECTS,
