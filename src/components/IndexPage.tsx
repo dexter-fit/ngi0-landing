@@ -103,15 +103,19 @@ const IndexPage = ({ cards, allAvailableTags }: {cards: ProjectCardType[], allAv
                 <div className="tag-heading">
                     <h2>Tags</h2>
                     <div className="tag-search-input-container">
-                        <FloatLabel>
-                            <InputText id="project-search"
-                                       className="full-width"
-                                       value={searchString}
-                                       onChange={(e) => updateStringState(e.target.value)}
-                            />
-                            <label htmlFor="project-search">Search Projects</label>
-                        </FloatLabel>
-                        <ClickableTag disabled={searchClearDisabled} onClick={clearSearch} name="×" />
+                            <div className="card flex justify-content-center">
+                                <FloatLabel>
+                                    <InputText id="project-search"
+                                               className="full-width"
+                                               value={searchString}
+                                               onChange={(e) => updateStringState(e.target.value)}
+                                    />
+                                    <label htmlFor="project-search">Search Projects</label>
+                                </FloatLabel>
+                            </div>
+                            <div id="search-clear-button">
+                                <ClickableTag disabled={searchClearDisabled} onClick={clearSearch} name="×"/>
+                            </div>
                     </div>
                 </div>
 
