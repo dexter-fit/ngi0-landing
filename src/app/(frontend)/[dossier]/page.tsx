@@ -6,6 +6,10 @@ import {ProjectDescriptionProps} from "@/props";
 import {projectDescriptionsToProjectDescriptionProps} from "@/util/projectDescriptionsToProjectDescriptionProps";
 import {ReactNode} from "react";
 
+export async function generateStaticParams() {
+    return Object.keys(dossiers).map(dossier => ({ dossier: dossier }));
+}
+
 export default async function Page({params}: {
     params: Promise<{ dossier: string }>
 }) {

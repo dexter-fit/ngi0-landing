@@ -4,6 +4,13 @@ import {createLinkWithLabelFromProjectLinkItems} from "@/util/createLinkWithLabe
 import {projectDescriptionPropsToProjectDescriptions} from "@/util/projectDescriptionPropsToProjectDescriptions";
 import {stringToTag} from "@/util/stringToTag";
 
+export async function generateStaticParams() {
+    return Object.entries(dossiers)
+        .flatMap(([dossierName, dossier]) =>
+            Object.keys(dossier.comparisons)
+                .map(comparison => ({dossier: dossierName, comparison})));
+}
+
 export default async function Page({params}: {
     params: Promise<{ dossier: string, comparison: string }>
 }) {

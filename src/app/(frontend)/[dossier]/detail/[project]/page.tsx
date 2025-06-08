@@ -3,6 +3,13 @@ import {projectDescriptionsToProjectDescriptionProps} from "@/util/projectDescri
 import {createLinkWithLabelFromProjectLinkItems} from "@/util/createLinkWithLabelFromProjectLinkItems";
 import {projectDescriptionPropsToProjectDescriptions} from "@/util/projectDescriptionPropsToProjectDescriptions";
 
+export async function generateStaticParams() {
+    return Object.entries(dossiers)
+        .flatMap(([dossierName, dossier]) =>
+            Object.keys(dossier.detailedProjects)
+                .map(project => ({dossier: dossierName, project})));
+}
+
 export default async function Page({params}: {
     params: Promise<{ dossier: string, project: string }>
 }) {
