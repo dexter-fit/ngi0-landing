@@ -18,7 +18,7 @@ const getCards = (dossier?: string): ProjectCardType[] => {
     if (dossier) {
         switch (dossier) {
             case "projects":
-                return dossiersArray.flatMap((item: any) => item.cards).sort(compare);
+                return Array.from(new Set(dossiersArray.flatMap((item: any) => item.cards).sort(compare))) as ProjectCardType[];
             default:
                 return dossiers[dossier].cards.sort(compare);
         }
