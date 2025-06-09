@@ -81,7 +81,7 @@ const Header = () => {
                             basicMenuItems.map((item, index) =>
                                 <div key={index} className="menu-links bold">
                                     <i className={homeIcon + " menu-icon"}></i>
-                                    <a href={item.url} className="menu-a">{item.label}</a>
+                                    <Link href={item.url} className="menu-a">{item.label}</Link>
                                 </div>
                             )
                         }
@@ -102,17 +102,17 @@ const Header = () => {
                                         </div>
                                         <div className="menu-links bold">
                                             <i className={homeIcon + " menu-icon"}></i>
-                                            <a href={item.link} className="menu-a">Main Dossier Page</a>
+                                            <Link href={item.link} className="menu-a">Main Dossier Page</Link>
                                         </div>
                                         <div className="menu-links">
                                             <i className={fileIcon + " menu-icon"}></i>
-                                            <a href={`${item.link}/projects`} className="menu-a">Projects</a>
+                                            <Link href={`${item.link}/projects`} className="menu-a">Projects</Link>
                                         </div>
                                         {
                                             Object.keys(item.detailedProjects).map((name) =>
                                                 <div key={name} className="menu-links">
                                                     <i className={fileIcon + " menu-icon"}></i>
-                                                    <a href={`${item.link}/detail/${name}`} className="menu-a">{item.detailedProjects[name].menuTitle}</a>
+                                                    <Link href={`${item.link}/detail/${name}`} className="menu-a">{item.detailedProjects[name].menuTitle}</Link>
                                                 </div>
                                             )
                                         }
@@ -120,7 +120,7 @@ const Header = () => {
                                             Object.keys(item.comparisons).map((name) =>
                                                 <div key={name} className="menu-links">
                                                     <i className={fileIcon + " menu-icon"}></i>
-                                                    <a href={`${item.link}/comparison/${name}`} className="menu-a">{item.comparisons[name].menuTitle}</a>
+                                                    <Link href={`${item.link}/comparison/${name}`} className="menu-a">{item.comparisons[name].menuTitle}</Link>
                                                 </div>
                                             )
                                         }
@@ -133,7 +133,7 @@ const Header = () => {
                 </div>
                 <div className="header-heading">{
                     breadcrumbs.map((item, index) => <div key={index}>
-                        <span><a href={item.url}>{item.label}</a></span>
+                        <span><Link href={item.url}>{item.label}</Link></span>
                         {index < breadcrumbs.length - 1 ? <span>; </span> : <></>}
                     </div>)}
                 </div>
