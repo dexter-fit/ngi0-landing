@@ -54,11 +54,11 @@ const Header = () => {
     const basicMenuItems: BreadcrumbsType[] = [
         {
             label: "Dossiers",
-            url: "/"
+            url: `${process.env.basePath}/`
         },
         {
             label: "Projects",
-            url: "/projects"
+            url: `${process.env.basePath}/projects`
         }
     ]
 
@@ -81,7 +81,7 @@ const Header = () => {
                             basicMenuItems.map((item, index) =>
                                 <div key={index} className="menu-links bold">
                                     <i className={homeIcon + " menu-icon"}></i>
-                                    <Link href={item.url} className="menu-a">{item.label}</Link>
+                                    <a href={item.url} className="menu-a">{item.label}</a>
                                 </div>
                             )
                         }
@@ -102,17 +102,17 @@ const Header = () => {
                                         </div>
                                         <div className="menu-links bold">
                                             <i className={homeIcon + " menu-icon"}></i>
-                                            <Link href={item.link} className="menu-a">Main Dossier Page</Link>
+                                            <a href={item.link} className="menu-a">Main Dossier Page</a>
                                         </div>
                                         <div className="menu-links">
                                             <i className={fileIcon + " menu-icon"}></i>
-                                            <Link href={`${item.link}/projects`} className="menu-a">Projects</Link>
+                                            <a href={`${item.link}/projects`} className="menu-a">Projects</a>
                                         </div>
                                         {
                                             Object.keys(item.detailedProjects).map((name) =>
                                                 <div key={name} className="menu-links">
                                                     <i className={fileIcon + " menu-icon"}></i>
-                                                    <Link href={`${item.link}/detail/${name}`} className="menu-a">{item.detailedProjects[name].menuTitle}</Link>
+                                                    <a href={`${item.link}/detail/${name}`} className="menu-a">{item.detailedProjects[name].menuTitle}</a>
                                                 </div>
                                             )
                                         }
@@ -120,7 +120,7 @@ const Header = () => {
                                             Object.keys(item.comparisons).map((name) =>
                                                 <div key={name} className="menu-links">
                                                     <i className={fileIcon + " menu-icon"}></i>
-                                                    <Link href={`${item.link}/comparison/${name}`} className="menu-a">{item.comparisons[name].menuTitle}</Link>
+                                                    <a href={`${item.link}/comparison/${name}`} className="menu-a">{item.comparisons[name].menuTitle}</a>
                                                 </div>
                                             )
                                         }

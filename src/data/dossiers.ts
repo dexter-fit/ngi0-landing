@@ -37,4 +37,8 @@ const dossiers = {
 
 const dossiersArray = Object.values(dossiers) as ProjectCardType[];
 
+dossiersArray.map((dossier) => {
+    dossier.link = `${process.env.basePath}${dossier.link}`
+})
+
 export {dossiers, dossiersArray};
