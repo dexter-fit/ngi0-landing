@@ -25,7 +25,7 @@ export default async function Page({params}: {
         otherProjectsLinkSpace.push(
             createLinkWithLabelFromProjectLinkItems(`Detailed Projects Within the Dossier`,
                 Object.entries(dossierData.detailedProjects).map(([path, item]) =>
-                    ({link: `detail/${path}`, label: item.menuTitle}))
+                    ({link: `/${dossierData.pathName}/detail/${path}`, label: item.menuTitle}))
             )
         )
     }
@@ -34,7 +34,7 @@ export default async function Page({params}: {
         otherProjectsLinkSpace.push(
             createLinkWithLabelFromProjectLinkItems(`Project Comparisons Within the Dossier`,
                 Object.entries(dossierData.comparisons).map(([path, item]) =>
-                    ({link: `comparison/${path}`, label: item.menuTitle}))
+                    ({link: `/${dossierData.pathName}/comparison/${path}`, label: item.menuTitle}))
             )
         )
     }

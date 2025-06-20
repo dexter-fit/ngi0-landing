@@ -266,7 +266,7 @@ export const ngi0Projects = {
         end: "2022-10"
     },
     pythonSupplyChainWithDream2Nix: {
-        image: "img/dream2nix.logo.svg",
+        image: "/ngi0/img/dream2nix.logo.svg",
         header: "Python supply-chain with dream2nix",
         subheader: "Towards a secure, extensible & reproducible Python supply-chain with dream2nix",
         tags: ["Python", "Nix", "Dream2nix", "Software supply chain", "Build automation"],
