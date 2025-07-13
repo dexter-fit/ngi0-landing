@@ -1,55 +1,72 @@
-import React from "react";
+'use client'
+import React, { useState, useEffect } from "react";
 import "./Header.css";
 import { dossiers } from "@/data/dossiers";
 import { BreadcrumbsType } from "@/types";
 import Link from "next/link";
+import { usePathname } from 'next/navigation'
 
 const Header = () => {
-    const findBreadcrumbs = (currentUrl: string): BreadcrumbsType[] => {
-        let resultBreadcrumbs: BreadcrumbsType[] = [];
-        const currentUrlArr = currentUrl.split('/').splice(2);
-        let currentlyViewedItem: {menuTitle: string, pageTitle: string} = {menuTitle: "", pageTitle: ""};
-        for (const item of Object.values(dossiers)) {
-            // Dossier home
-            if (item.pathName === currentUrlArr[0]) {
-                currentlyViewedItem = item.projects
-                resultBreadcrumbs.push({label: item.header, url: item.link});
+    const pathname = usePathname();
+    const [pageTitle, setPageTitle] = useState('');
+    const [breadcrumbs, setBreadcrumbs] = useState<BreadcrumbsType[]>([]);
 
-                // Dossier projects
-                if (item.projects && currentUrlArr[1] === 'projects') {
-                    currentlyViewedItem = item.projects
-                    resultBreadcrumbs.push({label: "Projects", url: `${item.link}/projects`});
-                }
+    // Remove trailing slash
+    const locationAlwaysWithoutSlash = pathname.endsWith('/')
+        ? pathname.slice(0, -1)
+        : pathname
 
-                // Detail project
-                if (currentUrlArr[1] === 'detail') {
-                    currentlyViewedItem = item.detailedProjects[currentUrlArr[2]];
-                    resultBreadcrumbs.push({label: currentlyViewedItem.menuTitle, url: `${item.link}/detail/${currentUrlArr[2]}`});
-                }
+    useEffect(() => {
+        const findBreadcrumbs = (currentUrl: string): {
+            breadcrumbs: BreadcrumbsType[],
+            title: string
+        } => {
+            let resultBreadcrumbs: BreadcrumbsType[] = [];
+            const currentUrlArr = currentUrl.split('/').splice(1);
+            let currentlyViewedItem: { menuTitle: string, pageTitle: string } = { menuTitle: "", pageTitle: "" };
 
-                // Project comparison
-                if (currentUrlArr[1] === 'comparison') {
-                    currentlyViewedItem = item.comparisons[currentUrlArr[2]];
-                    resultBreadcrumbs.push({label: currentlyViewedItem.menuTitle, url: `${item.link}/comparison/${currentUrlArr[2]}`});
+            for (const item of Object.values(dossiers)) {
+                if (item.pathName === currentUrlArr[0]) {
+                    currentlyViewedItem = item.projects;
+                    resultBreadcrumbs.push({ label: item.header, url: item.link });
+
+                    if (item.projects && currentUrlArr[1] === 'projects') {
+                        currentlyViewedItem = item.projects;
+                        resultBreadcrumbs.push({ label: "Projects", url: `${item.link}/projects` });
+                    }
+
+                    if (currentUrlArr[1] === 'detail') {
+                        currentlyViewedItem = item.detailedProjects[currentUrlArr[2]];
+                        resultBreadcrumbs.push({ label: currentlyViewedItem.menuTitle, url: `${item.link}/detail/${currentUrlArr[2]}` });
+                    }
+
+                    if (currentUrlArr[1] === 'comparison') {
+                        currentlyViewedItem = item.comparisons[currentUrlArr[2]];
+                        resultBreadcrumbs.push({ label: currentlyViewedItem.menuTitle, url: `${item.link}/comparison/${currentUrlArr[2]}` });
+                    }
+
+                    return {
+                        breadcrumbs: resultBreadcrumbs,
+                        title: currentlyViewedItem.pageTitle
+                    };
                 }
             }
 
-            if (resultBreadcrumbs.length > 0) {
-                document.title = currentlyViewedItem?.pageTitle || "";
-                return resultBreadcrumbs;
-            }
+            return { breadcrumbs: [], title: "" };
         }
 
-        return [];
-    };
+        const { breadcrumbs, title } = findBreadcrumbs(locationAlwaysWithoutSlash);
 
-    const location = "";
-    const locationAlwaysWithoutSlash = location.endsWith('/') ? location.slice(0, -1) : location
+        setBreadcrumbs([
+            { label: "NGI0 Projects", url: "/" },
+            ...breadcrumbs
+        ]);
 
-    const breadcrumbs = [
-        {label: "NGI0 Projects", url: "/"},
-        ...findBreadcrumbs(locationAlwaysWithoutSlash)
-    ]
+        setPageTitle(title);
+
+        // Update the actual document title
+        document.title = title || '';
+    }, [locationAlwaysWithoutSlash]);
 
     const basicMenuItems: BreadcrumbsType[] = [
         {

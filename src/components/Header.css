@@ -24,6 +24,10 @@
 
 .header-heading {
     flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-right: 56px;
 }
 
 .header-heading a {
