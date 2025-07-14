@@ -5,9 +5,21 @@ import {dossiers} from "@/data/dossiers";
 import {ProjectDescriptionProps} from "@/props";
 import {projectDescriptionsToProjectDescriptionProps} from "@/util/projectDescriptionsToProjectDescriptionProps";
 import {ReactNode} from "react";
+import { Metadata } from "next";
 
 export async function generateStaticParams() {
     return Object.keys(dossiers).map(dossier => ({ dossier: dossier }));
+}
+
+export async function generateMetadata({params}: {
+    params: Promise<{ dossier: string }>
+}): Promise<Metadata> {
+    const {dossier} = await params;
+    const dossierData = dossiers[dossier];
+
+    return {
+        title: dossierData.header
+    }
 }
 
 export default async function Page({params}: {

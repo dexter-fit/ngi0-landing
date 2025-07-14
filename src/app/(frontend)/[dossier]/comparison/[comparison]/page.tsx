@@ -3,12 +3,24 @@ import {projectDescriptionsToProjectDescriptionProps} from "@/util/projectDescri
 import {createLinkWithLabelFromProjectLinkItems} from "@/util/createLinkWithLabelFromProjectLinkItems";
 import {projectDescriptionPropsToProjectDescriptions} from "@/util/projectDescriptionPropsToProjectDescriptions";
 import {stringToTag} from "@/util/stringToTag";
+import { Metadata } from "next";
 
 export async function generateStaticParams() {
     return Object.entries(dossiers)
         .flatMap(([dossierName, dossier]) =>
             Object.keys(dossier.comparisons)
                 .map(comparison => ({dossier: dossierName, comparison})));
+}
+
+export async function generateMetadata({params}: {
+    params: Promise<{ dossier: string, comparison: string }>
+}): Promise<Metadata> {
+    const {dossier, comparison} = await params;
+    const dossierData = dossiers[dossier];
+
+    return {
+        title: dossierData.comparisons[comparison].menuTitle
+    }
 }
 
 export default async function Page({params}: {

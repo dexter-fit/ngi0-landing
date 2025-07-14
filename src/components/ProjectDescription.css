@@ -44,7 +44,7 @@
 
 .links-div {
     display: flex;
-    max-width: 100;
+    max-width: 100%;
     row-gap: 0.5rem;
     margin-bottom: 1rem;
     justify-content: start;
