@@ -1,5 +1,20 @@
 # NGI0 landing project and dockerfile
 Using React, see bellow for usage. 
+
+## Make sure build folder and necessary npm packages are installed
+
+Inside the cloned repository run the following commands, given `npm` got 
+installed:
+
+```sh
+npm install
+npm run build
+```
+
+This ensures the `build/` folder exists for building the `docker` image in the 
+next step. Also all needed `npm` modules for running the web app will be made
+available inside the `node_modules/` folder.
+
 ## Building the image
 ```sh
 docker build -t dexter.fit.vutbr.cz/ngi0/landing:latest -f SSGDockerfile .
