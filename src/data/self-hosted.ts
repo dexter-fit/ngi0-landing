@@ -968,9 +968,15 @@ const SELF_HOSTED_PROJECTS: ProjectPageType = {
 Self-hosting is the practice of running your own software services instead of relying on third-party providers. This approach gives you complete control over your data, security, and customization. Popular self-hosted applications include email servers, cloud storage (like Nextcloud), and personal websites. By self-hosting, you reduce dependency on big tech companies, avoid subscription fees, and enhance privacy. However, it requires some technical knowledge to set up and maintain servers, whether on-premises or in the cloud.          `,
         },
         {
-            header: "Self-Hosted Streaming  ",
+            header: "Self-Hosted Streaming",
             text: `
-One powerful use case for self-hosting is media streaming. Instead of relying on services like Netflix or Spotify, you can run your own streaming server with tools like Jellyfin, Plex, or Emby. These platforms allow you to manage and stream your personal collection of movies, TV shows, and music across multiple devices. Self-hosted streaming eliminates restrictions like content removal and region locks, ensuring you always have access to your media. It also allows for better organization and streaming quality, tailored to your preferences.  
+One powerful use case for self-hosting is media streaming. Instead of relying on services like Netflix or Spotify, you can run your own streaming server with tools like Jellyfin, Plex, or Emby. These platforms allow you to manage and stream your personal collection of movies, TV shows, and music across multiple devices. Self-hosted streaming eliminates restrictions like content removal and region locks, ensuring you always have access to your media. It also allows for better organization and streaming quality, tailored to your preferences.
+        `,
+        },
+        {
+            header: "Self-Hosted Social Media",
+            text: `
+Another powerful self-hosting use case is running your private social network. With Pixelfed, you can create a privacy-friendly alternative to Instagram, where you share photos and short videos with friends or communities. This gives you full control over your data, no ads or tracking, and the ability to connect with other users across the fediverse.
         `,
         },
         {
