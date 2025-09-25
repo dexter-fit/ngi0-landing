@@ -1,18 +1,18 @@
-import {DOSSIER as NIX_DOSSIER} from "./nix";
-import {DOSSIER as GEO_DOSSIER} from "./geo"
-import {DOSSIER as GRAPHICS2D_DOSSIER} from "./2Dgraphics";
-import {DOSSIER as GRAPHICS3D_DOSSIER} from "./3Dgraphics";
-import {DOSSIER as VIDEO_DOSSIER} from "./video";
-import {DOSSIER as GAMES_DOSSIER} from "./games";
-import {DOSSIER as AUDIO_DOSSIER} from "./audio";
-import {DOSSIER as OFFICE_DOSSIER} from "./office";
-import {DOSSIER as COMPRESSION_DOSSIER} from "./compression";
-import {DOSSIER as SELF_HOSTED_DOSSIER} from "./self-hosted";
-import {DOSSIER as PCB_DOSSIER} from "./pcb";
-import {DOSSIER as VULKAN_DOSSIER} from "./vulkan";
-import {DOSSIER as ROS_DOSSIER} from "./ros";
-import {DOSSIER as OPEN_DATA_DOSSIER} from "./open-data";
-import {DOSSIER as IoT_DOSSIER} from "./iot";
+import {DOSSIER as NIX_DOSSIER} from "./dossiers/nix";
+import {DOSSIER as GEO_DOSSIER} from "./dossiers/geo"
+import {DOSSIER as GRAPHICS2D_DOSSIER} from "./dossiers/2Dgraphics";
+import {DOSSIER as GRAPHICS3D_DOSSIER} from "./dossiers/3Dgraphics";
+import {DOSSIER as VIDEO_DOSSIER} from "./dossiers/video";
+import {DOSSIER as GAMES_DOSSIER} from "./dossiers/games";
+import {DOSSIER as AUDIO_DOSSIER} from "./dossiers/audio";
+import {DOSSIER as OFFICE_DOSSIER} from "./dossiers/office";
+import {DOSSIER as COMPRESSION_DOSSIER} from "./dossiers/compression";
+import {DOSSIER as SELF_HOSTED_DOSSIER} from "./dossiers/self-hosted";
+import {DOSSIER as PCB_DOSSIER} from "./dossiers/pcb";
+import {DOSSIER as VULKAN_DOSSIER} from "./dossiers/vulkan";
+import {DOSSIER as ROS_DOSSIER} from "./dossiers/ros";
+import {DOSSIER as OPEN_DATA_DOSSIER} from "./dossiers/open-data";
+import {DOSSIER as IoT_DOSSIER} from "./dossiers/iot";
 
 import {ProjectCardType} from "../types";
 import {DossierType} from "../types/DossierType";
@@ -36,5 +36,9 @@ const dossiers = {
 } as {[pathName: string]: DossierType}
 
 const dossiersArray = Object.values(dossiers) as ProjectCardType[];
+
+dossiersArray.map((dossier) => {
+    dossier.link = `${process.env.basePath}${dossier.link}`
+})
 
 export {dossiers, dossiersArray};

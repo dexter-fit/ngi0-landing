@@ -1,65 +1,74 @@
-import React from "react";
-import {Button} from "primereact/button";
+'use client'
+import React, { useState, useEffect } from "react";
 import "./Header.css";
-import { dossiers } from "../data/dossiers";
-import { BreadcrumbsType } from "../types/BreadcrumbsType"
-import {Link} from "react-router-dom";
+import { dossiers } from "@/data/dossiers";
+import { BreadcrumbsType } from "@/types";
+import Link from "next/link";
+import { usePathname } from 'next/navigation'
 
 const Header = () => {
-    const findBreadcrumbs = (currentUrl: string): BreadcrumbsType[] => {
-        let resultBreadcrumbs: BreadcrumbsType[] = [];
-        const currentUrlArr = currentUrl.split('/').splice(2);
-        let currentlyViewedItem: {menuTitle: string, pageTitle: string} = {menuTitle: "", pageTitle: ""};
-        for (const item of Object.values(dossiers)) {
-            // Dossier home
-            if (item.pathName === currentUrlArr[0]) {
-                currentlyViewedItem = item.projects
-                resultBreadcrumbs.push({label: item.header, url: item.link});
+    const pathname = usePathname();
+    const [breadcrumbs, setBreadcrumbs] = useState<BreadcrumbsType[]>([]);
 
-                // Dossier projects
-                if (item.projects && currentUrlArr[1] === 'projects') {
-                    currentlyViewedItem = item.projects
-                    resultBreadcrumbs.push({label: "Projects", url: `${item.link}/projects`});
-                }
+    // Remove trailing slash
+    const locationAlwaysWithoutSlash = pathname.endsWith('/')
+        ? pathname.slice(0, -1)
+        : pathname
 
-                // Detail project
-                if (currentUrlArr[1] === 'detail') {
-                    currentlyViewedItem = item.detailedProjects[currentUrlArr[2]];
-                    resultBreadcrumbs.push({label: currentlyViewedItem.menuTitle, url: `${item.link}/detail/${currentUrlArr[2]}`});
-                }
+    const locationWithoutBaseHref = (link: string) => {
+        process.env.basePath = !process.env.basePath ? "" : process.env.basePath;
+        return link.replace(process.env.basePath, "");
+    }
 
-                // Project comparison
-                if (currentUrlArr[1] === 'comparison') {
-                    currentlyViewedItem = item.comparisons[currentUrlArr[2]];
-                    resultBreadcrumbs.push({label: currentlyViewedItem.menuTitle, url: `${item.link}/comparison/${currentUrlArr[2]}`});
+    useEffect(() => {
+        const findBreadcrumbs = (currentUrl: string): BreadcrumbsType[] => {
+            let resultBreadcrumbs: BreadcrumbsType[] = [];
+            const currentUrlArr = currentUrl.split('/').splice(1);
+            let currentlyViewedItem: { menuTitle: string, pageTitle: string } = { menuTitle: "", pageTitle: "" };
+
+            for (const item of Object.values(dossiers)) {
+                if (item.pathName === currentUrlArr[0]) {
+                    currentlyViewedItem = item.projects;
+                    resultBreadcrumbs.push({ label: item.header, url: locationWithoutBaseHref(item.link) });
+
+                    if (item.projects && currentUrlArr[1] === 'projects') {
+                        currentlyViewedItem = item.projects;
+                        resultBreadcrumbs.push({ label: "Projects", url: `${locationWithoutBaseHref(item.link)}/projects` });
+                    }
+
+                    if (currentUrlArr[1] === 'detail') {
+                        currentlyViewedItem = item.detailedProjects[currentUrlArr[2]];
+                        resultBreadcrumbs.push({ label: currentlyViewedItem.menuTitle, url: `${locationWithoutBaseHref(item.link)}/detail/${currentUrlArr[2]}` });
+                    }
+
+                    if (currentUrlArr[1] === 'comparison') {
+                        currentlyViewedItem = item.comparisons[currentUrlArr[2]];
+                        resultBreadcrumbs.push({ label: currentlyViewedItem.menuTitle, url: `${locationWithoutBaseHref(item.link)}/comparison/${currentUrlArr[2]}` });
+                    }
+
+                    return resultBreadcrumbs;
                 }
             }
 
-            if (resultBreadcrumbs.length > 0) {
-                document.title = currentlyViewedItem?.pageTitle;
-                return resultBreadcrumbs;
-            }
+            return [];
         }
 
-        return [];
-    };
+        const breadcrumbs = findBreadcrumbs(locationAlwaysWithoutSlash);
 
-    const location = window.location.pathname;
-    const locationAlwaysWithoutSlash = location.endsWith('/') ? location.slice(0, -1) : location
-
-    const breadcrumbs = [
-        {label: "NGI0 Projects", url: "/ngi0"},
-        ...findBreadcrumbs(locationAlwaysWithoutSlash)
-    ]
+        setBreadcrumbs([
+            { label: "NGI0 Projects", url: "/" },
+            ...breadcrumbs
+        ]);
+    }, [locationAlwaysWithoutSlash]);
 
     const basicMenuItems: BreadcrumbsType[] = [
         {
             label: "Dossiers",
-            url: "/ngi0/"
+            url: `${process.env.basePath}/`
         },
         {
             label: "Projects",
-            url: "/ngi0/projects"
+            url: `${process.env.basePath}/projects`
         }
     ]
 
@@ -75,12 +84,12 @@ const Header = () => {
                     <div className="menu-sidebar">
                         <div className="menu-header-div">
                             <h3 className="menu-header">NLnet; Projects</h3>
-                            <Link to="/schema"><span style={{display: "none"}}>schema</span></Link>
+                            <Link href="/schema"><span style={{display: "none"}}>schema</span></Link>
                             <label htmlFor="mainMenu" className="menu-dropdown pi menu-dropdown-in"></label>
                         </div>
                         {
-                            basicMenuItems.map((item) =>
-                                <div className="menu-links bold">
+                            basicMenuItems.map((item, index) =>
+                                <div key={index} className="menu-links bold">
                                     <i className={homeIcon + " menu-icon"}></i>
                                     <a href={item.url} className="menu-a">{item.label}</a>
                                 </div>
@@ -88,7 +97,7 @@ const Header = () => {
                         }
                         {
                             Object.values(dossiers).map((item) =>
-                                <span>
+                                <span key={item.header}>
                                     <label htmlFor={item.header} className="sub-menu-dropdown">
                                         <div className="menu-links">
                                             <i className={homeIcon + " menu-icon"}></i>
@@ -111,7 +120,7 @@ const Header = () => {
                                         </div>
                                         {
                                             Object.keys(item.detailedProjects).map((name) =>
-                                                <div className="menu-links">
+                                                <div key={name} className="menu-links">
                                                     <i className={fileIcon + " menu-icon"}></i>
                                                     <a href={`${item.link}/detail/${name}`} className="menu-a">{item.detailedProjects[name].menuTitle}</a>
                                                 </div>
@@ -119,7 +128,7 @@ const Header = () => {
                                         }
                                         {
                                             Object.keys(item.comparisons).map((name) =>
-                                                <div className="menu-links">
+                                                <div key={name} className="menu-links">
                                                     <i className={fileIcon + " menu-icon"}></i>
                                                     <a href={`${item.link}/comparison/${name}`} className="menu-a">{item.comparisons[name].menuTitle}</a>
                                                 </div>
@@ -133,10 +142,10 @@ const Header = () => {
                     <div className="menu-sidebar-shadow"></div>
                 </div>
                 <div className="header-heading">{
-                    breadcrumbs.map((item, index) => <>
-                        <span><a href={item.url}>{item.label}</a></span>
+                    breadcrumbs.map((item, index) => <div key={index}>
+                        <span><Link href={item.url}>{item.label}</Link></span>
                         {index < breadcrumbs.length - 1 ? <span>; </span> : <></>}
-                    </>)}
+                    </div>)}
                 </div>
             </div>
         </div>

@@ -1,9 +1,10 @@
 import "./ProjectDescription.css";
 import React from "react";
-import {ProjectDescriptionProps} from "../props";
+import {ProjectDescriptionProps} from "@/props";
 import {AssociatedProjectTemplate} from "./AssociatedProjectTemplate";
 import {Divider} from "primereact/divider";
 import {GalleryTemplate} from "./Gallery";
+import Image from "next/image";
 
 const ProjectDescription = (props: ProjectDescriptionProps) => {
     return <>
@@ -11,7 +12,7 @@ const ProjectDescription = (props: ProjectDescriptionProps) => {
             {props.descriptionContent.header}
         </h1>
         <div className="image-content-wrapper">
-            {props?.image ? <img className="image" src={props.image} alt="header_image" key={props.image}/> : <></>}
+            {props?.image ? <Image className="image" src={props.image} alt="header_image" key={props.image} width={150} height={150}/> : <></>}
             {props.children}
         </div>
 
@@ -23,9 +24,10 @@ const ProjectDescription = (props: ProjectDescriptionProps) => {
             {props.tags}
         </div> : <></>}
 
-        <article key={props.descriptionContent.anchor}>
+        <article key={`${props.descriptionContent.anchor}-gallery`}>
             <section>
-                {props.descriptionContent.gallery?.map(project => <GalleryTemplate
+                {props.descriptionContent.gallery?.map((project, index) => <GalleryTemplate
+                    key={`${props.descriptionContent.anchor}-gallery-template-${index}`}
                     description={project.description}
                     heading={project.heading}
                     images={project.images}
@@ -34,9 +36,10 @@ const ProjectDescription = (props: ProjectDescriptionProps) => {
             </section>
         </article>
 
-        <article key={props.descriptionContent.anchor}>
+        <article key={`${props.descriptionContent.anchor}-associatedProjects`}>
             <section>
-                {props.descriptionContent.associatedProjects?.map(project => <AssociatedProjectTemplate
+                {props.descriptionContent.associatedProjects?.map((project, index) => <AssociatedProjectTemplate
+                    key={index}
                     description={project.description}
                     carousel={project.carousel}
                     heading={project.heading}

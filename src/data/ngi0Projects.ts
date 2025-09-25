@@ -53,7 +53,7 @@ export const ngi0Projects = {
         end: "2024-08"
     },
     maDada: {
-        image: "/ngi0/img/default.svg",
+        image: "/img/default.svg",
         header: "MaData",
         subheader: "From datasets in DCAT catalogs to knowledge graphs",
         tags: ["Open Data", "Freedom of Information", "Transparency", "Linked Data", "Public Records"],
@@ -63,7 +63,7 @@ export const ngi0Projects = {
         end: "2022-10"
     },
     linkedDataHub: {
-        image: "/ngi0/img/default.svg",
+        image: "/img/default.svg",
         header: "LinkedDataHub",
         subheader: "Framework to handle Linked Data at scale",
         tags: ["Open Data", "Linked Data", "Knowledge Graphs", "SPARQL", "RDF"],
@@ -82,7 +82,7 @@ export const ngi0Projects = {
         start: "2025-01"
     },
     organicMaps: {
-        "image": "/ngi0/img/organicmaps.svg",
+        "image": "/img/organicmaps.svg",
         "header": "Organic Maps",
         "subheader": "Privacy-focused Android & iOS offline maps application",
         "tags": [
@@ -97,7 +97,7 @@ export const ngi0Projects = {
         "start": "2021-10"
     },
     protomaps: {
-        "image": "/ngi0/img/protomaps.logo.svg",
+        "image": "/img/protomaps.logo.svg",
         "header": "Protomaps",
         "subheader": "Self-hostable maps based on OpenStreetMap data",
         "tags": [
@@ -113,7 +113,7 @@ export const ngi0Projects = {
         "start": "2023-10"
     },
     peermaps: {
-        "image": "/ngi0/img/peermaps.logo.svg",
+        "image": "/img/peermaps.logo.svg",
         "header": "peermaps",
         "subheader": "Peer to peer cartography",
         "tags": [
@@ -130,7 +130,7 @@ export const ngi0Projects = {
         "end": "2022-10"
     },
     mapComplete: {
-        "image": "/ngi0/img/mapcomplete.logo.svg",
+        "image": "/img/mapcomplete.logo.svg",
         "header": "MapComplete",
         "subheader": "Thematics OpenStreetMap-viewer and editor",
         "tags": [
@@ -145,7 +145,7 @@ export const ngi0Projects = {
         "start": "2022-10"
     },
     nominatim: {
-        "image": "/ngi0/img/openstreetmap.logo.svg",
+        "image": "/img/openstreetmap.logo.svg",
         "header": "Nominatim",
         "subheader": "Multi-lingual support in address search",
         "tags": [
@@ -159,7 +159,7 @@ export const ngi0Projects = {
         "end": "2022-09"
     },
     streetComplete: {
-        "image": "/ngi0/img/streetcomplete.logo.svg",
+        "image": "/img/streetcomplete.logo.svg",
         "header": "StreetComplete",
         "subheader": "Fix open geodata with OpenStreetMap",
         "tags": [
@@ -174,7 +174,7 @@ export const ngi0Projects = {
         "end": "2019-04"
     },
     mobroute: {
-        "image": "/ngi0/img/openstreetmap.logo.svg",
+        "image": "/img/openstreetmap.logo.svg",
         "header": "Mobroute",
         "subheader": "A minimalist FOSS public-transportation router/tool suite",
         "tags": [
@@ -188,7 +188,7 @@ export const ngi0Projects = {
         "start": "2023-04"
     },
     umap: {
-        "image": "/ngi0/img/umap.logo.svg",
+        "image": "/img/umap.logo.svg",
         "header": "uMap",
         "subheader": "Collaborative custom mapping with OpenStreetMap data",
         "tags": [
@@ -223,7 +223,7 @@ export const ngi0Projects = {
     },
 
     dream2nix: {
-        "image": "/ngi0/img/dream2nix.logo.svg",
+        "image": "/img/dream2nix.logo.svg",
         "header": "Dream2nix",
         "subheader": "Automate reproducible packaging for various language ecosystems",
         "tags": [
@@ -266,7 +266,7 @@ export const ngi0Projects = {
         end: "2022-10"
     },
     pythonSupplyChainWithDream2Nix: {
-        image: "img/dream2nix.logo.svg",
+        image: "/img/dream2nix.logo.svg",
         header: "Python supply-chain with dream2nix",
         subheader: "Towards a secure, extensible & reproducible Python supply-chain with dream2nix",
         tags: ["Python", "Nix", "Dream2nix", "Software supply chain", "Build automation"],
@@ -376,7 +376,7 @@ export const ngi0Projects = {
     },
 
     libspngAPNG: {
-        image: "/ngi0/img/default.svg",
+        image: "/img/default.svg",
         header: "libspng APNG",
         subheader: "Add Animated PNG (APNG) image read- and write support to libspng",
         tags: ["C Library", "PNG File Format", "APNG Support", "Image Processing", "Security and Ease of Use"],
@@ -385,14 +385,14 @@ export const ngi0Projects = {
         start: "2023-04"
     },
     calligraSVG: {
-        image: "/ngi0/img/default.svg",
+        image: "/img/default.svg",
         header: "Calligra-SVG",
         subheader: "Improve fallback mechanisms in Calligra ODF loading and saving",
         tags: ["ODF Standard", "adraw:frame", "Fallback Mechanism", "SVG Format", "Calligra Suite"],
         link: "https://nlnet.nl/project/calligra-svg/",
     },
     libvips: {
-        image: "/ngi0/img/default.svg",
+        image: "/img/default.svg",
         header: "libvips",
         subheader: "Add animated PNG and enhanced JPEG XL support to libvips",
         tags: ["Image Processing", "Libvips", "Animated PNG Support", "JXL Format", "Node Binding"],
@@ -838,7 +838,7 @@ export const ngi0Projects = {
         end: "2024-10"
     },
     smoltcp: {
-        image: "/ngi0/img/default.svg",
+        image: "/img/default.svg",
         header: "smoltcp RPL",
         subheader: "Implement Routing Protocol for Low-Power and Lossy networks",
         tags: ["smoltcp", "Rust", "RPL", "IoT", "6LoWPAN"],
@@ -866,7 +866,7 @@ export const ngi0Projects = {
         start: "2023-06",
     },
     openCryptoLinux: {
-        image: "/ngi0/img/default.svg",
+        image: "/img/default.svg",
         header: "OpenCryptoLinux",
         subheader: "Make Linux run on OpenCryptoHW",
         tags: ["OpenCryptoLinux", "Linux", "RISC-V", "OpenCryptoHW", "IoT"],
@@ -876,7 +876,7 @@ export const ngi0Projects = {
         end: "2024-07"
     },
     openCryptoHW: {
-        image: "/ngi0/img/default.svg",
+        image: "/img/default.svg",
         header: "OpenCryptoHW",
         subheader: "CGRA-based reconfigurable open-source cryptographic IP cores",
         tags: ["OpenCryptoHW", "CGRA", "Cryptography", "Reconfigurable Hardware", "IoT"],
@@ -954,7 +954,7 @@ export const ngi0Projects = {
         start: "2023-06",
     },
     ellipticCurveSIMDS: {
-        image: "/ngi0/img/default.svg",
+        image: "/img/default.svg",
         header: "Elliptic curve encryption speed-up using SIMD",
         subheader: "Low-level instructin optimisation for curve25519-dalek & Arkworks",
         tags: ["Elliptic Curve Cryptography", "SIMD", "Rust", "Curve25519", "IoT"],
@@ -963,7 +963,7 @@ export const ngi0Projects = {
         start: "2024-02",
     },
     iso14229: {
-        image: "/ngi0/img/default.svg",
+        image: "/img/default.svg",
         header: "iso14229",
         subheader: "Universal Diagnostic Services for automotive diagnostics",
         tags: ["ISO 14229", "UDS", "Automotive Diagnostics", "Security", "IoT"],

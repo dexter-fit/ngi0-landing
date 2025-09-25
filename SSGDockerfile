@@ -1,4 +1,0 @@
-FROM nginx:alpine AS frontend-release
-
-COPY build /usr/share/nginx/html/ngi0
-COPY SSGnginx.conf /etc/nginx/conf.d/default.conf

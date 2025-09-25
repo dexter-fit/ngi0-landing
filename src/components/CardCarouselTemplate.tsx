@@ -1,3 +1,4 @@
+"use client"
 import {ProjectCardType} from "../types";
 import {ProjectCard} from "./ProjectCard";
 import React from "react";

@@ -1,0 +1,29 @@
+import type { Metadata } from "next";
+import 'primereact/resources/themes/saga-blue/theme.css';
+import 'primereact/resources/primereact.min.css';
+import 'primeicons/primeicons.css';
+import 'primeflex/primeflex.css';
+import './globals.css';
+import {Header} from "@/components/Header";
+
+
+export const metadata: Metadata = {
+  title: "NGI0",
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en">
+      <body>
+          <Header/>
+          <div className="my-cards-container">
+              {children}
+          </div>
+      </body>
+    </html>
+  );
+}

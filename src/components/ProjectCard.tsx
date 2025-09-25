@@ -1,3 +1,4 @@
+"use client"
 import {ProjectCardType} from "../types";
 import "./ProjectCard.css";
 import {useEffect, useState} from "react";
@@ -50,7 +51,7 @@ const ProjectCard = (props: {card: ProjectCardType, hidden?: boolean, highlight?
                 <p>{props.card.subheader}</p>
             </div>
             <div className="card-tags">
-                {props.card.tags.map(tagName => <Tag key={tagName}>{tagName}</Tag>)}
+                {props.card.tags.map(tagName => <Tag key={`${props.card.header}-${tagName}`}>{tagName}</Tag>)}
             </div>
             <a className="card-link-container" href={props.card.link}>
                 <span className="card-link">Visit</span>
