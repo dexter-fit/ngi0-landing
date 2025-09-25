@@ -73,7 +73,7 @@ const VIDEO_DOSSIER_PROJECTS: ProjectPageType = {
             text: "Video editors are used in cinematography and all fields where video processing is a necessary task. They allow the users to cut the recorded video sequences, add audio tracks, text, edit the video appearance by application of various filters, etc."
         },
         {
-            image: "/ngi0/img/video/kdenlive.png",
+            image: "/img/video/kdenlive.png",
             header: "Kdenlive",
             text: "KDE Non-Linear Video Editor, is a free, open-source video editing software that caters to both amateur and professional video editors. Developed by the KDE community, Kdenlive offers a comprehensive set of features, including multi-track video editing, a wide array of effects and transitions, keyframe animations, and support for a vast range of video and audio formats. Its intuitive interface and powerful tools make it suitable for creating high-quality video content, from simple home movies to complex video projects.",
             tags: ["Video", "Movie", "Film", "Cut"],
@@ -95,7 +95,7 @@ const VIDEO_DOSSIER_PROJECTS: ProjectPageType = {
             text: "Kdenlive is focused on video editing and offers more features in this field than Blender. Kdenlive is often considered a worthy alternative to Sony Vegas, Adobe Premiere, or Final Cut. It is optimized and is one of the few professional video editor that runs well on Linux. Commercial software contains a lot of fancy features that can be often recreated in Kdenlive but the user needs to get used to the UI and options.",
         },
         {
-            image: "/ngi0/img/video/OpenShot_logo_2016.svg",
+            image: "/img/video/OpenShot_logo_2016.svg",
             header: "OpenShot",
             text: "This video editor offers basic and also advanced editing options, such as image, video, audio, and text input, curve-based animations, transitions, filters, transformations of the video clips, and more. OpenShot is lighweight, suitable for quick editing without additional software and tools.",
             tags: ["Video", "Movie", "Film", "Cut" ],
@@ -117,7 +117,7 @@ const VIDEO_DOSSIER_PROJECTS: ProjectPageType = {
             text: "OpenShot does not provide too complex features but is a great option for standard users who need to cut video without overly complex user interface. Compared to other products, OpenShot might be lacking in hardware acceleration support and stability.",
         },
         {
-            image: "/ngi0/img/video/shotcut.png",
+            image: "/img/video/shotcut.png",
             header: "Shotcut",
             text: "This video editor is suitable as an easy-to-use tool to edit videos with prepared templates of titles and effects. The user interface is friendly and not bloated with too complex features which are not necessary for simple projects.",
             tags: ["Video", "Movie", "Film", "Cut" ],
@@ -139,7 +139,7 @@ const VIDEO_DOSSIER_PROJECTS: ProjectPageType = {
             text: "Shotcut is similar to OpenShot, providing simple user interface but might not be as performant as other tools.",
         },
         {
-            image: "/ngi0/img/video/VLC_Icon.svg",
+            image: "/img/video/VLC_Icon.svg",
             header: "VLC Media Player",
             text: "This player supports a wide range of audio and video formats which can be played. It uses custom implementations and also FFmpeg-supported codecs and muxers. Many advanced functions can be used to avoid opening and editing the videos in editors, for example, audio or subtitle retiming, filters and transforms, etc. The playback is fast and often offers hardware acceleration.",
             tags: ["Video Player", "Multimedia", "Film", "Movie" ],
@@ -161,7 +161,7 @@ const VIDEO_DOSSIER_PROJECTS: ProjectPageType = {
             text: "Compared to other software, such as Windows Media Player or QuickTime, VLC supports almost all standardly used vidoe and audio formats and also offers tools that can be used to transcode videos, work with streaming, and more. The user interface is adjustable and different skins can be created by the users. It is also multiplatform and stable.",
         },
         {
-            image: "/ngi0/img/video/OBS_Studio_Logo.svg",
+            image: "/img/video/OBS_Studio_Logo.svg",
             header: "OBS Studio",
             text: "OBS is a screencasting and streaming application suitable for real-time video capturing, processing, encoding, and streaming purposes. It is often used for creating of tutorials to record the user desktop or to stream either capmera captured video or screen content, for example, when playing video games. Various edits and overlays can be added to the video in real time.",
             tags: ["Streaming", "Multimedia", "Video", "Capturing" ],
@@ -183,7 +183,7 @@ const VIDEO_DOSSIER_PROJECTS: ProjectPageType = {
             text: "OBS is a general video capturing and streaming tool and offers all the necessary features. Additional support for features like chat, connected mobile apps, store integrations, etc. are available in commercial alternatives, such as Streamlabs, which is based on a fork of OBS. Professional tools, such as vMix focus on industrial setups with several devices and user interface which is quick to use. OBS can be customized and extended to support many professional features. It might encounter some stability issues when performance demanding setups are used.",
         },
         {
-            image: "/ngi0/img/video/cutie_r.ico",
+            image: "/img/video/cutie_r.ico",
             header: "Cutie Roto",
             text: "This GUI application is based on the deep learning Cutie object segmentation framework. It serves as an AI assistant for rotoscoping a video sequence where a mask around an object is required to be updated through the whole video. The user can simply click on the desired object in the video, this object gets selected, additional adjustments can be applied, and the mask can be propagated to other frames.",
             tags: ["video", "movie", "vfx", "mask"],
@@ -217,7 +217,7 @@ export const VIDEO_DOSSIER_PATHNAME = "video";
 
 export const DOSSIER: DossierType = {
     pathName: VIDEO_DOSSIER_PATHNAME,
-    image: "/ngi0/img/video/Video_Camera_-_The_Noun_Project.svg",
+    image: "/img/video/Video_Camera_-_The_Noun_Project.svg",
     header: "Video",
     subheader: "Video Editors",
     tags: ["Graphics", "Multimedia", "Kdenlive", "Video"],

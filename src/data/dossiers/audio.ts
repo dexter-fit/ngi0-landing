@@ -49,7 +49,7 @@ const AUDIO_DOSSIER_PROJECTS: ProjectPageType = {
             text: "Audio editors are used to edit the sound wavefronts by cutting, moving or adjusting their shapes. On a higher level, various filters, denoisers, or sound effects can be applied. Different sound tracks can be mixed or new sounds can be synthesized, for example, simulating muscial instruments."
         },
         {
-            image: "/ngi0/img/audio/LMMS_logo_v1.2.2.png",
+            image: "/img/audio/LMMS_logo_v1.2.2.png",
             header: "LMMS",
             text: "This audio workstation program can be used to compose music in general. It offers multi-track workflow for various instruments or sound tracks and variety of effects and filters that can be applied on these tracks. Sound fonts can be easily imported into the program and the melodies can be composed by inserting separate tones using standard mouse and keyboard or with a connected MIDI or USB musical instrument, such as digital keyboard or piano.",
             tags: ["Music", "Composing", "Soundtrack", "Musical Instrument" ],
@@ -71,7 +71,7 @@ const AUDIO_DOSSIER_PROJECTS: ProjectPageType = {
             text: "Alternative products, such as FL Studio, Abbleton, Logic Pro X, or Reaper focus more on the professional needs and outperform LMMS in the amount and quality of professional features. LMMS is a smaller project but reflects the needs or amateur music composers and is easy to use. The extra features it misses can be supplemented with other software, such as Audacity, or by existing plugins.",
         },
          {
-            image: "/ngi0/img/audio/linthesia.png",
+            image: "/img/audio/linthesia.png",
             header: "Linthesia",
             text: "Linthesia is a game-like music visualizer, often used for learning of playing various songs on piano. A MIDI file can be imported and played with setting of various instruments to each MIDI track. The played tones are visualized on a virtual keyboard and a connected electronic instrument can be used to match the visualization.",
             tags: ["Muisic", "Piano", "Learning", "MIDI" ],
@@ -93,7 +93,7 @@ const AUDIO_DOSSIER_PROJECTS: ProjectPageType = {
             text: "Linthesia was created as a fork of a similar software called Synthesia. Synthesia project, however, stopped being open source and free and turned into a commercial project. Linthesia focuses primarily on the basic piano learning interface and migh miss some visual effects available in tools, such as Spectral Piano.",
         },
         {
-            image: "/ngi0/img/audio/audacity.png",
+            image: "/img/audio/audacity.png",
             header: "Audacity",
             text: "Audacity supports a wide range of audio formats and provides various tools for cutting, copying, mixing, and applying effects to audio files. Its functionality is further enhanced by support for plug-ins, making it suitable for both beginners and advanced users in fields such as music production, podcasting, and sound design.",
             tags: ["Audio", "Sound", "SFX", "Signal Processing"],
@@ -127,7 +127,7 @@ export const AUDIO_DOSSIER_PATHNAME = "audio";
 
 export const DOSSIER: DossierType = {
     pathName: AUDIO_DOSSIER_PATHNAME,
-    image: "/ngi0/img/audio/Sound-icon.svg",
+    image: "/img/audio/Sound-icon.svg",
     header: "Audio",
     subheader: "Sound and Music Editing",
     tags: ["Graphics", "Multimedia", "Music", "Sound"],

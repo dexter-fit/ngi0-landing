@@ -21,7 +21,7 @@ const COMPRESSION_PROJECTS: ProjectPageType = {
             header: "Brotli/Zstd",
             text: `Brotli was developed in 2013 by Google. It uses a combination of LZ77, Huffman coding, and context modeling. It should provide a better compression ratio than Deflate. The tool is focused on compressing HTML, CSS and JavaScript files. Similarly, the Zstandard (Zstd) tool was released by Facebook in 2015. It is a combination of LZ77 and entropy coding. It usually achieves similar compression ratios to Deflate, but is faster. At maximum compression, Zstd reaches compression ratios close to LZMA. Compared to libraries implementing Deflate, it achieves higher compression and decompression speeds.`,
             tags: ["lz77", "Huffman", "Facebook"],
-            image: "/ngi0/img/compression/zstd.png",
+            image: "/img/compression/zstd.png",
             links: [
                 {
                     label: "Brotli",
@@ -33,7 +33,7 @@ const COMPRESSION_PROJECTS: ProjectPageType = {
             header: "bzip2",
             text: `The bzip2 compression tool was first released in 1996 by British programmer Julian Seward. It is based on Burrows–Wheeler transform (BWT), move-to-front transform (MTF) and Huffman coding. bzip2 compresses most files more efficiently than Deflate (.zip, .gz), but is noticeably slower. The spiritual successor to bzip2 is bzip3, which was first released in 2022. It achieves even higher compression ratios than bzip2, but at the cost of lower speed. It is based on Burrows–Wheeler transform, LZ+P method and arithmetic encoder.`,
             tags: ["bwt", "mtf", "lz+p"],
-            image: "/ngi0/img/compression/bzip2.png",
+            image: "/img/compression/bzip2.png",
             links: [
                 {
                     label: "bzip2/bzip3",
@@ -45,7 +45,7 @@ const COMPRESSION_PROJECTS: ProjectPageType = {
             header: "gzip",
             text: `Probably the best-known compression method is Deflate, which is used in, for example, the gzip tool in .gz files. The author of the Deflate method was the brilliant American programmer Phil Katz, who introduced it in 1992 in his PKZIP archiving program. Internally, it is a combination of the LZ77 dictionary compression method and Huffman coding. Before compression, the input data is divided into blocks of different sizes. Huffman tables are then compiled for each block separately. Dividing into blocks during compression is a complex optimization task that is solved by the Zopfli tool. Zopfli increases the compression ratio at the cost of an extremely slow compression speed.`,
             tags: ["Deflate", "Huffman", "gz"],
-            image: "/ngi0/img/compression/gzip3d.png",
+            image: "/img/compression/gzip3d.png",
             links: [
                 {
                     label: "gzip",
@@ -57,7 +57,7 @@ const COMPRESSION_PROJECTS: ProjectPageType = {
             header: "LZ4/lzop",
             text: `LZ4 is a dictionary method from 2011 focused on compression and decompression speed. It implements LZ77 and, unlike other algorithms, does not use entropy coding. There is an LZ4 HC offshoot that achieves higher compression ratios at the cost of speed; bitstream is fully compatible with LZ4. LZ4 is comparable to the LZO (Lempel–Ziv–Oberhumer) method implemented by the lzop tool. The latter is focused on the speed of decompression, but it does not reach such speeds as LZ4. lzop was first released in 1997; does not have an official specification.`,
             tags: ["LZ4", "LZ77"],
-            image: "/ngi0/img/compression/lzop.png",
+            image: "/img/compression/lzop.png",
             links: [
                 {
                     label: "lzop",
@@ -69,7 +69,7 @@ const COMPRESSION_PROJECTS: ProjectPageType = {
             header: "xz/lzma",
             text: `Other widely used tools are xz and lzma from the XZ Utils package. The xz tool compresses data using the LZMA2 method. In contrast, the lzma tool uses the LZMA method. LZMA is an algorithm developed by programmer Igor Pavlov for his archiving program 7-Zip in 1999. It consists of the LZ77 method, Markov chains and an arithmetic coder (range coder). Regarding the compression ratio, the difference between the LZMA and LZMA2 methods is negligible.`,
             tags: ["LZMA2", "LZMA"],
-            image: "/ngi0/img/compression/xz.png",
+            image: "/img/compression/xz.png",
             links: [
                 {
                     label: "xz",
@@ -81,7 +81,7 @@ const COMPRESSION_PROJECTS: ProjectPageType = {
             header: "zpaq",
             text: `Less well-known data compression tools include zpaq, which is designed for incremental backups. This is an archive program that can only add files to the archive. But it can return to the previous state and load older versions of files. As preprocessing, zpaq allows you to use the LZ77, BWT and E8E9 methods. It uses context modeling for its own compression. The achieved compression ratios are very high. However, the compression and decompression speeds are very low. Unfortunately, the last release is from 2016 and active development is no longer ongoing.`,
             tags: ["LZ77", "BWT", "E8E9"],
-            image: "/ngi0/img/compression/zpaq.png",
+            image: "/img/compression/zpaq.png",
             links: [
                 {
                     label: "zpaq",
@@ -147,7 +147,7 @@ export const COMPRESSION_DOSSIER_PATHNAME = "compression";
 
 export const DOSSIER: DossierType = {
     pathName: COMPRESSION_DOSSIER_PATHNAME,
-    image: "/ngi0/img/compression/zip.logo.svg",
+    image: "/img/compression/zip.logo.svg",
     header: "Compression",
     subheader: "Data Compression",
     tags: ["Data", "Compression", "Comparison"],

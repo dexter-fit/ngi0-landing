@@ -59,7 +59,7 @@ export const OFFICE_DOSSIER_PATHNAME = "office";
 
 export const DOSSIER: DossierType = {
     pathName: OFFICE_DOSSIER_PATHNAME,
-    image: "/ngi0/img/office/LibreOffice_4.0_Writer_Icon.svg",
+    image: "/img/office/LibreOffice_4.0_Writer_Icon.svg",
     header: "Office",
     subheader: "Open-Source Office Dossier",
     tags: ["Word", "Excel", "Alternatives", "Open-Source"],

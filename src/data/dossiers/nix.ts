@@ -61,12 +61,12 @@ const NIX_DOSSIER_PROJECTS: ProjectPageType =
         menuTitle: "Nix Ecosystem",
         projectDescription: [
             {
-                image: "/ngi0/img/dream2nix.logo.svg",
+                image: "/img/dream2nix.logo.svg",
                 header: "Nix Ecosystem",
                 text: "Nix is a powerful system that integrates a declarative programming language, a versatile package\nmanager, and a comprehensive operating system. As a declarative language, Nix allows users to\ndescribe their system configurations in a high-level, human-readable format, ensuring consistency\nand reproducibility across different environments. Its package manager, also named Nix, facilitates\nthe installation, upgrading, and management of software packages with atomic upgrades and rollbacks,\nisolation of dependencies, and a robust versioning system. Moreover, NixOS, the operating system\nbuilt on Nix, leverages these capabilities to provide a highly reliable and customizable platform,\nmaking it an ideal choice for developers and system administrators seeking a modern approach to\nsystem management. In the sections below, we will delve into each of these components in detail,\nexploring their functionalities and the associated NGI0 projects that enhance and support the Nix\necosystem.",
                 links: [
                     {
-                        img: "/ngi0/img/nix.svg",
+                        img: "/img/nix.svg",
                         link: "https://nix.dev/manual/nix/stable/",
                         label: "Nix Reference Manual"
                     },
@@ -118,7 +118,7 @@ const NIX_LANGUAGE_DETAIL: ProjectPageType = {
             header: "Nix Language",
             text: "Nix is a functional programming language specifically designed for configuration management and package management. It is the core language of the Nix package manager and the NixOS Linux distribution. The primary objective of Nix is to provide reproducible and deterministic builds, which ensures that software builds and configurations are consistent across different environments.\n\nKey Features:\n-------------\n\n*   **Purely Functional:** Nix treats packages and configurations as pure functions without side effects. This functional nature allows for precise dependency tracking and ensures that builds are reproducible.\n*   **Declarative:** Users declare the desired state of the system in a Nix expression file, and Nix takes care of building and managing the system to match this state. This approach contrasts with imperative package managers that execute a series of commands.\n*   **Reproducibility:** Nix aims to produce identical outputs given the same input, making builds reproducible. It uses content-addressed storage to uniquely identify package dependencies and their versions.\n*   **Isolation:** Each package is built in a sandboxed environment, ensuring that builds are isolated from the rest of the system and from each other. This reduces the risk of interference between packages.\n*   **Atomic Upgrades and Rollbacks:** Nix supports atomic upgrades, meaning a system can be upgraded without downtime. If an upgrade fails, users can easily roll back to the previous working state.\n*   **Multi-User Support:** Nix can manage dependencies and configurations for multiple users on the same system, maintaining isolation between their environments.\n*   **Cross-Platform:** While primarily used on NixOS, Nix can be used on other Linux distributions and macOS, providing the same functional benefits across different platforms.\n\nNix is particularly useful in environments where consistency, reproducibility, and reliability are paramount. It is popular in DevOps, CI/CD pipelines, and environments where managing complex dependencies and configurations is a challenge.\n\nBrief with examples",
             tags: tagsFromProjectCardType(NIX_LANGUAGE_RELATED_PROJECT_CARDS),
-            image: "/ngi0/img/nix/nix.logo.svg"
+            image: "/img/nix/nix.logo.svg"
         } as ProjectDescriptionType
     ]
 };
@@ -147,7 +147,7 @@ const NIX_VS_DOCKER_COMPARISON: ProjectPageType = {
 
 export const DOSSIER: DossierType = {
     pathName: NIX_DOSSIER_PATHNAME,
-    image: "/ngi0/img/games/nix.logo.svg",
+    image: "/img/games/nix.logo.svg",
     header: "Nix",
     subheader: "Nix, Nixpkg, NixOS",
     tags: ["Nix", "NixOS", "Package Manager", "Operating System", "Reliability"],

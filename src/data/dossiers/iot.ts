@@ -452,12 +452,12 @@ for users of all ages and skill levels.`,
                     label: "GitHub"
                 },
                 {
-                    img: "/ngi0/img/iot/pocketix.png",
+                    img: "/img/iot/pocketix.png",
                     link: "https://pocketixng.iot.petr-john.cz/",
                     label: "Pocketixng"
                 },
                 {
-                    img: "/ngi0/img/iot/pocketix.png",
+                    img: "/img/iot/pocketix.png",
                     link: "https://pocketix-react.iot.petr-john.cz/",
                     label: "Pocketix React"
                 }
@@ -519,7 +519,7 @@ applications with minimal effort.`,
                     label: "GitHub"
                 },
                 {
-                    img: "/ngi0/img/iot/node-red-icon-2.svg",
+                    img: "/img/iot/node-red-icon-2.svg",
                     link: "https://nodered.org/",
                     label: "Homepage"
                 }
@@ -577,7 +577,7 @@ flexibility, scalability, and transparency to make it possible.`,
                     label: "GitHub"
                 },
                 {
-                    img: "/ngi0/img/iot/openHab.png",
+                    img: "/img/iot/openHab.png",
                     link: "https://www.openhab.org/",
                     label: "Homepage"
                 }
@@ -642,7 +642,7 @@ foundation that grows with your smart home ambitions.`,
                     label: "GitHub"
                 },
                 {
-                    img: "/ngi0/img/iot/homeAssistant.png",
+                    img: "/img/iot/homeAssistant.png",
                     link: "https://www.home-assistant.io/",
                     label: "Homepage"
                 }
@@ -677,7 +677,7 @@ connected systems.
 
 export const DOSSIER: DossierType = {
     pathName: IoT_DOSSIER_PATHNAME,
-    image: "/ngi0/img/iot.png",
+    image: "/img/iot.png",
     header: "IoT",
     subheader: "Internet of Things and Smart Devices",
     tags: ["IoT", "Internet of Things", "Smart Devices"],

@@ -62,7 +62,7 @@ const GRAPHICS3D_DOSSIER_PROJECTS: ProjectPageType = {
             text: "3D editors are programs capable of complex editing operations on 3D models. The editors usually offer imports of various 3D model types and also their import or rendering options to create, sometimes realistic, 2D renders of the 3D scene."
         },
         {
-            image: "/ngi0/img/3Dgraphics/Meshroom_Logo_-_visualization.png",
+            image: "/img/3Dgraphics/Meshroom_Logo_-_visualization.png",
             header: "Meshroom",
             text: "This program serves for photogrammetry and 3D reconstruction purposes. Based on an input set of images, capturing the scene from different points of view, sparse or dense point cloud can be reconstructed, followed by conversion to fully textured 3D mesh. Its highly extensible and adjustable pipeline and also commandline tools make Meshroom easy to integrate into various workflows. GPU acceleration as well as different feature extractors and matching options are available. ",
             tags: ["photogrammetry", "3D reconstruction", "mesh", "point cloud" ],
@@ -84,7 +84,7 @@ const GRAPHICS3D_DOSSIER_PROJECTS: ProjectPageType = {
             text: "Alternative products, such as 3DF Zephyr or Agisoft Metashape are more precise for the mesh reconstruction. However, the customizable pipeline allows the user to fine tune the reconstruction process for performance or quality purposes. The pipeline is also easily editable using graphical nodes-based programming whereas other software usually offers only limited options defined in various presets.",
         },
          {
-            image: "/ngi0/img/3Dgraphics/MeshLab_logo_left_eye.png",
+            image: "/img/3Dgraphics/MeshLab_logo_left_eye.png",
             header: "MeshLab",
             text: "MeshLab offers various advanced tools for 3D mesh editing, analysis, and processing. Simplification of meshes, alignment, refinement, removal or highlighting of specific mesh elements, subdivision, boolean operators, curvature analysis or point cloud processing are available. This software is often used in academic and scientific use cases.",
             tags: ["Mesh Editting", "Triangles", "3D Models", "Geometry" ],
@@ -106,7 +106,7 @@ const GRAPHICS3D_DOSSIER_PROJECTS: ProjectPageType = {
             text: "MeshLab is not a standard 3D modeling software. The main purpose of MeshLab is the analysis or processing of existing meshes, not the interactive artistic modeling proces. Existing tools often do not provide the advanced tools for allignment or highlighting of geometrical patterns.",
         },        
          {
-            image: "/ngi0/img/3Dgraphics/online3d.svg",
+            image: "/img/3Dgraphics/online3d.svg",
             header: "Online 3D Viewer",
             text: "This simple web-based tool is a convenient way to quickly display 3D models and apply basic transforms, measurements, and rendering operations.",
             tags: ["Mesh Viewing", "Triangles", "3D Models", "Geometry" ],
@@ -128,7 +128,7 @@ const GRAPHICS3D_DOSSIER_PROJECTS: ProjectPageType = {
             text: "This viewer does not offer any editing tools but can be used to quickly inspect 3D model files in web browser. It might be more convenient when working remotedely without the need to install any heavyweight software.",
         },        
         {
-            image: "/ngi0/img/3Dgraphics/blender.svg",
+            image: "/img/3Dgraphics/blender.svg",
             header: "Blender",
             text: "Blender is mainly a 3D editor but offers a lot of other options, such as 2D editing and animation, drawing, video editing, compositing, realistic rendering, etc. Its open-source nature makes it a popular choice for amateurs and professionals. The large community support with forums and tutorials makes learning with this tool easy. A lot of community add-ons and the option to use the built-in Python scripting environment make the software highly flexible and suitable for many various tasks in the field of computer graphics, game development, science, education, filmmaking, etc.",
             tags: ["3D editing", "Animation", "Multimedia Processing", "Video Editing"],
@@ -162,7 +162,7 @@ export const GRAPHICS3D_DOSSIER_PATHNAME = "graphics3D";
 
 export const DOSSIER: DossierType = {
     pathName: GRAPHICS3D_DOSSIER_PATHNAME,
-    image: "/ngi0/img/3Dgraphics/Blender_logo_no_text.svg",
+    image: "/img/3Dgraphics/Blender_logo_no_text.svg",
     header: "3D Graphics",
     subheader: "3D Modeling Software",
     tags: ["Graphics", "Multimedia", "3D", "Blender"],

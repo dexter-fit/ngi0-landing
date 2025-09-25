@@ -57,12 +57,12 @@ const GEO_DOSSIER_PROJECTS: ProjectPageType = {
     menuTitle: "Geovisialisation Dossier",
     projectDescription: [
         {
-            image: "/ngi0/img/openstreetmap.logo.svg",
+            image: "/img/openstreetmap.logo.svg",
             header: "Geovisualisation",
             text: "Geovisualization encompasses a wide variety of applications, from simple map displays with various points of interest, to navigation in unfamiliar space, to complex applications that help us every day. With themed maps, users can get to know their surroundings better as well as new points of interest. The next level is then represented by applications that allow the user to modify the maps themselves. Thanks to open souce projects with a wide community of users, cartography is more accessible than ever before.",
             links: [
                 {
-                    img: "/ngi0/img/openstreetmap.logo.svg",
+                    img: "/img/openstreetmap.logo.svg",
                     link: "https://www.openstreetmap.org/",
                     label: "Open Street Maps"
                 },
@@ -72,12 +72,12 @@ const GEO_DOSSIER_PROJECTS: ProjectPageType = {
                     label: "Wikipedia"
                 },
                 {
-                    img: "/ngi0/img/OpenSeaMap-Logo.svg",
+                    img: "/img/OpenSeaMap-Logo.svg",
                     link: "https://map.openseamap.org/",
                     label: "OpenSeaMap"
                 },
                 {
-                    img: "/ngi0/img/Open_Source_Routing_Machine_logo.png",
+                    img: "/img/Open_Source_Routing_Machine_logo.png",
                     link: "https://github.com/Project-OSRM/osrm-backend",
                     label: "Open Source Routing Machine"
                 },
@@ -162,7 +162,7 @@ The map data can be edited from a number of editing applications that provide ai
             tags: tagsFromProjectCardType(OSM_RELATED_PROJECT_CARDS),
             links: [
                 {
-                    img: "/ngi0/img/openstreetmap.logo.svg",
+                    img: "/img/openstreetmap.logo.svg",
                     link: "https://www.openstreetmap.org/",
                     label: "Open Street Maps"
                 },
@@ -172,12 +172,12 @@ The map data can be edited from a number of editing applications that provide ai
                     label: "Wikipedia"
                 },
                 {
-                    img: "/ngi0/img/OpenSeaMap-Logo.svg",
+                    img: "/img/OpenSeaMap-Logo.svg",
                     link: "https://map.openseamap.org/",
                     label: "OpenSeaMap"
                 },
                 {
-                    img: "/ngi0/img/Open_Source_Routing_Machine_logo.png",
+                    img: "/img/Open_Source_Routing_Machine_logo.png",
                     link: "https://github.com/Project-OSRM/osrm-backend",
                     label: "Open Source Routing Machine"
                 },
@@ -193,7 +193,7 @@ The map data can be edited from a number of editing applications that provide ai
                     carousel: OSM_RELATED_PROJECT_CARDS
                 }
             ],
-            image: "/ngi0/img/openstreetmap.logo.svg"
+            image: "/img/openstreetmap.logo.svg"
         } as ProjectDescriptionType
     ]
 };
@@ -213,7 +213,7 @@ export const GEO_DOSSIER_PATHNAME = "geo";
 
 export const DOSSIER: DossierType = {
     pathName: GEO_DOSSIER_PATHNAME,
-    image: "/ngi0/img/openstreetmap.logo.svg",
+    image: "/img/openstreetmap.logo.svg",
     header: "Geography",
     subheader: "Charting, routing, maps",
     tags: ["Charting", "Routing", "Maps", "OpenStreetMap", "Decentralised Solutions"],

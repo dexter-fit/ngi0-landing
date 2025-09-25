@@ -172,7 +172,7 @@ looks like in Altium Designer is shown in the following Figure.
             gallery: [
                 {
                     images: [{
-                        itemImageSrc: "/ngi0/img/pcb/schematic_editor_Altium.bmp",
+                        itemImageSrc: "/img/pcb/schematic_editor_Altium.bmp",
                         title: "Appearance of schematic editor GUI in Altium Designer."
                     }],
                     largeImage: true
@@ -195,7 +195,7 @@ action like in Altium Designer is shown in the following Figure.`,
             gallery: [
                 {
                     images: [{
-                        itemImageSrc: "/ngi0/img/pcb/pcb_editor_Altium.bmp",
+                        itemImageSrc: "/img/pcb/pcb_editor_Altium.bmp",
                         title: "Appearance of PCB editor GUI in Altium Designer."
                     }],
                     largeImage: true
@@ -219,7 +219,7 @@ components creation and management in Altium Designer is shown in the following 
             gallery: [
                 {
                     images: [{
-                        itemImageSrc: "/ngi0/img/pcb/library_management_Altium.bmp",
+                        itemImageSrc: "/img/pcb/library_management_Altium.bmp",
                         title: "Complex interface for components creation and management in Altium Designer."
                     }],
                     largeImage: true
@@ -241,7 +241,7 @@ applications. Interface to the generation of various output data types is shown 
             gallery: [
                 {
                     images: [{
-                        itemImageSrc: "/ngi0/img/pcb/fabrication_data_Altium.bmp",
+                        itemImageSrc: "/img/pcb/fabrication_data_Altium.bmp",
                         title: "Module for generation various types of output data from Altium Designer."
                     }],
                     largeImage: true
@@ -285,7 +285,7 @@ layout. An example of how the schematic editor GUI looks like in KiCAD environme
             gallery: [
                 {
                     images: [{
-                        itemImageSrc: "/ngi0/img/pcb/schematic_editor_KiCAD.bmp",
+                        itemImageSrc: "/img/pcb/schematic_editor_KiCAD.bmp",
                         title: "Appearance of schematic editor GUI in KiCAD."
                     }],
                     largeImage: true
@@ -307,7 +307,7 @@ GUI in action like in KiCAD environment is shown in the following Figure.
             gallery: [
                 {
                     images: [{
-                        itemImageSrc: "/ngi0/img/pcb/pcb_editor_KiCAD.bmp",
+                        itemImageSrc: "/img/pcb/pcb_editor_KiCAD.bmp",
                         title: "Appearance of PCB editor GUI in KiCAD environment."
                     }],
                     largeImage: true
@@ -332,7 +332,7 @@ the capabilities of Altium Designer, is shown in the following Figure.
             gallery: [
                 {
                     images: [{
-                        itemImageSrc: "/ngi0/img/pcb/library_management_KiCAD.bmp",
+                        itemImageSrc: "/img/pcb/library_management_KiCAD.bmp",
                         title: "An example of GUI for components creation and management in KiCAD tool."
                     }],
                     largeImage: true
@@ -356,7 +356,7 @@ is shown is shown in the following Figure.
             gallery: [
                 {
                     images: [{
-                        itemImageSrc: "/ngi0/img/pcb/fabrication_data_KiCAD.bmp",
+                        itemImageSrc: "/img/pcb/fabrication_data_KiCAD.bmp",
                         title: "Module for generation fabrication data from KiCAD tool."
                     }],
                     largeImage: true
@@ -402,7 +402,7 @@ schematic editor GUI looks like in KiCAD environment is shown in the following F
             gallery: [
                 {
                     images: [{
-                        itemImageSrc: "/ngi0/img/pcb/schematic_editor_LibrePCB.bmp",
+                        itemImageSrc: "/img/pcb/schematic_editor_LibrePCB.bmp",
                         title: "Appearance of schematic editor GUI in LibrePCB."
                     }],
                     largeImage: true
@@ -425,7 +425,7 @@ An example of how the PCB editor GUI in action like in LibrePCB tool is shown in
             gallery: [
                 {
                     images: [{
-                        itemImageSrc: "/ngi0/img/pcb/pcb_editor_LibrePCB.bmp",
+                        itemImageSrc: "/img/pcb/pcb_editor_LibrePCB.bmp",
                         title: "Appearance of PCB editor GUI in LibrePCB tool."
                     }],
                     largeImage: true
@@ -448,7 +448,7 @@ for components creation and management in LibrePCB is shown in the following Fig
             gallery: [
                 {
                     images: [{
-                        itemImageSrc: "/ngi0/img/pcb/library_management_LibrePCB.bmp",
+                        itemImageSrc: "/img/pcb/library_management_LibrePCB.bmp",
                         title: "An example of GUI for components creation and management in LibrePCB tool."
                     }],
                     largeImage: true
@@ -472,7 +472,7 @@ types in LibrePCB tool is shown on in the following Figure.
             gallery: [
                 {
                     images: [{
-                        itemImageSrc: "/ngi0/img/pcb/fabrication_data_LibrePCB.bmp",
+                        itemImageSrc: "/img/pcb/fabrication_data_LibrePCB.bmp",
                         title: "Module for generation fabrication data from LibrePCB tool."
                     }],
                     largeImage: true
@@ -617,7 +617,7 @@ export const PCB_DOSSIER_PATHNAME = "pcb";
 
 export const DOSSIER: DossierType = {
     pathName: PCB_DOSSIER_PATHNAME,
-    image: "/ngi0/img/pcb/PCB.png",
+    image: "/img/pcb/PCB.png",
     header: "PCB Design",
     subheader: "FOSS PCB Design",
     tags: ["Printed Circuit Board", "LibrePCB", "KiCad"],

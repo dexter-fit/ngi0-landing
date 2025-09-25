@@ -1242,7 +1242,7 @@ So, Vulkan loader is implemented by libvulkan.so.1 on Linux and vulkan-1.dll on 
 
 export const DOSSIER: DossierType = {
     pathName: VULKAN_DOSSIER_PATHNAME,
-    image: "/ngi0/img/Vulkan.svg",
+    image: "/img/Vulkan.svg",
     header: "Vulkan Tutorial",
     subheader: "Learn Vulkan with this Simple Tutorial",
     tags: ["Vulkan", "Rendering"],

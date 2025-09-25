@@ -38,7 +38,7 @@ addressing new challenges. However, it is considered obsolete nowadays.
                 }
             ],
             tags: ["ROS1"],
-            image: "/ngi0/img/ros/ROS1.png"
+            image: "/img/ros/ROS1.png"
         },
         {
             header: "ROS2",
@@ -59,7 +59,7 @@ coordination, and other advanced capabilities with ease.
                 }
             ],
             tags: ["ROS2"],
-            image: "/ngi0/img/ros/ROS2.png"
+            image: "/img/ros/ROS2.png"
         },
         {
             header: "MoveIt!",
@@ -83,7 +83,7 @@ and companies.
                 "Path Planning",
                 "Collision Avoidance"
             ],
-            image: "/ngi0/img/ros/moveit.png"
+            image: "/img/ros/moveit.png"
         },
         {
             header: "Gazebo",
@@ -96,7 +96,7 @@ tool for robotics development.
             links: [
                 {
                     label: "Gazebo",
-                    link: "/ngi0/img/ros/gazebo-classic"
+                    link: "/img/ros/gazebo-classic"
                 }
             ],
             tags: [
@@ -106,7 +106,7 @@ tool for robotics development.
                 "Physics Engine",
                 "Sensors"
             ],
-            image: "/ngi0/img/ros/gazebo.png"
+            image: "/img/ros/gazebo.png"
         }
     ]
 };
@@ -115,7 +115,7 @@ export const ROS_DOSSIER_PATHNAME = "ros";
 
 export const DOSSIER: DossierType = {
     pathName: ROS_DOSSIER_PATHNAME,
-    image: "/ngi0/img/ros/ROS1.png",
+    image: "/img/ros/ROS1.png",
     header: "ROS and Robotics",
     subheader: "ROS and Robotics Dossier",
     tags: ["ROS 1", "ROS 2", "MoveIt!", "Gazebo"],

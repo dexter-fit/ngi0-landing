@@ -20,13 +20,13 @@ const PEER_TUBE: ProjectPageType = {
                 {
                     images: [
                         {
-                            itemImageSrc: "/ngi0/img/self-hosted/peertube1.png"
+                            itemImageSrc: "/img/self-hosted/peertube1.png"
                         },
                         {
-                            itemImageSrc: "/ngi0/img/self-hosted/peertube2.png"
+                            itemImageSrc: "/img/self-hosted/peertube2.png"
                         },
                         {
-                            itemImageSrc: "/ngi0/img/self-hosted/peertube3.png"
+                            itemImageSrc: "/img/self-hosted/peertube3.png"
                         }
                     ]
                 }
@@ -284,13 +284,13 @@ const OWNCAST: ProjectPageType = {
                 {
                     images: [
                         {
-                            itemImageSrc: "/ngi0/img/self-hosted/owncast1.png"
+                            itemImageSrc: "/img/self-hosted/owncast1.png"
                         },
                         {
-                            itemImageSrc: "/ngi0/img/self-hosted/owncast2.png"
+                            itemImageSrc: "/img/self-hosted/owncast2.png"
                         },
                         {
-                            itemImageSrc: "/ngi0/img/self-hosted/owncast3.png"
+                            itemImageSrc: "/img/self-hosted/owncast3.png"
                         }
                     ]
                 }
@@ -445,13 +445,13 @@ const NEXTCLOUD: ProjectPageType = {
                 {
                     images: [
                         {
-                            itemImageSrc: "/ngi0/img/self-hosted/nextcloud1.png"
+                            itemImageSrc: "/img/self-hosted/nextcloud1.png"
                         },
                         {
-                            itemImageSrc: "/ngi0/img/self-hosted/nextcloud2.png"
+                            itemImageSrc: "/img/self-hosted/nextcloud2.png"
                         },
                         {
-                            itemImageSrc: "/ngi0/img/self-hosted/nextcloud3.png"
+                            itemImageSrc: "/img/self-hosted/nextcloud3.png"
                         }
                     ]
                 }
@@ -650,13 +650,13 @@ const GARAGE: ProjectPageType = {
                 {
                     images: [
                         {
-                            itemImageSrc: "/ngi0/img/self-hosted/garage1.png"
+                            itemImageSrc: "/img/self-hosted/garage1.png"
                         },
                         {
-                            itemImageSrc: "/ngi0/img/self-hosted/garage2.png"
+                            itemImageSrc: "/img/self-hosted/garage2.png"
                         },
                         {
-                            itemImageSrc: "/ngi0/img/self-hosted/garage3.png"
+                            itemImageSrc: "/img/self-hosted/garage3.png"
                         }
                     ]
                 }
@@ -1335,7 +1335,7 @@ export const SELF_HOSTED_DOSSIER_PATHNAME = "self-hosted";
 
 export const DOSSIER: DossierType = {
     pathName: SELF_HOSTED_DOSSIER_PATHNAME,
-    image: "/ngi0/img/self-hosted/Network-server.svg",
+    image: "/img/self-hosted/Network-server.svg",
     header: "Self-Hosting",
     subheader: "Self-Hosting Dossier",
     tags: ["Self-Hosting", "Privacy","Open-Source"],
