@@ -1,4 +1,6 @@
 # NGI0 landing project and dockerfile
+This repository has moved to [git.ngi-0.eu/tech-dossiers/ngi0-landing](https://git.ngi-0.eu/tech-dossiers/ngi0-landing).
+
 Using Next.js, see bellow for usage. 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
